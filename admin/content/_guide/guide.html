@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div id="guide">
+
+        <div class="input-group ">
+            <textarea class="form-control modal-textarea" aria-label="With textarea" maxlength="40"></textarea>
+            <span id="counter">0</span><span>/40</span>
+        </div>
+
+        <div class="">
+            <div class="upload-img d-flex align-items-center">
+                <div class="filebox">
+                    <label for="input-img"><i class="fas fa-plus"></i>
+                        <img src="" alt="" id="img"></label>
+                    <input type="file" id="input-img">
+                </div>
+                <div class="example-text ml-3">
+                    <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                    <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                </div>
+            </div>
+          
+        </div>
+
+
+
+        <div class="form-select">
+            <select class="mdb-select md-form w-100">
+                <option value="" disabled selected>123</option>
+                <option value="1">1</option>
+
+            </select>
+        </div>
+
+        <div class="modal-radio">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../resources/js/modal.js"></script>
+</body>
+
+</html>

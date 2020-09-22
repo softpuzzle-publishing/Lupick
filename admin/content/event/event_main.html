@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../../resources/plugins/chart/Chart.min.css">
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="gnb" class="">
+            <div class="gnb-content">
+                <div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="dash-profile d-flex align-items-center">
+                            <div class="profile-img"></div>
+                            <div>
+                                <p>TIDO</p>
+                                <p>마스터</p>
+                            </div>
+                        </div>
+                        <span><i class="far fa-bell"></i></span>
+                    </div>
+
+                    <button type="button" class="btn produce-event-btn" data-toggle="modal"
+                        data-target=".bd-example-modal-xl">+ 이벤트 생성</button>
+                </div>
+                <ul>
+                    <li>
+                        <a href="../dashboard/dashboard-home.html">
+                            <i class="fas fa-home"></i>
+                            <span>대시보드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span>재무</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span>통계</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="../event/event_main.html">
+                            <i class="far fa-comment-alt"></i>
+                            <span class="active">이벤트</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span>피드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span>배너</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="far fa-user"></i>
+                            <span>루픽 유저</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-user"></i>
+                            <span>루픽 메이커</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-user"></i>
+                            <span>판매자</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            <span>공지사항</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            <span>푸시 메시지</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            <span>문의내역</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            <span>환경설정</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div id="container-block">
+            <h2>안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+
+            <div class="row mr-0 ml-0">
+                <div class="main-event">
+                    <h1 class="title">Main Event</h1>
+                    <ul class="d-flex">
+                        <li class="main-event-box">
+                            <div class="event-box">
+                                <div class="reservation">
+                                    <span>예약 이벤트</span> <span>07:01:30 </span><span> 남음</span>
+                                    <p>9명에게 포르쉐911을 FLEX 해버릴까봐💥</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-event-box">
+                            <div class="event-box">
+                                <div class="achievement">
+                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
+                                    <p>샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-event-box">
+                            <div class="event-box">
+                                <div class="reservation">
+                                    <span>예약 이벤트</span> <span>2일</span><span>남음</span>
+                                    <p>방탄소년단 무대 보고 콘서트 티켓 받아가자</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-event-box">
+                            <div class="event-box">
+                                <div class="achievement">
+                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
+                                    <p>3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-event-box">
+                            <div class="event-box">
+                                <div class="achievement">
+                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
+                                    <p>스타벅스에서 7천원 쓰고 10만원 받아가자💰</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-event-box">
+                            <div class="event-box">
+                                <div class="achievement">
+                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
+                                    <p>센세이셔널한 아홉소년들과 90:9 저녁 만찬🥂</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="main-event-box">
+                            <div class="event-box">
+                                <div class="achievement">
+                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
+                                    <p>너도나도 파라다이스 침대 타고 하와이까지✈️</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="d-flex align-items-center event-title mb-3">
+                    <span>Event</span><span>총 792개의 이벤트 중 현재 67개의 이벤트를 진행중이에요</span>
+                </div>
+                <div class="col-12 d-flex align-items-center">
+                    <div class="event-search d-flex align-items-center">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input class="form-control border-0 form-control-sm ml-3 w-100" type="text"
+                            placeholder="찾고 싶은 이벤트가 있나요?" aria-label="Search">
+                    </div>
+                    <div class="event-select">
+                        <select class="mdb-select md-form w-100">
+                            <option value="" disabled selected>진행중인 이벤트</option>
+                            <option value="1">대기중인 이벤트</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 mt-4 p-0">
+                    <ul class="event-list">
+                        <li>
+                            <div class="col" data-toggle="modal" data-target="#myModal1">
+                                <div class="event-content"
+                                    style="background-image:url('../../resources/images/photo1.png')">
+                                    <div class="event-content-text">
+                                        <div class="d-flex">
+                                            <div class="event-name">
+                                                <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                            </div>
+                                            <div class="event-like">
+                                                <i class="fab fa-gratipay"></i>
+                                                <span>1,234</span>
+                                            </div>
+                                        </div>
+                                        <div class="row event-progress m-0">
+                                            <div id="resumeProficiencies">
+                                                <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                                <div id="resumeProficienciesBottom">
+                                                    <div class="progress">
+                                                        <div class="adobe progress-bar progress-bar-info"
+                                                            role="progressbar" style="width: 0%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="event-time">
+                                                <span>00:17:09:28</span>
+                                            </div>
+                                            <div class="event-percent">
+                                                <span>2자리 남았어요!</span>
+                                                <span>98%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col">
+                                <div class="event-content"
+                                    style="background-image:url('../../resources/images/photo1.png')">
+
+                                    <div class="event-content-text">
+                                        <div class="d-flex">
+                                            <div class="event-name">
+                                                <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                            </div>
+                                            <div class="event-like">
+                                                <i class="fab fa-gratipay"></i>
+                                                <span>1,234</span>
+                                            </div>
+                                        </div>
+                                        <div class="row event-progress m-0">
+                                            <div id="resumeProficiencies">
+                                                <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                                <div id="resumeProficienciesBottom">
+                                                    <div class="progress">
+                                                        <div class="adobe progress-bar progress-bar-info"
+                                                            role="progressbar" style="width: 0%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="event-time">
+                                                <span>00:17:09:28</span>
+                                            </div>
+                                            <div class="event-percent">
+                                                <span>2자리 남았어요!</span>
+                                                <span>98%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col">
+                                <div class="event-content"
+                                    style="background-image:url('../../resources/images/photo1.png')">
+
+                                    <div class="event-content-text">
+                                        <div class="d-flex">
+                                            <div class="event-name">
+                                                <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                            </div>
+                                            <div class="event-like">
+                                                <i class="fab fa-gratipay"></i>
+                                                <span>1,234</span>
+                                            </div>
+                                        </div>
+                                        <div class="row event-progress m-0">
+                                            <div id="resumeProficiencies">
+                                                <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                                <div id="resumeProficienciesBottom">
+                                                    <div class="progress">
+                                                        <div class="adobe progress-bar progress-bar-info"
+                                                            role="progressbar" style="width: 0%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="event-time">
+                                                <span>00:17:09:28</span>
+                                            </div>
+                                            <div class="event-percent">
+                                                <span>2자리 남았어요!</span>
+                                                <span>98%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col">
+                                <div class="event-content"
+                                    style="background-image:url('../../resources/images/photo1.png')">
+
+                                    <div class="event-content-text">
+                                        <div class="d-flex">
+                                            <div class="event-name">
+                                                <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                            </div>
+                                            <div class="event-like">
+                                                <i class="fab fa-gratipay"></i>
+                                                <span>1,234</span>
+                                            </div>
+                                        </div>
+                                        <div class="row event-progress m-0">
+                                            <div id="resumeProficiencies">
+                                                <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                                <div id="resumeProficienciesBottom">
+                                                    <div class="progress">
+                                                        <div class="adobe progress-bar progress-bar-info"
+                                                            role="progressbar" style="width: 0%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="event-time">
+                                                <span>00:17:09:28</span>
+                                            </div>
+                                            <div class="event-percent">
+                                                <span>2자리 남았어요!</span>
+                                                <span>98%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col">
+                                <div class="event-content"
+                                    style="background-image:url('../../resources/images/photo1.png')">
+
+                                    <div class="event-content-text">
+                                        <div class="d-flex">
+                                            <div class="event-name">
+                                                <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                            </div>
+                                            <div class="event-like">
+                                                <i class="fab fa-gratipay"></i>
+                                                <span>1,234</span>
+                                            </div>
+                                        </div>
+                                        <div class="row event-progress m-0">
+                                            <div id="resumeProficiencies">
+                                                <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                                <div id="resumeProficienciesBottom">
+                                                    <div class="progress">
+                                                        <div class="adobe progress-bar progress-bar-info"
+                                                            role="progressbar" style="width: 0%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="event-time">
+                                                <span>00:17:09:28</span>
+                                            </div>
+                                            <div class="event-percent">
+                                                <span>2자리 남았어요!</span>
+                                                <span>98%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="col">
+                                <div class="event-content"
+                                    style="background-image:url('../../resources/images/photo1.png')">
+
+                                    <div class="event-content-text">
+                                        <div class="d-flex">
+                                            <div class="event-name">
+                                                <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                            </div>
+                                            <div class="event-like">
+                                                <i class="fab fa-gratipay"></i>
+                                                <span>1,234</span>
+                                            </div>
+                                        </div>
+                                        <div class="row event-progress m-0">
+                                            <div id="resumeProficiencies">
+                                                <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                                <div id="resumeProficienciesBottom">
+                                                    <div class="progress">
+                                                        <div class="adobe progress-bar progress-bar-info"
+                                                            role="progressbar" style="width: 0%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="event-time">
+                                                <span>00:17:09:28</span>
+                                            </div>
+                                            <div class="event-percent">
+                                                <span>2자리 남았어요!</span>
+                                                <span>98%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+
+    <!-- Modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div id="modal-header">
+                    <div class="modal-header-top">
+                        <ul class="d-flex">
+                            <li class="active">이벤트 생성</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>진행 상황</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>아이템 배송</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>투표</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>집행</li>
+                        </ul>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item modal-nav active">
+                            <a class="nav-link" href="#">이벤트 정보</a>
+                        </li>
+                        <li class="nav-item modal-nav">
+                            <a class="nav-link" href="#">아이템 정보</a>
+                        </li>
+                        <li class="nav-item modal-nav">
+                            <a class="nav-link" href="#">럭키템 정보</a>
+                        </li>
+                        <li class="nav-item modal-nav">
+                            <a class="nav-link" href="#">이벤트 상세 정보</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <!-- //이벤트 정보 -->
+                    <div class="info-event" id="div1">
+                        <table class="table">
+                            <p class="modal-sub-title">이벤트 정보</p>
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <tbody>
+
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <label for="input-img"><i class="fas fa-plus"></i>
+                                                    <img src="" alt="" id="img"></label>
+                                                <input type="file" id="input-img">
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이벤트 타이틀</th>
+                                    <td>
+                                        <div class="input-group modal-textarea title align-items-end">
+                                            <textarea class="form-control " aria-label="With textarea" maxlength="40"
+                                                placeholder="이벤트 제목을 입력해주세요."></textarea>
+                                            <div class="textarea-counter ml-3">
+                                                <span id="counter-title">0</span><span>/40</span><span
+                                                    class="example-text ml-3">* 이벤트
+                                                    타이틀은 최소
+                                                    20자 이상으로 작성해주세요.</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th>이벤트 예약</th>
+                                    <td>
+                                        <div class="modal-radio">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio1" value="option1">
+                                                <label class="form-check-label ml-2" for="inlineRadio1">바로 오픈</label>
+                                            </div>
+                                            <div class="form-check form-check-inline ml-4">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                                    id="inlineRadio2" value="option2">
+                                                <label class="form-check-label ml-2" for="inlineRadio2">예약 오픈</label>
+                                            </div>
+                                            <div class='form-date form-check-inline'>
+                                                <div class="form-group">
+                                                    <div class="input-group date" id="datetimepicker2"
+                                                        data-target-input="nearest"> <input type="text"
+                                                            class="form-control datetimepicker-input"
+                                                            data-target="#datetimepicker2"
+                                                            placeholder="2020.08.10 19:00">
+                                                        <div class="input-group-append" data-target="#datetimepicker2"
+                                                            data-toggle="datetimepicker">
+                                                            <div class="input-group-text"><i class="fa fa-calendar"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이벤트 기간</th>
+                                    <td>
+                                        <div class="form-term">
+                                            <input type="number" value="07" class="text-center">
+                                            <span>일</span>
+                                            <span class="example-text ml-3">* 평균 이벤트 권장 기간은 7일 입니다. 규모가 큰 이벤트나 특별한 경우
+                                                마스터와 협의해 주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- //아이템 정보 -->
+                    <div class="info-item">
+                        <table class="table">
+                            <p class="modal-sub-title">아이템 정보</p>
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>아이템 카테고리</th>
+                                    <td>
+                                        <div class="form-select">
+                                            <select class="mdb-select md-form modal-subject">
+                                                <option value="" disabled selected>카테고리 선택</option>
+                                                <option value="1">스페셜 태그(Blue)</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>아이템 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <label for="input-img"><i class="fas fa-plus"></i>
+                                                    <img src="" alt="" id="img"></label>
+                                                <input type="file" id="input-img">
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>아이템 타이틀</th>
+                                    <td>
+                                        <div class="input-group large">
+                                            <textarea class="form-control modal-textarea"
+                                                aria-label="With textarea"></textarea>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>아이템 설명</th>
+                                    <td>
+                                        <div
+                                            class="input-group modal-textarea explanation d-flex align-items-center large">
+                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
+                                                maxlength="90"></textarea>
+                                            <div class="textarea-counter ml-3">
+                                                <span id="counter-explanation">0</span><span>/90</span>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>아이템 수량</th>
+                                    <td>
+                                        <div class="form-term">
+                                            <input type="number" value="07" class=" small">
+                                            <span>개</span>
+                                            <span class="example-text ml-3"> * 1,000,000 미만으로 입력해 주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>아이템 옵션</th>
+                                    <td>
+                                        <div class="form-term">
+                                            <p>옵션 개수 입력</p>
+                                            <input type="number" value="07" class="small mt-2 text-center">
+                                        </div>
+
+                                        <div class="modal-option-title d-flex justify-content-between mt-4">
+                                            <p class="w-50">옵션명</p>
+                                            <p class="w-50 ml-3">옵션 수량 <span class="example-text ml-3"> * 1,000,000 미만으로
+                                                    입력해 주세요.</span></p>
+                                        </div>
+
+
+                                        <div class="modal-create-option d-flex justify-content-between">
+                                            <div class="input-group modal-textarea w-50">
+                                                <input type="text" placeholder="컬러 - 화이트">
+                                            </div>
+                                            <div class="form-term w-50 ml-3">
+                                                <input type="number" value="07" class="small">
+                                                <span>개</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-create-option d-flex justify-content-between">
+                                            <div class="input-group modal-textarea w-50">
+                                                <input type="text" placeholder="컬러 - 블랙">
+                                            </div>
+                                            <div class="form-term w-50 ml-3">
+                                                <input type="number" value="07" class="small">
+                                                <span>개</span>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="45%">
+                                <col width="15%">
+                                <col width="25%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>아이템 매입가</th>
+                                    <td>
+                                        <div class="form-term">
+                                            <input type="number" value="" class="m-small">
+                                            <span>원</span>
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">아이템 판매가</th>
+                                    <td rowspan="2">
+                                        <div class="form-term">
+                                            <input type="number" value="" class="m-small">
+                                            <span>원</span>
+
+                                        </div>
+                                    <th class="text-center">아이템 판매 마진율</th>
+                                    <td>
+                                        <span>25 %</span>
+                                        <span class="example-text">*20% 마진율을 권장</span>
+                                    </td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>아이템 배송 택배사</th>
+                                    <td>
+                                        <div class="form-select">
+                                            <select class="mdb-select md-form">
+                                                <option value="" disabled selected>택배사를 선택하세요.</option>
+                                                <option value="1">한진택배</option>
+                                                <option value="1">한진택배</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>아이템 배송비</th>
+                                    <td>
+                                        <div class="form-select">
+                                            <select class="mdb-select md-form">
+                                                <option value="기본 배송">기본 배송</option>
+                                                <option value="조건부 무료배송">조건부 무료배송</option>
+                                                <option value="수량별 배송비">수량별 배송비</option>
+                                                <option value="착불 배송">착불 배송</option>
+
+                                            </select>
+                                            <span></span>
+                                        </div>
+                                        <!-- //기본배송 -->
+                                        <div class="form-term original-del">
+                                            <span>기본 배송비</span>
+                                            <input type="number" class="small">
+                                            <span>원<span>
+                                        </div>
+                                        <!-- //조건부 무료배송 -->
+                                        <div class="form-term free-del d-flex">
+                                            <div class="">
+                                                <span>기본 배송비</span>
+                                                <input type="number" class="small">
+                                                <span>원<span>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span>무료배송 조건 금액</span>
+                                                <input type="number" class="small" value="50000">
+                                                <span>원 이상 구매시 무료배송<span>
+                                            </div>
+                                        </div>
+                                        <!-- //수량별 배송비 -->
+                                        <div class="form-term count-del d-flex">
+                                            <div class="">
+                                                <span>* 1개 구매</span>
+                                                <input type="number" class="small">
+                                                <span>원<span>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span>* 2개 구매</span>
+                                                <input type="number" class="small">
+                                                <span>원<span>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span>* 3개 구매</span>
+                                                <input type="number" class="small">
+                                                <span>원<span>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span>* 4개 구매</span>
+                                                <input type="number" class="small">
+                                                <span>원<span>
+                                            </div>
+                                            <div class="ml-3">
+                                                <span>* 5개 구매</span>
+                                                <input type="number" class="small">
+                                                <span>원<span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- //럭키템 정보 -->
+                    <div class="info-lucky">
+                        <table class="table">
+                            <p class="modal-sub-title">럭키템 정보</p>
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <tbody>
+
+                                <tr>
+                                    <th>메인 럭키템 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <label for="input-img"><i class="fas fa-plus"></i>
+                                                    <img src="" alt="" id="img"></label>
+                                                <input type="file" id="input-img">
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>메인 럭키템 타이틀</th>
+                                    <td>
+                                        <div class="input-group large">
+                                            <textarea class="form-control modal-textarea"
+                                                aria-label="With textarea"></textarea>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>메인 럭키템 설명</th>
+                                    <td>
+                                        <div
+                                            class="input-group modal-textarea explanation d-flex align-items-center large">
+                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
+                                                maxlength="90"></textarea>
+                                            <div class="textarea-counter ml-3">
+                                                <span id="counter-explanation">0</span><span>/90</span>
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>메인 럭키템 선정자 수</th>
+                                    <td>
+                                        <div class="form-term">
+                                            <input type="number" class="small">
+                                            <span>명<span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>메인 럭키템 개당 예상 가격</th>
+                                    <td>
+                                        <div class="form-term">
+                                            <input type="number" class="m-small">
+                                            <span>원<span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>럭키템 차등 지급 옵션</th>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <span class="lucky-item-checkbox mr-2">
+                                                <input type="checkbox" id="lucky-item">
+                                                <label for="lucky-item"></label>
+                                                <span>럭키템 추가등록</span>
+                                            </span>
+
+                                            <div class="form-term">
+                                                <input type="number" class="m-small">
+                                                <span>개<span>
+                                                        <span class="example-text">
+                                                            * 1등 럭키템 외에도 추가 럭키템이 있다면 럭키템 차등 지급 옵션에 개수를 입력해 주세요.
+                                                        </span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="70%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th rowspan="6">2위 럭키템</th>
+                                </tr>
+                                <tr>
+                                    <th>럭키템 타입</th>
+                                    <td>
+                                        <div class="form-select">
+                                            <select class="mdb-select md-form">
+                                                <option value="" disabled selected>택배사를 선택하세요.</option>
+                                                <option value="1">한진택배</option>
+                                                <option value="1">한진택배</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>럭키템 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <label for="input-img"><i class="fas fa-plus"></i>
+                                                    <img src="" alt="" id="img"></label>
+                                                <input type="file" id="input-img">
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>럭키템 타이틀</th>
+                                    <td>
+                                        <div
+                                            class="input-group modal-textarea explanation d-flex align-items-center large">
+                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
+                                                maxlength="90"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>럭키템 선정자 수</th>
+                                    <td>
+                                        <div class="form-term">
+                                            <input type="number" class="small">
+                                            <span>명<span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>럭키템 개당 예상 가격</th>
+                                    <td>
+                                        <div class="form-term">
+                                            <input type="number" class="m-small">
+                                            <span>명<span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- //3위  -->
+                                <tr>
+                                    <th rowspan="2">3위 럭키템</th>
+                                </tr>
+                                <tr>
+                                    <th>럭키템 타입</th>
+                                    <td>
+                                        <div class="form-select">
+                                            <select class="mdb-select md-form">
+                                                <option value="">포인트 지급</option>
+                                            </select>
+                                        </div>
+                                        <!-- //기본배송 -->
+                                        <div class="form-term mt-3">
+                                            <span>랜덤</span>
+                                            <input type="number" class="small">
+                                            <span>명 에게</span>
+                                            <input type="number" class="small">
+                                            <span>포인트 일괄 지급</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">4위 럭키템</th>
+                                </tr>
+                                <tr>
+                                    <th>럭키템 타입</th>
+                                    <td>
+                                        <div class="form-select">
+                                            <select class="mdb-select md-form">
+                                                <option value="" disabled selected>택배사를 선택하세요.</option>
+                                                <option value="1">한진택배</option>
+                                                <option value="1">한진택배</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="info-detail-event">
+                        <table class="table">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <p class="modal-sub-title">이벤트 상세 정보</p>
+                            <tbody>
+                                <tr>
+                                    <th>이벤트 상세 정보</th>
+                                    <td>에디터 영역</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>교환 / 환불 / 취소 정책</th>
+                                    <td>
+                                        <div class="input-group modal-textarea d-flex align-items-center large">
+                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
+                                                maxlength="90" placeholder="- 파손 또는 불량품 수령 시 [   ]일 이내로 교환이 가능합니다.
+                                - 교환 및 AS 문의는 판매자에게 직접 문의해주세요.
+                                - 파손이나 불량품 교환시 발생하는 비용은 판매자가 부담합니다. 
+                                - 선물 확인을 위한 포장 훼손 외에 아이템의 가치가 훼손된 경우에는 교환 및 환불이 불가합니다."></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>상품 필수 표기 정보</th>
+                                    <td>
+                                        <div class="input-group modal-textarea d-flex align-items-center large">
+                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
+                                                maxlength="90"
+                                                placeholder="전자상거래 등에서의 상품 등의 정보제공에 관한 고시법에 따라, 이벤트 아이템 상품 정보를 고시하여야 합니다."></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="70%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th rowspan="7">판매자 정보</th>
+                                </tr>
+                                <tr>
+                                    <th>상호명</th>
+                                    <td>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="상호명을 입력해주세요." class="medium">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>대표자</th>
+                                    <td>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="대표자 성함을 입력해주세요." class="m-small">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사업자번호</th>
+                                    <td>
+                                        <div class="form-phone">
+                                            <input type="number" class="small">
+                                            <hr width="10px">
+                                            <input type="number" class="small">
+                                            <hr width="10px">
+                                            <input type="number" class="small">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>통신판매번호</th>
+                                    <td>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="통신판매번호를 입력해 주세요." class="medium">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사업자 소재지</th>
+                                    <td>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="사업자 소재지 주소를 입력해주세요." class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>고객센터 전화번호</th>
+                                    <td>
+                                        <div class="form-phone">
+                                            <input type="number" class="small">
+                                            <hr width="10px">
+                                            <input type="number" class="small">
+                                            <hr width="10px">
+                                            <input type="number" class="small">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-border">마진 계산기</button>
+                        <button type="button" class="btn btn-border ml-3">앱 프리뷰</button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-request  btn-default btn-next ml-3">다음 단계</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content modal-event-create">
+                <div id="modal-header">
+                    <div class="modal-header-top">
+                        <ul class="d-flex">
+                            <li class="active">이벤트 생성</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">진행 상황</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>아이템 배송</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>투표</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>집행</li>
+                        </ul>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3">
+
+                            <div class="row ml-0 mr-0">
+                                <p class="modal-sub-title">이벤트 진행시간</p>
+                                <div class="col-12 dash-box text-center">
+                                    <div class="modal-event-time">
+                                        <p><span>04</span>일 <span>18</span>시 <span>20</span>분 <span>40</span></p>
+                                    </div>
+                                    <div class="modal-event-term">
+                                        <p>이벤트 모집기간 : 7일</p>
+                                        <p>2020.08.15 ~ 2020.08.14</p>
+                                    </div>
+                                </div>
+                                <p class="modal-sub-title">이벤트 달성률</p>
+                                <div class="col-12 dash-box text-center">
+                                    <div class="success-event">
+                                        <div class="success-event-percent  d-flex">
+                                            <p>이벤트 달성률</p>
+                                            <p class="paint">91%</p>
+                                        </div>
+
+
+                                        <div class="canvas-wrap">
+                                            <div class="canvas-text-box">
+                                                <div>
+                                                    <p>총 이벤트 아이템 개수</p>
+                                                    <p>1,200</p>
+                                                </div>
+                                                <canvas id="chart-area"
+                                                    style="display: block; width: 574px; height: 287px;" width="574"
+                                                    height="287" class="chartjs-render-monitor"></canvas>
+                                            </div>
+                                        </div>
+
+                                        <div class="event-count">
+                                            <div class="">
+                                                <div class="mt-2">
+                                                    <span class="yellow-circle"></span>
+                                                    <span>구매한 이벤트 아이템 개수</span>
+                                                </div>
+                                                <span>8</span>
+                                            </div>
+                                            <div class="">
+                                                <div class="">
+                                                    <span class="black-circle"></span>
+                                                    <span>남은 이벤트 아이템 개수</span>
+                                                </div>
+                                                <span>8</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="col-12">
+                                <p class="modal-sub-title">구매 현황</p>
+                                <table class="table mt-3">
+                                    <colgroup>
+                                        <col width="30%">
+                                        <col width="40%">
+                                        <col width="15%">
+                                        <col width="15%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="text-center">아이템 명</th>
+                                            <th scope="col" class="text-center">옵션</th>
+                                            <th scope="col" class="text-center">판매 수량</th>
+                                            <th scope="col" class="text-center">재고</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td>에스카다</td>
+                                            <td class="text-center">3500</td>
+                                            <td class="text-center">5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td>에스카다</td>
+                                            <td class="text-center">3500</td>
+                                            <td class="text-center">5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td>에스카다</td>
+                                            <td class="text-center">3500</td>
+                                            <td class="text-center">5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td>에스카다</td>
+                                            <td class="text-center">3500</td>
+                                            <td class="text-center">5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td>에스카다</td>
+                                            <td class="text-center">3500</td>
+                                            <td class="text-center">5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td>에스카다</td>
+                                            <td class="text-center">3500</td>
+                                            <td class="text-center">5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td>에스카다</td>
+                                            <td class="text-center">3500</td>
+                                            <td class="text-center">5000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td>에스카다</td>
+                                            <td class="text-center">3500</td>
+                                            <td class="text-center">5000</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-12">
+                                <p class="modal-sub-title">시간대별 구매 통계</p>
+                                <canvas id="densityChart" width="600" height="320"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="col-12">
+                                <p class="modal-sub-title">성별 구매 통계</p>
+                                <div class="canvas-wrap dash-box">
+                                    <div class="canvas-text-box">
+                                        <canvas id="chart-gender" style="display: block; width: 574px; height: 287px;"
+                                            width="574" height="287" class="chartjs-render-monitor"></canvas>
+                                    </div>
+                                    <div class="gender-list">
+                                        <div class="female">
+                                            <div class="yellow-circle"></div>
+                                            <p>여성</p>
+                                        </div>
+                                        <div class="male">
+                                            <div class="black-circle"></div>
+                                            <p>남성</p>
+                                        </div>
+                                        <div class="none-select">
+                                            <div class="gray-circle"></div>
+                                            <p>선택안함</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <p class="modal-sub-title">연령대별 구매 통계</p>
+                                <div class="canvas-wrap dash-box">
+                                    <div class="canvas-text-box">
+                                        <canvas id="chart-age" style="display: block; width: 574px; height: 287px;"
+                                            width="574" height="287" class="chartjs-render-monitor"></canvas>
+                                    </div>
+                                    <div class="age-list">
+                                        <div class="ten">
+                                            <div class="blue-circle"></div>
+                                            <p>10대</p>
+                                        </div>
+                                        <div class="twenty">
+                                            <div class="orange-circle"></div>
+                                            <p>20대</p>
+                                        </div>
+                                        <div class="thirty">
+                                            <div class="red-circle"></div>
+                                            <p>30대</p>
+                                        </div>
+                                        <div class="forty">
+                                            <div class="green-circle"></div>
+                                            <p>40대</p>
+                                        </div>
+                                        <div class="fifty" style="margin-left:18px">
+                                            <div class="gray-circle"></div>
+                                            <p>50대 이상</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-border">마진 계산기</button>
+                        <button type="button" class="btn btn-border ml-3">앱 프리뷰</button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-temporary-save btn-prev">이전 단계</button>
+                        <button type="button" class="btn btn-request btn-next ml-3">다음 단계</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content modal-event-create">
+                <div id="modal-header">
+                    <div class="modal-header-top">
+                        <ul class="d-flex">
+                            <li class="active">이벤트 생성</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">진행 상황</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">아이템 배송</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>투표</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>집행</li>
+                        </ul>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="col-12">
+                                <p class="modal-sub-title">상품 정보</p>
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">옵션</th>
+                                            <th class="text-center">판매 수량</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td class="text-center">5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td class="text-center">5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td class="text-center">5,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-12">
+                                <p class="modal-sub-title">판매자 정보</p>
+                                <ul class="dash-box seller-info">
+                                    <li> <span>상호명</span><span>주식회사 호호호</span> </li>
+                                    <li> <span>대표자</span><span>정용채</span> </li>
+                                    <li> <span>사업자 등록번호</span><span>101-20-02020</span> </li>
+                                    <li> <span>통신 판매업 번호</span><span>101-20-02020</span> </li>
+                                    <li> <span>사업자 소재지</span><span>서울시 강남구 논현동 101-1 3층</span> </li>
+                                    <li> <span>담당자</span><span>정민우</span> </li>
+                                    <li> <span>담당자 전화번호</span><span>010-2222-1111</span> </li>
+                                    <li> <span>CS 전화번호</span><span>010-2102-1234</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <p class="modal-sub-title">구매 현황</p>
+                            <div class="col-12 d-flex align-items-center p-0 mb-4">
+                                <div class="col-6 d-flex p-0">
+                                    <div class="form-select mr-4">
+                                        <select class="mdb-select md-form w-100">
+                                            <option value="" disabled selected>결제 완료 순</option>
+                                            <option value="1">스페셜 태그(Blue)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-select">
+                                        <select class="mdb-select md-form w-100">
+                                            <option value="" disabled selected>결제 수단 별</option>
+                                            <option value="1">스페셜 태그(Blue)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6 d-flex justify-content-end p-0">
+                                    <a href="" class="btn-border">주문내역 다운로드</a>
+                                    <a href="" class="btn-border ml-4">송장번호 업로드</a>
+                                </div>
+                            </div>
+                            <table class="table text-center">
+                                <thead>
+                                    <tr>
+                                        <th>주문 번호</th>
+                                        <th>주문 일자</th>
+                                        <th>주문 상품</th>
+                                        <th>수량</th>
+                                        <th>주문자</th>
+                                        <th>연락처</th>
+                                        <th>진행 상태</th>
+                                        <th>구매확정</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>1</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>배송 완료</td>
+                                        <td>OK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>3</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>상품 준비중</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>4</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>상품 준비중</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>2</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>상품 준비중</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>2</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>상품 준비중</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>2</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>상품 준비중</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>2</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>상품 준비중</td>
+                                        <td>-</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="purchase-list-pagination mt-3" aria-label="page-navigation">
+                                <ul class="pagination">
+                                    <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+                                    <li><a href="#">1</a></li>
+
+                                    <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-border">마진 계산기</button>
+                        <button type="button" class="btn btn-border ml-3">앱 프리뷰</button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-temporary-save btn-prev">이전 단계</button>
+                        <button type="button" class="btn btn-request btn-next ml-3">다음 단계</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content modal-event-create">
+                <div id="modal-header">
+                    <div class="modal-header-top">
+                        <ul class="d-flex">
+                            <li class="active">이벤트 생성</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">진행 상황</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">아이템 배송</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">투표</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li>집행</li>
+                        </ul>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="modal-sub-title">투표 잔여 시간</p>
+                            <div class="col-12 text-center dash-box p-0">
+
+                                <div class="modal-event-time">
+                                    <p><span>04</span>일 <span>18</span>시 <span>20</span>분 <span>40</span></p>
+                                </div>
+                                <div class="modal-event-term">
+                                    <p>이벤트 모집기간 : 7일</p>
+                                    <p>2020.08.15 ~ 2020.08.14</p>
+                                </div>
+                            </div>
+                            <div class="col-12 p-0">
+                                <p class="modal-sub-title">투표율</p>
+                                <div class="success-event dash-box">
+                                    <div class="success-event-percent  d-flex">
+                                        <p>이벤트 달성률</p>
+                                        <p class="paint">91%</p>
+                                    </div>
+
+
+                                    <div class="canvas-wrap">
+                                        <div class="canvas-text-box">
+                                            <div>
+                                                <p>총 이벤트 투표수</p>
+                                                <p>10,000</p>
+                                            </div>
+                                            <canvas id="chart-vote" style="display: block; width: 574px; height: 287px;"
+                                                width="574" height="287" class="chartjs-render-monitor"></canvas>
+                                        </div>
+                                    </div>
+
+                                    <div class="event-count">
+                                        <div class="">
+                                            <div class="mt-2">
+                                                <span class="yellow-circle"></span>
+                                                <span>직접 투표한 투표수</span>
+                                            </div>
+                                            <span>8</span>
+                                        </div>
+                                        <div class="">
+                                            <div class="">
+                                                <span class="black-circle"></span>
+                                                <span>자동 투표한 투표수</span>
+                                            </div>
+                                            <span>8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //투표중 -->
+                        <!-- <div class="col-9 dash-box d-flex align-items-center justify-content-center">
+                            <p class="voting">투표 중...</p>
+                        </div> -->
+                        <div class="col-3 lupicker-list">
+                            <p class="modal-sub-title">루피커 리스트</p>
+                            <div class="dash-box">
+                                <h1>루피커 득표수</h1>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <span>1</span>
+                                            <span>91번 오리</span>
+                                        </div>
+                                        <span class="paint">30표</span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span>2</span>
+                                            <span>1009번 후디</span>
+                                        </div>
+                                        <span class="paint">19표</span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span>3</span>
+                                            <span>2번 메이</span>
+                                        </div>
+                                        <span class="paint">3표</span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span>4</span>
+                                            <span>9999번 티도</span>
+                                        </div>
+                                        <span class="paint">3표</span>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <span>5</span>
+                                            <span>1000번 호빵이</span>
+                                        </div>
+                                        <span class="paint">1표</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="modal-sub-title">직접 투표자 리스트</p>
+                                <button class="btn btn-modal p-0 modal-more" data-toggle="modal" data-target="#fsModal">
+                                    전체보기 >
+                                </button>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center">투표자</th>
+                                        <th scope="col" class="text-center">고유번호</th>
+                                        <th scope="col" class="text-center">투표번호</th>
+                                        <th scope="col" class="text-center">득표수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">오리</td>
+                                        <td class="text-center">91</td>
+                                        <td class="text-center">777</td>
+                                        <td class="text-center">30</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">후디</td>
+                                        <td class="text-center">1009</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-center">19</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">메이</td>
+                                        <td class="text-center">7</td>
+                                        <td class="text-center">1000</td>
+                                        <td class="text-center">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">티도</td>
+                                        <td class="text-center">9999</td>
+                                        <td class="text-center">10</td>
+                                        <td class="text-center">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">호빵이</td>
+                                        <td class="text-center">1000</td>
+                                        <td class="text-center">7777</td>
+                                        <td class="text-center">1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-3">
+                            <p class="modal-sub-title">자동 투표자 리스트</p>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center">투표자</th>
+                                        <th scope="col" class="text-center">고유번호</th>
+                                        <th scope="col" class="text-center">투표번호</th>
+                                        <th scope="col" class="text-center">득표수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">오리</td>
+                                        <td class="text-center">91</td>
+                                        <td class="text-center">777</td>
+                                        <td class="text-center">30</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">후디</td>
+                                        <td class="text-center">1009</td>
+                                        <td class="text-center">1</td>
+                                        <td class="text-center">19</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">메이</td>
+                                        <td class="text-center">7</td>
+                                        <td class="text-center">1000</td>
+                                        <td class="text-center">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">티도</td>
+                                        <td class="text-center">9999</td>
+                                        <td class="text-center">10</td>
+                                        <td class="text-center">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">호빵이</td>
+                                        <td class="text-center">1000</td>
+                                        <td class="text-center">7777</td>
+                                        <td class="text-center">1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-border">마진 계산기</button>
+                        <button type="button" class="btn btn-border ml-3">앱 프리뷰</button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-temporary-save btn-prev">이전 단계</button>
+                        <button type="button" class="btn btn-request btn-next ml-3">다음 단계</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content modal-event-create">
+                <div id="modal-header">
+                    <div class="modal-header-top">
+                        <ul class="d-flex">
+                            <li class="active">이벤트 생성</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">진행 상황</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">아이템 배송</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">투표</li>
+                            <li><i class="fas fa-chevron-right"></i></li>
+                            <li class="active">집행</li>
+                        </ul>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="modal-sub-title">비용 결재</p>
+                            <div class="modal-cost">
+
+                                <table class="table">
+
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="85%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>결제 내용</th>
+                                            <td>
+                                                <div class="input-group modal-textarea title align-items-end">
+                                                    <textarea class="form-control " aria-label="With textarea"
+                                                        maxlength="40" placeholder="결재 내용을 간략하게 설명해주세요."></textarea>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>결제 금액</th>
+                                            <td>
+                                                <div class="form-term">
+                                                    <input type="number" value="07" class=" m-small">
+                                                    <span>원</span>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>기타 인증 서류</th>
+                                            <td>
+                                                <div class="select-file d-flex mb-4">
+
+                                                    <div class="select-filebox">
+                                                        <label for="input-img">
+                                                            <p>
+                                                                파일 선택
+                                                            </p>
+                                                        </label>
+                                                        <input type="file" id="input-img">
+                                                    </div>
+                                                    <div class="example-text ml-3">
+                                                        <p>* 첨부 파일을 마우스로 끌어 넣으세요.<br>
+                                                            5MB 이하 파일을 업로드하세요. (pdf, hwp, doc, docx, txt, png, jpg,
+                                                            jpeg, xls, xlsx 파일 형식만 가능)</p>
+                                                    </div>
+
+                                                </div>
+                                                <div class="select-file-list">
+                                                    <div id></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="more-paymen-info">
+                                <button class="btn btn-border">+ 결재 정보 추가</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-border">마진 계산기</button>
+                        <button type="button" class="btn btn-border ml-3">앱 프리뷰</button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-temporary-save btn-prev">이전 단계</button>
+                        <button type="button" class="btn btn-request btn-next ml-3">수정 요청</button>
+                        <button type="button" class="btn btn-request btn-next ml-3">결제 요청</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- modal -->
+    <div id="fsModal" class="modal active animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <!-- dialog -->
+        <div class="modal-dialog modal-vote-list">
+            <!-- content -->
+            <div class="modal-content">
+                <!-- header -->
+                <div class="modal-header d-flex align-items-center justify-content-between">
+                    <p class="modal-sub-title">직접 투표자 리스트</p>
+                    
+                    <div class="form-select">
+                        <select class="mdb-select md-form x-small">
+                            <option value="" selected>카테고리 선택</option>
+                            <option value="1">스페셜 태그(Blue)</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- header -->
+                <!-- body -->
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-center">투표자</th>
+                                <th scope="col" class="text-center">고유번호</th>
+                                <th scope="col" class="text-center">투표번호</th>
+                                <th scope="col" class="text-center">득표수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">오리</td>
+                                <td class="text-center">91</td>
+                                <td class="text-center">777</td>
+                                <td class="text-center">30</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">후디</td>
+                                <td class="text-center">1009</td>
+                                <td class="text-center">1</td>
+                                <td class="text-center">19</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">메이</td>
+                                <td class="text-center">7</td>
+                                <td class="text-center">1000</td>
+                                <td class="text-center">3</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">티도</td>
+                                <td class="text-center">9999</td>
+                                <td class="text-center">10</td>
+                                <td class="text-center">3</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">호빵이</td>
+                                <td class="text-center">1000</td>
+                                <td class="text-center">7777</td>
+                                <td class="text-center">1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                 
+
+                </div>
+                <!-- body -->
+
+                <!-- footer -->
+                <div class="modal-footer">
+                  
+                </div>
+                <!-- footer -->
+            </div>
+            <!-- content -->
+        </div>
+        <!-- dialog -->
+    </div>
+    <!-- modal -->
+
+    <script src="../../resources/js/modal.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.adobe').css('width', '98%');
+        })
+
+
+        ///이벤트 달성률
+
+        var config = {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [91, 9],
+                    weight: 1,
+                    backgroundColor: [
+                        '#ffff00',
+                        '#000'
+                    ]
+                }],
+            },
+            options: {
+                responsive: true,
+                rotation: -0.3 * Math.PI,
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                cutoutPercentage: 80,
+                maintainAspectRatio: false,
+            }
+        };
+
+        window.onload = function () {
+            var ctx = document.getElementById('chart-area').getContext('2d');
+            window.myDoughnut = new Chart(ctx, config);
+        };
+
+        ///시간대별 구매 통계
+        var densityCanvas = document.getElementById("densityChart");
+
+        Chart.defaults.global.defaultFontFamily = "Lato";
+        Chart.defaults.global.defaultFontSize = 18;
+
+        var densityData = {
+            data: [20, 15, 16, 16, 20, 20, 60, 17, 17, 80, 85, 20],
+            barPercentage: 0.2,
+            backgroundColor: "#000000"
+        };
+
+        var barChart = new Chart(densityCanvas, {
+            type: 'bar',
+            data: {
+                labels: ["01-02h", "03-04h", "05-06h", "07-08h", "09-10h", "11-12h", "13-14h", "15-16h",
+                    "17-18h", "19-20h", "21-22h", "23-24h"
+                ],
+                datasets: [densityData]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: '2020.08.10'
+                },
+
+            }
+        });
+
+
+        //성별 구매 통계
+        var gender = document.getElementById('chart-gender').getContext('2d');
+
+        var myDoughnutChart = new Chart(gender, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [30, 32, 48],
+                    weight: 1,
+                    backgroundColor: [
+                        '#7b7b7b',
+                        '#000',
+                        '#ffff00',
+
+
+                    ]
+                }],
+            },
+            options: {
+                responsive: true,
+                rotation: 1 * Math.PI,
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                cutoutPercentage: 80,
+                maintainAspectRatio: false,
+            }
+        });
+
+        //연령대별 구매 통계
+        var age = document.getElementById('chart-age').getContext('2d');
+
+        var myDoughnutChart = new Chart(age, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [12, 28, 24, 22, 14],
+                    weight: 1,
+                    backgroundColor: [
+                        '#36a753',
+                        '#4286f5',
+                        '#ea4335',
+                        '#fabc05',
+                        '#8a8d92'
+                    ]
+                }],
+            },
+            options: {
+                responsive: true,
+                // rotation: -0.3 * Math.PI,
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                cutoutPercentage: 80,
+                maintainAspectRatio: false,
+            }
+        });
+
+        //투표율
+        var vote = document.getElementById('chart-vote').getContext('2d');
+
+        var myDoughnutChart = new Chart(vote, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [10, 90],
+                    weight: 1,
+                    backgroundColor: [
+                        '#000000',
+                        '#ffff00',
+
+                    ]
+                }],
+            },
+            options: {
+                responsive: true,
+                // rotation: -0.3 * Math.PI,
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                },
+                cutoutPercentage: 80,
+                maintainAspectRatio: false,
+            }
+        });
+    </script>
+
+</body>
+
+</html>

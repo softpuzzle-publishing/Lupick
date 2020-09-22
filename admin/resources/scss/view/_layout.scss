@@ -1,0 +1,39 @@
+#wrap{
+    width: 100%;
+    display: flex;
+}
+#gnb{
+    height: 100vh;
+    padding : 30px;
+    box-shadow: 5px 0 10px -5px rgba(0, 0, 0, 0.1);
+}
+#container-block{
+    width: 100%;
+    padding : 40px 30px;
+}
+.dash-box{
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);border: solid 1px rgba(0, 0, 0, 0.1);background-color: $white; padding : 30px;
+}
+.event-box{
+    height: 100%;
+}
+.main-event-box{
+    margin: 0 6px;
+    flex: 1 0 0%;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);border: solid 1px rgba(0, 0, 0, 0.1);background-color: $white;
+}
+@media screen and (max-width:1280px){
+    .main-event{
+        ul{
+            flex-flow:wrap;
+        }
+        
+    }
+    
+}
+@media screen and (max-width:900px){
+    .main-event{
+        
+    }
+    
+}

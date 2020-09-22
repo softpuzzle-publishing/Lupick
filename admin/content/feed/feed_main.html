@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <aside id="gnb" class="">
+            <div class="gnb-content">
+                <div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="dash-profile d-flex align-items-center">
+                            <div class="profile-img"></div>
+                            <div>
+                                <p>TIDO</p>
+                                <p>마스터</p>
+                            </div>
+                        </div>
+                        <span><i class="far fa-bell"></i></span>
+                    </div>
+
+                    <button type="button" class="btn produce-event-btn" data-toggle="modal"
+                        data-target=".bd-example-modal-xl">+ 이벤트 생성</button>
+                </div>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-home"></i>
+                            <span>대시보드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span>재무</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span>통계</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span class="active">이벤트</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span>피드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-comment-alt"></i>
+                            <span>배너</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="far fa-user"></i>
+                            <span>루픽 유저</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-user"></i>
+                            <span>루픽 메이커</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-user"></i>
+                            <span>판매자</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            <span>공지사항</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            <span>푸시 메시지</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            <span>문의내역</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-cog"></i>
+                            <span>환경설정</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div id="container-block">
+            <h2>안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+
+            <div class="row mr-0 ml-0">
+                <nav id="nav">
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-all-tab" data-toggle="tab" href="#nav-all"
+                            role="tab" aria-controls="nav-all" aria-selected="true">전체 피드</a>
+
+                        <a class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab"
+                            aria-controls="nav-review" aria-selected="false">이벤트 후기</a>
+
+                        <a class="nav-item nav-link" id="nav-story-tab" data-toggle="tab" href="#nav-story" role="tab"
+                            aria-controls="nav-story" aria-selected="false">루픽 스토리</a>
+
+                        <a class="nav-item nav-link" id="nav-exhibition-tab" data-toggle="tab" href="#nav-exhibition"
+                            role="tab" aria-controls="nav-exhibition" aria-selected="false">기획전</a>
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 d-flex align-items-center">
+                    <div class="feed-search d-flex align-items-center">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input class="form-control border-0 form-control-sm ml-3 w-100" type="text"
+                            placeholder="찾고 싶은 피드가 있나요?" aria-label="Search">
+                    </div>
+                    <div class="feed-select">
+                        <select class="mdb-select md-form w-100">
+                            <option value="" disabled selected>전체 피드</option>
+                            <option value="1">이벤트 후기</option>
+                            <option value="2">루픽 스토리</option>
+                            <option value="3">기획전</option>
+                        </select>
+                    </div>
+                    <div class="edit-feed">
+                        <button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-xl">+ 피드
+                            작성하기</button>
+                    </div>
+                </div>
+                <div class="col-12 tab-content p-0" id="nav-tabContent">
+
+                    <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+                        <div class="col-12 mt-4 p-0">
+                            <ul class="event-list">
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+                        <div class="col-12 mt-4 p-0">
+                            <ul class="event-list">
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-story" role="tabpanel" aria-labelledby="nav-story-tab">
+                        <div class="col-12 mt-4 p-0">
+                            <ul class="event-list">
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-exhibition" role="tabpanel" aria-labelledby="nav-exhibition-tab">
+                        <div class="col-12 mt-4 p-0">
+                            <ul class="event-list">
+                                <li>
+                                    <div class="col">
+                                        <div class="event-content"
+                                            style="background-image:url('../../resources/images/photo1.png')">
+                                            <div class="event-content-text">
+                                                <div class="d-flex">
+                                                    <div class="event-title">
+                                                        <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                                    </div>
+                                                    <div class="event-like">
+                                                        <i class="fab fa-gratipay"></i>
+                                                        <span>1,234</span>
+                                                    </div>
+                                                </div>
+                                                <div class="row event-progress m-0">
+                                                    <div id="resumeProficiencies">
+                                                        <div id="resumeProficienciesTop"
+                                                            class="resumeProficienciesTop1"></div>
+                                                        <div id="resumeProficienciesBottom">
+                                                            <div class="progress">
+                                                                <div class="adobe progress-bar progress-bar-info"
+                                                                    role="progressbar" style="width: 0%">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="event-time">
+                                                        <span>00:17:09:28</span>
+                                                    </div>
+                                                    <div class="event-percent">
+                                                        <span>2자리 남았어요!</span>
+                                                        <span>98%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div id="modal-header">
+                    <div class="modal-header-top">
+                        <h3 class="mb-0">피드 관리</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="modal-body">
+                    <!-- //이벤트 정보 -->
+                    <div class="info-event" id="div1">
+                        <table class="table">
+                            <p class="modal-sub-title">피드 관리</p>
+                            <colgroup>
+                                <col width="15%">
+                                <col width="85%">
+                            </colgroup>
+                            <tbody>
+
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <label for="input-img"><i class="fas fa-plus"></i>
+                                                    <img src="" alt="" id="img"></label>
+                                                <input type="file" id="input-img">
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>피드 타이틀</th>
+                                    <td>
+                                        <div class="input-group modal-textarea title align-items-end">
+                                            <textarea class="form-control " aria-label="With textarea" maxlength="50"
+                                                placeholder="이벤트 제목을 입력해주세요."></textarea>
+                                            <div class="textarea-counter ml-3">
+                                                <span id="counter-title">0</span><span>/50</span><span
+                                                    class="example-text ml-3">* 피드 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th>피드 상세페이지</th>
+                                    <td>
+                                        에디터 영역
+                                    </td>
+                                </tr>
+                               
+                               
+                               
+                            </tbody>
+                        </table>
+                    </div>
+
+                 
+                    
+
+                    
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-border">마진 계산기</button>
+                        <button type="button" class="btn btn-border ml-3">앱 프리뷰</button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-temporary-save">임시 저장</button>
+                        <button type="button" class="btn btn-request ml-3">승인 요청</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.adobe').css('width', '98%');
+
+        });
+    </script>
+
+</body>
+
+</html>
