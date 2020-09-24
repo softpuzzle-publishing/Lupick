@@ -3,17 +3,7 @@
     width: 100%;
     height: 100vh;
 }
-input[type="password"],[type="email"],[type="text"],[type="number"]{
-    width:100%;
-}
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
-
-input:focus { outline: none; }
 .info-form {
     padding:80px;
 
@@ -21,7 +11,7 @@ input:focus { outline: none; }
         input{ border: none; border-bottom: 1px solid $gray; padding:15px 0; }
         input.active{ border: none; border-bottom: 1px solid $black; padding:15px 0; }
     }
-    
+
     .login-btn, .sign-up-btn{ margin-top: 60px; background-color:$gray; color:$white;}
     .login-btn.active, .sign-up-btn.active{ margin-top: 60px; background-color:$black; color:$white;}
 
@@ -29,7 +19,7 @@ input:focus { outline: none; }
         h1{ font-size:30px; }
         span{ font-size:23px; color:$d-gray;}
         a{
-        font-size:23px;         
+        font-size:23px;
         color:$black;
         position: relative;
         z-index: 2;
@@ -42,7 +32,7 @@ input:focus { outline: none; }
             left:0;
             background-color:$yellow;
             z-index: -1;
-          }  
+          }
         }
     }
     .info-form-content{
@@ -81,7 +71,7 @@ input:focus { outline: none; }
         span{
             &:nth-child(1){
                 display: flex;
-                align-items: center;                            
+                align-items: center;
             }
             &:nth-child(2){
                 font-weight: bold;
@@ -92,7 +82,7 @@ input:focus { outline: none; }
                 }
             }
         }
-        
+
         input[id="login"] {
             display: none;
         }
@@ -104,11 +94,11 @@ input:focus { outline: none; }
             cursor: pointer;
         }
         input[id="login"]:checked + label {
-            background-image:url('../../resources/images/checkbox-icon.png');
+            background-image:url('../images/checkbox-icon.png');
             background-position: center;
             background-size: cover;
         }
-        
+
     }
-      
+
 }

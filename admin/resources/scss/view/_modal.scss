@@ -1,74 +1,53 @@
+.modal-backdrop + .modal-backdrop.show{
+    z-index: 1051;
+}
+.modal[data-overlap=true]{
+    z-index: 1052;
+}
+
 // xl
-#modal-header {
-    margin: 0 30px;
-    padding: 30px 0 0 0;
-    border-bottom: 1px solid $black;
+.modal-header {
+    margin: 0 40px;display: block;padding: 30px 0 0 0;border-bottom: 1px solid $black;min-height: 98px;
 
     .modal-header-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 30px;
-
         h3 {
-            font-size: 27px
+            font-size: 24px
         }
         ul{
             li{
-                opacity: $gray-opacity;
-                font-size: 27px;
+                opacity: $gray-opacity;font-size: 24px;
+                i{
+                    margin:0 20px;font-size: 20px;
+                }
                 &.active{
                     opacity: inherit;
+                    i{color: #000;}
                 }
-                i{
-                    margin:0 20px;
-                }
-            }
-        }
-    }
-
-    .nav-tabs {
-        .nav-item.modal-nav {
-            flex: inherit;
-            padding: 10px 90px;
-            border-top: 1px solid $gray;
-            border-left: 1px solid $gray;
-            border-right: 1px solid $gray;
-            margin-left: -1px;
-            color: $gray;
-
-            &.active {
-                background-color: $black;
-                color: $white;
             }
         }
     }
 }
 
-
-
 .modal-body {
-    input{border:1px solid $gray; padding : 10px 15px}
-    .table th{ text-align:center;}
-    .table th,.table td{border:1px solid $black;}
-    
+    max-height: 800px;
+    /* .table th{ text-align:center;}
+    .table th,.table td{border:1px solid $black;} */
+
     .modal-sub-title{
-        font-weight: bold;
-        margin:30px 0 20px 20px;
+        font-weight: bold;padding: 30px 0 18px 17px;
         position: relative;
         &::after{
             content:"";
             position: absolute;
-            top: 50%;
-            left:-20px;
+            top: 36px;
+            left:0;
             width: 7px;
             height: 7px;
             background-color:$black;
-            -webkit-transform: translate(0,-50%);
-            -ms-transform: translate(0,-50%);
-            -moz-transform: translate(0,-50%);
-            -o-transform: translate(0,-50%);
-
         }
     }
     .example-text {
@@ -103,39 +82,6 @@
         }
     }
 
-    //파일업로드
-    .filebox label {
-        width: 170px;
-        height: 170px;
-        display: inline-block;
-        color: $black;
-        font-size: inherit;
-        line-height: normal;
-        vertical-align: middle;
-        cursor: pointer;
-        border: 1px solid #ddd;
-        border-bottom-color: #e2e2e2;
-        position: relative;
-
-        i {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 20px;
-        }
-    }
-     .filebox input[type="file"] {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-    }
-
     .select-filebox label {
         width: 120px;
         height: 40px;
@@ -152,7 +98,7 @@
             text-align: center;
             line-height:40px;
         }
-    }  
+    }
     .select-filebox input[type="file"] {
         position: absolute;
         width: 1px;
@@ -163,113 +109,13 @@
         clip: rect(0, 0, 0, 0);
         border: 0;
     }
-   
+
 
     #img2 {
         width: 100%;
         height: 100px;
     }
 
-    //셀렉트박스
-    .form-select {
-        width: 100%;
-
-        select::-ms-expand {
-            display: none;
-        }
-
-        select {
-            width: 20%;
-            box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
-            border: solid 1px rgba(0, 0, 0, 0.1);
-            background-color: $white;
-            font-size: 18px;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background: url('../resources/images/bg_select.png') no-repeat 95% 50%;
-            padding: 10px 15px;
-            option {
-                font-size: 18px;
-            }
-
-            &.modal-subject {
-                option { font-size: 16px;}
-            }
-        }
-    }
-
-    ///체크박스
-    .subject-checkbox {
-        display: flex;
-        align-items: center;
-        margin-right: 40px;
-
-        .subject-name {
-            font-size: 12px;
-            font-weight: bold;
-            background-color: $black;
-            padding: 5px 8px;
-            color: $white;
-            vertical-align: bottom;
-        }
-
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        input[type="checkbox"]+label {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 1px solid $black;
-            margin-right: 15px;
-            cursor: pointer;
-        }
-
-        input[type="checkbox"]:checked+label {
-            background-image: url('../resources/images/checkbox-icon.png');
-            background-position: center;
-            background-size: cover;
-
-        }
-
-    }
-
-    //이벤트 기간
-    .form-term {
-        input[type="number"] {
-            width: 10%;
-            height: 40px;
-        }
-    }
-
-
-    //버튼
-    .subject-create-btn {
-        border: 1px solid $black;
-    }
-
-
-    ///달력
-    #datetimepicker2 {
-        position: relative;
-
-        .datetimepicker-input::placeholder {
-            padding: 0 25px;
-        }
-    }
-
-    .input-group-append {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        opacity: 0;
-    }
-
-
-    
-    
     .info-event{
         textarea{
             resize:none;
@@ -285,11 +131,6 @@
         .modal-option-title {
             width: 60%;
         }
-    
-        .modal-create-option {
-            width: 60%;
-            margin-top: 10px;
-        }
     }
     // .info-lucky{}
     .info-detail-event{
@@ -300,7 +141,7 @@
         }
         textarea{
             height: 220px;
-            
+
         }
     }
     .modal-event-time{
@@ -323,45 +164,15 @@
         color:$black;
         font-size: 15px;
         font-weight: bold;
-        padding : 10px 15px;       
+        padding : 10px 15px;
     }
 }
 
-.form-term{
-    input[type="number"]{
-        margin-right:15px;
-    }
-}
 .modal-footer{
-    .modal-footer-left{
-        .btn-border{
-            border:1px solid $black;
-            color:$black;
-            font-size: 15px;
-            font-weight: bold;
-            padding : 20px 40px;
-            
-        }
-    }
-    .modal-footer-right{
-            .btn-temporary-save{
-                background-color:$gray;
-                color:$white;
-                padding:0 80px;
-            }
-            .btn-request{
-                background-color:$black;
-                color:$white;
-                padding:0 80px;
-                &.active{
-                    opacity: $w-gray-opacity;
-                }
-            }
-    }
+    position: relative;padding: 22px 40px 20px;
+    [class^=btn] + [class^=btn]{margin-left: 15px;}
+    &::before{content: '';height: 2px;background: #000;position: absolute;left: 40px;right: 40px;top: 0;}
 }
-
-
-
 
 
 
@@ -378,15 +189,15 @@
     }
 }
 .canvas-wrap{
-    
+
     padding : 30px 0;
-  
+
     .canvas-text-box{
         width: 100%;
         height: 220px;
         position: relative;
         margin:0 auto;
-      
+
         div{
             position: absolute;
             top: 50%;
@@ -401,7 +212,7 @@
             }
         }
     }
-   
+
 }
 .success-event{
     .success-event-percent{
@@ -519,15 +330,8 @@
     }
 }
 
-.purchase-list-pagination{
-    ul{
-        li{
-            margin:0 15px;
-        }
-    }
-}
-
 .modal-vote-list{
+    width: 500px;
     .modal-sub-title{
         font-weight: bold;
         margin:30px 0 20px 20px;
@@ -544,16 +348,44 @@
             -ms-transform: translate(0,-50%);
             -moz-transform: translate(0,-50%);
             -o-transform: translate(0,-50%);
-
-        }
-    }
-    .table{
-        tr{
-            th{padding : 10px 20px;}
-            td{padding : 10px 20px;}
         }
     }
 }
 .modal-more{
     margin-top: 10px;
+}
+
+.table-next-button{
+    margin-left: 247px;
+}
+
+.modal.modal-size-fix{
+    .modal-dialog{margin: 0 auto;}
+    .modal-header{
+
+    }
+    .modal-body{
+        height: 810px;
+        max-height: 810px;
+    }
+    &.has-tab{
+        .modal-body{
+            height: 771px;
+        }
+    }
+}
+
+.table-form{
+    th,td{border-color: #000;}
+    > tbody > tr > th{font-size: 16px;text-align: center;padding: 15px;}
+    > tbody > tr > td{font-size: 16px;padding: 15px;}
+}
+
+label{
+    .badge{transform: translateY(-2px);}
+}
+input:checked ~ label{
+    .badge-dark {
+        color: $yellow;
+    }
 }

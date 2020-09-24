@@ -3,145 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=9">
-    <title>Document</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/plugins/chart/Chart.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
     <!-- jQuery -->
     <script src="../../resources/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
     <!-- Bootstrap 4 -->
-
-    <!-- //datePicker -->
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js">
-    </script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
-
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chart -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
 </head>
 
 <body>
     <div id="wrap">
-        <aside id="gnb" class="">
-            <div class="gnb-content">
-                <div>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="dash-profile d-flex align-items-center">
-                            <div class="profile-img"></div>
-                            <div>
-                                <p>TIDO</p>
-                                <p>마스터</p>
-                            </div>
-                        </div>
-                        <span><i class="far fa-bell"></i></span>
-                    </div>
-
-                    <button type="button" class="btn produce-event-btn" data-toggle="modal"
-                        data-target=".bd-example-modal-xl">+ 이벤트 생성</button>
-                </div>
-                <ul>
-                    <li>
-                        <a href="../dashboard/dashboard-home.html">
-                            <i class="fas fa-home"></i>
-                            <span class="active">대시보드</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="far fa-comment-alt"></i>
-                            <span>재무</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="far fa-comment-alt"></i>
-                            <span>통계</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="../event/event_main.html">
-                            <i class="far fa-comment-alt"></i>
-                            <span>이벤트</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="far fa-comment-alt"></i>
-                            <span>피드</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="far fa-comment-alt"></i>
-                            <span>배너</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="">
-                            <i class="far fa-user"></i>
-                            <span>루픽 유저</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="far fa-user"></i>
-                            <span>루픽 메이커</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="far fa-user"></i>
-                            <span>판매자</span>
-                        </a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-cog"></i>
-                            <span>공지사항</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-cog"></i>
-                            <span>푸시 메시지</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-cog"></i>
-                            <span>문의내역</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-cog"></i>
-                            <span>환경설정</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <aside>
+            <!-- aside include -->
         </aside>
         <div id="container-block">
-            <h2>안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
-            <div class="p-0">
+            <h2 class="hello">안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+            <div>
                 <h1 class="title">Lupick Report</h1>
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="col-3">
                         <div class="dash-box">
                             <div class="dash-statistics">
                                 <i class="fas fa-cog"></i>
@@ -153,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="col-3">
                         <div class="dash-box">
                             <div class="dash-statistics">
                                 <i class="fas fa-cog"></i>
@@ -165,7 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="col-3">
                         <div class="dash-box">
                             <div class="dash-statistics">
                                 <i class="fas fa-cog"></i>
@@ -177,7 +72,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="col-3">
                         <div class="dash-box">
                             <div class="dash-statistics">
                                 <i class="fas fa-cog"></i>
@@ -192,7 +87,6 @@
                 </div>
 
                 <div class="row">
-
                     <div class="col-6">
                         <h1 class="title">Event Report</h1>
                         <div class="row event-report">
@@ -324,788 +218,59 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content">
-                <div id="modal-header">
-                    <div class="modal-header-top">
-                        <h3 class="mb-0">이벤트 생성</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item modal-nav active">
-                            <a class="nav-link" href="#">이벤트 정보</a>
-                        </li>
-                        <li class="nav-item modal-nav">
-                            <a class="nav-link" href="#">아이템 정보</a>
-                        </li>
-                        <li class="nav-item modal-nav">
-                            <a class="nav-link" href="#">럭키템 정보</a>
-                        </li>
-                        <li class="nav-item modal-nav">
-                            <a class="nav-link" href="#">이벤트 상세 정보</a>
-                        </li>
-                    </ul> 
-                </div>
-                <div class="modal-body">
-                    <!-- //이벤트 정보 -->
-                    <div class="info-event" id="div1">
-                        <table class="table">
-                            <p class="modal-sub-title">이벤트 정보</p>
-                            <colgroup>
-                                <col width="15%">
-                                <col width="85%">
-                            </colgroup>
-                            <tbody>
-
-                                <tr>
-                                    <th>메인 이미지 등록</th>
-                                    <td>
-                                        <div class="upload-img d-flex align-items-center">
-                                            <div class="filebox">
-                                                <label for="input-img"><i class="fas fa-plus"></i>
-                                                    <img src="" alt="" id="img"></label>
-                                                <input type="file" id="input-img">
-                                            </div>
-                                            <div class="example-text ml-3">
-                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
-                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>이벤트 타이틀</th>
-                                    <td>
-                                        <div class="input-group modal-textarea title align-items-end">
-                                            <textarea class="form-control " aria-label="With textarea" maxlength="40"
-                                                placeholder="이벤트 제목을 입력해주세요."></textarea>
-                                            <div class="textarea-counter ml-3">
-                                                <span id="counter-title">0</span><span>/40</span><span
-                                                    class="example-text ml-3">* 이벤트
-                                                    타이틀은 최소
-                                                    20자 이상으로 작성해주세요.</span>
-                                            </div>
-                                        </div>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <th>이벤트 예약</th>
-                                    <td>
-                                        <div class="modal-radio">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio1" value="option1">
-                                                <label class="form-check-label ml-2" for="inlineRadio1">바로 오픈</label>
-                                            </div>
-                                            <div class="form-check form-check-inline ml-4">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                                    id="inlineRadio2" value="option2">
-                                                <label class="form-check-label ml-2" for="inlineRadio2">예약 오픈</label>
-                                            </div>
-                                            <div class='form-date form-check-inline'>
-                                                <div class="form-group">
-                                                    <div class="input-group date" id="datetimepicker2"
-                                                        data-target-input="nearest"> <input type="text"
-                                                            class="form-control datetimepicker-input"
-                                                            data-target="#datetimepicker2"
-                                                            placeholder="2020.08.10 19:00">
-                                                        <div class="input-group-append" data-target="#datetimepicker2"
-                                                            data-toggle="datetimepicker">
-                                                            <div class="input-group-text"><i class="fa fa-calendar"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
 
 
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>이벤트 기간</th>
-                                    <td>
-                                        <div class="form-term">
-                                            <input type="number" value="07" class="text-center">
-                                            <span>일</span>
-                                            <span class="example-text ml-3">* 평균 이벤트 권장 기간은 7일 입니다. 규모가 큰 이벤트나 특별한 경우
-                                                마스터와 협의해 주세요.</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>이벤트 주제 태그</th>
-                                    <td class="d-flex">
-                                        <span class="subject-checkbox">
-                                            <input type="checkbox" id="subject-1">
-                                            <label for="subject-1"></label>
-                                            <span class="subject-name">LOWEST PRICE</span>
-                                        </span>
-                                        <span class="subject-checkbox">
-                                            <input type="checkbox" id="subject-2">
-                                            <label for="subject-2"></label>
-                                            <span class="subject-name">LOWEST PRICE</span>
-                                        </span>
-                                        <span class="subject-checkbox">
-                                            <input type="checkbox" id="subject-3">
-                                            <label for="subject-3"></label>
-                                            <span class="subject-name">LOWEST PRICE</span>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>이벤트 주제태그 생성</th>
-                                    <td>
-                                        <div class="form-select">
-                                            <select class="mdb-select md-form modal-subject">
-                                                <option value="" disabled selected>스페셜 태그(Yellow)</option>
-                                                <option value="1">스페셜 태그(Blue)</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-group modal-textarea create align-items-center">
-                                            <textarea class="form-control " aria-label="With textarea" maxlength="15"
-                                                placeholder="이벤트 제목을 입력해주세요."></textarea>
-                                            <div class="textarea-counter ml-3">
-                                                <span id="counter-create">0</span><span>/15</span><span
-                                                    class="example-text ml-3">* 영문
-                                                    대문자로만 입력해주세요.</span>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="btn subject-create-btn" data-toggle="modal"
-                                            data-target=".bd-example-modal-xl">주제태그 생성</button>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- //아이템 정보 -->
-                    <div class="info-item">
-                        <table class="table">
-                            <p class="modal-sub-title">아이템 정보</p>
-                            <colgroup>
-                                <col width="15%">
-                                <col width="85%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>아이템 카테고리</th>
-                                    <td>
-                                        <div class="form-select">
-                                            <select class="mdb-select md-form modal-subject">
-                                                <option value="" disabled selected>카테고리 선택</option>
-                                                <option value="1">스페셜 태그(Blue)</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>아이템 이미지 등록</th>
-                                    <td>
-                                        <div class="upload-img d-flex align-items-center">
-                                            <div class="filebox">
-                                                <label for="input-img"><i class="fas fa-plus"></i>
-                                                    <img src="" alt="" id="img"></label>
-                                                <input type="file" id="input-img">
-                                            </div>
-                                            <div class="example-text ml-3">
-                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
-                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>아이템 타이틀</th>
-                                    <td>
-                                        <div class="input-group large">
-                                            <textarea class="form-control modal-textarea"
-                                                aria-label="With textarea"></textarea>
-
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>아이템 설명</th>
-                                    <td>
-                                        <div
-                                            class="input-group modal-textarea explanation d-flex align-items-center large">
-                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
-                                                maxlength="90"></textarea>
-                                            <div class="textarea-counter ml-3">
-                                                <span id="counter-explanation">0</span><span>/90</span>
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="85%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>아이템 수량</th>
-                                    <td>
-                                        <div class="form-term">
-                                            <input type="number" value="07" class=" small">
-                                            <span>개</span>
-                                            <span class="example-text ml-3"> * 1,000,000 미만으로 입력해 주세요.</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>아이템 옵션</th>
-                                    <td>
-                                        <div class="form-term">
-                                            <p>옵션 개수 입력</p>
-                                            <input type="number" value="07" class="small mt-2 text-center">
-                                        </div>
-
-                                        <div class="modal-option-title d-flex justify-content-between mt-4">
-                                            <p class="w-50">옵션명</p>
-                                            <p class="w-50 ml-3">옵션 수량 <span class="example-text ml-3"> * 1,000,000 미만으로
-                                                    입력해 주세요.</span></p>
-                                        </div>
-
-
-                                        <div class="modal-create-option d-flex justify-content-between">
-                                            <div class="input-group modal-textarea w-50">
-                                                <input type="text">
-                                            </div>
-                                            <div class="form-term w-50 ml-3">
-                                                <input type="number" value="07" class="small">
-                                                <span>개</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="modal-create-option d-flex justify-content-between">
-                                            <div class="input-group modal-textarea w-50">
-                                                <input type="text">
-                                            </div>
-                                            <div class="form-term w-50 ml-3">
-                                                <input type="number" value="07" class="small">
-                                                <span>개</span>
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="45%">
-                                <col width="15%">
-                                <col width="25%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>아이템 매입가</th>
-                                    <td>
-                                        <div class="form-term">
-                                            <input type="number" value="" class="m-small">
-                                            <span>원</span>
-
-                                        </div>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <th rowspan="2">아이템 판매가</th>
-                                    <td rowspan="2">
-                                        <div class="form-term">
-                                            <input type="number" value="" class="m-small">
-                                            <span>원</span>
-
-                                        </div>
-                                    <th class="text-center">아이템 판매 마진율</th>
-                                    <td>
-                                        <span>25 %</span>
-                                        <span class="example-text">*20% 마진율을 권장</span>
-                                    </td>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="85%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>아이템 배송 택배사</th>
-                                    <td>
-                                        <div class="form-select">
-                                            <select class="mdb-select md-form">
-                                                <option value="" disabled selected>택배사를 선택하세요.</option>
-                                                <option value="1">한진택배</option>
-                                                <option value="1">한진택배</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>아이템 배송비</th>
-                                    <td>
-                                        <div class="form-select">
-                                            <select class="mdb-select md-form">
-                                                <option value="기본 배송">기본 배송</option>
-                                                <option value="조건부 무료배송">조건부 무료배송</option>
-                                                <option value="수량별 배송비">수량별 배송비</option>
-                                                <option value="착불 배송">착불 배송</option>
-
-                                            </select>
-                                            <span></span>
-                                        </div>
-                                        <!-- //기본배송 -->
-                                        <div class="form-term original-del">
-                                            <span>기본 배송비</span>
-                                            <input type="number" class="small">
-                                            <span>원<span>
-                                        </div>
-                                        <!-- //조건부 무료배송 -->
-                                        <div class="form-term free-del d-flex">
-                                            <div class="">
-                                                <span>기본 배송비</span>
-                                                <input type="number" class="small">
-                                                <span>원<span>
-                                            </div>
-                                            <div class="ml-3">
-                                                <span>무료배송 조건 금액</span>
-                                                <input type="number" class="small" value="50000">
-                                                <span>원 이상 구매시 무료배송<span>
-                                            </div>
-                                        </div>
-                                        <!-- //수량별 배송비 -->
-                                        <div class="form-term count-del d-flex">
-                                            <div class="">
-                                                <span>* 1개 구매</span>
-                                                <input type="number" class="small">
-                                                <span>원<span>
-                                            </div>
-                                            <div class="ml-3">
-                                                <span>* 2개 구매</span>
-                                                <input type="number" class="small">
-                                                <span>원<span>
-                                            </div>
-                                            <div class="ml-3">
-                                                <span>* 3개 구매</span>
-                                                <input type="number" class="small">
-                                                <span>원<span>
-                                            </div>
-                                            <div class="ml-3">
-                                                <span>* 4개 구매</span>
-                                                <input type="number" class="small">
-                                                <span>원<span>
-                                            </div>
-                                            <div class="ml-3">
-                                                <span>* 5개 구매</span>
-                                                <input type="number" class="small">
-                                                <span>원<span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <!-- //럭키템 정보 -->
-                    <div class="info-lucky">
-                        <table class="table">
-                            <p class="modal-sub-title">럭키템 정보</p>
-                            <colgroup>
-                                <col width="15%">
-                                <col width="85%">
-                            </colgroup>
-                            <tbody>
-
-                                <tr>
-                                    <th>메인 럭키템 이미지 등록</th>
-                                    <td>
-                                        <div class="upload-img d-flex align-items-center">
-                                            <div class="filebox">
-                                                <label for="input-img"><i class="fas fa-plus"></i>
-                                                    <img src="" alt="" id="img"></label>
-                                                <input type="file" id="input-img">
-                                            </div>
-                                            <div class="example-text ml-3">
-                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
-                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>메인 럭키템 타이틀</th>
-                                    <td>
-                                        <div class="input-group large">
-                                            <textarea class="form-control modal-textarea"
-                                                aria-label="With textarea"></textarea>
-
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>메인 럭키템 설명</th>
-                                    <td>
-                                        <div
-                                            class="input-group modal-textarea explanation d-flex align-items-center large">
-                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
-                                                maxlength="90"></textarea>
-                                            <div class="textarea-counter ml-3">
-                                                <span id="counter-explanation">0</span><span>/90</span>
-                                            </div>
-                                        </div>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>메인 럭키템 선정자 수</th>
-                                    <td>
-                                        <div class="form-term">
-                                            <input type="number" class="small">
-                                            <span>명<span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>메인 럭키템 개당 예상 가격</th>
-                                    <td>
-                                        <div class="form-term">
-                                            <input type="number" class="m-small">
-                                            <span>원<span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>럭키템 차등 지급 옵션</th>
-                                    <td>
-                                        <div class="d-flex align-items-center">
-                                            <span class="lucky-item-checkbox mr-2">
-                                                <input type="checkbox" id="lucky-item">
-                                                <label for="lucky-item"></label>
-                                                <span>럭키템 추가등록</span>
-                                            </span>
-
-                                            <div class="form-term">
-                                                <input type="number" class="m-small">
-                                                <span>개<span>
-                                                        <span class="example-text">
-                                                            * 1등 럭키템 외에도 추가 럭키템이 있다면 럭키템 차등 지급 옵션에 개수를 입력해 주세요.
-                                                        </span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="15%">
-                                <col width="70%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th rowspan="6">2위 럭키템</th>
-                                </tr>
-                                <tr>
-                                    <th>럭키템 타입</th>
-                                    <td>
-                                        <div class="form-select">
-                                            <select class="mdb-select md-form">
-                                                <option value="" disabled selected>택배사를 선택하세요.</option>
-                                                <option value="1">한진택배</option>
-                                                <option value="1">한진택배</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>럭키템 이미지 등록</th>
-                                    <td>
-                                        <div class="upload-img d-flex align-items-center">
-                                            <div class="filebox">
-                                                <label for="input-img"><i class="fas fa-plus"></i>
-                                                    <img src="" alt="" id="img"></label>
-                                                <input type="file" id="input-img">
-                                            </div>
-                                            <div class="example-text ml-3">
-                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
-                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>럭키템 타이틀</th>
-                                    <td>
-                                        <div
-                                            class="input-group modal-textarea explanation d-flex align-items-center large">
-                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
-                                                maxlength="90"></textarea>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>럭키템 선정자 수</th>
-                                    <td>
-                                        <div class="form-term">
-                                            <input type="number" class="small">
-                                            <span>명<span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>럭키템 개당 예상 가격</th>
-                                    <td>
-                                        <div class="form-term">
-                                            <input type="number" class="m-small">
-                                            <span>명<span>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <!-- //3위  -->
-                                <tr>
-                                    <th rowspan="2">3위 럭키템</th>
-                                </tr>
-                                <tr>
-                                    <th>럭키템 타입</th>
-                                    <td>
-                                        <div class="form-select">
-                                            <select class="mdb-select md-form">
-                                                <option value="">포인트 지급</option>
-                                            </select>
-                                        </div>
-                                        <!-- //기본배송 -->
-                                        <div class="form-term mt-3">
-                                            <span>랜덤</span>
-                                            <input type="number" class="small">
-                                            <span>명 에게</span>
-                                            <input type="number" class="small">
-                                            <span>포인트 일괄 지급</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th rowspan="2">4위 럭키템</th>
-                                </tr>
-                                <tr>
-                                    <th>럭키템 타입</th>
-                                    <td>
-                                        <div class="form-select">
-                                            <select class="mdb-select md-form">
-                                                <option value="" disabled selected>택배사를 선택하세요.</option>
-                                                <option value="1">한진택배</option>
-                                                <option value="1">한진택배</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="info-detail-event">
-                        <table class="table">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="85%">
-                            </colgroup>
-                            <p class="modal-sub-title">이벤트 상세 정보</p>
-                            <tbody>
-                                <tr>
-                                    <th>이벤트 상세 정보</th>
-                                    <td>에디터 영역</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="85%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>교환 / 환불 / 취소 정책</th>
-                                    <td>
-                                        <div class="input-group modal-textarea d-flex align-items-center large">
-                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
-                                                maxlength="90" placeholder="- 파손 또는 불량품 수령 시 [   ]일 이내로 교환이 가능합니다.
-                                    - 교환 및 AS 문의는 판매자에게 직접 문의해주세요.
-                                    - 파손이나 불량품 교환시 발생하는 비용은 판매자가 부담합니다. 
-                                    - 선물 확인을 위한 포장 훼손 외에 아이템의 가치가 훼손된 경우에는 교환 및 환불이 불가합니다."></textarea>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="85%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th>상품 필수 표기 정보</th>
-                                    <td>
-                                        <div class="input-group modal-textarea d-flex align-items-center large">
-                                            <textarea class="form-control modal-textarea" aria-label="With textarea"
-                                                maxlength="90"
-                                                placeholder="전자상거래 등에서의 상품 등의 정보제공에 관한 고시법에 따라, 이벤트 아이템 상품 정보를 고시하여야 합니다."></textarea>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table class="table">
-                            <colgroup>
-                                <col width="15%">
-                                <col width="15%">
-                                <col width="70%">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th rowspan="7">판매자 정보</th>
-                                </tr>
-                                <tr>
-                                    <th>상호명</th>
-                                    <td>
-                                        <div class="input-group">
-                                            <input type="text" placeholder="상호명을 입력해주세요." class="medium">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>대표자</th>
-                                    <td>
-                                        <div class="input-group">
-                                            <input type="text" placeholder="대표자 성함을 입력해주세요." class="m-small">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>사업자번호</th>
-                                    <td>
-                                        <div class="form-phone">
-                                            <input type="number" class="small">
-                                            <hr width="10px">
-                                            <input type="number" class="small">
-                                            <hr width="10px">
-                                            <input type="number" class="small">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>통신판매번호</th>
-                                    <td>
-                                        <div class="input-group">
-                                            <input type="text" placeholder="통신판매번호를 입력해 주세요." class="medium">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>사업자 소재지</th>
-                                    <td>
-                                        <div class="input-group">
-                                            <input type="text" placeholder="사업자 소재지 주소를 입력해주세요." class="large">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>고객센터 전화번호</th>
-                                    <td>
-                                        <div class="form-phone">
-                                            <input type="number" class="small">
-                                            <hr width="10px">
-                                            <input type="number" class="small">
-                                            <hr width="10px">
-                                            <input type="number" class="small">
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="modal-footer d-flex justify-content-between">
-                    <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-border">마진 계산기</button>
-                        <button type="button" class="btn btn-border ml-3">앱 프리뷰</button>
-                    </div>
-
-                    <div class="modal-footer-right d-flex">
-                        <button type="button" class="btn btn-temporary-save">임시 저장</button>
-                        <button type="button" class="btn btn-request ml-3">승인 요청</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
+    <script src="../../resources/js/common.js"></script>
     <script>
-        $(".circle_percent").each(function () {
-            var $this = $(this),
-                $dataV = $this.data("percent"),
-                $dataDeg = $dataV * 3.6,
-                $round = $this.find(".round_per");
-            $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
-
-            $this.prop('Counter', 0).animate({
-                Counter: $dataV
-            }, {
-                duration: 2000,
-                // easing: 'swing',
-                //percent텍스트
-                // step: function (now) {
-                //     $this.find(".percent_text").text(Math.ceil(now));
-                // }
-            });
-            if ($dataV >= 51) {
-                $round.css("transform", "rotate(" + 360 + "deg)");
-                setTimeout(function () {
-                    $this.addClass("percent_more");
-                }, 1000);
-                setTimeout(function () {
-                    $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
-                }, 1000);
-            }
-        });
-        //달력
         $(function () {
+            //datetimepicker
             $('#datetimepicker1').datetimepicker({
-                format: 'L'
+                sideBySide: true,
+                dayViewHeaderFormat: "YYYY. M",
+                format: 'YYYY.MM.DD hh:mm',
+                icons: {
+                    up: 'fas fa-angle-up',
+                    down: 'fas fa-angle-down',
+                }
             });
-            $('#datetimepicker2').datetimepicker({
-                format: 'L',
-                useCurrent: false
+
+            //이벤트 오픈 날짜 선택
+            $('[name="eventOpenDate"]').on('change',function(){
+                if($('[name="eventOpenDate"]:checked').val() == 'radio2'){
+                    $('#datetimepicker1').prop('disabled',false);
+                }else{
+                    $('#datetimepicker1').prop('disabled',true);
+                }
             });
-            $("#datetimepicker1").on("change.datetimepicker", function (e) {
-                $('#datetimepicker2').datetimepicker('minDate', e.date);
-            });
-            $("#datetimepicker2").on("change.datetimepicker", function (e) {
-                $('#datetimepicker1').datetimepicker('maxDate', e.date);
+
+            $(".circle_percent").each(function () {
+                var $this = $(this),
+                    $dataV = $this.data("percent"),
+                    $dataDeg = $dataV * 3.6,
+                    $round = $this.find(".round_per");
+                $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
+
+                $this.prop('Counter', 0).animate({
+                    Counter: $dataV
+                }, {
+                    duration: 2000,
+                    // easing: 'swing',
+                    //percent텍스트
+                    // step: function (now) {
+                    //     $this.find(".percent_text").text(Math.ceil(now));
+                    // }
+                });
+                if ($dataV >= 51) {
+                    $round.css("transform", "rotate(" + 360 + "deg)");
+                    setTimeout(function () {
+                        $this.addClass("percent_more");
+                    }, 1000);
+                    setTimeout(function () {
+                        $round.css("transform", "rotate(" + parseInt($dataDeg + 180) + "deg)");
+                    }, 1000);
+                }
             });
         });
     </script>
-    <script src="../../resources/js/modal.js"></script>
 </body>
-
 </html>

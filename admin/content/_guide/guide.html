@@ -4,56 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lupick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
     <!-- jQuery -->
     <script src="../../resources/plugins/jquery/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
     <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
 
+    <style>
+        body{min-width: 0;}
+        #guide{padding: 50px;}
+        section{padding: 10px 0;}
+        section > div{padding: 5px 0;}
+    </style>
 </head>
 
 <body>
-    <div id="guide">
+    <article id="guide">
 
-        <div class="input-group ">
-            <textarea class="form-control modal-textarea" aria-label="With textarea" maxlength="40"></textarea>
-            <span id="counter">0</span><span>/40</span>
-        </div>
+        <section>
+            <input class="form-control w-1213px" maxlength="90" data-byte-target="#byte-check3">
+            <span class="example-text m-l-15">(<span id="byte-check3">0</span>/90)</span>
+        </section>
 
-        <div class="">
+        <section>
+            <div class="d-flex align-items-end">
+                <textarea class="form-control w-1213px" maxlength="40" placeholder="이벤트 제목을 입력해주세요." data-byte-target="#byte-check1"></textarea>
+                <span class="example-text m-l-15">(<span id="byte-check1">0</span>/40)</span>
+                <span class="example-text m-l-20">* 이벤트 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+            </div>
+        </section>
+
+        <section>
             <div class="upload-img d-flex align-items-center">
                 <div class="filebox">
-                    <label for="input-img"><i class="fas fa-plus"></i>
-                        <img src="" alt="" id="img"></label>
                     <input type="file" id="input-img">
+                    <label for="input-img"><i class="icon-plus"></i>
+                        <img src="" alt="" id="img"></label>
                 </div>
                 <div class="example-text ml-3">
                     <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
                     <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
                 </div>
             </div>
-          
-        </div>
+        </section>
 
-
-
-        <div class="form-select">
-            <select class="mdb-select md-form w-100">
-                <option value="" disabled selected>123</option>
-                <option value="1">1</option>
-
-            </select>
-        </div>
-
-        <div class="modal-radio">
+        <section class="modal-radio">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                     value="option1">
@@ -64,10 +71,201 @@
                     value="option2">
                 <label class="form-check-label" for="inlineRadio2">2</label>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <script src="../../resources/js/modal.js"></script>
+        <section>
+            <select class="select-md">
+                <option value="" disabled selected>배송비 옵션 선택</option>
+                <option value="1">기본 배송</option>
+                <option value="2">조건별 무료배송</option>
+                <option value="3">수량별 배송비</option>
+                <option value="4">착불 배송</option>
+                <option value="1">기본 배송</option>
+                <option value="2">조건별 무료배송</option>
+                <option value="3">수량별 배송비</option>
+                <option value="4">착불 배송</option>
+                <option value="1">기본 배송</option>
+                <option value="2">조건별 무료배송</option>
+                <option value="3">수량별 배송비</option>
+                <option value="4">착불 배송</option>
+            </select>
+            <select class="select-lg">
+                <option value="" selected>진행중인 이벤트</option>
+                <option value="1">대기중인 이벤트</option>
+                <option value="1">마감된 이벤트</option>
+            </select>
+        </section>
+
+        <section>
+            <div>
+                <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-outline-dark btn-md">인증번호 발송</button>
+                <button type="button" class="btn btn-outline-dark btn-md" disabled>인증번호 발송</button>
+                <button type="button" class="btn btn-outline-dark btn-md w-400px">+ 결재 정보 추가</button>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-outline-dark btn-md text-lager">주문내역 다운로드</button>
+                <button type="button" class="btn btn-outline-dark btn-md text-lager">송장번호 업로드</button>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-darkgray btn-lg">이전 단계</button>
+                <button type="button" class="btn btn-dark btn-lg">다음 단계</button>
+                <button type="button" class="btn btn-dark btn-lg" disabled>다음 단계</button>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
+                <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-dark btn-xl">로그인</button>
+                <button type="button" class="btn btn-dark btn-xl" disabled>로그인</button>
+            </div>
+        </section>
+
+        <section>
+            <ul class="card-list">
+                <li>
+                    <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                        <div class="thumb" style="background-image:url('../../resources/images/@event_01.png')">
+                            <span class="badge badge-dark">예약 이벤트</span>
+                        </div>
+                        <div class="info">
+                            <div class="d-flex justify-content-between">
+                                <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                <div class="util">
+                                    <div class="icon">
+                                        <i class="fab fa-gratipay"></i>
+                                    </div>
+                                    <span>1,234</span>
+                                </div>
+                            </div>
+                            <div class="event-progress">
+                                <div id="resumeProficiencies">
+                                    <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                    <div id="resumeProficienciesBottom">
+                                        <div class="progress">
+                                            <div class="adobe progress-bar progress-bar-info"
+                                                role="progressbar" style="width: 0%" data-percent="20">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="deadline">00:17:09:28</div>
+                                <div class="percent">
+                                    <em>2자리 남았어요!</em> <span>98%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                        <div class="thumb" style="background-image:url('../../resources/images/@event_01.png')">
+                            <span class="badge badge-gray">승인 대기</span>
+                        </div>
+                        <div class="info">
+                            <div class="d-flex justify-content-between">
+                                <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                <div class="util">
+                                    <div class="icon">
+                                        <i class="icon-heart"></i>
+                                    </div>
+                                    <span>1,234</span>
+                                </div>
+                            </div>
+                            <div class="event-progress">
+                                <div id="resumeProficiencies">
+                                    <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                    <div id="resumeProficienciesBottom">
+                                        <div class="progress">
+                                            <div class="adobe progress-bar progress-bar-info"
+                                                role="progressbar" style="width: 0%" data-percent="20">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="deadline">00:17:09:28</div>
+                                <div class="nickname">RANI</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                        <div class="thumb" style="background-image:url('../../resources/images/@event_01.png')">
+                            <span class="badge badge-dark">예약 이벤트</span>
+                        </div>
+                        <div class="info">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                            </div>
+                            <div class="event-progress">
+                                <div id="resumeProficiencies">
+                                    <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                    <div id="resumeProficienciesBottom">
+                                        <div class="progress">
+                                            <div class="adobe progress-bar progress-bar-info"
+                                                role="progressbar" style="width: 0%" data-percent="20">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="deadline">승인 대기 이벤트</div>
+                                <div class="nickname">RANI</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="card-list feed">
+                <li>
+                    <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                        <div class="thumb" style="background-image:url('../../resources/images/@Thumbnail_03.png')">
+                            <span class="badge badge-warning">이벤트 후기</span>
+                        </div>
+                        <div class="info">
+                            <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                            <div class="d-flex justify-content-between">
+                                <div class="deadline">조회수 3.1만∙19시간 전</div>
+                                <div class="nickname">RANI</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                        <div class="thumb" style="background-image:url('../../resources/images/@Thumbnail_03.png')">
+                            <span class="badge badge-warning">루픽 스토리</span>
+                        </div>
+                        <div class="info">
+                            <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                            <div class="d-flex justify-content-between">
+                                <span class="badge badge-gray">승인 대기</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </article>
+
+    <script src="../../resources/js/common.js"></script>
 </body>
 
 </html>
