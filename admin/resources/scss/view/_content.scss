@@ -269,7 +269,7 @@
         }
         .util{
             padding-left: 15px;
-            .icon{width: 30px;height: 30px;border-radius: 50%;background: #000;
+            .icon{width: 30px;height: 30px;border-radius: 50%;background: #000;position: relative;
                 i{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
             }
             span{font-size: 11px;font-weight: 700;display: block;text-align: center;margin-top: 6px;}

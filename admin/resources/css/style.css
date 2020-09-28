@@ -1272,6 +1272,7 @@ body {
   height: 30px;
   border-radius: 50%;
   background: #000;
+  position: relative;
 }
 
 .card-list .info .util .icon i {
