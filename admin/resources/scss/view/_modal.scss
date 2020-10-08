@@ -30,6 +30,10 @@
             }
         }
     }
+    .double-modal-title{
+        font-size: 20px;
+        font-weight: bold;
+    }
 }
 
 .modal-body {
@@ -172,6 +176,9 @@
     position: relative;padding: 22px 40px 20px;
     [class^=btn] + [class^=btn]{margin-left: 15px;}
     &::before{content: '';height: 2px;background: #000;position: absolute;left: 40px;right: 40px;top: 0;}
+    &.border-none{
+        &::before{content: '';height: 0;}
+    }
 }
 
 
@@ -350,7 +357,11 @@
             -o-transform: translate(0,-50%);
         }
     }
+    &.md{
+        width: 820px;
+    }
 }
+
 .modal-more{
     margin-top: 10px;
 }

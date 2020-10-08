@@ -50,9 +50,18 @@ a:focus{outline: none;}
 
 //margin
 .m-t-15{margin-top: 15px !important;}
+.m-t-30{margin-top: 30px !important;}
+.m-t-130{margin-top: 130px !important;}
+
 .m-b-15{margin-bottom: 15px !important;}
+.m-b-30{margin-bottom: 30px !important;}
+
 .m-l-15{margin-left: 12px !important;}
+.m-l-30{margin-left: 30px !important;}
+
 .m-r-15{margin-right: 12px !important;}
+.m-r-30{margin-right: 30px !important;}
+
 .d-flex >{
     .m-l-15{margin-left: 15px !important;}
     .m-r-15{margin-right: 15px !important;}
@@ -63,13 +72,36 @@ a:focus{outline: none;}
 .medium{width: 470px !important;}
 .m-small{width: 230px !important;}
 .small{width: 100px !important;}
+.w-60px{width: 60px !important;}
 .w-100px{width: 100px !important;}
 .w-120px{width: 120px !important;}
+.w-220px{width: 220px !important;}
+.w-250px{width: 250px !important;}
+.w-270px{width: 270px !important;}
+.w-382px{width: 382px !important;}
 .w-400px{width: 400px !important;}
 .w-476px{width: 476px !important;}
 .w-772px{width: 772px !important;}
+.w-800px{width: 800px !important;}
+.w-960px{width: 960px !important;}
 .w-1213px{width: 1213px !important;}
+.h-25px{height: 25px !important;}
+.h-90px{height: 90px !important;}
+.h-120px{height: 120px !important;}
 
+.modal-1400{
+    width:1400px !important;
+    top:50% !important;
+    left:50% !important;
+    transform:translate(-50%,-50%);
+}
+.sub-title{
+    font-size: 14px;
+    font-weight: normal;
+    color: $black;
+    margin-top: 40px;
+    margin-left: 30px;
+}
 
 .form-control{
     width:230px;display: inline-block;height: 40px;padding: 8px 15px;
@@ -80,7 +112,13 @@ textarea.form-control{
 .form-fake{
     border: 1px solid $border-color;padding: 0.6125rem 1rem;
 }
-
+.hyphen{
+    width: 12px;
+    height: 2px;
+    background-color:$black;
+    display: inline-block;
+    margin:0 15px;
+}
 //select
 .ui-selectmenu-button.ui-button{
     background: #fff !important;border: 1px solid $border-color;border-radius: 0;outline: 0;width: 230px;height: 40px;padding: 10.5px 15px 0;margin: 0;
@@ -122,7 +160,13 @@ textarea.form-control{
             display: inline-block;background: url('../images/icon-plus.svg') no-repeat 50% 50%;width: 20px;height: 20px;background-size: contain;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 20px;
         }
     }
-    input[type="file"]:focus ~ label{outline: 1px solid $black;}
+    input[type="file"]:focus ~ label{outline:none;}
+    &.profile{
+        label{width:150px;height:150px;border-radius:85px;border:1px solid $black;
+            img{border-radius:85px;}
+        }
+        
+    }
 }
 
 //tab
@@ -179,6 +223,9 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
 }
 .btn-xl{
     height: 60px;min-width:400px;font-size: 20px;font-weight: 700;padding: 20px;
+}
+.btn-xl-65{
+    height: 65px;min-width:300px;font-size: 20px;font-weight: 700;padding: 20px;
 }
 .btn-outline-dark{
     &:disabled{color: #c6c6c6;border-color: #c6c6c6 !important;}
@@ -292,3 +339,60 @@ content: '';display: block;color: $black;width: 30px;height: 30px;border-radius:
 .bootstrap-datetimepicker-widget .fa-angle-down{
     color: #416af2;padding: 0;line-height: 1;height: auto;
 }
+
+.default-box{
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  padding :15px;
+}
+.create-banner{
+    width: 382px;
+    height: 136px;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    background-color: $white;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:15px;
+    i {
+        display: inline-block;background: url('../images/icon-plus.svg') no-repeat 50% 50%;width: 20px;height: 20px;background-size: contain;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 20px;
+    }
+}
+.tab-list{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    
+    &.active {
+        &:after {
+            content: "";
+            width: 100%;
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $yellow;
+            z-index: -1;
+        }
+    }
+}
+.nav-tabs{
+    &.question{
+         margin-bottom: 25px;
+        .nav-item{
+            flex:inherit;
+            margin-right: 40px;
+        }
+        .nav-link{
+            &.active{
+                color:inherit;
+                background-color: inherit;
+            }
+        }
+    }   
+}
+
+

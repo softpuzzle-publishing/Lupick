@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="row align-items-center m-b-30">
+                <div class="col">
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="찾고 싶은 유저가 있나요?" aria-label="Search">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="1" selected>전체 루키</option>
+                        <option value="2">대기중인 이벤트</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="1" selected>가입 순</option>
+                        <option value="2">대기중인 이벤트</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table table-bordered table-center table-layout-auto">
+                <thead>
+                    <tr>
+                        <th scope="col">Admin</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">닉네임</th>
+                        <th scope="col">연락처</th>
+                        <th scope="col">회원 가입일</th>
+                        <th scope="col">최종 로그인</th>
+                        <th scope="col">등록 이벤트 수</th>
+                        <th scope="col">성공 이벤트 수</th>
+                        <th scope="col">실패 이벤트 수</th>
+                        <th scope="col">승인여부</th>
+                        <th scope="col">정보 수정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>루키</td>
+                        <td>이찬란</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>슈퍼루키</td>
+                        <td>이찬란</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>마스터</td>
+                        <td>이찬란</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="m-t-30">
+                <ul class="pagination">
+                    <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+        })
+    </script>
+
+</body>
+
+</html>

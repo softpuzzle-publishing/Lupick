@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+         
+            <ul class="nav nav-tabs question" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link tab-list active" id="home-tab" data-toggle="tab" href="#tap-1" role="tab" aria-controls="home" aria-selected="true">루픽 문의</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tab-list" id="profile-tab" data-toggle="tab" href="#tap-2" role="tab" aria-controls="profile" aria-selected="false">이벤트 문의</a>
+                </li>
+
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="tap-1" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row align-items-center m-b-30">
+                        <div class="col">
+                            <div class="item-search d-flex align-items-center">
+                                <input class="form-control w-100" type="text" placeholder="찾고 싶은 유저가 있나요?" aria-label="Search">
+                                <i></i>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <select class="select-lg">
+                                <option value="1" selected>전체 문의</option>
+                                <option value="2">대기중인 이벤트</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="select-lg">
+                                <option value="1" selected>답변 대기</option>
+                                <option value="2">대기중인 이벤트</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table table-bordered table-center table-layout-auto">
+                        <thead>
+                            <tr>
+                                <th scope="col">문의구분</th>
+                                <th scope="col">유저 이름</th>
+                                <th scope="col">이메일</th>
+                                <th scope="col">닉네임</th>
+                                <th scope="col">연락처</th>
+                                <th scope="col">내용</th>
+                                <th scope="col">접수일</th>
+                                <th scope="col">처리 상태</th>
+                                <th scope="col">처리완료 정보</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>시스템 문의</td>
+                                <td>이찬란</td>
+                                <td>brilliant512.92@gmail.com</td>
+                                <td>호호호라니호호호라니</td>
+                                <td>010-2345-6789</td>
+                                <td>루픽 시스템 문의 드립니다.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                            <tr>
+                                <td>회원 문의</td>
+                                <td>이찬란</td>
+                                <td>brilliant512.92@gmail.com</td>
+                                <td>호호호라니호호호라니</td>
+                                <td>010-2345-6789</td>
+                                <td>루픽 시스템 문의 드립니다.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                            <tr>
+                                <td>포인트 문의</td>
+                                <td>이찬란</td>
+                                <td>brilliant512.92@gmail.com</td>
+                                <td>호호호라니호호호라니</td>
+                                <td>010-2345-6789</td>
+                                <td>루픽 시스템 문의 드립니다.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                            <tr>
+                                <td>투표 문의</td>
+                                <td>이찬란</td>
+                                <td>brilliant512.92@gmail.com</td>
+                                <td>호호호라니호호호라니</td>
+                                <td>010-2345-6789</td>
+                                <td>루픽 시스템 문의 드립니다.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                            <tr>
+                                <td>오류 문의</td>
+                                <td>이찬란</td>
+                                <td>brilliant512.92@gmail.com</td>
+                                <td>호호호라니호호호라니</td>
+                                <td>010-2345-6789</td>
+                                <td>루픽 시스템 문의 드립니다.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                            <tr>
+                                <td>기타 문의</td>
+                                <td>이찬란</td>
+                                <td>brilliant512.92@gmail.com</td>
+                                <td>호호호라니호호호라니</td>
+                                <td>010-2345-6789</td>
+                                <td>루픽 시스템 문의 드립니다.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                           
+        
+                        </tbody>
+                    </table>
+                    <div class="m-t-30">
+                        <ul class="pagination">
+                            <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tap-2" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row align-items-center m-b-30">
+                        <div class="col">
+                            <div class="item-search d-flex align-items-center">
+                                <input class="form-control w-100" type="text" placeholder="찾고 싶은 유저가 있나요?" aria-label="Search">
+                                <i></i>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <select class="select-lg">
+                                <option value="1" selected>전체 문의</option>
+                                <option value="2">대기중인 이벤트</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="select-lg">
+                                <option value="1" selected>답변 대기</option>
+                                <option value="2">대기중인 이벤트</option>
+                            </select>
+                        </div>
+                    </div>
+                    <table class="table table-bordered table-center table-layout-auto">
+                        <thead>
+                            <tr>
+                                <th scope="col">문의구분</th>
+                                <th scope="col">유저 이름</th>
+                                <th scope="col">연락처</th>
+                                <th scope="col">이벤트 명</th>
+                                <th scope="col">내용</th>                                
+                                <th scope="col">접수일</th>
+                                <th scope="col">처리 상태</th>
+                                <th scope="col">처리완료 정보</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>이벤트 문의</td>
+                                <td>이찬란</td>
+                                <td>010-2345-6789</td>
+                                <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
+                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                            <tr>
+                                <td>아이템 문의</td>
+                                <td>이찬란</td>
+                                <td>010-2345-6789</td>
+                                <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
+                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                            <tr>
+                                <td>럭키템 문의</td>
+                                <td>이찬란</td>
+                                <td>010-2345-6789</td>
+                                <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
+                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+                            <tr>
+                                <td>교환/환불/취소</td>
+                                <td>이찬란</td>
+                                <td>010-2345-6789</td>
+                                <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
+                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>                           
+                            </tr>
+        
+                        </tbody>
+                    </table>
+                    <div class="m-t-30">
+                        <ul class="pagination">
+                            <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+         
+           
+            
+        </div>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+        })
+    </script>
+
+</body>
+
+</html>
