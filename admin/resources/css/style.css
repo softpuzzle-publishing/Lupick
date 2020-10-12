@@ -79,6 +79,10 @@ a:focus {
   margin-bottom: 30px !important;
 }
 
+.m-l-10 {
+  margin-left: 10px !important;
+}
+
 .m-l-15 {
   margin-left: 12px !important;
 }
@@ -93,6 +97,18 @@ a:focus {
 
 .m-r-30 {
   margin-right: 30px !important;
+}
+
+.p-15 {
+  padding: 15px !important;
+}
+
+.p-25 {
+  padding: 25px 15px !important;
+}
+
+.p-30 {
+  padding: 30px 15px !important;
 }
 
 .d-flex > .m-l-15 {
@@ -131,6 +147,10 @@ a:focus {
   width: 120px !important;
 }
 
+.w-200px {
+  width: 200px !important;
+}
+
 .w-220px {
   width: 220px !important;
 }
@@ -153,6 +173,10 @@ a:focus {
 
 .w-476px {
   width: 476px !important;
+}
+
+.w-610px {
+  width: 610px !important;
 }
 
 .w-772px {
@@ -181,6 +205,10 @@ a:focus {
 
 .h-120px {
   height: 120px !important;
+}
+
+.h-495px {
+  height: 495px !important;
 }
 
 .modal-1400 {
@@ -360,6 +388,15 @@ textarea.form-control {
 
 .filebox.profile label img {
   border-radius: 85px;
+}
+
+.icon i {
+  display: inline-block;
+  background: url("../images/icon-plus.svg") no-repeat 50% 50%;
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  font-size: 20px;
 }
 
 .nav-pills .nav-item {
@@ -1797,7 +1834,12 @@ body {
   color: #000;
 }
 
-.modal-header .double-modal-title {
+.modal-header.modal-none-border {
+  border-bottom: none;
+  min-height: auto;
+}
+
+.modal-header.modal-none-border .double-modal-title {
   font-size: 20px;
   font-weight: bold;
 }
@@ -2248,6 +2290,20 @@ body {
 
 .modal.modal-size-fix .modal-dialog {
   margin: 0 auto;
+}
+
+.modal.modal-size-fix .modal-auto-height {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal.modal-size-fix .modal-auto-height .modal-body {
+  height: auto;
 }
 
 .modal.modal-size-fix .modal-body {

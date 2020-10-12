@@ -89,8 +89,7 @@
                         </td>
                         <td><span class="badge badge-dark">Black</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal"
-                                data-target="#exampleModalScrollable">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#exampleModalScrollable">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -271,8 +270,8 @@
             aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="modal-header-top">
+                    <div class="modal-header modal-none-border">
+                        <div class="modal-header-top m-0">
                             <h3 class="mb-0">유저 관리</h3>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
@@ -328,11 +327,11 @@
                                 </tr>
                                 <tr>
                                     <th>이메일</th>
-                                    <td><span class="float-left">hohoho@hohohogroup.com</span> <button type="button" class="btn btn-outline-dark btn-sm float-right">메일 발송</button></td>
+                                    <td><span class="float-left">hohoho@hohohogroup.com</span> <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-email" data-toggle="modal" data-role="button">메일 발송</button></td>
 
                                     <th class="text-center">전화번호</th>
                                     <td>
-                                        <span class="float-left">010-1234-5678</span> <button type="button" class="btn btn-outline-dark btn-sm float-right">SMS 발송</button>
+                                        <span class="float-left">010-1234-5678</span> <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-sms" data-toggle="modal" data-role="button">SMS 발송</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -351,7 +350,7 @@
 
                                     <th class="text-center">포인트</th>
                                     <td class="">
-                                        <span class="float-left">1000 p</span><button type="button" class="btn btn-outline-dark btn-sm float-right"href="#payments" data-toggle="modal" data-role="button">지급 / 차감</button>
+                                        <span class="float-left">1000 p</span><button type="button" class="btn btn-outline-dark btn-sm float-right" href="#payments" data-toggle="modal" data-role="button">지급 / 차감</button>
                                     </td>
                                 </tr>
 
@@ -423,12 +422,157 @@
         <div class="modal fade" id="payments" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
             <div class="modal-dialog modal-vote-list md modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header border-none">
-                       <div class="double-modal-title">asd</div>
+                    <div class="modal-header border-none modal-none-border">
+                       <div class="double-modal-title m-b-30">개별/전체 메일 발송</div>
                     </div>
                     <div class="modal-body">
-                       
+                        <table class="table table-bordered table-center">
+                            <colgroup>
+                                <col width="120px">
+                                <col width="640px">
+                            </colgroup>
+                      
+                            <tbody>
+                                <tr>
+                                    <th>발송 대상</td>
+                                        <td class="text-left p-25">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" name="eventOpenDate" id="payment-1" value="payment-1">
+                                                <label class="custom-control-label" for="payment-1">지급 (+)</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" name="eventOpenDate" id="deduction-1" value="deduction-1">
+                                                <label class="custom-control-label" for="deduction-1">차감 (-)</label>
+                                            </div>
+                                          
+                                        </td>
+                                </tr>
+                               
+                                <tr>
+                                    <th>금액설정</th>
+                                    <!-- 지급 -->
+                                    <td class="text-left"><span class="icon m-r-15"><i class="icon-plus"></i></span><input type="text" class="form-control w-200px" placeholder="포인트를 입력해주세요."><span class="m-l-10">P</span></td>
+
+                                    <!-- 차감 -->
+                                    <!-- <td class="text-left"><span class="m-r-15"><i class="fas fa-minus"></i></span><input type="text" class="form-control w-200px" placeholder="포인트를 입력해주세요."><span class="m-l-10">P</span></td> -->
+                                </tr>
+                                <tr>
+                                    <th>사유</th>
+                                    <td class="text-left">
+                                        <select class="select-md">
+                                            <option value="" disabled selected>포인트 지급/차감 사유 선택</option>
+                                            <option value="1">상품 구매 시 사용</option>
+                                            <option value="2">포인트 환원 (취소/환불)</option>
+                                            <option value="2">루피커 선정 포인트 지급</option>
+                                            <option value="2">기타</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- ///sms 발송-->
+        <div class="modal fade" id="send-sms" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+            <div class="modal-dialog modal-vote-list md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-none modal-none-border">
+                        <div class="double-modal-title m-b-30">개별/전체 메일 발송</div>
+                     </div>
+                    <div class="modal-body">
+                        <table class="table table-bordered table-center">
+                            <colgroup>
+                                <col width="120px">
+                                <col width="640px">
+                            </colgroup>
+                      
+                            <tbody>
+                                <tr>
+                                    <th>발송 대상</td>
+                                        <td class="text-left p-25">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
+                                                <label class="custom-control-label" for="send-radio-2">선택 유저</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
+                                                <label class="custom-control-label" for="send-radio-2">수신 동의 유저</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-3" value="send-radio-3">
+                                                <label class="custom-control-label" for="send-radio-3">전체 유저</label>
+                                            </div>
+                                        </td>
+                                </tr>
+                               
+                                <tr>
+                                    <th>제목</th>
+                                    <td> <input type="text" class="form-control w-610px"></td>
+                                </tr>
+                                <tr>
+                                    <th>내용</th>
+                                    <td>
+                                        <textarea class="form-control w-610px h-495px" maxlength="40" placeholder="내용을 입력해 주세요." data-byte-target="#byte-check1"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        
+        <!-- ///메일 발송 -->
+        <div class="modal fade" id="send-email" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+            <div class="modal-dialog modal-vote-list md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header border-none modal-none-border">
+                        <div class="double-modal-title m-b-30">개별/전체 메일 발송</div>
+                     </div>
+                     <div class="modal-body">
+                         <table class="table table-bordered table-center">
+                             <colgroup>
+                                 <col width="120px">
+                                 <col width="640px">
+                             </colgroup>
+                       
+                             <tbody>
+                                 <tr>
+                                     <th>발송 대상</td>
+                                         <td class="text-left p-25">
+                                             <div class="custom-control custom-radio custom-control-inline">
+                                                 <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
+                                                 <label class="custom-control-label" for="send-radio-2">선택 유저</label>
+                                             </div>
+                                             <div class="custom-control custom-radio custom-control-inline">
+                                                 <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
+                                                 <label class="custom-control-label" for="send-radio-2">수신 동의 유저</label>
+                                             </div>
+                                             <div class="custom-control custom-radio custom-control-inline">
+                                                 <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-3" value="send-radio-3">
+                                                 <label class="custom-control-label" for="send-radio-3">전체 유저</label>
+                                             </div>
+                                         </td>
+                                 </tr>
+                                
+                                 <tr>
+                                     <th>제목</th>
+                                     <td> <input type="text" class="form-control w-610px"></td>
+                                 </tr>
+                                 <tr>
+                                     <th>내용</th>
+                                     <td>
+                                         <textarea class="form-control w-610px h-495px" maxlength="40" placeholder="내용을 입력해 주세요." data-byte-target="#byte-check1"></textarea>
+                                     </td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
                 </div>
             </div>
         </div>

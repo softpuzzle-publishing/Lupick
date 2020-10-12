@@ -56,12 +56,16 @@ a:focus{outline: none;}
 .m-b-15{margin-bottom: 15px !important;}
 .m-b-30{margin-bottom: 30px !important;}
 
+.m-l-10{margin-left: 10px !important;}
 .m-l-15{margin-left: 12px !important;}
 .m-l-30{margin-left: 30px !important;}
 
 .m-r-15{margin-right: 12px !important;}
 .m-r-30{margin-right: 30px !important;}
 
+.p-15{padding:15px !important;}
+.p-25{padding:25px 15px !important;}
+.p-30{padding:30px 15px !important;}
 .d-flex >{
     .m-l-15{margin-left: 15px !important;}
     .m-r-15{margin-right: 15px !important;}
@@ -75,12 +79,14 @@ a:focus{outline: none;}
 .w-60px{width: 60px !important;}
 .w-100px{width: 100px !important;}
 .w-120px{width: 120px !important;}
+.w-200px{width: 200px !important;}
 .w-220px{width: 220px !important;}
 .w-250px{width: 250px !important;}
 .w-270px{width: 270px !important;}
 .w-382px{width: 382px !important;}
 .w-400px{width: 400px !important;}
 .w-476px{width: 476px !important;}
+.w-610px{width: 610px !important;}
 .w-772px{width: 772px !important;}
 .w-800px{width: 800px !important;}
 .w-960px{width: 960px !important;}
@@ -88,6 +94,7 @@ a:focus{outline: none;}
 .h-25px{height: 25px !important;}
 .h-90px{height: 90px !important;}
 .h-120px{height: 120px !important;}
+.h-495px{height: 495px !important;}
 
 .modal-1400{
     width:1400px !important;
@@ -119,6 +126,7 @@ textarea.form-control{
     display: inline-block;
     margin:0 15px;
 }
+
 //select
 .ui-selectmenu-button.ui-button{
     background: #fff !important;border: 1px solid $border-color;border-radius: 0;outline: 0;width: 230px;height: 40px;padding: 10.5px 15px 0;margin: 0;
@@ -168,7 +176,12 @@ textarea.form-control{
         
     }
 }
-
+//+아이콘
+.icon{
+    i {
+        display: inline-block;background: url('../images/icon-plus.svg') no-repeat 50% 50%;width: 15px;height: 15px;background-size: contain;font-size: 20px;
+    }
+}
 //tab
 .nav-pills {
     .nav-item{

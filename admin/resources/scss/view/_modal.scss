@@ -30,10 +30,15 @@
             }
         }
     }
-    .double-modal-title{
-        font-size: 20px;
-        font-weight: bold;
+    &.modal-none-border{
+        border-bottom:none;
+        min-height: auto;
+        .double-modal-title{
+            font-size: 20px;
+            font-weight: bold;
+        }
     }
+    
 }
 
 .modal-body {
@@ -372,6 +377,17 @@
 
 .modal.modal-size-fix{
     .modal-dialog{margin: 0 auto;}
+    .modal-auto-height{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        .modal-body{
+            height:auto;
+        }
+    }
     .modal-header{
 
     }

@@ -43,7 +43,8 @@
                 </div>
 
                 <div class="col-auto">
-                    <button type="button" class="btn btn-dark btn-xl-65">+ 판매자 추가하기</button>
+                    <button type="button" class="btn btn-dark btn-xl-65" data-toggle="modal"
+                    data-target="#exampleModalScrollable-1">+ 판매자 추가하기</button>
                 </div>
             </div>
             <table class="table table-bordered table-center table-layout-auto">
@@ -71,8 +72,8 @@
                         <td>02-1111-2222</td>
                         <td>서울시 강남구 논현동 101-1 3층</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal"
-                                data-target="#exampleModalScrollable">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm"  data-toggle="modal"
+                            data-target="#exampleModalScrollable-2">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -152,27 +153,181 @@
             </div>
         </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+        <!-- 판매자 등록 -->
+        <div class="modal fade modal-1400 modal-size-fix" id="exampleModalScrollable-1" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content modal-auto-height">
+                <div class="modal-header modal-none-border">
+                    <div class="modal-header-top m-0">
+                        <h3 class="m-b-30">판매자 등록</h3>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button> -->
                     </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                <div class="modal-body">
+                  
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                           
+                            <tr>
+                                <th>상호명</th>
+                                <td>
+                                    <input type="text" value="hohohoTIDO" class="form-control w-610px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>대표자</th>
+                                <td>
+                                    <input type="text" value="****" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업자 번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>통신판매번호</th>
+                                <td>
+                                    <input type="text" value="티도" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업자 소재지</th>
+                                <td>
+                                    <input type="text" value="TIDO" class="form-control w-960px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>고객센터 전화번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+       
+                   
+                   
+                </div>
+                <div class="modal-footer border-none">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark btn-lg">등록하기</button>
                     </div>
                 </div>
             </div>
         </div>
+       </div>
+
+       
+        <!-- 판매자 등록 -->
+        <div class="modal fade modal-1400 modal-size-fix" id="exampleModalScrollable-2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content modal-auto-height">
+                <div class="modal-header modal-none-border">
+                    <div class="modal-header-top m-0">
+                        <h3 class="m-b-30">판매자 정보 수정</h3>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button> -->
+                    </div>
+                </div>
+                <div class="modal-body">
+                  
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                           
+                            <tr>
+                                <th>상호명</th>
+                                <td>
+                                    <input type="text" value="hohohoTIDO" class="form-control w-610px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>대표자</th>
+                                <td>
+                                    <input type="text" value="****" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업자 번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>통신판매번호</th>
+                                <td>
+                                    <input type="text" value="티도" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업자 소재지</th>
+                                <td>
+                                    <input type="text" value="TIDO" class="form-control w-960px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>고객센터 전화번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+       
+                   
+                   
+                </div>
+                <div class="modal-footer border-none d-flex justify-content-center">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-darkgray btn-lg m-r-30">삭제하기</button>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-dark btn-lg">등록하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
     </div>
 
     <script src="../../resources/js/common.js"></script>
