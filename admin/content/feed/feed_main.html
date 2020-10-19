@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lupick</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
     <link rel="stylesheet" href="../../resources/css/style.css">
     <!-- jQuery -->
     <script src="../../resources/plugins/jquery/jquery.min.js"></script>
@@ -20,7 +22,9 @@
     <!-- Bootstrap 4 -->
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- datetimepicker -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js">
+    </script>
 </head>
 
 <body>
@@ -36,7 +40,8 @@
                     <a class="nav-link active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab">전체 피드</a>
                     <a class="nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab">이벤트 후기</a>
                     <a class="nav-link" id="nav-story-tab" data-toggle="tab" href="#nav-story" role="tab">루픽 스토리</a>
-                    <a class="nav-link" id="nav-exhibition-tab" data-toggle="tab" href="#nav-exhibition" role="tab">기획전</a>
+                    <a class="nav-link" id="nav-exhibition-tab" data-toggle="tab" href="#nav-exhibition"
+                        role="tab">기획전</a>
                 </div>
             </nav>
 
@@ -48,7 +53,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="col-auto">
                     <select class="select-lg">
                         <option value="" selected>전체 피드</option>
@@ -70,12 +75,13 @@
                                 
                             </div> 
                         </div> -->
-                      
-                        
+
+
                         <ul class="card-list feed">
                             <li>
-                                <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
-                                    <div class="thumb" style="background-image:url('../../resources/images/@Thumbnail_03.png')">
+                                <a href="#myModal2" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb"
+                                        style="background-image:url('../../resources/images/@Thumbnail_03.png')">
                                         <span class="badge badge-warning">이벤트 후기</span>
                                     </div>
                                     <div class="info">
@@ -88,8 +94,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
-                                    <div class="thumb" style="background-image:url('../../resources/images/@Thumbnail_03.png')">
+                                <a href="#feedmodal2" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb"
+                                        style="background-image:url('../../resources/images/@Thumbnail_03.png')">
                                         <span class="badge badge-warning">이벤트 후기</span>
                                     </div>
                                     <div class="info">
@@ -101,8 +108,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
-                                    <div class="thumb" style="background-image:url('../../resources/images/@Thumbnail_03.png')">
+                                <a href="#feedmodal1" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb"
+                                        style="background-image:url('../../resources/images/@Thumbnail_03.png')">
                                         <span class="badge badge-warning">루픽 스토리</span>
                                     </div>
                                     <div class="info">
@@ -133,30 +141,116 @@
     </div>
 
 
-    <!-- Modal -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="modal-event-create">
-        <div class="modal-dialog modal-xl" role="document">
+
+    <!-- Modal : 피드 작성 -->
+    <div class="modal modal-size-fix has-tab" id="feedmodal1" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header modal-none-border">
                     <div class="modal-header-top">
-                        <h3 class="mb-0">피드 관리</h3>
+                        <h3>피드 작성</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-
                 </div>
-                <div class="modal-body">
-                    <!-- //이벤트 정보 -->
+                <div class="modal-body" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
+                    <!-- //피드작성 /이벤트 후기-->
                     <div class="info-event" id="div1">
-                        <table class="table table-bordered">
-                            <p class="modal-sub-title">피드 관리</p>
+                        <p class="modal-sub-title">피드 작성</p>
+                        <table class="table table-bordered table-form">
                             <colgroup>
                                 <col width="246px">
                                 <col>
                             </colgroup>
                             <tbody>
+                                <tr>
+                                    <th>피드 종류</th>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-1" value="feed-select-1" selected>
+                                            <label class="custom-control-label" for="feed-select-1">이벤트 후기</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-2" value="feed-select-2">
+                                            <label class="custom-control-label" for="feed-select-2">루픽 스토리</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-3" value="feed-select-3">
+                                            <label class="custom-control-label" for="feed-select-3">기획전</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <input type="file" id="input-img">
+                                                <label for="input-img"><i class="icon-plus"></i>
+                                                    <img src="" alt="" id="img"></label>
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
 
+                                <tr>
+                                    <th>피드 타이틀</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50"
+                                                placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check1"></textarea>
+                                            <span class="example-text m-l-15">(<span
+                                                    id="byte-check1">0</span>/50)</span>
+                                            <span class="example-text m-l-20">* 피드 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>피드 상세페이지</th>
+                                    <td>
+                                        <input type="text" class="form-control w-100p h-570px"
+                                            placeholder="피드 상세 페이지를 구성해 주세요.">
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody class="radio-select" id="radio-select-1">
+                                <tr>
+                                    <th>이벤트 링크</th>
+                                    <td>
+                                        <div class="select-file d-flex align-items-center">
+                                            <div class="select-filebox">
+                                                <label for="input-img">
+                                                    <p>파일 선택 </p>
+                                                </label>
+                                                <input type="file" id="input-img">
+                                            </div>
+                                            <div class="example-text m-l-15">
+                                                <p>* 해당 이벤트 후기의 관련 이벤트를 선택해 주세요. (1개)</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- //기획전 -->
+                            <tbody class="radio-select" id="radio-select-3">
+                                <tr>
+                                    <th>기획전 기간</th>
+                                    <td>
+                                        <input type="text" value="30" class="form-control text-center w-100px">
+                                        <span class="m-l-15">일</span>
+                                        <span class="example-text m-l-15">* 평균 기획전 권장 기간은 30일 입니다. 특별한 경우 마스터와 협의해 주세요.
+                                            * 해당 기간이 지나면 기획전은 자동으로 종료되어 피드에 노출되지 않습니다.</span>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <th>메인 이미지 등록</th>
                                     <td>
@@ -174,57 +268,343 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>피드 타이틀</th>
+                                    <th>기획전 타이틀</th>
                                     <td>
-                                        <div class="input-group modal-textarea title align-items-end">
-                                            <textarea class="form-control " maxlength="50"
-                                                placeholder="이벤트 제목을 입력해주세요."></textarea>
-                                            <div class="textarea-counter ml-3">
-                                                <span id="counter-title">0</span><span>/50</span><span
-                                                    class="example-text ml-3">* 피드 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50"
+                                                placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check1"></textarea>
+                                            <span class="example-text m-l-15">(<span
+                                                    id="byte-check1">0</span>/50)</span>
+                                            <span class="example-text m-l-20">* 기획전 타이틀은 최소 25자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기획전 내용</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50"
+                                                placeholder="기획전 내용을 입력해 주세요."
+                                                data-byte-target="#byte-check1"></textarea>
+                                            <span class="example-text m-l-15">(<span
+                                                    id="byte-check1">0</span>/85)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>배경 컬러</th>
+                                    <td>
+                                        <div class="d-flex">
+                                            <input id="demo-input" type="text" value="rgb(255, 128, 0)" />
+                                            <input type="text" class="form-control">
+                                            <span class="example-text m-l-15">* 기획전 배경 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>텍스트 컬러</th>
+                                    <td>
+                                        <div class="d-flex">
+                                            <input id="demo-input" type="text" value="rgb(255, 128, 0)" />
+                                            <input type="text" class="form-control">
+                                            <span class="example-text m-l-15">* 기획전 텍스트 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이벤트 링크</th>
+                                    <td>
+                                        <div class="select-file d-flex align-items-center">
+                                            <button class="btn btn-outline-dark btn-md" data-toggle="modal" data-role="button" data-target="#select-event">이벤트 선택</button>
+
+                                            <div class="example-text m-l-15">
+                                                <p>* 해당 이벤트 후기의 관련 이벤트를 선택해 주세요. (1개)</p>
+                                            </div>
+                                        </div>
+                                        <div class="event-link">
+                                            <div class="event-pd">
+                                                <div class="event-list w-350px d-flex align-items-baseline justify-content-between">
+                                                    <div class="d-flex">
+                                                        <span class="ic-select"></span>
+                                                        <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
+                                                    </div>
+                                                    <span class="ic-close"></span>
+                                                </div>
+                                            </div>
+                                            <div class="event-pd">
+                                                <div class="event-list w-350px d-flex align-items-baseline justify-content-between">
+                                                    <div class="d-flex">
+                                                        <span class="ic-select"></span>
+                                                        <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
+                                                    </div>
+                                                    <span class="ic-close"></span>
+                                                </div>
+                                            </div>
+                                            <div class="event-pd">
+                                                <div class="event-list w-350px d-flex align-items-baseline justify-content-between">
+                                                    <div class="d-flex">
+                                                        <span class="ic-select"></span>
+                                                        <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
+                                                    </div>
+                                                    <span class="ic-close"></span>
+                                                </div>
+                                            </div>
+                                            <div class="event-pd">
+                                                <div class="event-list w-350px d-flex align-items-baseline justify-content-between">
+                                                    <div class="d-flex">
+                                                        <span class="ic-select"></span>
+                                                        <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
+                                                    </div>
+                                                    <span class="ic-close"></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>
-
                                 </tr>
-                                <tr>
-                                    <th>피드 상세페이지</th>
-                                    <td>
-                                        에디터 영역
-                                    </td>
-                                </tr>
-
-
-
                             </tbody>
+                           
                         </table>
+                   
                     </div>
-
-
-
-
 
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진
+                                계산기</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱
+                                프리뷰</strong></button>
                     </div>
 
                     <div class="modal-footer-right d-flex">
-                        <button type="button" class="btn btn-temporary-save">임시 저장</button>
-                        <button type="button" class="btn btn-request ml-3">승인 요청</button>
+                        <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal : 피드 관리 -->
+    <!-- 선택한 피드의 데이터가 들어감 -->
+    <div class="modal modal-size-fix" id="feedmodal2" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header modal-none-border">
+                    <div class="modal-header-top">
+                        <h3>피드 관리</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
+                    <!-- //피드작성 /이벤트 후기-->
+                    <div class="info-event" id="div1">
+                        <p class="modal-sub-title">피드 관리</p>
+                        <table class="table table-bordered table-form">
+                            <colgroup>
+                                <col width="246px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>피드 종류</th>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-4" value="feed-select-4" selected>
+                                            <label class="custom-control-label" for="feed-select-4">이벤트 후기</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-5" value="feed-select-5">
+                                            <label class="custom-control-label" for="feed-select-5">루픽 스토리</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-6" value="feed-select-6">
+                                            <label class="custom-control-label" for="feed-select-6">기획전</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <input type="file" id="input-img">
+                                                <label for="input-img"><i class="icon-plus"></i>
+                                                    <img src="" alt="" id="img"></label>
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>피드 타이틀</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50"
+                                                placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check1"></textarea>
+                                            <span class="example-text m-l-15">(<span
+                                                    id="byte-check1">0</span>/50)</span>
+                                            <span class="example-text m-l-20">* 피드 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>피드 상세페이지</th>
+                                    <td>
+                                        <input type="text" class="form-control w-100p h-570px"
+                                            placeholder="피드 상세 페이지를 구성해 주세요.">
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <!-- //기획전 -->
+                            <tbody class="radio-select" id="radio-select-3">
+                                <tr>
+                                    <th>기획전 기간</th>
+                                    <td>
+                                        <input type="text" value="30" class="form-control text-center w-100px">
+                                        <span class="m-l-15">일</span>
+                                        <span class="example-text m-l-15">* 평균 기획전 권장 기간은 30일 입니다. 특별한 경우 마스터와 협의해 주세요.
+                                            * 해당 기간이 지나면 기획전은 자동으로 종료되어 피드에 노출되지 않습니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <input type="file" id="input-img">
+                                                <label for="input-img"><i class="icon-plus"></i>
+                                                    <img src="" alt="" id="img"></label>
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기획전 타이틀</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50"
+                                                placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check1"></textarea>
+                                            <span class="example-text m-l-15">(<span
+                                                    id="byte-check1">0</span>/50)</span>
+                                            <span class="example-text m-l-20">* 기획전 타이틀은 최소 25자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기획전 내용</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50"
+                                                placeholder="기획전 내용을 입력해 주세요."
+                                                data-byte-target="#byte-check1"></textarea>
+                                            <span class="example-text m-l-15">(<span
+                                                    id="byte-check1">0</span>/85)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>배경 컬러</th>
+                                    <td>
+                                        <div class="d-flex">
+                                            <input id="demo-input" type="text" value="rgb(255, 128, 0)" />
+                                            <input type="text" class="form-control">
+                                            <span class="example-text m-l-15">* 기획전 배경 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>텍스트 컬러</th>
+                                    <td>
+                                        <div class="d-flex">
+                                            <input id="demo-input" type="text" value="rgb(255, 128, 0)" />
+                                            <input type="text" class="form-control">
+                                            <span class="example-text m-l-15">* 기획전 텍스트 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 이벤트 후기 -->
+                        <table class="table table-bordered table-form radid-select" id="radio-select-1">
+                            <colgroup>
+                                <col width="246px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>이벤트 링크</th>
+                                    <td>
+                                        <div class="select-file d-flex align-items-center">
+                                            <div class="select-filebox">
+                                                <label for="input-img">
+                                                    <p>파일 선택 </p>
+                                                </label>
+                                                <input type="file" id="input-img">
+                                            </div>
+                                            <div class="example-text m-l-15">
+                                                <p>* 해당 이벤트 후기의 관련 이벤트를 선택해 주세요. (1개)</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                       
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진
+                                계산기</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱
+                                프리뷰</strong></button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+       <!-- modal : 전체보기 -->
+       <div class="modal fade" id="select-event" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-vote-list modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header modal-none-border">
+                    <div class="double-modal-title m-b-30">링크할 이벤트를 선택해 주세요.</div>
+                </div>
+                <div class="modal-body">
+             
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- <script src="../../resources/plugins/bootstrap-colorpicker/Colorpicker.js"></script> -->
     <script src="../../resources/js/common.js"></script>
     <script>
         $(document).ready(function () {
             $('.adobe').css('width', '98%');
-
         });
     </script>
 

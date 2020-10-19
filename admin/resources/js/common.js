@@ -4,7 +4,7 @@ $('[data-overlap="true"]').on('hidden.bs.modal', function (e) {
 });
 
 $('textarea, input').on("input", function () {
-    if($(this).attr('maxlength') !== ""){
+    if ($(this).attr('maxlength') !== "") {
         var maxlength = $(this).attr("maxlength");
         var content = $(this).val();
 
@@ -47,7 +47,8 @@ function handleImgFileSelect(e) {
 
     });
 }
-function profileImgFileSelect(e){
+
+function profileImgFileSelect(e) {
     var files = e.target.files;
     var filesArr = Array.prototype.slice.call(files);
 
@@ -87,10 +88,36 @@ $(document).ready(function () {
     $('aside').load('../_include/aside.html');
 
     //select
-    setTimeout(function(){
+    setTimeout(function () {
         $(".select-sm").selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
         $(".select-md").selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
         $(".select-lg").selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
-    },50);
+    }, 50);
+
 
 });
+
+
+
+
+$('.custom-radio').click(function(){
+
+    var idx = $(this).index()+1;
+    console.log('number = ' + idx);
+    
+ 
+    if( idx == 1){
+        $('#radio-select-'+idx).show();
+        $('#radio-select-2').hide();
+        $('#radio-select-3').hide();
+    }else if( idx == 2){
+        $('#radio-select-'+idx).show();
+        $('#radio-select-1').hide();
+        $('#radio-select-3').hide();
+    }else if( idx == 3 ){
+        $('#radio-select-'+idx).show();
+        $('#radio-select-1').hide();
+        $('#radio-select-2').hide();
+    }
+
+})

@@ -18,6 +18,8 @@ a{text-decoration: none;}
 
 p{margin:0;}
 
+.g-b{font-family: 'Gilroy';font-size:18px;}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -83,6 +85,7 @@ a:focus{outline: none;}
 .w-220px{width: 220px !important;}
 .w-250px{width: 250px !important;}
 .w-270px{width: 270px !important;}
+.w-350px{width: 350px !important;}
 .w-382px{width: 382px !important;}
 .w-400px{width: 400px !important;}
 .w-476px{width: 476px !important;}
@@ -91,10 +94,12 @@ a:focus{outline: none;}
 .w-800px{width: 800px !important;}
 .w-960px{width: 960px !important;}
 .w-1213px{width: 1213px !important;}
+.w-100p{width: 100% !important;}
 .h-25px{height: 25px !important;}
 .h-90px{height: 90px !important;}
 .h-120px{height: 120px !important;}
 .h-495px{height: 495px !important;}
+.h-570px{height: 570px !important;}
 
 .modal-1400{
     width:1400px !important;
@@ -181,6 +186,22 @@ textarea.form-control{
     i {
         display: inline-block;background: url('../images/icon-plus.svg') no-repeat 50% 50%;width: 15px;height: 15px;background-size: contain;font-size: 20px;
     }
+}
+.ic-select{
+    width: 16px;
+    height: 16px;
+    background-image: url('../../resources/images/ic-select.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display:inline-block;
+}
+.ic-close{
+    width: 11px;
+    height: 11px;
+    background-image: url('../../resources/images/ic-close.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display:inline-block;
 }
 //tab
 .nav-pills {

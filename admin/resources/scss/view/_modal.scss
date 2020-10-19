@@ -13,6 +13,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
         margin-bottom: 30px;
         h3 {
             font-size: 24px
@@ -33,6 +34,7 @@
     &.modal-none-border{
         border-bottom:none;
         min-height: auto;
+        position: relative;
         .double-modal-title{
             font-size: 20px;
             font-weight: bold;
@@ -404,6 +406,7 @@
 
 .table-form{
     th,td{border-color: #000;}
+    > tbody{margin-bottom:15px;}
     > tbody > tr > th{font-size: 16px;text-align: center;padding: 15px;}
     > tbody > tr > td{font-size: 16px;padding: 15px;}
 }
@@ -416,3 +419,30 @@ input:checked ~ label{
         color: $yellow;
     }
 }
+
+
+// 피드
+.event-link{
+    display:flex;
+    align-items: center;
+    flex-flow:wrap;
+    margin-left:-55px;
+    margin-right:-55px;
+    .event-pd{padding :20px 60px 0;}
+    .event-list{
+        margin-top: 20px;
+        span:nth-child(2){
+            font-size:14px;
+            margin-left: 15px;
+        }
+    }
+}
+.radio-select{
+    display:none;
+}
+// #radio-select-1{
+//     display:none;
+// }
+// #radio-select-3{
+//     display:none;
+// }

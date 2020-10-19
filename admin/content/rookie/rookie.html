@@ -135,9 +135,9 @@
                 <div class="modal-header modal-none-border">
                     <div class="modal-header-top m-0">
                         <h3 class="mb-0">루키 관리</h3>
-                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
-                        </button> -->
+                        </button>
                     </div>
                 </div>
                 <div class="modal-body">
@@ -156,29 +156,36 @@
                                 <td> 
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio1" value="radio1">
-                                        <label class="custom-control-label" for="radio1">Lukie</label>
+                                        <label class="custom-control-label g-b" for="radio1">Lukie</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio2" value="radio2">
-                                        <label class="custom-control-label" for="radio2">Super Lukie</label>
+                                        <label class="custom-control-label g-b" for="radio2">Super Lukie</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio2" value="radio2">
-                                        <label class="custom-control-label" for="radio2">Master</label>
+                                        <label class="custom-control-label g-b" for="radio2">Master</label>
                                     </div>
 
                                     <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-sms" data-toggle="modal" data-role="button">탈퇴 처리</button>
                                  </td>
        
                                 <th class="text-center">가입승인</th>
-                                <td><span class="float-left">승인 대기</span> <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-email" data-toggle="modal" data-role="button">승인</button></td>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="float-left">승인 대기</span> <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-email" data-toggle="modal" data-role="button">승인</button>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <th>아이디</th>
                                 <td> Luukkie20 </td>
-       
                                 <th class="text-center">전화번호</th>
-                                <td><span class="float-left">010-1234-5678</span> <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-email" data-toggle="modal" data-role="button">SMS 발송</button></td>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="float-left">010-1234-5678</span> <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-email" data-toggle="modal" data-role="button">SMS 발송</button>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <th>이름</th>
