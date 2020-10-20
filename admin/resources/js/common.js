@@ -103,21 +103,24 @@ $(document).ready(function () {
 $('.custom-radio').click(function(){
 
     var idx = $(this).index()+1;
+    
+
     console.log('number = ' + idx);
     
  
     if( idx == 1){
-        $('#radio-select-'+idx).show();
-        $('#radio-select-2').hide();
-        $('#radio-select-3').hide();
+        $('.radio-select-'+idx).show();
+        $('.radio-select-2').show();
+        $('.radio-select-3').hide();
+
     }else if( idx == 2){
-        $('#radio-select-'+idx).show();
-        $('#radio-select-1').hide();
-        $('#radio-select-3').hide();
+        $('.radio-select-1').show();
+        $('.radio-select-2').hide();
+        $('.radio-select-3').hide();
     }else if( idx == 3 ){
-        $('#radio-select-'+idx).show();
-        $('#radio-select-1').hide();
-        $('#radio-select-2').hide();
+        $('.radio-select-'+idx).show();
+        $('.radio-select-1').hide();
+
     }
 
 })

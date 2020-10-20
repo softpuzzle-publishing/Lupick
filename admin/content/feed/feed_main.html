@@ -63,7 +63,7 @@
                     </select>
                 </div>
                 <div class="col-auto">
-                    <button type="button" class="btn btn-dark btn-xl btn-feed-write">+ 피드 작성하기</button>
+                    <button type="button" class="btn btn-dark btn-xl btn-feed-write" data-toggle="modal" data-role="button" data-target="#edit-feed">+ 피드 작성하기</button>
                 </div>
             </div>
             <div class="tab-content p-0" id="nav-tabContent">
@@ -79,7 +79,7 @@
 
                         <ul class="card-list feed">
                             <li>
-                                <a href="#myModal2" class="item" data-toggle="modal" data-role="button">
+                                <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
                                     <div class="thumb"
                                         style="background-image:url('../../resources/images/@Thumbnail_03.png')">
                                         <span class="badge badge-warning">이벤트 후기</span>
@@ -94,7 +94,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#feedmodal2" class="item" data-toggle="modal" data-role="button">
+                                <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
                                     <div class="thumb"
                                         style="background-image:url('../../resources/images/@Thumbnail_03.png')">
                                         <span class="badge badge-warning">이벤트 후기</span>
@@ -108,7 +108,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#feedmodal1" class="item" data-toggle="modal" data-role="button">
+                                <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
                                     <div class="thumb"
                                         style="background-image:url('../../resources/images/@Thumbnail_03.png')">
                                         <span class="badge badge-warning">루픽 스토리</span>
@@ -143,11 +143,11 @@
 
 
     <!-- Modal : 피드 작성 -->
-    <div class="modal modal-size-fix has-tab" id="feedmodal1" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal modal-size-fix has-tab" id="edit-feed" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header modal-none-border">
-                    <div class="modal-header-top">
+                    <div class="modal-header-top m-0">
                         <h3>피드 작성</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -169,21 +169,21 @@
                                     <td>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-1" value="feed-select-1" selected>
-                                            <label class="custom-control-label" for="feed-select-1">이벤트 후기</label>
+                                            <label class="custom-control-label" for="feed-select-1"><span class="paint s-font">이벤트 후기</span></label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-2" value="feed-select-2">
-                                            <label class="custom-control-label" for="feed-select-2">루픽 스토리</label>
+                                            <label class="custom-control-label" for="feed-select-2"><span class="paint s-font">루픽 스토리</span></label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-3" value="feed-select-3">
-                                            <label class="custom-control-label" for="feed-select-3">기획전</label>
+                                            <label class="custom-control-label" for="feed-select-3"><span class="paint s-font">기획전</span></label>
                                         </div>
                                     </td>
                                 </tr>
                             </tbody>
                             <tbody>
-                                <tr>
+                                <tr class="radio-select-1">
                                     <th>메인 이미지 등록</th>
                                     <td>
                                         <div class="upload-img d-flex align-items-center">
@@ -194,13 +194,14 @@
                                             </div>
                                             <div class="example-text ml-3">
                                                 <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 동영상 : 16:9 비율 (해상도:..)</p>
                                                 <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr class="radio-select-1">
                                     <th>피드 타이틀</th>
                                     <td>
                                         <div class="d-flex align-items-end">
@@ -213,7 +214,7 @@
                                     </td>
                                 </tr>
 
-                                <tr>
+                                <tr class="radio-select-1">
                                     <th>피드 상세페이지</th>
                                     <td>
                                         <input type="text" class="form-control w-100p h-570px"
@@ -221,19 +222,26 @@
                                     </td>
                                 </tr>
                             </tbody>
-                            <tbody class="radio-select" id="radio-select-1">
+                            <tbody class="radio-select-2">
                                 <tr>
                                     <th>이벤트 링크</th>
                                     <td>
                                         <div class="select-file d-flex align-items-center">
-                                            <div class="select-filebox">
-                                                <label for="input-img">
-                                                    <p>파일 선택 </p>
-                                                </label>
-                                                <input type="file" id="input-img">
-                                            </div>
+                                            <button class="btn btn-outline-dark btn-md" data-toggle="modal" data-role="button" data-target="#select-event">이벤트 선택</button>
+
                                             <div class="example-text m-l-15">
                                                 <p>* 해당 이벤트 후기의 관련 이벤트를 선택해 주세요. (1개)</p>
+                                            </div>
+                                        </div>
+                                        <div class="event-link">
+                                            <div class="event-pd">
+                                                <div class="event-list w-350px d-flex align-items-baseline justify-content-between">
+                                                    <div class="d-flex">
+                                                        <span class="ic-select"></span>
+                                                        <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
+                                                    </div>
+                                                    <a href=""><span class="ic-close"></span></a>
+                                                </div>
                                             </div>
                                         </div>
                                     </td>
@@ -241,7 +249,7 @@
                             </tbody>
 
                             <!-- //기획전 -->
-                            <tbody class="radio-select" id="radio-select-3">
+                            <tbody class="radio-select-3">
                                 <tr>
                                     <th>기획전 기간</th>
                                     <td>
@@ -271,10 +279,10 @@
                                     <th>기획전 타이틀</th>
                                     <td>
                                         <div class="d-flex align-items-end">
-                                            <textarea class="form-control w-772px" maxlength="50"
-                                                placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check1"></textarea>
+                                            <textarea class="form-control w-772px h-40px" maxlength="40"
+                                                placeholder="기획전 제목을 입력해주세요." data-byte-target="#byte-check1"></textarea>
                                             <span class="example-text m-l-15">(<span
-                                                    id="byte-check1">0</span>/50)</span>
+                                                    id="byte-check1">0</span>/40)</span>
                                             <span class="example-text m-l-20">* 기획전 타이틀은 최소 25자 이상으로 작성해주세요.</span>
                                         </div>
                                     </td>
@@ -328,7 +336,7 @@
                                                         <span class="ic-select"></span>
                                                         <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
                                                     </div>
-                                                    <span class="ic-close"></span>
+                                                    <a href=""><span class="ic-close"></span></a>
                                                 </div>
                                             </div>
                                             <div class="event-pd">
@@ -337,7 +345,7 @@
                                                         <span class="ic-select"></span>
                                                         <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
                                                     </div>
-                                                    <span class="ic-close"></span>
+                                                    <a href=""><span class="ic-close"></span></a>
                                                 </div>
                                             </div>
                                             <div class="event-pd">
@@ -346,7 +354,7 @@
                                                         <span class="ic-select"></span>
                                                         <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
                                                     </div>
-                                                    <span class="ic-close"></span>
+                                                    <a href=""><span class="ic-close"></span></a>
                                                 </div>
                                             </div>
                                             <div class="event-pd">
@@ -355,7 +363,7 @@
                                                         <span class="ic-select"></span>
                                                         <span class="w-270px">실제로 포르쉐폴 FLEX 해버린 루피커 9명워 생생한 후기! 시승식부터 소감까지</span>
                                                     </div>
-                                                    <span class="ic-close"></span>
+                                                    <a href=""><span class="ic-close"></span></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -370,14 +378,13 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진
-                                계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱
                                 프리뷰</strong></button>
                     </div>
 
                     <div class="modal-footer-right d-flex">
-                        <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
+                        <button type="button" class="btn btn-darkgray btn-lg" data-event="next-step">임시 저장</button>
+                        <button type="button" class="btn btn-dark btn-lg" data-event="next-step">승인 요청</button>
                     </div>
                 </div>
 
@@ -387,11 +394,11 @@
 
     <!-- Modal : 피드 관리 -->
     <!-- 선택한 피드의 데이터가 들어감 -->
-    <div class="modal modal-size-fix" id="feedmodal2" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal modal-size-fix" id="feed-management" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header modal-none-border">
-                    <div class="modal-header-top">
+                    <div class="modal-header-top m-0">
                         <h3>피드 관리</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -413,15 +420,15 @@
                                     <td>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-4" value="feed-select-4" selected>
-                                            <label class="custom-control-label" for="feed-select-4">이벤트 후기</label>
+                                            <label class="custom-control-label" for="feed-select-4"><span class="paint s-font">이벤트 후기</span></label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-5" value="feed-select-5">
-                                            <label class="custom-control-label" for="feed-select-5">루픽 스토리</label>
+                                            <label class="custom-control-label" for="feed-select-5"><span class="paint s-font">루픽 스토리</span></label>
                                         </div>
                                         <div class="custom-control custom-radio custom-control-inline">
                                             <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-6" value="feed-select-6">
-                                            <label class="custom-control-label" for="feed-select-6">기획전</label>
+                                            <label class="custom-control-label" for="feed-select-6"><span class="paint s-font">기획전</span></label>
                                         </div>
                                     </td>
                                 </tr>
@@ -438,6 +445,7 @@
                                             </div>
                                             <div class="example-text ml-3">
                                                 <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 동영상 : 16:9 비율 (해상도:..)</p>
                                                 <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
                                             </div>
                                         </div>
@@ -466,7 +474,7 @@
                                 </tr>
                             </tbody>
                             <!-- //기획전 -->
-                            <tbody class="radio-select" id="radio-select-3">
+                            <!-- <tbody class="radio-select" id="radio-select-3">
                                 <tr>
                                     <th>기획전 기간</th>
                                     <td>
@@ -536,10 +544,10 @@
                                         </div>
                                     </td>
                                 </tr>
-                            </tbody>
+                            </tbody> -->
                         </table>
                         <!-- 이벤트 후기 -->
-                        <table class="table table-bordered table-form radid-select" id="radio-select-1">
+                        <!-- <table class="table table-bordered table-form radid-select" id="radio-select-1">
                             <colgroup>
                                 <col width="246px">
                                 <col>
@@ -562,21 +570,20 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table> -->
                        
                     </div>
 
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진
-                                계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱
                                 프리뷰</strong></button>
                     </div>
 
                     <div class="modal-footer-right d-flex">
-                        <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
+                        <button type="button" class="btn btn-darkgray btn-lg" data-event="next-step" disabled>승인 대기중</button>
+                        <button type="button" class="btn btn-dark btn-lg" data-event="next-step">피드 승인</button>
                     </div>
                 </div>
 
@@ -586,15 +593,55 @@
 
 
 
-       <!-- modal : 전체보기 -->
-       <div class="modal fade" id="select-event" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list modal-dialog-centered">
-            <div class="modal-content">
+    <!-- modal : 이벤트 선택 -->
+    <div class="modal fade" id="select-event" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-vote-list modal-dialog-centered w-610px">
+            <div class="modal-content h-650px">
                 <div class="modal-header modal-none-border">
                     <div class="double-modal-title m-b-30">링크할 이벤트를 선택해 주세요.</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
+
                 <div class="modal-body">
-             
+                   
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="기획전에 링크하고 싶은 이벤트가 있나요?">
+                        <i></i>
+                    </div>
+
+                    <div class="select-event-list">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                    <span class="badge badge-dark">예약 이벤트</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>센세이셔널한 아홉소년들과 90:9 저녁 만찬🥂</span>
+                                    <span class="badge badge-dark">예약 이벤트</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>스타벅스에서 7천원 쓰고 10만원 받아가자💰</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -34,7 +34,7 @@
             
             <div class="row">
                 <div class="col-auto p-0">
-                    <a href="">
+                    <a href="#management-banner" data-toggle="modal" data-role="button">
                         <div class="banner-box">
                             <div class="banner-img" style="background-image: url('../../resources/images/banner-img.png');"></div>
                             <span class="badge badge-warning">노출 배너</span>
@@ -42,31 +42,231 @@
                     </a>
                 </div>
                 <div class="col-auto p-0">
-                    <a href="">
+                    <a href="#management-banner" data-toggle="modal" data-role="button">
                         <div class="banner-box">
                             <div class="banner-img" style="background-image: url('../../resources/images/banner-img.png');"></div>
                         </div>
                     </a>
-                </div>         
+                </div>       
                 <div class="col-auto p-0">
-                    <a href="">
-                        <div class="create-banner">
-                            <i class="icon-plus"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-auto p-0">
-                    <a href="">
+                    <a href="#management-banner" data-toggle="modal" data-role="button">
                         <div class="banner-box">
                             <div class="banner-img" style="background-image: url('../../resources/images/banner-img.png');"></div>
                         </div>
                     </a>
                 </div> 
+                <div class="col-auto p-0">
+                    <a href="#enrollment-banner" data-toggle="modal" data-role="button">
+                        <div class="create-banner">
+                            <i class="icon-plus"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
            
         </div>
     </div>
 
+
+
+<!-- modal : 배너등록 -->
+<div class="modal fade" id="enrollment-banner" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-vote-list modal-dialog-centered w-820px">
+        <div class="modal-content">
+            <div class="modal-header modal-none-border">
+                <div class="double-modal-title m-b-30">배너 등록</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <table class="table table-bordered table-form">
+                    <colgroup>
+                        <col width="120px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>썸네일</th>
+                            <td>
+                                <div class="upload-img d-flex align-items-center">
+                                    <div class="filebox">
+                                        <input type="file" id="input-img">
+                                        <label for="input-img"><i class="icon-plus"></i>
+                                            <img src="" alt="" id="img"></label>
+                                    </div>
+                                    <div class="example-text ml-3">
+                                        <p>* 이미지 사이즈 : 가로 335px, 세로 100px</p>
+                                        <p>* 용량 : 500KB 이하, 파일 형식 JPG, PNG</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>상세 이미지</th>
+                            <td>
+                                <div class="upload-img d-flex align-items-center">
+                                    <div class="filebox">
+                                        <input type="file" id="input-img">
+                                        <label for="input-img"><i class="icon-plus"></i>
+                                            <img src="" alt="" id="img"></label>
+                                    </div>
+                                    <div class="example-text ml-3">
+                                        <p>* 이미지 사이즈 : 가로 1000px, 세로 제한 없음</p>
+                                        <p>* 용량 : 500KB 이하, 파일 형식 JPG, PNG</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>버튼 텍스트</th>
+                            <td>
+                                <input type="text" class="form-control w-100p" placeholder="버튼 텍스트를 입력하세요. * 최대 15자">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>외부 URL</th>
+                            <td>
+                                <input type="text" class="form-control w-100p" placeholder="버튼에 연결시킬 외부 URL 입력하세요.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>노출 여부</th>
+                            <td>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="eventOpenDate" id="exposure-1" value="exposure-1" selected>
+                                    <label class="custom-control-label" for="exposure-1">노출</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="eventOpenDate" id="exposure-2" value="exposure-2">
+                                    <label class="custom-control-label" for="exposure-2">비 노출</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>메인 배너</th>
+                            <td>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="eventOpenDate" id="main-banner-1" value="main-banner-1" selected>
+                                    <label class="custom-control-label" for="main-banner-1">메인</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="eventOpenDate" id="main-banner-2" value="main-banner-2">
+                                    <label class="custom-control-label" for="main-banner-2">일반</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="double-modal-footer text-center">
+                    <button type="button" class="btn btn-dark btn-lg">등록하기</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- modal : 배너관리 -->
+<div class="modal fade" id="management-banner" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-vote-list modal-dialog-centered w-820px">
+        <div class="modal-content">
+            <div class="modal-header modal-none-border">
+                <div class="double-modal-title m-b-30">배너 관리</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <table class="table table-bordered table-form">
+                    <colgroup>
+                        <col width="120px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>썸네일</th>
+                            <td>
+                                <div class="upload-img d-flex align-items-center">
+                                    <div class="filebox">
+                                        <input type="file" id="input-img">
+                                        <label for="input-img"><i class="icon-plus"></i>
+                                            <img src="" alt="" id="img"></label>
+                                    </div>
+                                    <div class="example-text ml-3">
+                                        <p>* 이미지 사이즈 : 가로 335px, 세로 100px</p>
+                                        <p>* 용량 : 500KB 이하, 파일 형식 JPG, PNG</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>상세 이미지</th>
+                            <td>
+                                <div class="upload-img d-flex align-items-center">
+                                    <div class="filebox">
+                                        <input type="file" id="input-img">
+                                        <label for="input-img"><i class="icon-plus"></i>
+                                            <img src="" alt="" id="img"></label>
+                                    </div>
+                                    <div class="example-text ml-3">
+                                        <p>* 이미지 사이즈 : 가로 1000px, 세로 제한 없음</p>
+                                        <p>* 용량 : 500KB 이하, 파일 형식 JPG, PNG</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>버튼 텍스트</th>
+                            <td>
+                                <input type="text" class="form-control w-100p" placeholder="버튼 텍스트를 입력하세요. * 최대 15자">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>외부 URL</th>
+                            <td>
+                                <input type="text" class="form-control w-100p" placeholder="버튼에 연결시킬 외부 URL 입력하세요.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>노출 여부</th>
+                            <td>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="eventOpenDate" id="exposure-1" value="exposure-1" selected>
+                                    <label class="custom-control-label" for="exposure-1">노출</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="eventOpenDate" id="exposure-2" value="exposure-2">
+                                    <label class="custom-control-label" for="exposure-2">비 노출</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>메인 배너</th>
+                            <td>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="eventOpenDate" id="main-banner-1" value="main-banner-1" selected>
+                                    <label class="custom-control-label" for="main-banner-1">메인</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="eventOpenDate" id="main-banner-2" value="main-banner-2">
+                                    <label class="custom-control-label" for="main-banner-2">일반</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="double-modal-footer text-center">
+                    <button type="button" class="btn btn-darkgray btn-lg">삭제하기</button>
+                    <button type="button" class="btn btn-dark btn-lg">수정하기</button>
+                </div>
+            </div>
+              
+        </div>
+    </div>
+</div>
     <script src="../../resources/js/common.js"></script>
     <script>
         $(document).ready(function () {
