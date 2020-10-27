@@ -1351,6 +1351,7 @@ button.close span {
 
 .login-body {
   width: 100%;
+  height: 100vh;
 }
 
 .login-box {
