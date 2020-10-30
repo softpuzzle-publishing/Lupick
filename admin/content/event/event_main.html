@@ -29,76 +29,76 @@
             <!-- aside include -->
         </aside>
         <div id="container-block">
-            <h2 class="hello">안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
-
-            <div class="row mr-0 ml-0">
-                <div class="main-event">
-                    <h1 class="title">Main Event</h1>
-                    <ul class="d-flex">
-                        <li class="main-event-box">
-                            <div class="event-box">
-                                <div class="reservation">
-                                    <span>예약 이벤트</span> <span>07:01:30 </span><span> 남음</span>
-                                    <p>9명에게 포르쉐911을 FLEX 해버릴까봐💥</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="main-event-box">
-                            <div class="event-box">
-                                <div class="achievement">
-                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
-                                    <p>샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="main-event-box">
-                            <div class="event-box">
-                                <div class="reservation">
-                                    <span>예약 이벤트</span> <span>2일</span><span>남음</span>
-                                    <p>방탄소년단 무대 보고 콘서트 티켓 받아가자</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="main-event-box">
-                            <div class="event-box">
-                                <div class="achievement">
-                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
-                                    <p>3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="main-event-box">
-                            <div class="event-box">
-                                <div class="achievement">
-                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
-                                    <p>스타벅스에서 7천원 쓰고 10만원 받아가자💰</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="main-event-box">
-                            <div class="event-box">
-                                <div class="achievement">
-                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
-                                    <p>센세이셔널한 아홉소년들과 90:9 저녁 만찬🥂</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="main-event-box">
-                            <div class="event-box">
-                                <div class="achievement">
-                                    <span>이벤트 달성률</span> <span class="paint">96%</span>
-                                    <p>너도나도 파라다이스 침대 타고 하와이까지✈️</p>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
+            <div class="top">
+                <h2 class="hello">안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+                <div class="latest">최근 업데이트 : 2020.08.07 17:49</div>
             </div>
 
-            <div class="d-flex align-items-center event-title mb-3">
-                <span class="title">Event</span><span class="sub-title">총 792개의 이벤트 중 현재 67개의 이벤트를 진행중이에요</span>
+            <div class="title-wrap justify-content-between">
+                <h1 class="title">Main Event</h1>
+                <a href="" class="edit" id="btn-edit"><b>Edit</b> <i class="icon-link-arr"></i></a>
+                <a href="" class="save" id="btn-save" style="display:none"><b>Save</b></a>
             </div>
+
+            <div class="main-event">
+                <ul id="sortable">
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <span class="tag">예약 이벤트</span> <span class="deadline">07:01:30 </span><i> 남음</i>
+                            </div>
+                            <p>9명에게 포르쉐911을 FLEX 해버릴까봐💥</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <em>이벤트 달성률</em> <strong class="paint">96%</strong>
+                            </div>
+                            <p>샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <span class="tag">예약 이벤트</span> <span class="deadline">2일</span><i>남음</i>
+                            </div>
+                            <p>방탄소년단 무대 보고 콘서트 티켓 받아가자</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <em>이벤트 달성률</em> <strong class="paint">96%</strong>
+                            </div>
+                            <p>3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <em>이벤트 달성률</em> <strong class="paint">96%</strong>
+                            </div>
+                            <p>스타벅스에서 7천원 쓰고 10만원 받아가자💰</p>
+                        </a>
+                    </li>
+                    <li class="item-disabled">
+                        <a href="#modal-event-add" data-toggle="modal" class="filebox">
+                            <label><i class="icon-plus"></i></label>
+                        </a>
+                    </li>
+                    <li class="item-disabled">
+                        <a href="#modal-event-add" data-toggle="modal" class="filebox">
+                            <label><i class="icon-plus"></i></label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="title-wrap">
+                <span class="title">Event</span><p class="title-desc">총 792개의 이벤트 중 현재 67개의 이벤트를 진행중이에요</p>
+            </div>
+
             <div class="row align-items-center">
                 <div class="col">
                     <div class="item-search d-flex align-items-center">
@@ -113,6 +113,7 @@
                     </select>
                 </div>
             </div>
+
             <div class="m-t-30">
                 <ul class="card-list">
                     <li>
@@ -142,7 +143,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div class="deadline">00:17:09:28</div>
                                     <div class="percent">
                                         <em>2자리 남았어요!</em> <span>98%</span>
@@ -153,7 +154,7 @@
                     </li>
                     <li>
                         <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
-                            <div class="thumb" style="background-image:url('../../resources/images/@event_01.png')">
+                            <div class="thumb" style="background-image:url('../../resources/images/@event_07.png')">
                                 <span class="badge badge-gray">승인 대기</span>
                             </div>
                             <div class="info">
@@ -178,7 +179,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div class="deadline">00:17:09:28</div>
                                     <div class="nickname">RANI</div>
                                 </div>
@@ -206,8 +207,236 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between">
+                                <div class="d-flex justify-content-between align-items-center">
                                     <div class="deadline">승인 대기 이벤트</div>
+                                    <div class="nickname">RANI</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb" style="background-image:url('../../resources/images/@event_07.png')">
+                                <span class="badge badge-gray">승인 대기</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                    <div class="util">
+                                        <div class="icon">
+                                            <i class="icon-bell"></i>
+                                        </div>
+                                        <span>1,234</span>
+                                    </div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">00:17:09:28</div>
+                                    <div class="nickname">RANI</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb" style="background-image:url('../../resources/images/@event_01.png')">
+                                <span class="badge badge-dark">예약 이벤트</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                    <div class="util">
+                                        <div class="icon">
+                                        	<i class="icon-heart"></i>
+                                        </div>
+                                        <span>1,234</span>
+                                    </div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">00:17:09:28</div>
+                                    <div class="percent">
+                                        <em>2자리 남았어요!</em> <span>98%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb" style="background-image:url('../../resources/images/@event_07.png')">
+                                <span class="badge badge-gray">승인 대기</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                    <div class="util">
+                                        <div class="icon">
+                                            <i class="icon-bell"></i>
+                                        </div>
+                                        <span>1,234</span>
+                                    </div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">00:17:09:28</div>
+                                    <div class="nickname">RANI</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb" style="background-image:url('../../resources/images/@event_01.png')">
+                                <span class="badge badge-dark">예약 이벤트</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">승인 대기 이벤트</div>
+                                    <div class="nickname">RANI</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb" style="background-image:url('../../resources/images/@event_07.png')">
+                                <span class="badge badge-gray">승인 대기</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                    <div class="util">
+                                        <div class="icon">
+                                            <i class="icon-bell"></i>
+                                        </div>
+                                        <span>1,234</span>
+                                    </div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">00:17:09:28</div>
+                                    <div class="nickname">RANI</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb" style="background-image:url('../../resources/images/@event_01.png')">
+                                <span class="badge badge-dark">예약 이벤트</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">승인 대기 이벤트</div>
+                                    <div class="nickname">RANI</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb" style="background-image:url('../../resources/images/@event_07.png')">
+                                <span class="badge badge-gray">승인 대기</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                    <div class="util">
+                                        <div class="icon">
+                                            <i class="icon-bell"></i>
+                                        </div>
+                                        <span>1,234</span>
+                                    </div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">00:17:09:28</div>
                                     <div class="nickname">RANI</div>
                                 </div>
                             </div>
@@ -216,6 +445,9 @@
                 </ul>
             </div>
         </div>
+        <footer>
+            <!-- footer include -->
+        </footer>
     </div>
 
 
@@ -224,21 +456,18 @@
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-header-top">
-                        <ul class="d-flex">
+                    <div class="event-detail-top">
+                        <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                        <p class="code">LEFAS201000152</p>
+                    </div>
+                    <div class="modal-title">
+                        <ul class="modal-step">
                             <li class="active">이벤트 생성</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>진행 상황</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>아이템 배송</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>투표</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>집행</li>
                         </ul>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
                     <ul class="nav nav-pills" id="tab-event-add">
                         <li class="nav-item modal-nav">
@@ -254,11 +483,16 @@
                             <a class="nav-link" href="#div4">이벤트 상세 정보</a>
                         </li>
                     </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
                     <!-- //이벤트 정보 -->
                     <div class="info-event" id="div1">
-                        <p class="modal-sub-title">이벤트 정보</p>
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>이벤트 정보</span></p>
+                        </div>
                         <table class="table table-bordered table-form">
                             <colgroup>
                                 <col width="246px">
@@ -355,14 +589,16 @@
                                         </div>
                                     </td>
                                 </tr>
-    
+
                             </tbody>
                         </table>
                     </div>
-    
+
                     <!-- //아이템 정보 -->
                     <div class="info-item" id="div2">
-                        <p class="modal-sub-title">아이템 정보</p>
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>아이템 정보</span></p>
+                        </div>
                         <table class="table table-bordered table-form">
                             <colgroup>
                                 <col width="246px">
@@ -559,10 +795,12 @@
                             </tbody>
                         </table>
                     </div>
-    
+
                     <!-- //럭키템 정보 -->
                     <div class="info-lucky" id="div3">
-                        <p class="modal-sub-title">럭키템 정보</p>
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>럭키템 정보</span></p>
+                        </div>
                         <table class="table table-bordered table-form">
                             <colgroup>
                                 <col width="246px">
@@ -693,10 +931,12 @@
                             <button type="button" class="btn btn-outline-dark w-400px">+ 럭키템 추가</button>
                         </div>
                     </div>
-    
+
                     <!-- //이벤트 상세 정보 -->
                     <div class="info-detail-event" id="div4">
-                        <p class="modal-sub-title">이벤트 상세 정보</p>
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>이벤트 상세 정보</span></p>
+                        </div>
                         <table class="table table-bordered table-form">
                             <colgroup>
                                 <col width="246px">
@@ -784,86 +1024,79 @@
     <!-- Modal : 진행 상황 -->
     <div class="modal modal-size-fix" id="myModal2" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content modal-event-create">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-header-top">
-                        <ul class="d-flex">
+                    <div class="event-detail-top">
+                        <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                        <p class="code">LEFAS201000152</p>
+                    </div>
+                    <div class="modal-title">
+                        <ul class="modal-step">
                             <li class="active">이벤트 생성</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">진행 상황</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>아이템 배송</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>투표</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>집행</li>
                         </ul>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
-
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-3">
-                            <div class="row ml-0 mr-0">
-                                <p class="modal-sub-title">이벤트 진행시간</p>
-                                <div class="col-12 dash-box text-center">
+                            <div>
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>이벤트 진행시간</span></p>
+                                </div>
+                                <div class="box" style="height:187px">
                                     <div class="modal-event-time">
-                                        <p><span>04</span>일 <span>18</span>시 <span>20</span>분 <span>40</span></p>
-                                    </div>
-                                    <div class="modal-event-term">
-                                        <p>이벤트 모집기간 : 7일</p>
-                                        <p>2020.08.15 ~ 2020.08.14</p>
+                                        <div class="deadline">
+                                            <p><strong>04</strong>일 <strong>18</strong>시 <strong>20</strong>분 <strong>40</strong></p>
+                                        </div>
+                                        <div class="term">
+                                            <p>이벤트 모집기간 : <strong>7일</strong></p>
+                                            <p>2020.08.15 ~ 2020.08.14</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <p class="modal-sub-title">이벤트 달성률</p>
-                                <div class="col-12 dash-box text-center">
-                                    <div class="success-event">
-                                        <div class="success-event-percent  d-flex">
-                                            <p>이벤트 달성률</p>
-                                            <p class="paint">91%</p>
-                                        </div>
-
-
-                                        <div class="canvas-wrap">
-                                            <div class="canvas-text-box">
-                                                <div>
-                                                    <p>총 이벤트 아이템 개수</p>
-                                                    <p>1,200</p>
-                                                </div>
-                                                <canvas id="chart-area"
-                                                    style="display: block; width: 574px; height: 287px;" width="574"
-                                                    height="287" class="chartjs-render-monitor"></canvas>
-                                            </div>
-                                        </div>
-
-                                        <div class="event-count">
-                                            <div class="">
-                                                <div class="mt-2">
-                                                    <span class="yellow-circle"></span>
-                                                    <span>구매한 이벤트 아이템 개수</span>
-                                                </div>
-                                                <span>8</span>
-                                            </div>
-                                            <div class="">
-                                                <div class="">
-                                                    <span class="black-circle"></span>
-                                                    <span>남은 이벤트 아이템 개수</span>
-                                                </div>
-                                                <span>8</span>
-                                            </div>
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>이벤트 달성률</span></p>
+                                </div>
+                                <div class="success-event box">
+                                    <div class="success-event-percent">
+                                        <div class="dash-title">이벤트 성공률</div>
+                                        <strong class="paint">90%</strong>
+                                    </div>
+                                    <div class="circle_percent">
+                                        <canvas id="chart-success"></canvas>
+                                        <div class="circle_inbox">
+                                            <dl class="circle-text">
+                                                <dt>마감된 이벤트</dt>
+                                                <dd>1,200</dd>
+                                            </dl>
                                         </div>
                                     </div>
-
+                                    <div class="event-count-summary">
+                                        <div class="success">
+                                            <span>총 이벤트 아이템 개수</span>
+                                            <strong>52,000</strong>
+                                        </div>
+                                        <div class="fail">
+                                            <span>남은 이벤트 아이템 개수</span>
+                                            <strong>500</strong>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div>
-                                <p class="modal-sub-title">구매 현황</p>
-                                <table class="table table-bordered">
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>구매 현황</span></p>
+                                </div>
+                                <table class="table table-bordered mb-0">
                                     <colgroup>
                                         <col width="30%">
                                         <col width="40%">
@@ -921,71 +1154,65 @@
                                             <td class="text-center">3500</td>
                                             <td class="text-center">5000</td>
                                         </tr>
-                                        <tr>
-                                            <td>라피네르 로얄스페이드 …</td>
-                                            <td>에스카다</td>
-                                            <td class="text-center">3500</td>
-                                            <td class="text-center">5000</td>
-                                        </tr>
-
                                     </tbody>
                                 </table>
                             </div>
                             <div>
-                                <p class="modal-sub-title">시간대별 구매 통계</p>
-                                <canvas id="densityChart" width="600" height="320"></canvas>
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>시간대별 구매 통계</span></p>
+                                </div>
+                                <div class="canvas-wrap box">
+                                    <div class="date">2020.08.10</div>
+                                    <div class="canvas bar">
+                                        <canvas id="chart-purchase" style="width:100%;height:100%"></canvas>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-3">
                             <div>
-                                <p class="modal-sub-title">성별 구매 통계</p>
-                                <div class="canvas-wrap dash-box">
-                                    <div class="canvas-text-box">
-                                        <canvas id="chart-gender" style="display: block; width: 574px; height: 287px;"
-                                            width="574" height="287" class="chartjs-render-monitor"></canvas>
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>성별 구매 통계</span></p>
+                                </div>
+                                <div class="canvas-wrap box">
+                                    <div class="canvas">
+                                        <canvas id="chart-gender"></canvas>
                                     </div>
-                                    <div class="gender-list">
-                                        <div class="female">
-                                            <div class="yellow-circle"></div>
+                                    <div class="legend-list">
+                                        <div class="yellow">
                                             <p>여성</p>
                                         </div>
-                                        <div class="male">
-                                            <div class="black-circle"></div>
+                                        <div class="black">
                                             <p>남성</p>
                                         </div>
-                                        <div class="none-select">
-                                            <div class="gray-circle"></div>
+                                        <div class="gray">
                                             <p>선택안함</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <p class="modal-sub-title">연령대별 구매 통계</p>
-                                <div class="canvas-wrap dash-box">
-                                    <div class="canvas-text-box">
-                                        <canvas id="chart-age" style="display: block; width: 574px; height: 287px;"
-                                            width="574" height="287" class="chartjs-render-monitor"></canvas>
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>연령대별 구매 통계</span></p>
+                                </div>
+                                <div class="canvas-wrap box">
+                                    <div class="canvas">
+                                        <canvas id="chart-age"></canvas>
                                     </div>
-                                    <div class="age-list">
-                                        <div class="ten">
-                                            <div class="blue-circle"></div>
+                                    <div class="legend-list age">
+                                        <div class="blue">
                                             <p>10대</p>
                                         </div>
-                                        <div class="twenty">
-                                            <div class="orange-circle"></div>
+                                        <div class="orange">
                                             <p>20대</p>
                                         </div>
-                                        <div class="thirty">
-                                            <div class="red-circle"></div>
+                                        <div class="red">
                                             <p>30대</p>
                                         </div>
-                                        <div class="forty">
-                                            <div class="green-circle"></div>
+                                        <div class="green">
                                             <p>40대</p>
                                         </div>
-                                        <div class="fifty" style="margin-left:18px">
-                                            <div class="gray-circle"></div>
+                                        <div class="gray"">
                                             <p>50대 이상</p>
                                         </div>
                                     </div>
@@ -1012,32 +1239,34 @@
     <!-- Modal : 아이템 배송 -->
     <div class="modal modal-size-fix" id="myModal3" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content modal-event-create">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-header-top">
-                        <ul class="d-flex">
+                    <div class="event-detail-top">
+                        <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                        <p class="code">LEFAS201000152</p>
+                    </div>
+                    <div class="modal-title">
+                        <ul class="modal-step">
                             <li class="active">이벤트 생성</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">진행 상황</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">아이템 배송</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>투표</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>집행</li>
                         </ul>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
-
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-3">
                             <div>
-                                <p class="modal-sub-title">상품 정보</p>
-                                <table class="table table-bordered">
+                                <div class="title-square-wrap d-flex align-items-center justify-content-between">
+                                    <p class="title-square"><span>상품 정보</span></p>
+                                    <a href="" data-toggle="modal" data-role="button" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
+                                </div>
+                                <table class="table table-bordered mb-0">
                                     <colgroup>
                                         <col>
                                         <col style="width:100px">
@@ -1046,10 +1275,25 @@
                                         <tr>
                                             <th class="text-center">옵션</th>
                                             <th class="text-center">판매 수량</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td class="text-center">5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td class="text-center">5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td class="text-center">5,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>라피네르 로얄스페이드 …</td>
+                                            <td class="text-center">5,000</td>
+                                        </tr>
                                         <tr>
                                             <td>라피네르 로얄스페이드 …</td>
                                             <td class="text-center">5,000</td>
@@ -1066,8 +1310,10 @@
                                 </table>
                             </div>
                             <div>
-                                <p class="modal-sub-title">판매자 정보</p>
-                                <ul class="dash-box seller-info">
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>판매자 정보</span></p>
+                                </div>
+                                <ul class="box seller-info">
                                     <li> <span>상호명</span><span>주식회사 호호호</span> </li>
                                     <li> <span>대표자</span><span>정용채</span> </li>
                                     <li> <span>사업자 등록번호</span><span>101-20-02020</span> </li>
@@ -1080,7 +1326,9 @@
                             </div>
                         </div>
                         <div class="col-9">
-                            <p class="modal-sub-title">구매 현황</p>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>구매 현황</span></p>
+                            </div>
                             <div class="row justify-content-between m-b-20">
                                 <div class="col-auto d-flex">
                                     <div>
@@ -1097,7 +1345,8 @@
                                     </div>
                                 </div>
                                 <div class="col-auto d-flex">
-                                    <button type="button" class="btn btn-outline-dark btn-md text-lager">주문내역 다운로드</button>
+                                    <button type="button" class="btn btn-outline-dark btn-md text-lager">메일 일괄 전송</button>
+                                    <button type="button" class="btn btn-outline-dark btn-md text-lager m-l-15">주문내역 다운로드</button>
                                     <button type="button" class="btn btn-outline-dark btn-md text-lager m-l-15">송장번호 업로드</button>
                                 </div>
                             </div>
@@ -1185,6 +1434,76 @@
                                         <td>상품 준비중</td>
                                         <td>-</td>
                                     </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>1</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>배송 완료</td>
+                                        <td>OK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>1</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>배송 완료</td>
+                                        <td>OK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>1</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>배송 완료</td>
+                                        <td>OK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>1</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>배송 완료</td>
+                                        <td>OK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>1</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>배송 완료</td>
+                                        <td>OK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>1</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>배송 완료</td>
+                                        <td>OK</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1010-2020-0801</td>
+                                        <td>2020.08.01</td>
+                                        <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                        <td>1</td>
+                                        <td>호호호</td>
+                                        <td>010-2345-6789</td>
+                                        <td>배송 완료</td>
+                                        <td>OK</td>
+                                    </tr>
                                 </tbody>
                             </table>
 
@@ -1217,221 +1536,374 @@
     <!-- Modal : 투표 -->
     <div class="modal modal-size-fix" id="myModal4" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content modal-event-create">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-header-top">
-                        <ul class="d-flex">
+                    <div class="event-detail-top">
+                        <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                        <p class="code">LEFAS201000152</p>
+                    </div>
+                    <div class="modal-title">
+                        <ul class="modal-step">
                             <li class="active">이벤트 생성</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">진행 상황</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">아이템 배송</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">투표</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li>집행</li>
                         </ul>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
-
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-3">
-                            <p class="modal-sub-title">투표 잔여 시간</p>
-                            <div class="col-12 text-center dash-box p-0">
-
-                                <div class="modal-event-time">
-                                    <p><span>04</span>일 <span>18</span>시 <span>20</span>분 <span>40</span></p>
+                            <div>
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>투표 잔여 시간</span></p>
                                 </div>
-                                <div class="modal-event-term">
-                                    <p>이벤트 모집기간 : 7일</p>
-                                    <p>2020.08.15 ~ 2020.08.14</p>
-                                </div>
-                            </div>
-                            <div class="col-12 p-0">
-                                <p class="modal-sub-title">투표율</p>
-                                <div class="success-event dash-box">
-                                    <div class="success-event-percent  d-flex">
-                                        <p>이벤트 달성률</p>
-                                        <p class="paint">91%</p>
-                                    </div>
-
-
-                                    <div class="canvas-wrap">
-                                        <div class="canvas-text-box">
-                                            <div>
-                                                <p>총 이벤트 투표수</p>
-                                                <p>10,000</p>
-                                            </div>
-                                            <canvas id="chart-vote" style="display: block; width: 574px; height: 287px;"
-                                                width="574" height="287" class="chartjs-render-monitor"></canvas>
+                                <div class="box" style="height:187px">
+                                    <div class="modal-event-time">
+                                        <div class="deadline">
+                                            <p><strong>18</strong>시 <strong>20</strong>분 <strong>40</strong></p>
+                                        </div>
+                                        <div class="term">
+                                            <p>남은 투표 수 : 99,991 / 100,000</p>
+                                            <p>2020.08.15 ~ 2020.08.14</p>
                                         </div>
                                     </div>
-
-                                    <div class="event-count">
-                                        <div class="">
-                                            <div class="mt-2">
-                                                <span class="yellow-circle"></span>
-                                                <span>직접 투표한 투표수</span>
-                                            </div>
-                                            <span>8</span>
+                                </div>
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>투표율</span></p>
+                                </div>
+                                <div class="success-event box">
+                                    <div class="success-event-percent">
+                                        <div class="dash-title">이벤트 직접 투표율</div>
+                                        <strong class="paint">90%</strong>
+                                    </div>
+                                    <div class="circle_percent">
+                                        <canvas id="chart-turnout"></canvas>
+                                        <div class="circle_inbox">
+                                            <dl class="circle-text">
+                                                <dt>총 이벤트 투표수</dt>
+                                                <dd>1,200</dd>
+                                            </dl>
                                         </div>
-                                        <div class="">
-                                            <div class="">
-                                                <span class="black-circle"></span>
-                                                <span>자동 투표한 투표수</span>
-                                            </div>
-                                            <span>8</span>
+                                    </div>
+                                    <div class="event-count-summary">
+                                        <div class="success">
+                                            <span>직접 투표한 투표수</span>
+                                            <strong>52,000</strong>
+                                        </div>
+                                        <div class="fail">
+                                            <span>자동 투표한 투표수</span>
+                                            <strong>500</strong>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- //투표중 -->
-                        <!-- <div class="col-9 dash-box d-flex align-items-center justify-content-center">
-                            <p class="voting">투표 중...</p>
-                        </div> -->
-                        <div class="col-3 lupicker-list">
-                            <p class="modal-sub-title">루피커 리스트</p>
-                            <div class="dash-box">
-                                <h1>루피커 득표수</h1>
-                                <ul>
-                                    <li>
-                                        <div>
-                                            <span>1</span>
-                                            <span>91번 오리</span>
+                        <div class="col-9">
+                            <div class="box voting">
+                                <div class="bg-mix">
+                                    <canvas id="balls"></canvas>
+                                </div>
+                                <p>투표중...</p>
+                            </div>
+                            <div class="row" id="voting-result" style="display: none;">
+                                <div class="col-4">
+                                    <div class="title-square-wrap">
+                                        <p class="title-square"><span>루피커 리스트</span></p>
+                                    </div>
+                                    <div class="box popularity-event">
+                                        <div class="popularity-title">
+                                            <div class="dash-title">루피커 득표수</div>
                                         </div>
-                                        <span class="paint">30표</span>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <span>2</span>
-                                            <span>1009번 후디</span>
-                                        </div>
-                                        <span class="paint">19표</span>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <span>3</span>
-                                            <span>2번 메이</span>
-                                        </div>
-                                        <span class="paint">3표</span>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <span>4</span>
-                                            <span>9999번 티도</span>
-                                        </div>
-                                        <span class="paint">3표</span>
-                                    </li>
-                                    <li>
-                                        <div>
-                                            <span>5</span>
-                                            <span>1000번 호빵이</span>
-                                        </div>
-                                        <span class="paint">1표</span>
-                                    </li>
-                                </ul>
+                                        <ul>
+                                            <li>
+                                                <b>1</b>
+                                                <span>91번 오리</span>
+                                                <span class="paint">30표</span>
+                                            </li>
+                                            <li>
+                                                <b>2</b>
+                                                <span>1009번 후디</span>
+                                                <span class="paint">19표</span>
+                                            </li>
+                                            <li>
+                                                <b>3</b>
+                                                <span>2번 메이</span>
+                                                <span class="paint">3표</span>
+                                            </li>
+                                            <li>
+                                                <b>4</b>
+                                                <span>9999번 티도</span>
+                                                <span class="paint">3표</span>
+                                            </li>
+                                            <li>
+                                                <b>5</b>
+                                                <span>1000번 호빵이</span>
+                                                <span class="paint">1표</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="title-square-wrap d-flex align-items-center justify-content-between">
+                                        <p class="title-square"><span>직접 투표자 리스트</span></p>
+                                        <a href="#fsModal" data-toggle="modal" data-role="button" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
+                                    </div>
+
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width: 37%;">
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="text-center">투표자</th>
+                                                <th scope="col" class="text-center">고유번호</th>
+                                                <th scope="col" class="text-center">투표번호</th>
+                                                <th scope="col" class="text-center">득표수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-left">오리</td>
+                                                <td class="text-center">91</td>
+                                                <td class="text-center">777</td>
+                                                <td class="text-center">30</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">후디</td>
+                                                <td class="text-center">1009</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">19</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">메이</td>
+                                                <td class="text-center">7</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">티도</td>
+                                                <td class="text-center">9999</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">호빵이</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">7777</td>
+                                                <td class="text-center">1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">오리</td>
+                                                <td class="text-center">91</td>
+                                                <td class="text-center">777</td>
+                                                <td class="text-center">30</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">후디</td>
+                                                <td class="text-center">1009</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">19</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">메이</td>
+                                                <td class="text-center">7</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">티도</td>
+                                                <td class="text-center">9999</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">호빵이</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">7777</td>
+                                                <td class="text-center">1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">오리</td>
+                                                <td class="text-center">91</td>
+                                                <td class="text-center">777</td>
+                                                <td class="text-center">30</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">후디</td>
+                                                <td class="text-center">1009</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">19</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">메이</td>
+                                                <td class="text-center">7</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">티도</td>
+                                                <td class="text-center">9999</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">호빵이</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">7777</td>
+                                                <td class="text-center">1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">티도</td>
+                                                <td class="text-center">9999</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">호빵이</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">7777</td>
+                                                <td class="text-center">1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-4">
+                                    <div class="title-square-wrap d-flex align-items-center justify-content-between">
+                                        <p class="title-square"><span>자동 투표자 리스트</span></p>
+                                        <a href="#fsModal" data-toggle="modal" data-role="button" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
+                                    </div>
+                                    <table class="table table-bordered">
+                                        <colgroup>
+                                            <col style="width: 37%;">
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="text-center">투표자</th>
+                                                <th scope="col" class="text-center">고유번호</th>
+                                                <th scope="col" class="text-center">투표번호</th>
+                                                <th scope="col" class="text-center">득표수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-left">오리</td>
+                                                <td class="text-center">91</td>
+                                                <td class="text-center">777</td>
+                                                <td class="text-center">30</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">후디</td>
+                                                <td class="text-center">1009</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">19</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">메이</td>
+                                                <td class="text-center">7</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">티도</td>
+                                                <td class="text-center">9999</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">호빵이</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">7777</td>
+                                                <td class="text-center">1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">오리</td>
+                                                <td class="text-center">91</td>
+                                                <td class="text-center">777</td>
+                                                <td class="text-center">30</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">후디</td>
+                                                <td class="text-center">1009</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">19</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">메이</td>
+                                                <td class="text-center">7</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">티도</td>
+                                                <td class="text-center">9999</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">호빵이</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">7777</td>
+                                                <td class="text-center">1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">오리</td>
+                                                <td class="text-center">91</td>
+                                                <td class="text-center">777</td>
+                                                <td class="text-center">30</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">후디</td>
+                                                <td class="text-center">1009</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">19</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">메이</td>
+                                                <td class="text-center">7</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">티도</td>
+                                                <td class="text-center">9999</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">호빵이</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">7777</td>
+                                                <td class="text-center">1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">티도</td>
+                                                <td class="text-center">9999</td>
+                                                <td class="text-center">10</td>
+                                                <td class="text-center">3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">호빵이</td>
+                                                <td class="text-center">1000</td>
+                                                <td class="text-center">7777</td>
+                                                <td class="text-center">1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-3">
-                            <div class="modal-sub-title d-flex align-items-center justify-content-between">
-                                <p>직접 투표자 리스트</p>
-                                <a href="#fsModal" data-toggle="modal" data-role="button" class="more-text">전체보기 ></a>
-                            </div>
-
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" class="text-center">투표자</th>
-                                        <th scope="col" class="text-center">고유번호</th>
-                                        <th scope="col" class="text-center">투표번호</th>
-                                        <th scope="col" class="text-center">득표수</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">오리</td>
-                                        <td class="text-center">91</td>
-                                        <td class="text-center">777</td>
-                                        <td class="text-center">30</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">후디</td>
-                                        <td class="text-center">1009</td>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center">19</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">메이</td>
-                                        <td class="text-center">7</td>
-                                        <td class="text-center">1000</td>
-                                        <td class="text-center">3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">티도</td>
-                                        <td class="text-center">9999</td>
-                                        <td class="text-center">10</td>
-                                        <td class="text-center">3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">호빵이</td>
-                                        <td class="text-center">1000</td>
-                                        <td class="text-center">7777</td>
-                                        <td class="text-center">1</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-3">
-                            <p class="modal-sub-title">자동 투표자 리스트</p>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" class="text-center">투표자</th>
-                                        <th scope="col" class="text-center">고유번호</th>
-                                        <th scope="col" class="text-center">투표번호</th>
-                                        <th scope="col" class="text-center">득표수</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">오리</td>
-                                        <td class="text-center">91</td>
-                                        <td class="text-center">777</td>
-                                        <td class="text-center">30</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">후디</td>
-                                        <td class="text-center">1009</td>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center">19</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">메이</td>
-                                        <td class="text-center">7</td>
-                                        <td class="text-center">1000</td>
-                                        <td class="text-center">3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">티도</td>
-                                        <td class="text-center">9999</td>
-                                        <td class="text-center">10</td>
-                                        <td class="text-center">3</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">호빵이</td>
-                                        <td class="text-center">1000</td>
-                                        <td class="text-center">7777</td>
-                                        <td class="text-center">1</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
                     </div>
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
@@ -1439,7 +1911,6 @@
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
                     </div>
-
                     <div class="modal-footer-right d-flex">
                         <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
                         <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
@@ -1452,33 +1923,34 @@
     <!-- Modal : 집행 -->
     <div class="modal modal-size-fix" id="myModal5" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content modal-event-create">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-header-top">
-                        <ul class="d-flex">
+                    <div class="event-detail-top">
+                        <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                        <p class="code">LEFAS201000152</p>
+                    </div>
+                    <div class="modal-title">
+                        <ul class="modal-step">
                             <li class="active">이벤트 생성</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">진행 상황</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">아이템 배송</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">투표</li>
-                            <li><i class="fas fa-chevron-right"></i></li>
                             <li class="active">집행</li>
                         </ul>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-12">
-                            <p class="modal-sub-title">비용 결재</p>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>비용 결재</span></p>
+                            </div>
                             <div class="modal-cost">
 
                                 <table class="table table-bordered">
-
                                     <colgroup>
                                         <col width="246px">
                                         <col>
@@ -1488,8 +1960,7 @@
                                             <th>결제 내용</th>
                                             <td>
                                                 <div class="input-group modal-textarea title align-items-end">
-                                                    <textarea class="form-control "
-                                                        maxlength="40" placeholder="결재 내용을 간략하게 설명해주세요."></textarea>
+                                                    <textarea class="form-control" maxlength="40" placeholder="결재 내용을 간략하게 설명해주세요."></textarea>
                                                 </div>
                                             </td>
                                         </tr>
@@ -1499,33 +1970,34 @@
                                                 <div class="form-term">
                                                     <input type="text" value="07" class="form-control">
                                                     <span>원</span>
-
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>기타 인증 서류</th>
                                             <td>
-                                                <div class="select-file d-flex mb-4">
+                                                <form id="upload" action="" method="POST" enctype="multipart/form-data">
+                                                    <fieldset>
 
-                                                    <div class="select-filebox">
-                                                        <label for="input-img">
-                                                            <p>
-                                                                파일 선택
-                                                            </p>
-                                                        </label>
-                                                        <input type="file" id="input-img">
-                                                    </div>
-                                                    <div class="example-text m-l-15">
-                                                        <p>* 첨부 파일을 마우스로 끌어 넣으세요.<br>
-                                                            5MB 이하 파일을 업로드하세요. (pdf, hwp, doc, docx, txt, png, jpg,
-                                                            jpeg, xls, xlsx 파일 형식만 가능)</p>
-                                                    </div>
+                                                        <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
 
-                                                </div>
-                                                <div class="select-file-list">
-                                                    <div id></div>
-                                                </div>
+                                                        <div class="file-upload">
+                                                            <div class="">
+                                                                <label class="btn btn-outline-dark btn-md" for="fileselect">파일 선택</label>
+                                                                <input type="file" id="fileselect" name="fileselect[]" multiple="multiple">
+                                                            </div>
+                                                            <div class="example-text m-l-15">
+                                                                <p>* 첨부 파일을 마우스로 끌어 넣으세요.<br>
+                                                                    5MB 이하 파일을 업로드하세요. (pdf, hwp, doc, docx, txt, png, jpg,
+                                                                    jpeg, xls, xlsx 파일 형식만 가능)</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="filedrag" id="filedrag">
+                                                            <div class="files" id="files"></div>
+                                                        </div>
+                                                    </fieldset>
+                                                </form>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -1542,7 +2014,6 @@
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
                     </div>
-
                     <div class="modal-footer-right d-flex">
                         <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
                         <button type="button" class="btn btn-dark btn-lg">수정 요청</button>
@@ -1553,13 +2024,13 @@
         </div>
     </div>
 
-    <!-- modal : 전체보기 -->
+    <!-- modal : 직접/자동 투표자 리스트 전체보기 -->
     <div class="modal fade" id="fsModal" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <p class="modal-sub-title">직접 투표자 리스트</p>
+                    <div class="title-square-wrap d-flex align-items-center justify-content-between pt-0 p-b-20">
+                        <p class="title-square"><span>직접||자동 투표자 리스트</span></p>
                         <div class="form-select">
                             <select class="select-sm">
                                 <option value="" selected>투표자 가나다 순</option>
@@ -1571,7 +2042,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered mb-0">
                         <thead>
                             <tr>
                                 <th scope="col" class="text-center">투표자</th>
@@ -1618,11 +2089,252 @@
         </div>
     </div>
 
+    <!-- modal : 직접/자동 투표자 리스트 전체보기 -->
+    <div class="modal fade" id="modal-lupicker-list" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title-square-wrap d-flex align-items-center justify-content-between pt-0 p-b-20">
+                        <p class="title-square"><span>루피커 리스트</span></p>
+                        <div class="form-select">
+                            <select class="select-sm">
+                                <option value="" selected>루피커 가나다 순</option>
+                                <option value="1">고유번호 순</option>
+                                <option value="1">득표수 순</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-center">루피커</th>
+                                <th scope="col" class="text-center">고유번호</th>
+                                <th scope="col" class="text-center">득표수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">오리</td>
+                                <td class="text-center">777</td>
+                                <td class="text-center">30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 메인 이벤트 선택 -->
+    <div class="modal fade" id="modal-event-add" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered w-600px">
+            <div class="modal-content h-650px">
+                <div class="modal-header">
+                    <div class="modal-title">링크할 이벤트를 선택해 주세요.</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="기획전에 링크하고 싶은 이벤트가 있나요?">
+                        <i></i>
+                    </div>
+                    <div class="select-event-list">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                    <span class="badge badge-dark">예약 이벤트</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>센세이셔널한 아홉소년들과 90:9 저녁 만찬🥂</span>
+                                    <span class="badge badge-dark">예약 이벤트</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>스타벅스에서 7천원 쓰고 10만원 받아가자💰</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <link rel="stylesheet" href="../../resources/plugins/chart/Chart.min.css">
     <script src="../../resources/plugins/chart/Chart.min.js"></script>
     <script src="../../resources/js/common.js"></script>
     <script>
+        //투표중 balls
+        var canvas = document.getElementById("balls");
+        var ctx = canvas.getContext("2d");
+        var canvasWidth;
+        var canvasHeight;
+        var colors = ["#ffff00", "#ffff00", "#ffff00", "#ffff00", "#ffff00", "#ffff00", "#000000"];
+        var setings = [];
+        var isMouseDown = false;
+        var SPRING = 0.1;
+        var BOUNCE = -0.3;
+        var GRAVITY = 0.3;
+        var mouse = {
+            x : 0,
+            y : 0
+        };
+
+        function mixInit() {
+            reset();
+
+            for( var i = 0; i < 10; i++ ) {
+                setings.push( new setBall( canvasWidth / 2, canvasHeight / 2 ) );
+            };
+
+            animate();
+        }
+
+        function reset() {
+            canvasWidth = $('.voting').width();
+            canvasHeight = $('.voting').height();
+            canvas.width = canvasWidth;
+            canvas.height = canvasHeight;
+        }
+        /**
+         *@param {Number} x
+        *@param {Number} y
+        */
+        function setBall( x, y ) {
+
+            this.x = x;
+            this.y = y;
+            this.vx = Math.random() * 6 - 3;
+            this.vy = Math.random() * 6 - 3;
+            this.radius = 60;
+            this.cor = colors[Math.random() * colors.length << 0];
+
+        }
+
+        function draw() {
+            setings.forEach( function( ball, i ) {
+                ctx.beginPath();
+                ctx.fillStyle = ball.cor;
+                ctx.arc( ball.x, ball.y, ball.radius, 0, Math.PI * 2, );
+                ctx.fill();
+
+                move( ball, i );
+
+            } );
+        }
+
+        function animate() {
+
+            ctx.clearRect( 0, 0, canvasWidth, canvasHeight );
+            draw();
+            active();
+            requestAnimationFrame( animate );
+
+        }
+
+        /**
+         *@param {Object} ball
+        *@param {Number} i
+        */
+        function move( ball, i ) {
+
+            for( var j = i + 1, len = setings.length; j < len; j++ ) {
+
+                var ball1 = ball;
+                var ball2 = setings[j];
+                var dx = ball2.x - ball1.x;
+                var dy = ball2.y - ball1.y;
+                var dist = Math.sqrt( dx * dx + dy * dy );
+                var distMin = ball1.radius + ball2.radius;
+
+                if( dist < distMin ) {
+
+                    var angle = Math.atan2( dy, dx );
+                    var tx = ball1.x + Math.cos( angle ) * distMin;
+                    var ty = ball1.y + Math.sin( angle ) * distMin;
+                    var ax = ( tx - ball2.x ) * SPRING * 0.5;
+                    var ay = ( ty - ball2.y ) * SPRING * 0.5;
+                    var depth = ( distMin - dist ) / ( dist + 1 );
+
+                    ball1.x += ( ball1.x - ball2.x ) * depth * 0.5;
+                    ball1.y += ( ball1.y - ball2.y ) * depth * 0.5;
+
+                    ball1.vx -= ax;
+                    ball1.vy -= ay;
+
+                    ball2.vx += ax;
+                    ball2.vy += ay;
+                }
+            }
+
+            ball.vy += GRAVITY;
+            ball.x += ball.vx;
+            ball.y += ball.vy;
+
+            if( ball.x + ball.radius > canvasWidth ) {
+                ball.x = canvasWidth - ball.radius;
+                ball.vx *= BOUNCE;
+            } else
+            if( ball.x - ball.radius < 0 ) {
+                ball.x = ball.radius;
+                ball.vx *= BOUNCE;
+            }
+
+            if( ball.y + ball.radius > canvasHeight ) {
+                ball.y = canvasHeight - ball.radius;
+                ball.vy *= BOUNCE;
+            } else
+            if( ball.y - ball.radius < 0 ) {
+                ball.y = ball.radius;
+                ball.vy *= BOUNCE;
+            }
+        }
+
+        function active() {
+            if( isMouseDown ) {
+                setings.push( new setBall( mouse.x, mouse.y ) );
+            }
+        }
+    </script>
+    <script>
         $(document).ready(function () {
+            //datetimepicker
+            $('#datetimepicker2').datetimepicker({
+                sideBySide: true,
+                dayViewHeaderFormat: "YYYY. M",
+                format: 'YYYY.MM.DD hh:mm',
+                icons: {
+                    up: 'fas fa-angle-up',
+                    down: 'fas fa-angle-down',
+                }
+            });
+            //이벤트 오픈 날짜 선택
+            $('[name="eventOpenDate"]').on('change',function(){
+                if($('[name="eventOpenDate"]:checked').val() == 'radio4'){
+                    $('#datetimepicker2').prop('disabled',false);
+                }else{
+                    $('#datetimepicker2').prop('disabled',true);
+                }
+            });
+
             $('.adobe').each(function(){
                 var data = $(this).attr('data-percent') + '%';
                 $(this).css('width', data);
@@ -1643,71 +2355,114 @@
                     currentModal.prev("div[id^='myModal']").modal('show');
                 });
             });
+
+            $('#btn-edit').on('click',function(e){
+                e.preventDefault();
+                /* https://api.jqueryui.com/sortable/ */
+                $('html').addClass('is-editing');
+                $( "#sortable" ).sortable({
+                    cursor: "move",
+                    items: "li:not(.item-disabled)",
+                    placeholder: "box-placeholder",
+                    change: function( event, ui ) {
+                        console.log('change');
+                    }
+                });
+            });
+            $('#btn-save').on('click',function(e){
+                e.preventDefault();
+                /* https://api.jqueryui.com/sortable/ */
+                $('html').removeClass('is-editing');
+                $( "#sortable" ).sortable( "destroy" );
+            });
+
+
+            //로딩 후 결과 보여주기 샘플
+            $('#myModal4').on('shown.bs.modal', function () {
+                mixInit();
+                setTimeout(function(){
+                    $('.voting').hide();
+                    $('#voting-result').show();
+                },3500);
+            })
         })
 
         ///이벤트 달성률
-        var config = {
+        var success = document.getElementById('chart-success').getContext('2d');
+        var doughnutSuccess = new Chart(success, {
             type: 'doughnut',
             data: {
                 datasets: [{
                     data: [91, 9],
-                    weight: 1,
+                    borderWidth: 0,
                     backgroundColor: [
                         '#ffff00',
                         '#000'
-                    ]
+                    ],
                 }],
+                labels: [
+                    '구매한 이벤트 아이템 개수',
+                    '남은 이벤트 아이템 개수'
+                ],
             },
             options: {
                 responsive: true,
                 rotation: -0.3 * Math.PI,
+                cutoutPercentage: 85,
+                maintainAspectRatio: false,
                 animation: {
                     animateScale: true,
                     animateRotate: true
                 },
-                cutoutPercentage: 80,
-                maintainAspectRatio: false,
-            }
-        };
-
-        window.onload = function () {
-            var ctx = document.getElementById('chart-area').getContext('2d');
-            window.myDoughnut = new Chart(ctx, config);
-        };
-
-        ///시간대별 구매 통계
-        var densityCanvas = document.getElementById("densityChart");
-
-        Chart.defaults.global.defaultFontFamily = "Lato";
-        Chart.defaults.global.defaultFontSize = 18;
-
-        var densityData = {
-            data: [20, 15, 16, 16, 20, 20, 60, 17, 17, 80, 85, 20],
-            barPercentage: 0.2,
-            backgroundColor: "#000000"
-        };
-
-        var barChart = new Chart(densityCanvas, {
-            type: 'bar',
-            data: {
-                labels: ["01-02h", "03-04h", "05-06h", "07-08h", "09-10h", "11-12h", "13-14h", "15-16h",
-                    "17-18h", "19-20h", "21-22h", "23-24h"
-                ],
-                datasets: [densityData]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: '2020.08.10'
+                legend: {
+                    display: false
                 },
             }
         });
 
+        ///시간대별 구매 통계
+        var densityCanvas = document.getElementById("chart-purchase");
+        //Chart.defaults.global.defaultFontFamily = "Lato";
+        //Chart.defaults.global.defaultFontSize = 16;
+        var barChart = new Chart(densityCanvas, {
+            type: 'bar',
+            data: {
+                datasets: [{
+                    data: [20, 15, 16, 16, 20, 20, 60, 17, 17, 80, 85, 20],
+                    barPercentage: 0.2,
+                    backgroundColor: "#000000"
+                }],
+                labels: ["01-02h", "03-04h", "05-06h", "07-08h", "09-10h", "11-12h", "13-14h", "15-16h",
+                    "17-18h", "19-20h", "21-22h", "23-24h"
+                ],
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                            color: "black"
+                        },
+                        scaleLabel: {
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }]
+                }
+            }
+        });
 
         //성별 구매 통계
         var gender = document.getElementById('chart-gender').getContext('2d');
-
-        var myDoughnutChart = new Chart(gender, {
+        var doughnutGender = new Chart(gender, {
             type: 'doughnut',
             data: {
                 datasets: [{
@@ -1719,6 +2474,11 @@
                         '#ffff00',
                     ]
                 }],
+                labels: [
+                    '선택안함',
+                    '남성',
+                    '여성',
+                ],
             },
             options: {
                 responsive: true,
@@ -1727,15 +2487,17 @@
                     animateScale: true,
                     animateRotate: true
                 },
-                cutoutPercentage: 80,
+                cutoutPercentage: 85,
                 maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
             }
         });
 
         //연령대별 구매 통계
         var age = document.getElementById('chart-age').getContext('2d');
-
-        var myDoughnutChart = new Chart(age, {
+        var doughnutAge = new Chart(age, {
             type: 'doughnut',
             data: {
                 datasets: [{
@@ -1749,46 +2511,63 @@
                         '#8a8d92'
                     ]
                 }],
+                labels: [
+                    '50대 이상',
+                    '10대',
+                    '30대',
+                    '20대',
+                    '40대',
+                ],
             },
             options: {
                 responsive: true,
-                // rotation: -0.3 * Math.PI,
+                rotation: -0.3 * Math.PI,
                 animation: {
                     animateScale: true,
                     animateRotate: true
                 },
-                cutoutPercentage: 80,
+                cutoutPercentage: 85,
                 maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
             }
         });
 
         //투표율
-        var vote = document.getElementById('chart-vote').getContext('2d');
-
-        var myDoughnutChart = new Chart(vote, {
+        var turnout = document.getElementById('chart-turnout').getContext('2d');
+        var doughnutTurnout = new Chart(turnout, {
             type: 'doughnut',
             data: {
                 datasets: [{
-                    data: [10, 90],
-                    weight: 1,
+                    data: [91, 9],
+                    borderWidth: 0,
                     backgroundColor: [
-                        '#000000',
                         '#ffff00',
-                    ]
+                        '#000'
+                    ],
                 }],
+                labels: [
+                    '구매한 이벤트 아이템 개수',
+                    '남은 이벤트 아이템 개수'
+                ],
             },
             options: {
                 responsive: true,
-                // rotation: -0.3 * Math.PI,
+                rotation: -0.3 * Math.PI,
+                cutoutPercentage: 85,
+                maintainAspectRatio: false,
                 animation: {
                     animateScale: true,
                     animateRotate: true
                 },
-                cutoutPercentage: 80,
-                maintainAspectRatio: false,
+                legend: {
+                    display: false
+                },
             }
         });
     </script>
+
 
 </body>
 

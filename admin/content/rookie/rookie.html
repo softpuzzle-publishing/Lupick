@@ -126,13 +126,16 @@
                 </ul>
             </div>
         </div>
-      
-        <!-- 루키수정 -->
-        <div class="modal fade modal-1400 modal-size-fix" id="exampleModalScrollable" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <footer>
+            <!-- footer include -->
+        </footer>
+    </div>
+
+    <!-- 루키수정 -->
+    <div class="modal fade modal-1400 modal-size-fix" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content modal-auto-height">
-                <div class="modal-header modal-none-border">
+                <div class="modal-header">
                     <div class="modal-header-top m-0">
                         <h3 class="mb-0">루키 관리</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -141,7 +144,9 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <div class="modal-sub-title">루키 정보</div>
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>루키 정보</span></p>
+                    </div>
                     <table class="table table-bordered table-form">
                         <colgroup>
                             <col width="120px">
@@ -150,10 +155,9 @@
                             <col>
                         </colgroup>
                         <tbody>
-                                         
                             <tr>
                                 <th>루키관리</th>
-                                <td> 
+                                <td>
                                     <div class="custom-control custom-radio custom-control-inline">
                                         <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio1" value="radio1">
                                         <label class="custom-control-label g-b" for="radio1">Lukie</label>
@@ -168,8 +172,8 @@
                                     </div>
 
                                     <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-sms" data-toggle="modal" data-role="button">탈퇴 처리</button>
-                                 </td>
-       
+                                </td>
+
                                 <th class="text-center">가입승인</th>
                                 <td>
                                     <div class="d-flex align-items-center justify-content-between">
@@ -190,33 +194,33 @@
                             <tr>
                                 <th>이름</th>
                                 <td><span class="float-left">김루키</span> </td>
-       
+
                                 <th class="text-center">닉네임</th>
                                 <td>루키루키</td>
                             </tr>
                             <tr>
                                 <th>가입일</th>
                                 <td>2020.10.05</td>
-       
+
                                 <th class="text-center">최종 접속일</th>
                                 <td>
                                     <span>2020.10.06</span><span>20:15:01</span>
                                 </td>
                             </tr>
-                         
-                          
                         </tbody>
                     </table>
-       
-                    <div class="modal-sub-title">생성 이벤트</div>
+
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>생성 이벤트</span></p>
+                    </div>
                     <table class="table table-bordered table-center table-layout-auto">
-                      
+
                         <thead>
                             <tr>
                                 <th scope="col">생성일</th>
                                 <th scope="col">이벤트 명</th>
                                 <th scope="col">진행 상황</th>
-                           
+
                             </tr>
                         </thead>
                         <tbody>
@@ -232,8 +236,7 @@
                             </tr>
                         </tbody>
                     </table>
-       
-                   
+
                 </div>
                 <div class="modal-footer border-none">
                     <div class="text-center">
@@ -242,8 +245,8 @@
                 </div>
             </div>
         </div>
-       </div>
     </div>
+
     <script src="../../resources/js/common.js"></script>
     <script>
         $(document).ready(function () {

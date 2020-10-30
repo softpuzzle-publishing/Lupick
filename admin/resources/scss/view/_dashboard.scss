@@ -1,0 +1,66 @@
+body.body-dashboard{
+    .box{height: 100%;padding: 30px;}
+    .row{margin: -15px;}
+    [class^=col-]{padding: 15px;}
+}
+
+.dashboard-bottom{
+
+}
+
+.dash-title{font-size: 20px;font-weight: 700;line-height: 1.15;}
+
+.lupick-report{
+    .statistics{display:flex;align-items: center;justify-content: space-between;
+        p{font-size:30px;font-weight: bold;line-height: 1.166;}
+        i{font-size:40px;}
+    }
+    .info{display:flex;align-items:center;justify-content: space-between;margin-top:20px;font-size: 14px;line-height: 1.15;}
+}
+
+.h-690px{height: 690px;}
+
+.event-report{
+    .event-count{
+        position: relative;display:flex;align-items: center;justify-content: space-between;height: 120px;
+        p:nth-child(1){position: relative;z-index: 2;margin-left: 15px;font-size: 14px;}
+        p:nth-child(2){font-size:30px;font-weight: bold;}
+        &:after{content:"";width:80px;height:80px;position: absolute;top: 50%;left: 20px;background-color:$gray;border-radius: 50%;z-index: 1;transform:translate(0,-50%)}
+        &.ing:after{background-color:$yellow;}
+    }
+    .popularity-event{
+        height: 360px;
+    }
+
+    .success-event{
+        height: 100%;padding: 30px;
+        .success-event-percent{
+            padding-bottom:20px;
+            strong{font-size: 40px;}
+        }
+        .circle_percent {
+            width: 100%;height: 300px;margin:35px auto;
+        }
+    }
+}
+
+.management{
+    .box{
+        display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 40px;
+        p{font-size:14px;line-height: 1.43; margin-top: 15px;}
+        strong{font-size:40px;font-weight: bold; margin:40px 0;line-height: 1.15;}
+        a{font-size:14px;font-weight: bold;
+            i{vertical-align: middle;transform: translateY(-1px);margin-left: 1px;}
+        }
+        a:hover{text-decoration: underline;}
+        .row{border-top: 1px solid $gray;margin: 0;width: 100%;padding-top: 30px;margin-top: 20px;}
+        .col-4{
+            display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0;
+            p{margin-top: 0;}
+            strong{margin: 22px 0 30px;}
+        }
+    }
+    > .row + .row{margin-top: 30px;}
+}
+
+

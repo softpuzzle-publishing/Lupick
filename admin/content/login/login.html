@@ -23,53 +23,78 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
 </head>
 
-<body>
-
-    <div class="login-body d-flex align-items-center justify-content-center">
-        <div class="container">
-            <div class="d-flex">
-                <div class="login-box d-flex align-items-center justify-content-center">
-                    <div>
-                        <a href="login.html"><div class="login-logo"></div></a>
-
-                        <p><b>Lupick Admin Page</b><br>
-                            © 2020 LUPICK. ALL RIGHTS RESERVED.</p>
-                    </div>
+<body class="body-center-content"> <!-- 로그인, 회원가입, 아이디/비번 찾기 -->
+    <div class="bg-balls">
+        <canvas id="stage" width="400" height="400"></canvas>
+    </div>
+    <div class="login-wrap">
+        <div class="login-logo">
+            <div class="logo"><span class="sr-only">Lupick.</span></div>
+            <p class="copyright">
+                <b>Lupick Admin Page</b>
+                <span>© 2020 LUPICK. ALL RIGHTS RESERVED.</span>
+            </p>
+        </div>
+        <div class="login-box">
+            <div class="info-form">
+                <div class="info-form-top">
+                    <h1>관리자 로그인</h1>
+                    <span>루픽의 메이커가 되어보세요!</span> <a href="signup.html" class="lg-font paint">가입하기</a>
                 </div>
-                <div class="login-box shadow bg-white rounde">
-                    <div class="info-form">
-                        <div class="info-form-top mb-5">
-                            <h1>관리자 로그인</h1>
-                            <span>루픽의 메이커가 되어보세요!</span> <a href="signup.html" class="lg-font paint">가입하기</a>
-                        </div>
-    
-                        <div class="info-form-content">
-                            <div class="info-list">
-                                <span>아이디</span>
-                                <input class="input-id w-400px" type="email" value="" placeholder="아이디를 입력해주세요.">
-                            </div>
-    
-                            <div class="info-list">
-                                <span>비밀번호</span>
-                                <input class="input-pw w-400px" type="password" value="" placeholder="비밀번호를 입력해주세요.">
-                            </div>
-                            <p class="error-msg">! 아이디 또는 비밀번호가 일치하지 않습니다</p>
-                        </div>
-                       
-                        <button type="button" class="login-btn btn btn-xl btn-block" onclick="clickLogin()">로그인</button>
-    
-                        <div class="info-form-bottom d-flex align-items-center justify-content-between">
-                            <span><input type="checkbox" id="login"> <label for="login"></label><label for="login">아이디
-                                    기억하기</label></span>
-                            <span>
-                                <a href="find_id.html">아이디/비밀번호 찾기</a>
-                            </span>
-                        </div>
+
+                <div class="info-form-content">
+                    <div class="info-list">
+                        <span>아이디</span>
+                        <input class="input-id form-control" type="email" value="" placeholder="아이디를 입력해주세요.">
                     </div>
+                    <div class="info-list">
+                        <span>비밀번호</span>
+                        <input class="input-pw form-control" type="password" value="" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+                    <p class="error-msg m-t-20">! 아이디 또는 비밀번호가 일치하지 않습니다</p>
+                </div>
+
+                <button type="button" class="login-btn btn btn-dark btn-xl btn-block" disabled onclick="clickLogin()">로그인</button>
+
+                <div class="info-form-bottom">
+                    <div class="custom-control custom-check custom-control-inline mr-0">
+                        <input type="checkbox" class="custom-control-input" id="login" value="login">
+                        <label class="custom-control-label" for="login">아이디 기억하기</label>
+                    </div>
+                    <span>
+                        <a href="find_id.html">아이디/비밀번호 찾기</a>
+                    </span>
                 </div>
             </div>
         </div>
-        <script src="../../resources/js/login.js"></script>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $('.form-control').on('input', function (e) {
+            $(this).addClass('active');
+        });
+
+        $(".form-control").on("change keyup paste",function () {
+            var id = $('.input-id').val();
+            var pw = $('.input-pw').val();
+
+            if (!id == "" && !pw == "") {
+                $('.login-btn').prop('disabled',false);
+            }else{
+                $('.login-btn').prop('disabled',true);
+            }
+        });
+
+        function clickLogin(){
+            var id = $('.input-id').val();
+            var pw = $('.input-pw').val();
+
+            if (!id == "" && !pw == "") {
+                $('.error-msg').css({'display':'block'});
+            }
+        }
+    </script>
 </body>
 
 </html>

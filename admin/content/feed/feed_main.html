@@ -33,15 +33,17 @@
             <!-- aside include -->
         </aside>
         <div id="container-block">
-            <h2 class="hello">안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+            <div class="top">
+                <h2 class="hello">안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+                <div class="latest">최근 업데이트 : 2020.08.07 17:49</div>
+            </div>
 
-            <nav id="nav" class="m-b-25">
+            <nav id="nav">
                 <div class="nav" id="nav-tab" role="tablist">
                     <a class="nav-link active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab">전체 피드</a>
                     <a class="nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab">이벤트 후기</a>
                     <a class="nav-link" id="nav-story-tab" data-toggle="tab" href="#nav-story" role="tab">루픽 스토리</a>
-                    <a class="nav-link" id="nav-exhibition-tab" data-toggle="tab" href="#nav-exhibition"
-                        role="tab">기획전</a>
+                    <a class="nav-link" id="nav-exhibition-tab" data-toggle="tab" href="#nav-exhibition" role="tab">기획전</a>
                 </div>
             </nav>
 
@@ -52,8 +54,6 @@
                         <i></i>
                     </div>
                 </div>
-
-
                 <div class="col-auto">
                     <select class="select-lg">
                         <option value="" selected>전체 피드</option>
@@ -66,17 +66,10 @@
                     <button type="button" class="btn btn-dark btn-xl btn-feed-write" data-toggle="modal" data-role="button" data-target="#edit-feed">+ 피드 작성하기</button>
                 </div>
             </div>
+
             <div class="tab-content p-0" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
                     <div class="m-t-30">
-                        <!-- <div class="wrap-img">
-                            <div class="hide-img"></div>
-                            <div class="real-img" style="background-image: url('../../resources/images/111.jpg');">
-                                
-                            </div> 
-                        </div> -->
-
-
                         <ul class="card-list feed">
                             <li>
                                 <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
@@ -135,18 +128,16 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <!-- footer include -->
+        </footer>
     </div>
-
-    </div>
-    </div>
-
-
 
     <!-- Modal : 피드 작성 -->
     <div class="modal modal-size-fix has-tab" id="edit-feed" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header modal-none-border">
+                <div class="modal-header">
                     <div class="modal-header-top m-0">
                         <h3>피드 작성</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -157,7 +148,9 @@
                 <div class="modal-body" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
                     <!-- //피드작성 /이벤트 후기-->
                     <div class="info-event" id="div1">
-                        <p class="modal-sub-title">피드 작성</p>
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>피드 작성</span></p>
+                        </div>
                         <table class="table table-bordered table-form">
                             <colgroup>
                                 <col width="246px">
@@ -370,9 +363,9 @@
                                     </td>
                                 </tr>
                             </tbody>
-                           
+
                         </table>
-                   
+
                     </div>
 
                 </div>
@@ -397,7 +390,7 @@
     <div class="modal modal-size-fix" id="feed-management" tabindex="-1" role="dialog" data-backdrop="static">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
-                <div class="modal-header modal-none-border">
+                <div class="modal-header">
                     <div class="modal-header-top m-0">
                         <h3>피드 관리</h3>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -408,7 +401,9 @@
                 <div class="modal-body" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
                     <!-- //피드작성 /이벤트 후기-->
                     <div class="info-event" id="div1">
-                        <p class="modal-sub-title">피드 관리</p>
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>피드 관리</span></p>
+                        </div>
                         <table class="table table-bordered table-form">
                             <colgroup>
                                 <col width="246px">
@@ -571,7 +566,7 @@
                                 </tr>
                             </tbody>
                         </table> -->
-                       
+
                     </div>
 
                 </div>
@@ -597,7 +592,7 @@
     <div class="modal fade" id="select-event" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
         <div class="modal-dialog modal-vote-list modal-dialog-centered w-610px">
             <div class="modal-content h-650px">
-                <div class="modal-header modal-none-border">
+                <div class="modal-header">
                     <div class="double-modal-title m-b-30">링크할 이벤트를 선택해 주세요.</div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -605,7 +600,7 @@
                 </div>
 
                 <div class="modal-body">
-                   
+
                     <div class="item-search d-flex align-items-center">
                         <input class="form-control w-100" type="text" placeholder="기획전에 링크하고 싶은 이벤트가 있나요?">
                         <i></i>

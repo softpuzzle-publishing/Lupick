@@ -23,81 +23,117 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
 </head>
 
-<body>
+<body class="body-center-content"> <!-- 로그인, 회원가입, 아이디/비번 찾기 -->
 
-    <div class="login-body d-flex align-items-center justify-content-center">
-        <div class="container">
-            <div class="d-flex">
-                <div class="login-box d-flex align-items-center justify-content-center">
-                    <div>
-                        <a href="login.html"><div class="login-logo"></div></a>
-                        <p><b>Lupick Admin Page</b><br>
-                            © 2020 LUPICK. ALL RIGHTS RESERVED.</p>
-                    </div>
+    <div class="bg-balls">
+        <canvas id="stage" width="400" height="400"></canvas>
+    </div>
+    <div class="login-wrap">
+        <div class="login-logo">
+            <div class="logo"><span class="sr-only">Lupick.</span></div>
+            <p class="copyright">
+                <b>Lupick Admin Page</b>
+                <span>© 2020 LUPICK. ALL RIGHTS RESERVED.</span>
+            </p>
+        </div>
+        <div class="login-box">
+            <div class="info-form">
+                <div class="info-form-top m-b-40">
+                    <h1>계정 찾기</h1>
+                    <a href="find_id.html" class="lg-font">아이디 찾기</a>
+                    <a href="find_pw.html" class="paint lg-font m-l-20">비밀번호 찾기</a>
                 </div>
-                <div class="login-box shadow bg-white rounde">
-                    <div class="info-form w-400px">
-                        <div class="info-form-top m-b-40">
-                            <h1>계정 찾기</h1>
-                            <a href="find_id.html" class="lg-font">아이디 찾기</a>
-                            <a href="find_pw.html" class="paint lg-font m-l-20">비밀번호 찾기</a>
+
+                <!--//비밀번호 찾기 찾기 -->
+                <div id="contents1">
+                    <div class="info-form-content m-b-40">
+                        <div class="info-list">
+                            <span>아이디</span>
+                            <input class="input-id form-control" type="email" value="" placeholder="아이디를 입력해주세요.">
                         </div>
-    
-                        <!-- //비밀번호 찾기 찾기 -->
-                        <!-- <div class="info-form-content">
-                            <div class="info-list">
-                                <span>아이디</span>
-                                <input class="input-id w-400px" type="email" value="" placeholder="아이디를 입력해주세요.">
+                        <div class="info-list">
+                            <div>
+                                <span>이름</span>
                             </div>
-                            <div class="info-list">
-                                <div>
-                                    <span>이름</span>
-                                </div>
-                                <input class="input-name w-400px" type="text" value="" placeholder="이름을 입력해주세요.">
+                            <input class="input-name form-control" type="text" value="" placeholder="이름을 입력해주세요.">
+                        </div>
+                        <div class="info-list">
+                            <div class="info-list-header">
+                                <span>휴대폰 번호</span> <span class="error-msg">! 본인 인증이 필요합니다</span>
                             </div>
-                            <div class="info-list m-0">
-                                <div class="info-list-header">
-                                    <span>휴대폰 번호</span> <span class="error-msg">! 본인 인증이 필요합니다</span>
-                                </div>
-                                <div class="certification">
-                                    <input class="input-phone w-270px" type="number" value="" placeholder="- 없이 입력해주세요.">
-                                    <button type="button" class="w-120px">인증번호 발송</button>
-                                </div>
-    
-                                <div class="certification-num">
-                                    <input class="input-num w-400px" type="number" value="" placeholder="인증번호를 입력해주세요">
-                                    <span class="timer"></span>
-                                    <span class="error-msg"><i class="fas fa-times"></i> 인증 실패! 인증 번호를 확인하거나 다시 시도해주세요</span>
-                                    <span class="success-msg"><i class="fas fa-check"></i> 인증 완료</span>
-                                </div>
+                            <div class="certification">
+                                <input class="input-phone form-control" type="tel" value="" placeholder="- 없이 입력해주세요.">
+                                <button type="button" class="btn btn-outline-dark btn-md">인증번호 발송</button>
                             </div>
-                        </div> -->
-
-                       <!-- //비밀번호 재설정 -->
-                       <div class="info-form-content">
-                            <p class="">비밀번호를 변경해 주세요.</p>
-
-                            <div class="info-list m-t-40">
-                                <div class="info-list-header">
-                                    <span>새 비밀번호</span> <span class="error-msg">! 8~20자 영문, 숫자, 특수문자 조합으로 입력해주세요</span>
-                                </div>
-                                <input class="input-pw w-400px" type="password" value="" placeholder="8~20자 영문, 숫자, 특수문자 조합">
+                            <div class="certification-num">
+                                <input class="input-num form-control" type="tel" value="" placeholder="인증번호를 입력해주세요">
+                                <span class="timer"></span>
+                                <span class="error-msg"><i class="fas fa-times"></i> 인증 실패! 인증 번호를 확인하거나 다시 시도해주세요</span>
+                                <span class="success-msg"><i class="fas fa-check"></i> 인증 완료</span>
                             </div>
-                            <div class="info-list m-0">
-                                <div class="info-list-header">
-                                    <span>새 비밀번호 확인</span> <span class="error-msg">! 8~20자 영문, 숫자, 특수문자 조합으로 입력해주세요</span>
-                                </div>
-                                <input class="input-pw w-400px" type="password" value="" placeholder="비밀번호를 확인해주세요">
-                            </div>
-                       </div>
-
-                        <button type="button" class="btn btn-dark btn-xl m-t-40">비밀번호 변경</button>
-    
+                        </div>
                     </div>
+                    <button type="button" class="find-btn btn btn-dark btn-xl btn-block" disabled>비밀번호 변경</button>
+                </div>
+
+                <!-- //비밀번호 재설정 -->
+                <div style="display:none" id="contents2">
+                    <div class="info-form-content m-b-40">
+                        <p class="m-b-40">비밀번호를 변경해 주세요.</p>
+
+                        <div class="info-list">
+                            <div class="info-list-header">
+                                <span>새 비밀번호</span> <span class="error-msg">! 8~20자 영문, 숫자, 특수문자 조합으로 입력해주세요</span>
+                            </div>
+                            <input class="input-pw-change form-control" type="password" value="" placeholder="8~20자 영문, 숫자, 특수문자 조합">
+                        </div>
+                        <div class="info-list">
+                            <div class="info-list-header">
+                                <span>새 비밀번호 확인</span> <span class="error-msg">! 8~20자 영문, 숫자, 특수문자 조합으로 입력해주세요</span>
+                            </div>
+                            <input class="input-pw-change-confirm form-control" type="password" value="" placeholder="비밀번호를 확인해주세요">
+                        </div>
+                    </div>
+                    <button type="button" class="change-btn btn btn-dark btn-xl btn-block" disabled>비밀번호 변경</button>
                 </div>
             </div>
         </div>
-        <script src="../../resources/js/login.js"></script>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(".form-control").on("change keyup paste",function () {
+            if(!$(this).val() == ""){
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+
+            var id = $('.input-id').val();
+            var name = $('.input-name').val();
+            var phone = $('.input-phone').val();
+            var num = $('.input-num').val();
+            var pw = $('.input-pw-change').val();
+            var pwRe = $('.input-pw-change-confirm').val();
+
+            if (!id == "" && !name == "" && !phone == "" && !num== "") {
+                $('.find-btn').prop('disabled',false);
+            }else{
+                $('.find-btn').prop('disabled',true);
+            }
+
+            if (!pw == "" && !pwRe == "") {
+                $('.change-btn').prop('disabled',false);
+            }else{
+                $('.change-btn').prop('disabled',true);
+            }
+        });
+
+        $('.find-btn').on('click',function(){
+            $('#contents1').hide();
+            $('#contents2').show();
+        });
+    </script>
 </body>
 
 </html>
