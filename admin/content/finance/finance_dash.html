@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/plugins/chart/Chart.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js">
+    </script>
+    <!-- chart -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+</head>
+
+<style>
+    #container-block .title.dash{margin: 40px 0 15px 0;}
+    .h-500px{height: 500px !important;}
+    .h-100p{height: 100% !important;}
+    .icon-finance-money{width: 40px;height: 40px;background-image: url('../../resources/images/icon-finance-money.svg');}
+    .icon-finance-sales{width: 40px;height: 40px;background-image: url('../../resources/images/icon-finance-sales.svg');}
+    .icon-finance-expenditure{width: 40px;height: 40px;background-image: url('../../resources/images/icon-finance-expenditure.svg');}
+    .icon-finance-revenue{width: 40px;height: 40px;background-image: url('../../resources/images/icon-finance-revenue.svg');}
+    .font-blue{color:#426bf2 !important; font-weight: bold !important;}
+    .font-red{color:#d20000 !important; font-weight: bold !important;}
+</style>
+
+<body class="body-dashboard">
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="top">
+                <h2 class="hello"><span>Tido</span>님, 언제나 루픽은 다양한 분석을 통해 보다 좋은 이벤트 제작을 지원합니다!</h2>
+                <div class="latest">최근 업데이트 : 2020.10.07 17:49</div>
+            </div>
+            <h3 class="title">Lupick Report</h3>
+            <div class="lupick-report">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="box">
+                            <div class="statistics">
+                                <i class="icon-finance-money"></i>
+                                <p>313,523</p>
+                            </div>
+                            <div class="info">
+                                <p>루픽 총 매출 (원)</p>
+                                <p class="comment">* 루픽 누적 총 매출</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <div class="statistics">
+                                <i class="icon-finance-sales"></i>
+                                <p>2,746,103</p>
+                            </div>
+                            <div class="info">
+                                <p>8월 매출 금액 (원)</p>
+                                <p class="paint">전월 대비 +20%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <div class="statistics">
+                                <i class="icon-finance-expenditure"></i>
+                                <p>92,561,512,648</p>
+                            </div>
+                            <div class="info">
+                                <p>8월 지출 금액 (원)</p>
+                                <p class="paint">전월 대비 +7%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <div class="statistics">
+                                <i class="icon-finance-revenue"></i>
+                                <p>1,583,327</p>
+                            </div>
+                            <div class="info">
+                                <p>8월 수익 금액 (원)</p>
+                                <p class="paint">전월 대비 +27%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="box h-500px m-t-15">
+                        <canvas class="h-100p" id="myChart" width="10" height="3">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="title dash">Revenue Report</h3>
+                        <a href="#fsModal" data-toggle="modal" data-role="button" class="more-text m-t-40">전체보기 <i
+                                class="icon-link-arr"></i></a>
+                    </div>
+                    <table class="table table-bordered table-center table-layout-auto">
+                        <thead>
+                            <tr>
+                                <th scope="col">상태</th>
+                                <th scope="col">이벤트 명</th>
+                                <th scope="col">이벤트 코드</th>
+                                <th scope="col">주문 번호</th>
+                                <th scope="col">주문자</th>
+                                <th scope="col">결제 시간</th>
+                                <th scope="col">금액</th>
+                                <th scope="col">결제 수단</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-blue">결제 완료</td>
+                                <td class="text-left">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                                <td>LE20101801A142</td>
+                                <td>1010-2020-0801</td>
+                                <td>알파</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td class="font-blue">+ 37,000</td>
+                                <td>신용카드</td>
+                            </tr>
+                            <tr>
+                                <td class="font-blue">결제 완료</td>
+                                <td class="text-left">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                                <td>LE20101801A142</td>
+                                <td>1010-2020-0801</td>
+                                <td>티도</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td class="font-blue">+ 37,000</td>
+                                <td>페이코</td>
+                            </tr>
+                            <tr>
+                                <td class="font-blue">결제 완료</td>
+                                <td class="text-left">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                                <td>LE20101801A142</td>
+                                <td>1010-2020-0801</td>
+                                <td>라니</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td class="font-blue">+ 37,000</td>
+                                <td>네이버페이</td>
+                            </tr>
+                            <tr>
+                                <td class="font-blue">결제 완료</td>
+                                <td class="text-left">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                                <td>LE20101801A142</td>
+                                <td>1010-2020-0801</td>
+                                <td>호빵이</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td class="font-blue">+ 37,000</td>
+                                <td>신용카드</td>
+                            </tr>
+                            <tr>
+                                <td class="font-red">결제 취소</td>
+                                <td class="text-left">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                                <td>LE20101801A142</td>
+                                <td>1010-2020-0801</td>
+                                <td>호호호</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td class="font-red">- 37,000</td>
+                                <td>카카오페이</td>
+                            </tr>
+                            <tr>
+                                <td class="font-blue">결제 완료</td>
+                                <td class="text-left">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                                <td>LE20101801A142</td>
+                                <td>1010-2020-0801</td>
+                                <td>호호호</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td class="font-blue">+ 37,000</td>
+                                <td>카카오페이</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="title dash">Expense Report</h3>
+                        <a href="#fsModal" data-toggle="modal" data-role="button" class="more-text m-t-40">전체보기 <i
+                                class="icon-link-arr"></i></a>
+                    </div>
+                    <table class="table table-bordered table-center table-layout-auto">
+                        <thead>
+                            <tr>
+                                <th scope="col">내용</th>
+                                <th scope="col">이벤트 명</th>
+                                <th scope="col">이벤트 코드</th>
+                                <th scope="col">루키</th>
+                                <th scope="col">결제 승인 시간</th>
+                                <th scope="col">금액</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">스페셜 상품 구매 비용</td>
+                                <td class="text-left">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                                <td>LE20101801A142</td>
+                                <td>호호호</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td>250,000,000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">이벤트 운영비 입니다. 촬영, 소품 비용 첨부합니다.</td>
+                                <td class="text-left">리모와 캐리어 구매하고 코로나 이후 세계일주 가보자!</td>
+                                <td>LE20101801A142</td>
+                                <td>알파</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td>130,000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">이벤트 운영비 입니다. 촬영, 소품 비용 첨부합니다.</td>
+                                <td class="text-left">리모와 캐리어 구매하고 코로나 이후 세계일주 가보자!</td>
+                                <td>LE20101801B512</td>
+                                <td>알파</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td>1,100,000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">제세 공과금</td>
+                                <td class="text-left">리모와 캐리어 구매하고 코로나 이후 세계일주 가보자!</td>
+                                <td>LE20101801B512</td>
+                                <td>라니</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td>130,000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">운영비</td>
+                                <td class="text-left">샤넬립스틱 구매하고 샤넬 매장에서 나홀로 쇼핑!!</td>
+                                <td>LE20101801A142</td>
+                                <td>티도</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td>300,000</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">이벤트 촬영 대관 비용</td>
+                                <td class="text-left">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                                <td>LE20101801A142</td>
+                                <td>호빵이</td>
+                                <td>2020.10.05.19:27:38</td>
+                                <td>425,000</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <!-- footer include -->
+        </footer>
+    </div>
+
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var data = {
+            // The type of chart we want to create
+            type: 'line',
+            // The data for our dataset
+            data: {
+                labels: ["", "2020.09", "2020.10", "2020.11", "2020.12", "2021.01", "2021.02", "2021.03", "2021.04",
+                    "2021.05", "2021.06", "2021.07", "2021.08"
+                ],
+                datasets: [{
+                    type: 'line',
+                    label: "매출",
+                    backgroundColor: '#35a853',
+                    fill: false, // line의 아래쪽을 색칠할 것인가? 
+                    borderColor: '#35a853',
+                    lineTension: 0, // 값을 높이면, line의 장력이 커짐.
+                    data: [2, 3, 4, 4, 2, 1, 2, 4, 5, 3, 2, 1, 5],
+                }, {
+                    type: 'line',
+                    label: "수익",
+                    backgroundColor: 'yellow',
+                    fill: false, // line의 아래쪽을 색칠할 것인가? 
+                    borderColor: '#4286f5',
+                    lineTension: 0, // 값을 높이면, line의 장력이 커짐.
+                    data: [1, 2, 3, 4, 5, 2, 1, 3, 3, 2, 1, 2, 4],
+                }, {
+                    type: 'line',
+                    label: "지출",
+                    backgroundColor: '#fabc05',
+                    fill: false, // line의 아래쪽을 색칠할 것인가? 
+                    borderColor: '#000000',
+                    lineTension: 0, // 값을 높이면, line의 장력이 커짐.
+                    data: [1, 2, 4, 2, 3, 2, 3, 4, 1, 2, 2, 5, 2],
+                }]
+            },
+            // Configuration options go here
+            options: {
+                scales: {
+                    yAxes: [{
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Temp'
+                        },
+                        ticks: {
+                            max: 5,
+                            min: 1,
+                            stepSize: 1
+                        }
+                    }]
+                }
+
+            }
+        }
+        var chart = new Chart(ctx, data);
+    </script>
+</body>
+
+</html>
