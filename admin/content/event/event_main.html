@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lupick</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
@@ -84,12 +84,12 @@
                     </li>
                     <li class="item-disabled">
                         <a href="#modal-event-add" data-toggle="modal" class="filebox">
-                            <label><i class="icon-plus"></i></label>
+                            <label></label>
                         </a>
                     </li>
                     <li class="item-disabled">
                         <a href="#modal-event-add" data-toggle="modal" class="filebox">
-                            <label><i class="icon-plus"></i></label>
+                            <label></label>
                         </a>
                     </li>
                 </ul>
@@ -505,12 +505,11 @@
                                         <div class="upload-img d-flex align-items-center">
                                             <div class="filebox">
                                                 <input type="file" id="input-img">
-                                                <label for="input-img"><i class="icon-plus"></i>
-                                                    <img src="" alt="" id="img"></label>
+                                                <label for="input-img"><img src="../../resources/images/@event_01.png" alt="" id="img"></label>
                                             </div>
                                             <div class="example-text m-l-15">
                                                 <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
-                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                                <p>* 용량 : 5MB 이하, 파일 형식 JPG, PNG </p>
                                             </div>
                                         </div>
                                     </td>
@@ -519,8 +518,8 @@
                                     <th>이벤트 타이틀</th>
                                     <td>
                                         <div class="d-flex align-items-end">
-                                            <textarea class="form-control w-772px" maxlength="40" placeholder="이벤트 제목을 입력해주세요." data-byte-target="#byte-check1"></textarea>
-                                            <span class="example-text m-l-15">(<span id="byte-check1">0</span>/40)</span>
+                                            <textarea class="form-control w-772px" maxlength="40" placeholder="이벤트 제목을 입력해주세요." data-byte-target="#byte-check-event-title"></textarea>
+                                            <span class="example-text m-l-15">(<span id="byte-check-event-title">0</span>/40)</span>
                                             <span class="example-text m-l-20">* 이벤트 타이틀은 최소 20자 이상으로 작성해주세요.</span>
                                         </div>
                                     </td>
@@ -557,11 +556,11 @@
                                         <div class="d-flex align-items-center">
                                             <div class="custom-control custom-check custom-control-inline">
                                                 <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk4" value="chk4">
-                                                <label class="custom-control-label" for="chk4"><span class="badge badge-dark">LOWEST PRICE</span></label>
+                                                <label class="custom-control-label" for="chk4"><span class="badge badge-dark badge-dark-primary">LUPICK SPECIAL</span></label>
                                             </div>
                                             <div class="custom-control custom-check custom-control-inline">
                                                 <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk5" value="chk5">
-                                                <label class="custom-control-label" for="chk5"><span class="badge badge-dark">LOWEST PRICE</span></label>
+                                                <label class="custom-control-label" for="chk5"><span class="badge badge-dark">LUPICK COLLAB</span></label>
                                             </div>
                                             <div class="custom-control custom-check custom-control-inline">
                                                 <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk6" value="chk6">
@@ -580,8 +579,8 @@
                                             </select>
                                         </div>
                                         <div class="d-flex align-items-center m-t-10">
-                                            <input type="text" class="form-control w-476px" maxlength="15" data-byte-target="#byte-check2">
-                                            <span class="m-l-15" id="byte-check2">0</span><span>/15</span>
+                                            <input type="text" class="form-control w-476px" maxlength="15" data-byte-target="#byte-check-tag">
+                                            <span class="m-l-15" id="byte-check-tag">0</span><span>/15</span>
                                             <span class="example-text m-l-20">* 영문 대문자로만 입력해주세요.</span>
                                         </div>
                                         <div class="m-t-20">
@@ -620,8 +619,7 @@
                                         <div class="upload-img d-flex align-items-center">
                                             <div class="filebox">
                                                 <input type="file" id="input-img">
-                                                <label for="input-img"><i class="icon-plus"></i>
-                                                    <img src="" alt="" id="img"></label>
+                                                <label for="input-img"><img src="../../resources/images/@event_07.png" alt="" id="img"></label>
                                             </div>
                                             <div class="example-text m-l-15">
                                                 <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
@@ -639,8 +637,8 @@
                                 <tr>
                                     <th>아이템 설명</th>
                                     <td>
-                                        <input class="form-control w-1213px" maxlength="90" data-byte-target="#byte-check3">
-                                        <span class="example-text m-l-15">(<span id="byte-check3">0</span>/90)</span>
+                                        <input class="form-control w-1213px" maxlength="90" data-byte-target="#byte-check-desc">
+                                        <span class="example-text m-l-15">(<span id="byte-check-desc">0</span>/90)</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -813,8 +811,7 @@
                                         <div class="upload-img d-flex align-items-center">
                                             <div class="filebox">
                                                 <input type="file" id="input-img">
-                                                <label for="input-img"><i class="icon-plus"></i>
-                                                    <img src="" alt="" id="img"></label>
+                                                <label for="input-img"><img src="../../resources/images/@event_07.png" alt="" id="img"></label>
                                             </div>
                                             <div class="example-text m-l-15">
                                                 <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
@@ -832,8 +829,8 @@
                                 <tr>
                                     <th>메인 럭키템 설명</th>
                                     <td>
-                                        <input type="text" class="form-control w-1213px" placeholder="럭키템 설명을 간략하게 입력해 주세요." maxlength="90"  data-byte-target="#byte-check4">
-                                        <span class="example-text m-l-15">(<span id="byte-check4">0</span>/90)</span>
+                                        <input type="text" class="form-control w-1213px" placeholder="럭키템 설명을 간략하게 입력해 주세요." maxlength="90"  data-byte-target="#byte-check-lucky">
+                                        <span class="example-text m-l-15">(<span id="byte-check-lucky">0</span>/90)</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -872,8 +869,7 @@
                                         <div class="upload-img d-flex align-items-center">
                                             <div class="filebox">
                                                 <input type="file" id="input-img">
-                                                <label for="input-img"><i class="icon-plus"></i>
-                                                    <img src="" alt="" id="img"></label>
+                                                <label for="input-img"><img src="" alt="" id="img"></label>
                                             </div>
                                             <div class="example-text m-l-15">
                                                 <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
@@ -1008,7 +1004,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
                     </div>
 
@@ -1066,7 +1062,7 @@
                                 </div>
                                 <div class="success-event box">
                                     <div class="success-event-percent">
-                                        <div class="dash-title">이벤트 성공률</div>
+                                        <div class="box-title">이벤트 성공률</div>
                                         <strong class="paint">90%</strong>
                                     </div>
                                     <div class="circle_percent">
@@ -1223,7 +1219,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
                     </div>
 
@@ -1520,7 +1516,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
                     </div>
 
@@ -1578,7 +1574,7 @@
                                 </div>
                                 <div class="success-event box">
                                     <div class="success-event-percent">
-                                        <div class="dash-title">이벤트 직접 투표율</div>
+                                        <div class="box-title">이벤트 직접 투표율</div>
                                         <strong class="paint">90%</strong>
                                     </div>
                                     <div class="circle_percent">
@@ -1618,7 +1614,7 @@
                                     </div>
                                     <div class="box popularity-event">
                                         <div class="popularity-title">
-                                            <div class="dash-title">루피커 득표수</div>
+                                            <div class="box-title">루피커 득표수</div>
                                         </div>
                                         <ul>
                                             <li>
@@ -1908,7 +1904,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
                     </div>
                     <div class="modal-footer-right d-flex">
@@ -2011,7 +2007,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>마진 계산기</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
                     </div>
                     <div class="modal-footer-right d-flex">
@@ -2028,8 +2024,8 @@
     <div class="modal fade" id="fsModal" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <div class="title-square-wrap d-flex align-items-center justify-content-between pt-0 p-b-20">
+                <div class="modal-header pb-0">
+                    <div class="title-square-wrap d-flex align-items-center justify-content-between pt-0">
                         <p class="title-square"><span>직접||자동 투표자 리스트</span></p>
                         <div class="form-select">
                             <select class="select-sm">
@@ -2093,8 +2089,8 @@
     <div class="modal fade" id="modal-lupicker-list" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <div class="title-square-wrap d-flex align-items-center justify-content-between pt-0 p-b-20">
+                <div class="modal-header pb-0">
+                    <div class="title-square-wrap d-flex align-items-center justify-content-between pt-0">
                         <p class="title-square"><span>루피커 리스트</span></p>
                         <div class="form-select">
                             <select class="select-sm">
@@ -2178,7 +2174,175 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="../../resources/plugins/chart/Chart.min.css">
+    <!-- modal : 마진계산기 -->
+    <div class="modal fade modal-calculator" id="modal-calculator" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-dialog-centered w-1000px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title gilroy">Lupick Calculator <i class="icon-finance"></i></div>
+                </div>
+                <div class="modal-body">
+                    <div class="calculator box">
+                        <ul class="list p-r-50">
+                            <li>
+                                <label>판매가</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="50,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label>매입가</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="30,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label>모집수</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="10,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">개</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label>럭키템</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="100,000,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">원</span>
+                                    </div>
+                                </div>
+                                <div class="luckytem">
+                                    <ol>
+                                        <li class="first"><span>1위</span><strong>70,000,000<i>원</i></strong></li>
+                                        <li><span>2위</span><strong>20,000,000<i>원</i></strong></li>
+                                        <li><span>3위</span><strong>6,000,000<i>원</i></strong></li>
+                                        <li><span>4위</span><strong>4,000,000<i>원</i></strong></li>
+                                        <li><span>5위</span><strong>0<i>원</i></strong></li>
+                                        <li><span>6위</span><strong>0<i>원</i></strong></li>
+                                        <li><span>7위</span><strong>0<i>원</i></strong></li>
+                                    </ol>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="list p-l-50">
+                            <li>
+                                <label>총 매출</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="500,000,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label>판매 수익</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="200,000,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label>판매 마진율</label>
+                                <div class="data">
+                                    <strong>40<i>%</i></strong>
+                                    <p class="text-danger">* 20% 이상을 권장합니다.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <label>제세공과금</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="100,000,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label>운영비</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="100,000,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label>루픽 수수료</label>
+                                <div class="input-group black">
+                                    <input type="text" class="form-control" value="90,000,000">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">원</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <label>루픽 마진율</label>
+                                <div class="data">
+                                    <strong class="paint">45<i>%</i></strong>
+                                    <p class="text-danger">* 10% 이상을 권장합니다.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="footnote">
+                        * 입력된 값에 따라 자동으로 계산됩니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 앱 프리뷰 -->
+    <div class="modal fade modal-app-preview" id="modal-app-preview" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-dialog-centered w-418px">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="app-preview">
+                        <div class="img">
+                            <img src="../../resources/images/@event_01.png" alt="">
+                        </div>
+                        <div class="detail">
+                            <div class="subject">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</div>
+                            <div class="d-flex align-items-center">
+                                <strong class="price">51,000 / <span class="paint">98%</span></strong>
+                                <span class="status">참여중∙4일 남음</span>
+                            </div>
+                            <div class="m-t-15">
+                                <span class="badge badge-dark">LUPICK COLLAB</span>
+                            </div>
+                            <div class="text">
+                                <div>
+                                    <em>이벤트 기간</em>
+                                    <span>2020.08.12(수) ~ 2020.08.19(수)</span>
+                                </div>
+                                <ul class="desc">
+                                    <li>• 1인당 아이템 구매 개수는 3개로 제한되어 있습니다.</li>
+                                    <li>• 기간 내 준비된 아이템 모두 소진 시 이벤트가 마감됩니다.</li>
+                                    <li>• 이벤트 마감 후 결제취소는 불가능합니다.</li>
+                                    <li>• 이벤트가 무산될 경우 전액 환불처리됩니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <div class="btn btn-dark btn-pick">PICK</div>
+                        </div>
+                   </div>
+                   <a href="javascrpt:;" class="app-preview-close" data-dismiss="modal"><span class="sr-only">레이어 닫기</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../../resources/plugins/chart/Chart.min.js"></script>
     <script src="../../resources/js/common.js"></script>
     <script>
@@ -2335,6 +2499,7 @@
                 }
             });
 
+            //카드 달성률
             $('.adobe').each(function(){
                 var data = $(this).attr('data-percent') + '%';
                 $(this).css('width', data);
@@ -2377,6 +2542,20 @@
             });
 
 
+            $('#myModal2').on('shown.bs.modal', function () {
+                var success = document.getElementById('chart-success').getContext('2d');
+                window.myChart1 = new Chart(success, doughnutSuccess);
+
+                var purchase = document.getElementById('chart-purchase').getContext('2d');
+                window.myChart2 = new Chart(purchase, barChart);
+
+                var gender = document.getElementById('chart-gender').getContext('2d');
+                window.myChart3 = new Chart(gender, doughnutGender);
+
+                var age = document.getElementById('chart-age').getContext('2d');
+			    window.myChart4 = new Chart(age, doughnutAge);
+            });
+
             //로딩 후 결과 보여주기 샘플
             $('#myModal4').on('shown.bs.modal', function () {
                 mixInit();
@@ -2384,12 +2563,14 @@
                     $('.voting').hide();
                     $('#voting-result').show();
                 },3500);
+
+                var turnout = document.getElementById('chart-turnout').getContext('2d');
+			    window.myChart5 = new Chart(turnout, doughnutTurnout);
             })
         })
 
         ///이벤트 달성률
-        var success = document.getElementById('chart-success').getContext('2d');
-        var doughnutSuccess = new Chart(success, {
+        var doughnutSuccess = {
             type: 'doughnut',
             data: {
                 datasets: [{
@@ -2418,13 +2599,10 @@
                     display: false
                 },
             }
-        });
+        };
 
         ///시간대별 구매 통계
-        var densityCanvas = document.getElementById("chart-purchase");
-        //Chart.defaults.global.defaultFontFamily = "Lato";
-        //Chart.defaults.global.defaultFontSize = 16;
-        var barChart = new Chart(densityCanvas, {
+        var barChart = {
             type: 'bar',
             data: {
                 datasets: [{
@@ -2458,11 +2636,10 @@
                     }]
                 }
             }
-        });
+        };
 
         //성별 구매 통계
-        var gender = document.getElementById('chart-gender').getContext('2d');
-        var doughnutGender = new Chart(gender, {
+        var doughnutGender = {
             type: 'doughnut',
             data: {
                 datasets: [{
@@ -2493,11 +2670,10 @@
                     display: false
                 },
             }
-        });
+        };
 
         //연령대별 구매 통계
-        var age = document.getElementById('chart-age').getContext('2d');
-        var doughnutAge = new Chart(age, {
+        var doughnutAge = {
             type: 'doughnut',
             data: {
                 datasets: [{
@@ -2532,11 +2708,10 @@
                     display: false
                 },
             }
-        });
+        };
 
         //투표율
-        var turnout = document.getElementById('chart-turnout').getContext('2d');
-        var doughnutTurnout = new Chart(turnout, {
+        var doughnutTurnout = {
             type: 'doughnut',
             data: {
                 datasets: [{
@@ -2565,7 +2740,7 @@
                     display: false
                 },
             }
-        });
+        };
     </script>
 
 

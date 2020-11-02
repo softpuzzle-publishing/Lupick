@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lupick</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
@@ -47,11 +47,21 @@
         </section>
 
         <section>
+            <nav id="nav">
+                <div class="nav" id="nav-tab" role="tablist">
+                    <a class="nav-link active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab">전체 피드</a>
+                    <a class="nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab">이벤트 후기</a>
+                    <a class="nav-link" id="nav-story-tab" data-toggle="tab" href="#nav-story" role="tab">루픽 스토리</a>
+                    <a class="nav-link" id="nav-exhibition-tab" data-toggle="tab" href="#nav-exhibition" role="tab">기획전</a>
+                </div>
+            </nav>
+        </section>
+
+        <section>
             <div class="upload-img d-flex align-items-center">
                 <div class="filebox">
                     <input type="file" id="input-img">
-                    <label for="input-img"><i class="icon-plus"></i>
-                        <img src="" alt="" id="img"></label>
+                    <label for="input-img"><img src="" alt="" id="img"></label>
                 </div>
                 <div class="example-text ml-3">
                     <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
@@ -87,8 +97,8 @@
         <section>
             <span class="badge badge-dark">예약 이벤트</span>
             <span class="badge badge-gray">승인 대기</span>
-            <span class="badge badge-dark giloy">LUPICK SPECIAL</span>
-            <span class="badge badge-dark-primary giloy">LUPICK SPECIAL</span>
+            <span class="badge badge-dark gilroy">LUPICK SPECIAL</span>
+            <span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span>
         </section>
 
         <section>

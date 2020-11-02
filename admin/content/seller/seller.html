@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lupick</title>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
@@ -33,20 +32,25 @@
             <!-- aside include -->
         </aside>
         <div id="container-block">
-            <p class="title m-b-15 m-0">Seller</p>
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Seller</h1>
+            </div>
             <div class="row align-items-center m-b-30">
                 <div class="col">
-                    <div class="item-search d-flex align-items-center">
+                    <div class="item-search">
                         <input class="form-control w-100" type="text" placeholder="찾고 싶은 판매자가 있나요?" aria-label="Search">
                         <i></i>
                     </div>
                 </div>
-
                 <div class="col-auto">
-                    <button type="button" class="btn btn-dark btn-xl-65" data-toggle="modal"
-                    data-target="#exampleModalScrollable-1">+ 판매자 추가하기</button>
+                    <button type="button" class="btn btn-dark btn-xl-65" data-toggle="modal" data-target="#modal-seller-add">+ 판매자 추가하기</button>
                 </div>
             </div>
+            <div class="item-search m-b-30">
+                <input class="form-control w-100" type="text" placeholder="찾고 싶은 판매자가 있나요?" aria-label="Search">
+                <i></i>
+            </div>
+
             <table class="table table-bordered table-center table-layout-auto">
                 <thead>
                     <tr>
@@ -73,75 +77,9 @@
                         <td>서울시 강남구 논현동 101-1 3층</td>
                         <td>
                             <button type="button" class="btn btn-outline-dark btn-sm"  data-toggle="modal"
-                            data-target="#exampleModalScrollable-2">수정</button>
+                            data-target="#modal-seller-edit">수정</button>
                         </td>
                     </tr>
-                    <tr>
-                        <td>주식회사 호호호</td>
-                        <td>101-20-02020</td>
-                        <td>101-20-02020</td>
-                        <td>정용채</td>
-                        <td>정민우</td>
-                        <td>010-1234-5678</td>
-                        <td>02-1111-2222</td>
-                        <td>서울시 강남구 논현동 101-1 3층</td>
-                        <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>주식회사 호호호</td>
-                        <td>101-20-02020</td>
-                        <td>101-20-02020</td>
-                        <td>정용채</td>
-                        <td>정민우</td>
-                        <td>010-1234-5678</td>
-                        <td>02-1111-2222</td>
-                        <td>서울시 강남구 논현동 101-1 3층</td>
-                        <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>주식회사 호호호</td>
-                        <td>101-20-02020</td>
-                        <td>101-20-02020</td>
-                        <td>정용채</td>
-                        <td>정민우</td>
-                        <td>010-1234-5678</td>
-                        <td>02-1111-2222</td>
-                        <td>서울시 강남구 논현동 101-1 3층</td>
-                        <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>주식회사 호호호</td>
-                        <td>101-20-02020</td>
-                        <td>101-20-02020</td>
-                        <td>정용채</td>
-                        <td>정민우</td>
-                        <td>010-1234-5678</td>
-                        <td>02-1111-2222</td>
-                        <td>서울시 강남구 논현동 101-1 3층</td>
-                        <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>주식회사 호호호</td>
-                        <td>101-20-02020</td>
-                        <td>101-20-02020</td>
-                        <td>정용채</td>
-                        <td>정민우</td>
-                        <td>010-1234-5678</td>
-                        <td>02-1111-2222</td>
-                        <td>서울시 강남구 논현동 101-1 3층</td>
-                        <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
-                        </td>
-                    </tr>
-
                 </tbody>
             </table>
             <div class="m-t-30">
@@ -157,27 +95,23 @@
         </footer>
     </div>
 
-    <!-- 판매자 등록 -->
-    <div class="modal fade modal-1400 modal-size-fix" id="exampleModalScrollable-1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content modal-auto-height">
+    <!-- modal : 판매자 추가하기 -->
+    <div class="modal fade" id="modal-seller-add" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-1400px" role="document">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-header-top m-b-30">
-                        <h3 class="">판매자 등록</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
+                    <div class="modal-title">판매자 등록</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-
                     <table class="table table-bordered table-form">
                         <colgroup>
                             <col width="246px">
                             <col>
                         </colgroup>
                         <tbody>
-
                             <tr>
                                 <th>상호명</th>
                                 <td>
@@ -226,44 +160,33 @@
                                     </div>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
-
-
-
-                </div>
-                <div class="modal-footer border-none">
-                    <div class="text-center">
+                    <div class="text-center m-t-30">
                         <button type="button" class="btn btn-dark btn-lg">등록하기</button>
                     </div>
                 </div>
             </div>
         </div>
-       </div>
+    </div>
 
-
-        <!-- 판매자 등록 -->
-        <div class="modal fade modal-1400 modal-size-fix" id="exampleModalScrollable-2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content modal-auto-height">
+    <!-- modal : 판매자 정보 수정 -->
+    <div class="modal fade" id="modal-seller-edit" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-1400px" role="document">
+            <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-header-top m-b-30">
-                        <h3 class="">판매자 정보 수정</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
+                    <div class="modal-title">판매자 정보 수정</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-
                     <table class="table table-bordered table-form">
                         <colgroup>
                             <col width="246px">
                             <col>
                         </colgroup>
                         <tbody>
-
                             <tr>
                                 <th>상호명</th>
                                 <td>
@@ -312,24 +235,16 @@
                                     </div>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
-
-
-
-                </div>
-                <div class="modal-footer border-none d-flex justify-content-center">
-                    <div class="text-center">
-                        <button type="button" class="btn btn-darkgray btn-lg m-r-30">삭제하기</button>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-dark btn-lg">등록하기</button>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-darkgray btn-lg">삭제하기</button>
+                        <button type="button" class="btn btn-dark btn-lg">수정하기</button>
                     </div>
                 </div>
             </div>
         </div>
-       </div>
+    </div>
 
     <script src="../../resources/js/common.js"></script>
     <script>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lupick</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
@@ -29,23 +29,22 @@
             <!-- aside include -->
         </aside>
         <div id="container-block">
-
-            <ul class="nav nav-tabs question" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link tab-list active" id="home-tab" data-toggle="tab" href="#tap-1" role="tab" aria-controls="home" aria-selected="true">루픽 문의</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link tab-list" id="profile-tab" data-toggle="tab" href="#tap-2" role="tab" aria-controls="profile" aria-selected="false">이벤트 문의</a>
-                </li>
-
-            </ul>
-
+            <nav>
+                <ul class="nav nav-tabs question" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link tab-list active" id="home-tab" data-toggle="tab" href="#tap-1" role="tab" aria-controls="home" aria-selected="true">루픽 문의</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tab-list" id="profile-tab" data-toggle="tab" href="#tap-2" role="tab" aria-controls="profile" aria-selected="false">이벤트 문의</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="tap-1" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade show active" id="tap-1" role="tabpanel">
                     <div class="row align-items-center m-b-30">
                         <div class="col">
                             <div class="item-search d-flex align-items-center">
-                                <input class="form-control w-100" type="text" placeholder="찾고 싶은 유저가 있나요?" aria-label="Search">
+                                <input class="form-control w-100" type="text" placeholder="찾고 싶은 내용을 검색해 주세요." aria-label="Search">
                                 <i></i>
                             </div>
                         </div>
@@ -78,73 +77,16 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#lupick-question" data-toggle="modal" data-role="modal">시스템 문의</a></td>
+                                <td>시스템 문의</td>
                                 <td>이찬란</td>
                                 <td>brilliant512.92@gmail.com</td>
                                 <td>호호호라니호호호라니</td>
                                 <td>010-2345-6789</td>
-                                <td>루픽 시스템 문의 드립니다.</td>
+                                <td><a href="#modal-lupick-question" data-toggle="modal" data-role="button">루픽 시스템 문의 드립니다.</a></td>
                                 <td>2020.08.20 12:34:21</td>
                                 <td>답변대기</td>
                                 <td>-</td>
                             </tr>
-                            <tr>
-                                <td>회원 문의</td>
-                                <td>이찬란</td>
-                                <td>brilliant512.92@gmail.com</td>
-                                <td>호호호라니호호호라니</td>
-                                <td>010-2345-6789</td>
-                                <td>루픽 시스템 문의 드립니다.</td>
-                                <td>2020.08.20 12:34:21</td>
-                                <td>답변대기</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>포인트 문의</td>
-                                <td>이찬란</td>
-                                <td>brilliant512.92@gmail.com</td>
-                                <td>호호호라니호호호라니</td>
-                                <td>010-2345-6789</td>
-                                <td>루픽 시스템 문의 드립니다.</td>
-                                <td>2020.08.20 12:34:21</td>
-                                <td>답변대기</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>투표 문의</td>
-                                <td>이찬란</td>
-                                <td>brilliant512.92@gmail.com</td>
-                                <td>호호호라니호호호라니</td>
-                                <td>010-2345-6789</td>
-                                <td>루픽 시스템 문의 드립니다.</td>
-                                <td>2020.08.20 12:34:21</td>
-                                <td>답변대기</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>오류 문의</td>
-                                <td>이찬란</td>
-                                <td>brilliant512.92@gmail.com</td>
-                                <td>호호호라니호호호라니</td>
-                                <td>010-2345-6789</td>
-                                <td>루픽 시스템 문의 드립니다.</td>
-                                <td>2020.08.20 12:34:21</td>
-                                <td>답변대기</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>기타 문의</td>
-                                <td>이찬란</td>
-                                <td>brilliant512.92@gmail.com</td>
-                                <td>호호호라니호호호라니</td>
-                                <td>010-2345-6789</td>
-                                <td>루픽 시스템 문의 드립니다.</td>
-                                <td>2020.08.20 12:34:21</td>
-                                <td>답변대기</td>
-                                <td>-</td>
-                            </tr>
-
-
                         </tbody>
                     </table>
                     <div class="m-t-30">
@@ -155,11 +97,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="tap-2" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade" id="tap-2" role="tabpanel">
                     <div class="row align-items-center m-b-30">
                         <div class="col">
                             <div class="item-search d-flex align-items-center">
-                                <input class="form-control w-100" type="text" placeholder="찾고 싶은 유저가 있나요?" aria-label="Search">
+                                <input class="form-control w-100" type="text" placeholder="찾고 싶은 내용이나 이벤트를 검색해 주세요." aria-label="Search">
                                 <i></i>
                             </div>
                         </div>
@@ -191,46 +133,15 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><a href="#event-question" data-toggle="modal" data-role="modal">이벤트 문의</a></td>
+                                <td>이벤트 문의</td>
                                 <td>이찬란</td>
                                 <td>010-2345-6789</td>
                                 <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
-                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
+                                <td><a href="#modal-event-question" data-toggle="modal" data-role="modal">이벤트 내용을 더 자세히 알고싶어요.</a></td>
                                 <td>2020.08.20 12:34:21</td>
                                 <td>답변대기</td>
                                 <td>-</td>
                             </tr>
-                            <tr>
-                                <td>아이템 문의</td>
-                                <td>이찬란</td>
-                                <td>010-2345-6789</td>
-                                <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
-                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
-                                <td>2020.08.20 12:34:21</td>
-                                <td>답변대기</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>럭키템 문의</td>
-                                <td>이찬란</td>
-                                <td>010-2345-6789</td>
-                                <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
-                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
-                                <td>2020.08.20 12:34:21</td>
-                                <td>답변대기</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>교환/환불/취소</td>
-                                <td>이찬란</td>
-                                <td>010-2345-6789</td>
-                                <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
-                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
-                                <td>2020.08.20 12:34:21</td>
-                                <td>답변대기</td>
-                                <td>-</td>
-                            </tr>
-
                         </tbody>
                     </table>
                     <div class="m-t-30">
@@ -241,7 +152,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
         <footer>
@@ -250,26 +160,23 @@
     </div>
 
     <!-- modal : 루픽 문의 -->
-    <div class="modal fade" id="lupick-question" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list modal-dialog-centered w-820px">
+    <div class="modal fade" id="modal-lupick-question" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered w-820px">
             <div class="modal-content">
                 <div class="modal-header gray-bg">
-                    <div class="">
-                        <div class="double-modal-title m-b-30">루픽 문의</div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="d-flex flex-wrap">
-                        <p class="title-square s-font">문의 유형 <span class="m-l-30">시스템 문의</span></p>
-                        <p class="title-square s-font">접수자 <span class="m-l-30">루피</span></p>
-                        <p class="title-square s-font">접수 일자 <span class="m-l-30">2020.09.07 15:41</span></p>
-                        <p class="title-square s-font">이메일 <span class="m-l-30">hohoho@bang.com</span></p>
-                    </div>
+                    <div class="modal-title">루픽 문의</div>
+                    <ul class="qna-summary">
+                        <li><span>문의 유형</span><p>시스템 문의</p></li>
+                        <li><span>접수자</span><p>루피</p></li>
+                        <li><span>접수 일자 </span><p>2020.09.07 15:41</p></li>
+                        <li><span>이메일</span><p>hohoho@bang.com</p></li>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
 
                 <div class="modal-body m-t-30">
-
                     <table class="table table-bordered table-form">
                         <colgroup>
                             <col width="120px">
@@ -279,13 +186,7 @@
                             <tr>
                                 <th>문의 내용</th>
                                 <td>
-                                    <input type="text" value="" class="form-control w-100p h-220px" placeholder="답변을 작성해 주세요.">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>답변 작성</th>
-                                <td>
-                                    <input type="text" value="" class="form-control w-100p h-220px" placeholder="답변을 작성해 주세요.">
+                                    <textarea class="form-control w-100p h-220px" placeholder="내용을 입력해 주세요."></textarea>
                                 </td>
                             </tr>
                         </tbody>
@@ -297,48 +198,59 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th>메인 배너</th>
+                                <th>답변 작성</th>
+                                <td>
+                                    <textarea class="form-control w-100p h-220px" placeholder="답변을 작성해 주세요."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>처리 여부</th>
                                 <td>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="main-banner-1" value="main-banner-1" selected>
-                                        <label class="custom-control-label" for="main-banner-1">답변 대기</label>
+                                        <input type="radio" class="custom-control-input" name="lupickStatus" id="answerN" value="answerN" selected>
+                                        <label class="custom-control-label" for="answerN">답변 대기</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="main-banner-2" value="main-banner-2">
-                                        <label class="custom-control-label" for="main-banner-2">답변 완료</label>
+                                        <input type="radio" class="custom-control-input" name="lupickStatus" id="answerY" value="answerY">
+                                        <label class="custom-control-label" for="answerY">답변 완료</label>
                                     </div>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="double-modal-footer text-center">
+                    <div class="text-center m-t-30">
                         <button type="button" class="btn btn-dark btn-lg">수정하기</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
     <!-- modal : 이벤트 문의 -->
-    <div class="modal fade" id="event-question" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list modal-dialog-centered w-820px">
+    <div class="modal fade" id="modal-event-question" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered w-820px">
             <div class="modal-content">
                 <div class="modal-header gray-bg">
-                    <div class="">
-                        <div class="double-modal-title m-b-30">이벤트 문의</div>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="d-flex flex-wrap">
-                        <p class="title-square s-font">문의 유형 <span class="m-l-30">시스템 문의</span></p>
-                        <p class="title-square s-font">접수자 <span class="m-l-30">루피</span></p>
-                        <p class="title-square s-font">접수 일자 <span class="m-l-30">2020.09.07 15:41</span></p>
-                        <p class="title-square s-font">이메일 <span class="m-l-30">hohoho@bang.com</span></p>
-                        <p class="title-square s-font">주문 번호 <span class="m-l-30">ORD20200508-0029143</span></p>
-                        <p class="title-square s-font">이벤트 명 <span class="m-l-30">9명에게 포르쉐911을 FLEX 해버릴까봐💥</span></p>
-                    </div>
+                    <div class="modal-title">이벤트 문의</div>
+                    <ul class="qna-summary">
+                        <li><span>문의 유형</span><p>시스템 문의</p></li>
+                        <li><span>접수자</span><p>루피</p></li>
+                        <li><span>접수 일자 </span><p>2020.09.07 15:41</p></li>
+                        <li><span>이메일</span><p>hohoho@bang.com</p></li>
+                        <li><span>주문 번호</span><p>ORD20200508-0029143</p></li>
+                        <li><span>이벤트 명</span><p>9명에게 포르쉐911을 FLEX 해버릴까봐💥</p></li>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
 
                 <div class="modal-body m-t-30">
@@ -351,19 +263,47 @@
                             <tr>
                                 <th>문의 내용</th>
                                 <td>
-                                    <input type="text" value="" class="form-control w-100p h-220px" placeholder="답변을 작성해 주세요.">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>답변 작성</th>
-                                <td>
-                                    <input type="text" value="" class="form-control w-100p h-220px" placeholder="답변을 작성해 주세요.">
+                                    <textarea class="form-control w-100p h-220px" placeholder="내용을 입력해 주세요."></textarea>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="double-modal-footer text-center">
-                        <button type="button" class="btn btn-darkgray btn-lg">삭제하기</button>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>답변 작성</th>
+                                <td>
+                                    <textarea class="form-control w-100p h-220px" placeholder="답변을 작성해 주세요."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>처리 여부</th>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventStatus" id="answerN2" value="answerN2" selected>
+                                        <label class="custom-control-label" for="answerN2">답변 대기</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventStatus" id="answerY2" value="answerY2">
+                                        <label class="custom-control-label" for="answerY2">답변 완료</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-30">
                         <button type="button" class="btn btn-dark btn-lg">수정하기</button>
                     </div>
                 </div>

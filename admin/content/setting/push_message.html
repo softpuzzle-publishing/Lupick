@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lupick</title>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
@@ -33,20 +32,22 @@
             <!-- aside include -->
         </aside>
         <div id="container-block">
-            <h1 class="title m-0 m-b-15">Push Messages</h1>
-
-            <div class="d-flex align-items-end m-b-30">
-                <div class="w-960px h-120px default-box d-flex align-items-end">
-                    <input class="form-control w-800px h-90px" maxlength="200" data-byte-target="#byte-check3" placeholder="푸시 메시지를 입력해 주세요. 전체 유저에게 발송됩니다.">
-                    <span class="example-text m-l-15">(<span id="byte-check3">0</span>/200)</span>
-                </div>
-                <button type="button" class="btn btn-dark btn-md text-lager m-l-15">+ 푸시 메시지 전송</button>
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Push Messages</h1>
             </div>
 
-            <table class="table table-bordered table-center table-layout-auto">
+            <div class="d-flex align-items-end m-b-30">
+                <div class="box p-15 w-960px h-120px d-flex align-items-end">
+                    <textarea class="form-control w-800px h-90px" maxlength="200" data-byte-target="#byte-check-push" placeholder="푸시 메시지를 입력해 주세요. 전체 유저에게 발송됩니다."></textarea>
+                    <span class="example-text m-l-15">(<span id="byte-check-push">0</span>/200)</span>
+                </div>
+                <button type="button" class="btn btn-dark btn-md w-180px m-l-15">+ 푸시 메시지 전송</button>
+            </div>
+
+            <table class="table table-bordered table-center">
                 <colgroup>
                     <col width="180px">
-                    <col width="1322px">
+                    <col>
                     <col width="120px">
                 </colgroup>
                 <thead>
@@ -62,9 +63,21 @@
                         <td class="text-left">잠시후 오후 3시 루픽의 깜짝 프로모션이 시작됩니다. 두구두구두구~!!</td>
                         <td>라니</td>
                     </tr>
-
-
-
+                    <tr>
+                        <td>2020.08.25 13:30:00</td>
+                        <td class="text-left">잠시후 오후 3시 루픽의 깜짝 프로모션이 시작됩니다. 두구두구두구~!!</td>
+                        <td>라니</td>
+                    </tr>
+                    <tr>
+                        <td>2020.08.25 13:30:00</td>
+                        <td class="text-left">잠시후 오후 3시 루픽의 깜짝 프로모션이 시작됩니다. 두구두구두구~!!</td>
+                        <td>라니</td>
+                    </tr>
+                    <tr>
+                        <td>2020.08.25 13:30:00</td>
+                        <td class="text-left">잠시후 오후 3시 루픽의 깜짝 프로모션이 시작됩니다. 두구두구두구~!!</td>
+                        <td>라니</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

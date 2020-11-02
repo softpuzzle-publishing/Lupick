@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lupick</title>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
@@ -33,7 +32,9 @@
             <!-- aside include -->
         </aside>
         <div id="container-block">
-            <p class="title m-b-15 m-0">Lupick User</p>
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Lupick User</h1>
+            </div>
             <div class="row align-items-center m-b-30">
                 <div class="col">
                     <div class="item-search d-flex align-items-center">
@@ -54,7 +55,7 @@
                     </select>
                 </div>
                 <div class="col-auto">
-                    <button type="button" class="btn btn-dark btn-xl-65">메일 발송</button>
+                    <button type="button" class="btn btn-dark btn-xl-65" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                 </div>
             </div>
             <table class="table table-bordered table-center table-layout-auto">
@@ -84,12 +85,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-dark">Black</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#exampleModalScrollable">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -102,12 +103,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-danger">Red</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -120,12 +121,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-dark">Black</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -138,12 +139,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-danger">Red</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -156,12 +157,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-dark">Black</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -174,12 +175,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-danger">Red</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -192,12 +193,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-dark">Black</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -210,12 +211,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-danger">Red</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -228,12 +229,12 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-dark">Black</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
                     <tr>
@@ -246,15 +247,176 @@
                         <td>2020.08.20</td>
                         <td>010-2345-6789</td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
                             <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
                         </td>
                         <td><span class="badge badge-danger">Red</span></td>
                         <td>
-                            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
                         </td>
                     </tr>
-
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="m-t-30">
@@ -270,81 +432,81 @@
         </footer>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade modal-1400 modal-size-fix" id="exampleModalScrollable" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <!-- modal : 유저 관리 -->
+    <div class="modal fade" id="modal-user" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-1400px" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-header-top m-0">
-                        <h3 class="mb-0">유저 관리</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
+                    <div class="modal-title">유저 관리</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <div class="title-square-wrap">
+                    <div class="title-square-wrap pt-0">
                         <p class="title-square"><span>회원 정보</span></p>
                     </div>
-                    <table class="table table-bordered table-form">
+                    <table class="table table-bordered table-user">
                         <colgroup>
                             <col width="120px">
-                            <col width="535px">
+                            <col>
                             <col width="120px">
                             <col>
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th>회원관리</th>
+                                <th class="text-center">회원관리</th>
                                 <td colspan="3">
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio1" value="radio1">
-                                        <label class="custom-control-label" for="radio1"><input type="text" value="-" class="form-control w-60px h-25px text-center"></label>
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio11" value="radio11">
+                                        <label class="custom-control-label" for="radio11"><span class="badge badge-outline-gray">-</span></label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio2" value="radio2">
-                                        <label class="custom-control-label" for="radio2"><span class="badge badge-dark">Black</span></label>
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio12" value="radio12">
+                                        <label class="custom-control-label" for="radio12"><span class="badge badge-dark">Black</span></label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio2" value="radio2">
-                                        <label class="custom-control-label" for="radio2"><span class="badge badge-danger">Red</span></label>
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio13" value="radio13">
+                                        <label class="custom-control-label" for="radio13"><span class="badge badge-danger">Red</span></label>
                                     </div>
                                 </td>
                             </tr>
-
                             <tr>
-                                <th>이름</th>
+                                <th class="text-center">이름</th>
                                 <td> <input type="text" value="김지민" class="form-control w-250px">
                                 </td>
-
                                 <th class="text-center">닉네임</th>
                                 <td>
                                     <span>지미</span>
                                 </td>
                             </tr>
                             <tr>
-                                <th>생년월일</th>
+                                <th class="text-center">생년월일</th>
                                 <td> 1990.10.10 </td>
-
                                 <th class="text-center">성별</th>
                                 <td>
                                     <span>선택안함</span>
                                 </td>
                             </tr>
                             <tr>
-                                <th>이메일</th>
-                                <td><span class="float-left">hohoho@hohohogroup.com</span> <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-email" data-toggle="modal" data-role="button">메일 발송</button></td>
-
+                                <th class="text-center">이메일</th>
+                                <td>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>hohoho@hohohogroup.com</span>
+                                        <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                                    </div>
+                                </td>
                                 <th class="text-center">전화번호</th>
                                 <td>
-                                    <span class="float-left">010-1234-5678</span> <button type="button" class="btn btn-outline-dark btn-sm float-right" href="#send-sms" data-toggle="modal" data-role="button">SMS 발송</button>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>010-1234-5678</span>
+                                        <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-role="#modal-send-sms">SMS 발송</button>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th>가입일</th>
+                                <th class="text-center">가입일</th>
                                 <td>2020.10.05</td>
-
                                 <th class="text-center">최종 접속일</th>
                                 <td>
                                     <span>2020.10.06</span><span>20:15:01</span>
@@ -352,12 +514,14 @@
                             </tr>
 
                             <tr>
-                                <th>마케팅 동의</th>
+                                <th class="text-center">마케팅 동의</th>
                                 <td>거부 : 2020.10.05</td>
-
                                 <th class="text-center">포인트</th>
-                                <td class="">
-                                    <span class="float-left">1000 p</span><button type="button" class="btn btn-outline-dark btn-sm float-right" href="#payments" data-toggle="modal" data-role="button">지급 / 차감</button>
+                                <td>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>1000 p</span>
+                                        <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-payments">지급 / 차감</button>
+                                    </div>
                                 </td>
                             </tr>
 
@@ -368,7 +532,6 @@
                         <p class="title-square"><span>주문 내역</span></p>
                     </div>
                     <table class="table table-bordered table-center table-layout-auto">
-
                         <thead>
                             <tr>
                                 <th scope="col">주문번호</th>
@@ -419,56 +582,57 @@
 
                         </tbody>
                     </table>
-                </div>
-                <div class="modal-footer border-none">
-                    <div class="text-center">
-                        <button type="button" class="btn btn-dark btn-lg">작성하기</button>
+
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">수정하기</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ///지급 차감 -->
-    <div class="modal fade" id="payments" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list md modal-dialog-centered">
+    <!-- modal: 포인트 지급 차감 -->
+    <div class="modal fade" id="modal-payments" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-820px">
             <div class="modal-content">
-                <div class="modal-header border-none">
-                <div class="double-modal-title m-b-30">개별/전체 메일 발송</div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div class="modal-header">
+                    <div class="modal-title">포인트 지급 / 차감</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <table class="table table-bordered table-center">
+                    <table class="table table-bordered table-center table-form">
                         <colgroup>
                             <col width="120px">
-                            <col width="640px">
+                            <col>
                         </colgroup>
-
                         <tbody>
                             <tr>
-                                <th>발송 대상</td>
-                                    <td class="text-left p-25">
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="payment-1" value="payment-1">
-                                            <label class="custom-control-label" for="payment-1">지급 (+)</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="deduction-1" value="deduction-1">
-                                            <label class="custom-control-label" for="deduction-1">차감 (-)</label>
-                                        </div>
+                                <th>발송 대상</th>
+                                <td class="text-left p-25">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="payment-1" value="payment-1">
+                                        <label class="custom-control-label" for="payment-1">지급 (+)</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="deduction-1" value="deduction-1">
+                                        <label class="custom-control-label" for="deduction-1">차감 (-)</label>
+                                    </div>
 
-                                    </td>
+                                </td>
                             </tr>
-
                             <tr>
                                 <th>금액설정</th>
-                                <!-- 지급 -->
-                                <td class="text-left"><span class="icon m-r-15"><i class="icon-plus"></i></span><input type="text" class="form-control w-200px" placeholder="포인트를 입력해주세요."><span class="m-l-10">P</span></td>
-
-                                <!-- 차감 -->
-                                <!-- <td class="text-left"><span class="m-r-15"><i class="fas fa-minus"></i></span><input type="text" class="form-control w-200px" placeholder="포인트를 입력해주세요."><span class="m-l-10">P</span></td> -->
+                                <td class="text-left">
+                                    <div class="d-flex align-items-center">
+                                        <div style="width:29px">
+                                            +
+                                        </div>
+                                        <input type="text" class="form-control w-200px" placeholder="포인트를 입력해주세요.">
+                                        <span class="m-l-10">P</span>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <th>사유</th>
@@ -484,44 +648,48 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">처리하기</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ///sms 발송-->
-    <div class="modal fade" id="send-sms" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list md modal-dialog-centered">
+    <!-- modal : 메일 발송 -->
+    <div class="modal fade" id="modal-send-email" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-820px">
             <div class="modal-content">
-                <div class="modal-header border-none">
-                    <div class="double-modal-title m-b-30">개별/전체 메일 발송</div>
+                <div class="modal-header">
+                    <div class="modal-title">개별/전체 메일 발송</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
                 </div>
                 <div class="modal-body">
-                    <table class="table table-bordered table-center">
+                    <table class="table table-bordered table-form">
                         <colgroup>
                             <col width="120px">
-                            <col width="640px">
+                            <col>
                         </colgroup>
-
                         <tbody>
                             <tr>
-                                <th>발송 대상</td>
-                                    <td class="text-left p-25">
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
-                                            <label class="custom-control-label" for="send-radio-2">선택 유저</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
-                                            <label class="custom-control-label" for="send-radio-2">수신 동의 유저</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-3" value="send-radio-3">
-                                            <label class="custom-control-label" for="send-radio-3">전체 유저</label>
-                                        </div>
-                                    </td>
+                                <th>발송 대상</th>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-1" value="send-radio-1">
+                                        <label class="custom-control-label" for="send-radio-1">선택 유저</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
+                                        <label class="custom-control-label" for="send-radio-2">수신 동의 유저</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-3" value="send-radio-3">
+                                        <label class="custom-control-label" for="send-radio-3">전체 유저</label>
+                                    </div>
+                                </td>
                             </tr>
-
                             <tr>
                                 <th>제목</th>
                                 <td> <input type="text" class="form-control w-610px"></td>
@@ -529,61 +697,15 @@
                             <tr>
                                 <th>내용</th>
                                 <td>
-                                    <textarea class="form-control w-610px h-495px" maxlength="40" placeholder="내용을 입력해 주세요." data-byte-target="#byte-check1"></textarea>
+                                    <textarea class="form-control d-block w-610px h-495px" maxlength="40" placeholder="내용을 입력해 주세요." data-byte-target="#byte-check1"></textarea>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- ///메일 발송 -->
-    <div class="modal fade" id="send-email" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list md modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header border-none">
-                    <div class="double-modal-title m-b-30">개별/전체 메일 발송</div>
-                </div>
-                <div class="modal-body">
-                    <table class="table table-bordered table-center">
-                        <colgroup>
-                            <col width="120px">
-                            <col width="640px">
-                        </colgroup>
-
-                        <tbody>
-                            <tr>
-                                <th>발송 대상</td>
-                                    <td class="text-left p-25">
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
-                                            <label class="custom-control-label" for="send-radio-2">선택 유저</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
-                                            <label class="custom-control-label" for="send-radio-2">수신 동의 유저</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-3" value="send-radio-3">
-                                            <label class="custom-control-label" for="send-radio-3">전체 유저</label>
-                                        </div>
-                                    </td>
-                            </tr>
-
-                            <tr>
-                                <th>제목</th>
-                                <td> <input type="text" class="form-control w-610px"></td>
-                            </tr>
-                            <tr>
-                                <th>내용</th>
-                                <td>
-                                    <textarea class="form-control w-610px h-495px" maxlength="40" placeholder="내용을 입력해 주세요." data-byte-target="#byte-check1"></textarea>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">메일 발송하기</button>
+                    </div>
                 </div>
             </div>
         </div>

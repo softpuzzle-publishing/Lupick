@@ -42,8 +42,7 @@
                                     <div class="upload-img d-flex align-items-center">
                                         <div class="filebox">
                                             <input type="file" id="input-img">
-                                            <label for="input-img"><i class="icon-plus"></i>
-                                                <img src="" alt="" id="img"></label>
+                                            <label for="input-img"><img src="" alt="" id="img"></label>
                                         </div>
                                         <div class="example-text m-l-15">
                                             <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
@@ -94,11 +93,11 @@
                                     <div class="d-flex align-items-center">
                                         <div class="custom-control custom-check custom-control-inline">
                                             <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk1" value="chk1">
-                                            <label class="custom-control-label" for="chk1"><span class="badge badge-dark">LOWEST PRICE</span></label>
+                                            <label class="custom-control-label" for="chk1"><span class="badge badge-dark badge-dark-primary">LUPICK SPECIAL</span></label>
                                         </div>
                                         <div class="custom-control custom-check custom-control-inline">
                                             <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk2" value="chk2">
-                                            <label class="custom-control-label" for="chk2"><span class="badge badge-dark">LOWEST PRICE</span></label>
+                                            <label class="custom-control-label" for="chk2"><span class="badge badge-dark">LUPICK COLLAB</span></label>
                                         </div>
                                         <div class="custom-control custom-check custom-control-inline">
                                             <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk3" value="chk3">
@@ -157,8 +156,7 @@
                                     <div class="upload-img d-flex align-items-center">
                                         <div class="filebox">
                                             <input type="file" id="input-img">
-                                            <label for="input-img"><i class="icon-plus"></i>
-                                                <img src="" alt="" id="img"></label>
+                                            <label for="input-img"><img src="" alt="" id="img"></label>
                                         </div>
                                         <div class="example-text m-l-15">
                                             <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
@@ -350,8 +348,7 @@
                                     <div class="upload-img d-flex align-items-center">
                                         <div class="filebox">
                                             <input type="file" id="input-img">
-                                            <label for="input-img"><i class="icon-plus"></i>
-                                                <img src="" alt="" id="img"></label>
+                                            <label for="input-img"><img src="" alt="" id="img"></label>
                                         </div>
                                         <div class="example-text m-l-15">
                                             <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
@@ -409,8 +406,7 @@
                                     <div class="upload-img d-flex align-items-center">
                                         <div class="filebox">
                                             <input type="file" id="input-img">
-                                            <label for="input-img"><i class="icon-plus"></i>
-                                                <img src="" alt="" id="img"></label>
+                                            <label for="input-img"><img src="" alt="" id="img"></label>
                                         </div>
                                         <div class="example-text m-l-15">
                                             <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
@@ -560,6 +556,15 @@
 
 <script>
     $(document).ready(function () {
+        /*
+            common.js 에 공통으로 호출하는 부분이 있긴 한데
+            $('footer').load() 의 영향으로 이벤트생성 모달 안에 있는 셀렉트들이 안나오네요.
+            그래서 여기서 한번 더 써줬어요~~~ 개발에서는 무시해주세요!
+        */
+        $(".select-sm").selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
+        $(".select-md").selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
+        $(".select-lg").selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
+
         //datetimepicker
         $('#datetimepicker1').datetimepicker({
             sideBySide: true,

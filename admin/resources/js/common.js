@@ -5,6 +5,7 @@ $('[data-overlap="true"]').on('hidden.bs.modal', function (e) {
 
 $('textarea, input').on("input", function () {
     if ($(this).attr('maxlength') !== "") {
+        console.log(1)
         var maxlength = $(this).attr("maxlength");
         var content = $(this).val();
 
@@ -39,32 +40,20 @@ $(document).ready(function () {
         $(".select-sm").selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
         $(".select-md").selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
         $(".select-lg").selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
-    }, 50);
+    }, 0);
 
     //bouncing balls
     if($('#stage').length > 0){
         bouncing();
     }
-});
 
-$('.custom-radio').click(function(){
-    var idx = $(this).index()+1;
-
-    if( idx == 1){
-        $('.radio-select-'+idx).show();
-        $('.radio-select-2').show();
-        $('.radio-select-3').hide();
-
-    }else if( idx == 2){
-        $('.radio-select-1').show();
-        $('.radio-select-2').hide();
-        $('.radio-select-3').hide();
-    }else if( idx == 3 ){
-        $('.radio-select-'+idx).show();
-        $('.radio-select-1').hide();
+    //colorpicker
+    if($('.colorpicker-piece').length > 0){
+        $('.colorpicker-piece').colorpicker();
     }
 });
 
+//로그인,회원가입 background balls
 function bouncing(){
     var stage = document.getElementById('stage');
 
@@ -341,14 +330,14 @@ function bouncing(){
 }
 
 
-var fileUpoload = {
+var fileUpload = {
     // getElementById
     $id : function(id){
         return document.getElementById(id);
     },
     // output information
     Output: function(msg){
-        var m = fileUpoload.$id("files");
+        var m = fileUpload.$id("files");
         m.innerHTML = msg + m.innerHTML;
     },
     // file drag hover
@@ -364,44 +353,47 @@ var fileUpoload = {
     // file selection
     FileSelectHandler: function(e){
         // cancel event and hover styling
-        fileUpoload.FileDragHover(e);
+        fileUpload.FileDragHover(e);
 
         // fetch FileList object
         var files = e.target.files || e.dataTransfer.files;
 
         // process all File objects
         for (var i = 0, f; f = files[i]; i++) {
-            fileUpoload.ParseFile(f);
+            fileUpload.ParseFile(f);
         }
     },
     // output file information
     ParseFile: function(file){
-        fileUpoload.Output('<div class="item"><i class="icon-file"></i><div class="status"><div class="name">' + file.name + '</div><div class="size">' + file.size + ' bytes</div></div><a href="javascript:;"><i class="icon-x"></i></a></div>');
+        fileUpload.Output('<div class="item"><i class="icon-file"></i><div class="status"><div class="name">' + file.name + '</div><div class="size">' + file.size + ' bytes</div></div><a href="javascript:;"><i class="icon-x"></i></a></div>');
     },
     // initialize
     Init: function(file){
-        var fileselect = fileUpoload.$id("fileselect"),
-            filedrag = fileUpoload.$id("filedrag"),
-            submitbutton = fileUpoload.$id("submitbutton");
+        var fileselect = fileUpload.$id("fileselect"),
+            filedrag = fileUpload.$id("filedrag"),
+            submitbutton = fileUpload.$id("submitbutton");
 
         // file select
-        fileselect.addEventListener("change", fileUpoload.FileSelectHandler, false);
+        fileselect.addEventListener("change", fileUpload.FileSelectHandler, false);
 
         // is XHR2 available?
         var xhr = new XMLHttpRequest();
         if (xhr.upload) {
 
             // file drop
-            filedrag.addEventListener("dragover", fileUpoload.FileDragHover, false);
-            filedrag.addEventListener("dragleave", fileUpoload.FileDragHover, false);
-            filedrag.addEventListener("drop", fileUpoload.FileSelectHandler, false);
+            filedrag.addEventListener("dragover", fileUpload.FileDragHover, false);
+            filedrag.addEventListener("dragleave", fileUpload.FileDragHover, false);
+            filedrag.addEventListener("drop", fileUpload.FileSelectHandler, false);
             filedrag.style.display = "block";
         }
     }
 };
 // call initialization file
-if (window.File && window.FileList && window.FileReader) {
-    fileUpoload.Init();
+if($('.file-upload').length > 0){
+    if (window.File && window.FileList && window.FileReader) {
+        fileUpload.Init();
+    }
 }
+
 
 

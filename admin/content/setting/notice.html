@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Lupick</title>
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
@@ -33,13 +32,15 @@
             <!-- aside include -->
         </aside>
         <div id="container-block">
-            <h1 class="title m-0 m-b-15">Notice</h1>
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Notice</h1>
+            </div>
 
-            <table class="table table-bordered table-center table-layout-auto m-b-30">
+            <table class="table table-bordered table-center">
                 <colgroup>
                     <col width="180px">
                     <col width="120px">
-                    <col width="1283px">
+                    <col>
                     <col width="120px">
                 </colgroup>
                 <thead>
@@ -54,7 +55,7 @@
                     <tr>
                         <td>6</td>
                         <td>2020.08.25</td>
-                        <td class="text-left"><a href="" data-toggle="modal" data-role="modal" data-target="#modify-notice">개인정보 처리방침 변경 고지</a></td>
+                        <td class="text-left"><a href="#modal-notice-modify" data-toggle="modal" data-role="button">개인정보 처리방침 변경 고지</a></td>
                         <td>라니</td>
                     </tr>
                     <tr>
@@ -88,14 +89,11 @@
                         <td class="text-left">투표하기 창 오류 점검</td>
                         <td>라니</td>
                     </tr>
-
-
-
                 </tbody>
             </table>
 
-            <div class="text-center">
-                <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-role="modal" data-target="#edit-notice">작성하기</button>
+            <div class="text-center m-t-30">
+                <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-role="modal" data-target="#modal-notice-add">작성하기</button>
             </div>
         </div>
         <footer>
@@ -104,11 +102,11 @@
     </div>
 
     <!-- modal : 공지사항 등록 -->
-    <div class="modal fade" id="edit-notice" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list modal-dialog-centered w-820px">
+    <div class="modal fade" id="modal-notice-add" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered w-820px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="double-modal-title m-b-30">공지사항 등록</div>
+                    <div class="modal-title">공지사항 등록</div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -130,12 +128,12 @@
                             <tr>
                                 <th>내용</th>
                                 <td>
-                                    <input type="text" class="form-control w-100p h-570px" placeholder="내용을 입력해 주세요.">
+                                    <textarea class="form-control w-100p h-570px" placeholder="내용을 입력해 주세요."></textarea>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="double-modal-footer text-center">
+                    <div class="text-center m-t-30">
                         <button type="button" class="btn btn-dark btn-lg">등록하기</button>
                     </div>
                 </div>
@@ -145,11 +143,11 @@
     </div>
 
     <!-- modal : 공지사항 수정 -->
-    <div class="modal fade" id="modify-notice" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-vote-list modal-dialog-centered w-820px">
+    <div class="modal fade" id="modal-notice-modify" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered w-820px">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="double-modal-title m-b-30">공지사항 수정</div>
+                    <div class="modal-title">공지사항 수정</div>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -171,16 +169,16 @@
                             <tr>
                                 <th>내용</th>
                                 <td>
-                                    <input type="text" value="개인정보보호책임자 및 관리 담당자가 8월 31일부터 변경 예정으로 고지 드립니다.
-                                    관련 내용은 ‘마이페이지 > 설정 > 개인정보 이용 및 수집’에서 확인하실 수 있습니다.
-                                    감사합니다 :)" class="form-control w-100p h-570px" placeholder="내용을 입력해 주세요.">
+                                    <textarea class="form-control w-100p h-570px" placeholder="내용을 입력해 주세요.">개인정보보호책임자 및 관리 담당자가 8월 31일부터 변경 예정으로 고지 드립니다.
+관련 내용은 ‘마이페이지 > 설정 > 개인정보 이용 및 수집’에서 확인하실 수 있습니다.
+감사합니다 :)</textarea>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="double-modal-footer text-center">
+                    <div class="text-center m-t-30">
                         <button type="button" class="btn btn-darkgray btn-lg">삭제하기</button>
-                        <button type="button" class="btn btn-dark btn-lg">수정하기</button>
+                        <button type="button" class="btn btn-dark btn-lg">등록하기</button>
                     </div>
                 </div>
 
