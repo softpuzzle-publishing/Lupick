@@ -446,17 +446,25 @@
                                 <tr>
                                     <th>배경 컬러</th>
                                     <td>
-                                        <input type="text" class="form-control colorpicker-piece">
-                                        <input type="text" class="form-control w-110px text-center m-l-15">
-                                        <span class="example-text m-l-15">* 기획전 배경 컬러를 입력해주세요 (HEX값)</span>
+                                        <div class="input-group colorpicker-group">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                                            </span>
+                                            <input type="text" class="form-control w-110px text-center m-l-15" value="#ffffff">
+                                            <span class="example-text m-l-15">* 기획전 배경 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>텍스트 컬러</th>
                                     <td>
-                                        <input type="text" class="form-control colorpicker-piece">
-                                        <input type="text" class="form-control w-110px text-center m-l-15">
-                                        <span class="example-text m-l-15">* 기획전 텍스트 컬러를 입력해주세요 (HEX값)</span>
+                                        <div class="input-group colorpicker-group">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                                            </span>
+                                            <input type="text" class="form-control w-110px text-center m-l-15" value="#ffffff">
+                                            <span class="example-text m-l-15">* 기획전 텍스트 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -883,8 +891,8 @@
         </div>
     </div>
 
-    <script src="../../resources/css/colorpicker.css"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/3.2.0/js/bootstrap-colorpicker.min.js"></script>
+    <link rel="stylesheet" href="../../resources/plugins/bootstrap-colorpicker/bootstrap-colorpicker.css">
+    <script src="../../resources/plugins/bootstrap-colorpicker/bootstrap-colorpicker.js"></script>
     <script src="../../resources/js/common.js"></script>
     <script>
         $(document).ready(function () {
@@ -893,11 +901,6 @@
                 var t = $('[name=feedType]:checked').val();
                 $('[data-type]').hide();
                 $('[data-type=' + t + ']').show();
-            });
-
-            $('.colorpicker-piece').on('colorpickerChange', function(event) {
-                $(this).next('.form-control').val(event.color.toString());
-                $(this).css('background-color', event.color.toString());
             });
         });
     </script>

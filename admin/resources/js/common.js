@@ -48,8 +48,8 @@ $(document).ready(function () {
     }
 
     //colorpicker
-    if($('.colorpicker-piece').length > 0){
-        $('.colorpicker-piece').colorpicker();
+    if($('.colorpicker-group').length > 0){
+        $('.colorpicker-group').colorpicker();
     }
 });
 

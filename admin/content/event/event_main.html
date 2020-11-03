@@ -1005,7 +1005,7 @@
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
                     </div>
 
                     <div class="modal-footer-right d-flex">
@@ -1220,7 +1220,7 @@
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
                     </div>
 
                     <div class="modal-footer-right d-flex">
@@ -1517,7 +1517,7 @@
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
                     </div>
 
                     <div class="modal-footer-right d-flex">
@@ -1905,7 +1905,7 @@
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
                     </div>
                     <div class="modal-footer-right d-flex">
                         <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
@@ -2008,7 +2008,7 @@
                 <div class="modal-footer d-flex justify-content-between">
                     <div class="modal-footer-left d-flex">
                         <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
-                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
                     </div>
                     <div class="modal-footer-right d-flex">
                         <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
@@ -2304,8 +2304,11 @@
 
     <!-- modal : 앱 프리뷰 -->
     <div class="modal fade modal-app-preview" id="modal-app-preview" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
-        <div class="modal-dialog modal-dialog-centered w-418px">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-418px">
             <div class="modal-content">
+                <div class="modal-header">
+                    <a href="javascrpt:;" class="app-preview-close" data-dismiss="modal"><span class="sr-only">레이어 닫기</span></a>
+                </div>
                 <div class="modal-body">
                     <div class="app-preview">
                         <div class="img">
@@ -2330,14 +2333,21 @@
                                     <li>• 기간 내 준비된 아이템 모두 소진 시 이벤트가 마감됩니다.</li>
                                     <li>• 이벤트 마감 후 결제취소는 불가능합니다.</li>
                                     <li>• 이벤트가 무산될 경우 전액 환불처리됩니다.</li>
+                                    <li>• 1인당 아이템 구매 개수는 3개로 제한되어 있습니다.</li>
+                                    <li>• 기간 내 준비된 아이템 모두 소진 시 이벤트가 마감됩니다.</li>
+                                    <li>• 이벤트 마감 후 결제취소는 불가능합니다.</li>
+                                    <li>• 이벤트가 무산될 경우 전액 환불처리됩니다.</li>
+                                    <li>• 1인당 아이템 구매 개수는 3개로 제한되어 있습니다.</li>
+                                    <li>• 기간 내 준비된 아이템 모두 소진 시 이벤트가 마감됩니다.</li>
+                                    <li>• 이벤트 마감 후 결제취소는 불가능합니다.</li>
+                                    <li>• 이벤트가 무산될 경우 전액 환불처리됩니다.</li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="button">
-                            <div class="btn btn-dark btn-pick">PICK</div>
-                        </div>
                    </div>
-                   <a href="javascrpt:;" class="app-preview-close" data-dismiss="modal"><span class="sr-only">레이어 닫기</span></a>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn btn-dark btn-pick gilroy">PICK</div>
                 </div>
             </div>
         </div>
