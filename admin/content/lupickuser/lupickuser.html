@@ -21,9 +21,9 @@
     <!-- Bootstrap 4 -->
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- datetimepicker -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
 </head>
 
 <body>
@@ -544,7 +544,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>202020-10102-11</td>
+                                <td><a href="#myModal1" data-toggle="modal">202020-10102-11</a></td>
                                 <td>2020.08.20. 13:34:00</td>
                                 <td>[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 …</td>
                                 <td>미니 캐리어 테이블 (PLAIN) - 외 2건 </td>
@@ -559,7 +559,6 @@
                         <p class="title-square"><span>문의 내역</span></p>
                     </div>
                     <table class="table table-bordered table-center table-layout-auto">
-
                         <thead>
                             <tr>
                                 <th scope="col">문의구분</th>
@@ -574,7 +573,7 @@
                             <tr>
                                 <td>이벤트 문의</td>
                                 <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
-                                <td>이벤트 내용을 더 자세히 알고싶어요.</td>
+                                <td><a href="#myModal1" data-toggle="modal">이벤트 내용을 더 자세히 알고싶어요.</a></td>
                                 <td>2020.08.20 12:34:21</td>
                                 <td>답변대기</td>
                                 <td>-</td>
@@ -604,19 +603,19 @@
                 <div class="modal-body">
                     <table class="table table-bordered table-center table-form">
                         <colgroup>
-                            <col width="120px">
+                            <col style="width:130px">
                             <col>
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th>발송 대상</th>
+                                <th>지급/차감 여부</th>
                                 <td class="text-left p-25">
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="payment-1" value="payment-1">
+                                        <input type="radio" class="custom-control-input" name="paymentType" id="payment-1" value="payment-1" checked="checked">
                                         <label class="custom-control-label" for="payment-1">지급 (+)</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="deduction-1" value="deduction-1">
+                                        <input type="radio" class="custom-control-input" name="paymentType" id="deduction-1" value="deduction-1">
                                         <label class="custom-control-label" for="deduction-1">차감 (-)</label>
                                     </div>
 
@@ -626,9 +625,7 @@
                                 <th>금액설정</th>
                                 <td class="text-left">
                                     <div class="d-flex align-items-center">
-                                        <div style="width:29px">
-                                            +
-                                        </div>
+                                        <div class="operator">+</div>
                                         <input type="text" class="form-control w-200px" placeholder="포인트를 입력해주세요.">
                                         <span class="m-l-10">P</span>
                                     </div>
@@ -713,7 +710,21 @@
 
     <script src="../../resources/js/common.js"></script>
     <script>
-        $(document).ready(function () {})
+        $(document).ready(function () {
+            $('[name=paymentType]').on('change',function(){
+                if($('[name=paymentType]:checked').val() == 'payment-1'){
+                    $('.operator').text('+');
+                }else if($('[name=paymentType]:checked').val() == 'deduction-1'){
+                    $('.operator').text('-');
+                }
+            });
+
+            $(window).on('load', function(){
+                $('div[id^="myModal"]').each(function(){
+                    $(this).attr('data-overlap','true');
+                });
+            });
+        });
     </script>
 
 </body>

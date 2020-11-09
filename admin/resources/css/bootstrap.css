@@ -23,6 +23,22 @@
   url(../fonts/NanumBarunGothic/NanumBarunGothicBold.ttf) format("truetype");
 }
 @font-face {
+  font-family: 'NanumGothic';
+  font-weight: 400;
+  src: url(../fonts/NanumGothic/NanumGothic-Regular.eot);
+  src: url(../fonts/NanumGothic/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"),
+  url(../fonts/NanumGothic/NanumGothic-Regular.woff) format("woff"),
+  url(../fonts/NanumGothic/NanumGothic-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 700;
+  src: url(../fonts/NanumGothic/NanumGothic-Bold.eot);
+  src: url(../fonts/NanumGothic/NanumGothic-Bold.eot?#iefix) format("embedded-opentype"),
+  url(../fonts/NanumGothic/NanumGothic-Bold.woff) format("woff"),
+  url(../fonts/NanumGothic/NanumGothic-Bold.ttf) format("truetype");
+}
+@font-face {
   font-family: 'Gilroy';
   font-weight: 700;
   src: url(../fonts/Gilroy/Gilroy-Bold.eot);
@@ -77,8 +93,6 @@
 }
 
 html {
-  font-family: sans-serif;
-  line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -89,7 +103,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "NanumBarunGothic";
+  font-family: "NanumBarunGothic", 'NanumGothic', dotum, arial;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2103,7 +2117,7 @@ mt-1 : { margin-top : 1px; }
 }
 
 .p-b-25 {
-  padding-bottom: 25px;
+  padding-bottom: 25px !important;
 }
 
 .m--30 {
@@ -6027,10 +6041,11 @@ input[type="button"].btn-block {
 .badge {
   display: inline-block;
   min-width: 80px;
-  padding: 1px 8px 0;
+  padding: 2px 8px 0;
   font-size: 12px;
   font-family: 'Gilroy';
-  line-height: 24px;
+  line-height: 20px;
+  border: 1px solid transparent;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;

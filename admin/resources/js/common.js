@@ -31,26 +31,33 @@ $("input[type=checkbox]").click(function () {
     }
 });
 
-$(document).ready(function () {
-    $('aside').load('../_include/aside.html');
-    $('footer').load('../_include/footer.html');
+$('aside').load('../_include/aside.html');
+$('footer').load('../_include/footer.html');
 
+$(document).ready(function () {
     //select
-    setTimeout(function () {
+    $(window).on('load', function(){
         $(".select-sm").selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
         $(".select-md").selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
         $(".select-lg").selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
-    }, 0);
 
-    //bouncing balls
-    if($('#stage').length > 0){
-        bouncing();
-    }
+        // call initialization file
+        if($('.file-upload').length > 0){
+            if (window.File && window.FileList && window.FileReader) {
+                fileUpload.Init();
+            }
+        }
 
-    //colorpicker
-    if($('.colorpicker-group').length > 0){
-        $('.colorpicker-group').colorpicker();
-    }
+        //bouncing balls
+        if($('#stage').length > 0){
+            bouncing();
+        }
+
+        //colorpicker
+        if($('.colorpicker-group').length > 0){
+            $('.colorpicker-group').colorpicker();
+        }
+    });
 });
 
 //로그인,회원가입 background balls
@@ -388,12 +395,7 @@ var fileUpload = {
         }
     }
 };
-// call initialization file
-if($('.file-upload').length > 0){
-    if (window.File && window.FileList && window.FileReader) {
-        fileUpload.Init();
-    }
-}
+
 
 
 

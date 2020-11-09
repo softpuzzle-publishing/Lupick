@@ -21,6 +21,10 @@
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- datetimepicker -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
 </head>
 
 <body>
@@ -47,8 +51,8 @@
                 </div>
                 <div class="col-auto">
                     <select class="select-lg">
-                        <option value="1" selected>가입 순</option>
-                        <option value="2">대기중인 이벤트</option>
+                        <option value="3" selected>가입 순</option>
+                        <option value="4">대기중인 이벤트</option>
                     </select>
                 </div>
             </div>
@@ -400,7 +404,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="title-square-wrap">
+                    <div class="title-square-wrap pt-0">
                         <p class="title-square"><span>루키 정보</span></p>
                     </div>
                     <table class="table table-bordered table-user">
@@ -417,8 +421,8 @@
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="pt-1">
                                             <div class="custom-control custom-radio custom-control-inline m-r-30">
-                                                <input type="radio" class="custom-control-input" name="lukieRole" id="radio-role1" value="radio-role1">
-                                                <label class="custom-control-label g-b" for="radio1">Lukie</label>
+                                                <input type="radio" class="custom-control-input" name="lukieRole" id="radio-role1" value="radio-role1" checked="checked">
+                                                <label class="custom-control-label g-b" for="radio-role1">Lukie</label>
                                             </div>
                                             <div class="custom-control custom-radio custom-control-inline m-r-30">
                                                 <input type="radio" class="custom-control-input" name="lukieRole" id="radio-role2" value="radio-role2">
@@ -482,12 +486,12 @@
                         <tbody>
                             <tr>
                                 <td>2020.10.01</td>
-                                <td class="text-left">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</td>
+                                <td class="text-left"><a href="#myModal1" data-toggle="modal">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</a></td>
                                 <td>투표중</td>
                             </tr>
                             <tr>
                                 <td>2020.10.01</td>
-                                <td class="text-left">여름의 향을 담은 복숭아청, 궁금하지 않나요? - 고블렛 컵과 함께</td>
+                                <td class="text-left"><a href="#myModal1" data-toggle="modal">여름의 향을 담은 복숭아청, 궁금하지 않나요? - 고블렛 컵과 함께</a></td>
                                 <td>이벤트 실패</td>
                             </tr>
                         </tbody>
@@ -503,7 +507,12 @@
     <script src="../../resources/js/common.js"></script>
     <script>
         $(document).ready(function () {
-        })
+            $(window).on('load', function(){
+                $('div[id^="myModal"]').each(function(){
+                    $(this).attr('data-overlap','true');
+                });
+            });
+        });
     </script>
 
 </body>

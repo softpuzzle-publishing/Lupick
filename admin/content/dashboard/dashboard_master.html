@@ -22,6 +22,8 @@
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- datetimepicker -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
     <!-- chart -->
     <script src="../../resources/plugins/chart/Chart.min.js"></script>
 </head>
@@ -43,7 +45,7 @@
                         <div class="box">
                             <div class="statistics">
                                 <i class="icon-dash-connect"></i>
-                                <p>313,523</p>
+                                <p data-count="313523">0</p>
                             </div>
                             <div class="info">
                                 <p>현재 루픽 접속 유저 (명)</p>
@@ -55,7 +57,7 @@
                         <div class="box">
                             <div class="statistics">
                                 <i class="icon-dash-user"></i>
-                                <p>2,746,103</p>
+                                <p data-count="2746103">0</p>
                             </div>
                             <div class="info">
                                 <p>루픽 총 가입 유저 (명)</p>
@@ -67,7 +69,7 @@
                         <div class="box">
                             <div class="statistics">
                                 <i class="icon-dash-money"></i>
-                                <p>92,561,512,648</p>
+                                <p data-count="92561512648">0</p>
                             </div>
                             <div class="info">
                                 <p>오늘 매출 금액 (원)</p>
@@ -79,7 +81,7 @@
                         <div class="box">
                             <div class="statistics">
                                 <i class="icon-dash-check"></i>
-                                <p>1,583,327</p>
+                                <p data-count="1586627">0</p>
                             </div>
                             <div class="info">
                                 <p>오늘 주문수 (주문번호기준)</p>
@@ -263,6 +265,38 @@
                     },
                 }
             };
+        });
+
+        $(window).on('load', function () {
+            $('[data-count]').not('.finish').each(function() {
+                console.log(1);
+                var $this = $(this),
+                countTo = $this.attr('data-count');
+                $this.addClass('finish');
+                $({
+                    countNum: $this.text()
+                    }).stop().animate({
+                        countNum: countTo
+                    },
+                    {
+                        duration: 1500,
+                        easing: 'linear',
+                        step: function() {
+                            $this.text(commaSeparateNumber(Math.floor(this.countNum)));
+                        },
+                        complete: function() {
+                            $this.text(commaSeparateNumber(this.countNum));
+                            //$this.addClass('finish');
+                        }
+                    }
+                );
+            });
+            function commaSeparateNumber(val) {
+                while (/(\d+)(\d{3})/.test(val.toString())) {
+                val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                }
+                return val;
+            }
         });
     </script>
 </body>

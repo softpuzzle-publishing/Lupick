@@ -22,9 +22,9 @@
     <!-- Bootstrap 4 -->
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- datetimepicker -->
-    <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
     <!-- chart -->
     <script src="../../resources/plugins/chart/Chart.min.js"></script>
 </head>
@@ -40,7 +40,7 @@
                 <div class="latest">최근 업데이트 : 2020.10.07 17:49</div>
             </div>
             <div class="title-wrap justify-content-between">
-                <h3 class="title">Lupick Report</h3>
+                <h3 class="title">Finance Report</h3>
             </div>
             <div class="lupick-report">
                 <div class="row">
@@ -95,8 +95,16 @@
                     <div class="col-12">
                         <div class="chart-finance box h-500px">
                             <div class="d-flex justify-content-between align-items-center m-b-40">
-                                <div>
+                                <div class="d-flex align-items-center">
                                     <div class="box-title">루픽 월별 지표</div>
+                                    <dl class="legend-custom">
+                                        <dt><i class="icon-circle-green"></i></dt>
+                                        <dd>매출</dd>
+                                        <dt><i class="icon-circle-blue"></i></dt>
+                                        <dd>수익</dd>
+                                        <dt><i class="icon-circle-yellow"></i></dt>
+                                        <dd>지출</dd>
+                                    </dl>
                                 </div>
                                 <a href=""><i class="icon-download"><span class="sr-only">다운로드</span></i></a>
                             </div>
@@ -585,6 +593,7 @@
             window.myChart1 = new Chart(finance, barFinance);
         };
 
+
         Chart.defaults.global.pointHitDetectionRadius = 1;
 		var customTooltips = function(tooltip) {
 			// Tooltip Element
@@ -696,7 +705,7 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 legend: {
-                    display: false
+                    display: false,
                 },
 				tooltips: {
 					enabled: false,
@@ -706,8 +715,8 @@
                     custom: customTooltips,
 				},
 				hover: {
-					mode: 'nearest',
-					intersect: true
+					mode: 'index',
+					intersect: false
 				},
                 scales: {
                     xAxes: [{
@@ -716,14 +725,22 @@
                         },
                         scaleLabel: {
                             display: false,
-                        }
+                        },
+                        ticks:{
+                            fontColor : '#d2d2d2',
+                            fontSize : 15,
+                            fontFamily : 'Gilroy',
+                        },
                     }],
                     yAxes: [{
                         scaleLabel: {
                             drawBorder: false,
-                            color: '#efefef'
+
                         },
                         ticks: {
+                            fontColor : '#d2d2d2',
+                            fontSize : 15,
+                            fontFamily : 'Gilroy',
                             stepSize: 1,
                             beginAtZero: true,
                         }

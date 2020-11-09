@@ -24,7 +24,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="modal-body" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
+            <div class="modal-body p-b-25" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
                 <!-- //이벤트 정보 -->
                 <div class="info-event" id="tab1">
                     <div class="title-square-wrap">
@@ -554,16 +554,1752 @@
     </div>
 </div>
 
+<!-- Modal : 이벤트 생성 -->
+<div class="modal modal-size-fix has-tab" id="myModal1" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="event-detail-top">
+                    <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                    <p class="code">LEFAS201000152</p>
+                </div>
+                <div class="modal-title">
+                    <ul class="modal-step">
+                        <li class="active">이벤트 생성</li>
+                        <li>진행 상황</li>
+                        <li>아이템 배송</li>
+                        <li>투표</li>
+                        <li>집행</li>
+                    </ul>
+                </div>
+                <ul class="nav nav-pills" id="tab-event-add">
+                    <li class="nav-item modal-nav">
+                        <a class="nav-link active" href="#div1">이벤트 정보</a>
+                    </li>
+                    <li class="nav-item modal-nav">
+                        <a class="nav-link" href="#div2">아이템 정보</a>
+                    </li>
+                    <li class="nav-item modal-nav">
+                        <a class="nav-link" href="#div3">럭키템 정보</a>
+                    </li>
+                    <li class="nav-item modal-nav">
+                        <a class="nav-link" href="#div4">이벤트 상세 정보</a>
+                    </li>
+                </ul>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-b-25" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
+                <!-- //이벤트 정보 -->
+                <div class="info-event" id="div1">
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>이벤트 정보</span></p>
+                    </div>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>메인 이미지 등록</th>
+                                <td>
+                                    <div class="upload-img d-flex align-items-center">
+                                        <div class="filebox">
+                                            <input type="file" id="input-img">
+                                            <label for="input-img"><img src="../../resources/images/@event_01.png" alt="" id="img"></label>
+                                        </div>
+                                        <div class="example-text m-l-15">
+                                            <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                            <p>* 용량 : 5MB 이하, 파일 형식 JPG, PNG </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이벤트 타이틀</th>
+                                <td>
+                                    <div class="d-flex align-items-end">
+                                        <textarea class="form-control w-772px" maxlength="40" placeholder="이벤트 제목을 입력해주세요." data-byte-target="#byte-check-event-title"></textarea>
+                                        <span class="example-text m-l-15">(<span id="byte-check-event-title">0</span>/40)</span>
+                                        <span class="example-text m-l-20">* 이벤트 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이벤트 예약</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio3" value="radio3">
+                                            <label class="custom-control-label" for="radio3">바로 오픈</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio4" value="radio4">
+                                            <label class="custom-control-label" for="radio4">예약 오픈</label>
+                                        </div>
+                                        <div class="d-inline-block position-relative">
+                                            <input type="text" class="form-control datetimepicker-input text-center" autocomplete="no" id="datetimepicker2" data-toggle="datetimepicker" data-target="#datetimepicker2" disabled>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이벤트 기간</th>
+                                <td>
+                                    <input type="text" value="07" class="form-control text-center w-100px">
+                                    <span class="m-l-15">일</span>
+                                    <span class="example-text m-l-15">* 평균 이벤트 권장 기간은 7일 입니다. 규모가 큰 이벤트나 특별한 경우 마스터와 협의해 주세요.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이벤트 주제 태그</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <div class="custom-control custom-check custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk4" value="chk4">
+                                            <label class="custom-control-label" for="chk4"><span class="badge badge-dark badge-dark-primary">LUPICK SPECIAL</span></label>
+                                        </div>
+                                        <div class="custom-control custom-check custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk5" value="chk5">
+                                            <label class="custom-control-label" for="chk5"><span class="badge badge-dark">LUPICK COLLAB</span></label>
+                                        </div>
+                                        <div class="custom-control custom-check custom-control-inline">
+                                            <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk6" value="chk6">
+                                            <label class="custom-control-label" for="chk6"><span class="badge badge-dark">LOWEST PRICE</span></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이벤트 주제태그 생성</th>
+                                <td>
+                                    <div>
+                                        <select class="select-md">
+                                            <option value="" disabled selected>스페셜 태그(Yellow)</option>
+                                            <option value="1">스페셜 태그(Blue)</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex align-items-center m-t-10">
+                                        <input type="text" class="form-control w-476px" maxlength="15" data-byte-target="#byte-check-tag">
+                                        <span class="m-l-15" id="byte-check-tag">0</span><span>/15</span>
+                                        <span class="example-text m-l-20">* 영문 대문자로만 입력해주세요.</span>
+                                    </div>
+                                    <div class="m-t-20">
+                                        <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="">주제태그 생성</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- //아이템 정보 -->
+                <div class="info-item" id="div2">
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>아이템 정보</span></p>
+                    </div>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>아이템 카테고리</th>
+                                <td>
+                                    <select class="select-md">
+                                        <option value="" disabled selected>카테고리 선택</option>
+                                        <option value="1">스페셜 태그(Blue)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이템 이미지 등록</th>
+                                <td>
+                                    <div class="upload-img d-flex align-items-center">
+                                        <div class="filebox">
+                                            <input type="file" id="input-img">
+                                            <label for="input-img"><img src="../../resources/images/@event_07.png" alt="" id="img"></label>
+                                        </div>
+                                        <div class="example-text m-l-15">
+                                            <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                            <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이템 타이틀</th>
+                                <td>
+                                    <input type="text" class="form-control w-1213px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이템 설명</th>
+                                <td>
+                                    <input class="form-control w-1213px" maxlength="90" data-byte-target="#byte-check-desc">
+                                    <span class="example-text m-l-15">(<span id="byte-check-desc">0</span>/90)</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>아이템 수량</th>
+                                <td>
+                                    <div class="form-term">
+                                        <input type="text" value="07" class="form-control w-100px">
+                                        <span class="m-l-15">개</span>
+                                        <span class="example-text m-l-15"> * 1,000,000 미만으로 입력해 주세요.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이템 옵션</th>
+                                <td>
+                                    <div>
+                                        <p>옵션 개수 입력</p>
+                                        <input type="text" value="2" class="form-control mt-2 w-100px text-center">
+                                    </div>
+                                    <div class="d-flex align-items-center mt-4">
+                                        <p class="w-476px">옵션명</p>
+                                        <p class="m-l-15">옵션 수량 <span class="example-text m-l-15"> * 아이템 옵션 수량의 총합은 아이템 수량 이상이어야 함.</span></p>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <input type="text" class="form-control w-476px" placeholder="컬러 - 화이트">
+                                        <input type="text" value="20,000" class="form-control w-100px m-l-15">
+                                        <span class="m-l-15">개</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <input type="text" class="form-control w-476px" placeholder="컬러 - 블랙">
+                                        <input type="text" value="500" class="form-control w-100px m-l-15">
+                                        <span class="m-l-15">개</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col width="737px">
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>아이템 매입가</th>
+                                <td colspan="3">
+                                    <input type="text" value="" class="form-control">
+                                    <span class="m-l-15">원</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">아이템 판매가</th>
+                                <td rowspan="2">
+                                    <input type="text" value="" class="form-control">
+                                    <span class="m-l-15">원</span>
+                                <th class="text-center">아이템 판매 마진율</th>
+                                <td>
+                                    <span>25 %</span>
+                                    <span class="m-l-15 example-text">*20% 마진율을 권장</span>
+                                </td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>아이템 배송 택배사</th>
+                                <td>
+                                    <select class="select-md">
+                                        <option value="" disabled selected>택배사를 선택하세요.</option>
+                                        <option value="1">한진택배</option>
+                                        <option value="1">한진택배</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이템 배송비</th>
+                                <td>
+                                    <div>
+                                        <select class="select-md" id="delivery-type">
+                                            <option value="d1">기본 배송</option>
+                                            <option value="d2">착불 배송</option>
+                                            <option value="d3">조건부 무료배송</option>
+                                            <option value="d4">수량별 배송비</option>
+                                        </select>
+                                        <!-- 착불 배송 -->
+                                        <span class="example-text m-l-15" data-delivery-type="d2" style="display:none">* 상세페이지에 해당 사항 공지</span>
+                                    </div>
+                                    <!-- 기본 배송 -->
+                                    <div class="m-t-10" data-delivery-type="d1"> <!-- 아이템 배송비 셀렉트 value와 맞추기 -->
+                                        <span class="m-r-15">기본 배송비</span>
+                                        <input type="text" class="form-control w-100px">
+                                        <span class="m-l-15">원<span>
+                                    </div>
+                                    <!-- 조건부 무료배송 -->
+                                    <div class="m-t-10" data-delivery-type="d3" style="display:none">
+                                        <div class="d-flex align-items-center">
+                                            <span class="m-r-15">기본 배송비</span>
+                                            <input type="text" class="form-control w-100px">
+                                            <span class="m-l-15">원<span>
+                                            <span class="m-l-20 m-r-15">무료배송 조건 금액</span>
+                                            <input type="text" class="form-control w-100px" value="50,000">
+                                            <span class="m-l-15">원 이상 구매시 무료배송<span>
+                                        </div>
+                                    </div>
+                                    <!-- 수량별 배송비 -->
+                                    <div class="m-t-10" data-delivery-type="d4" style="display:none">
+                                        <div class="d-flex">
+                                            <div>
+                                                <span class="m-r-15">* 1개 구매</span>
+                                                <input type="text" class="form-control w-100px">
+                                                <span class="m-l-15">원<span>
+                                            </div>
+                                            <div class="m-l-25">
+                                                <span class="m-r-15">* 2개 구매</span>
+                                                <input type="text" class="form-control w-100px">
+                                                <span class="m-l-15">원<span>
+                                            </div>
+                                            <div class="m-l-25">
+                                                <span class="m-r-15">* 3개 구매</span>
+                                                <input type="text" class="form-control w-100px">
+                                                <span class="m-l-15">원<span>
+                                            </div>
+                                            <div class="m-l-25">
+                                                <span class="m-r-15">* 4개 구매</span>
+                                                <input type="text" class="form-control w-100px">
+                                                <span class="m-l-15">원<span>
+                                            </div>
+                                            <div class="m-l-25">
+                                                <span class="m-r-15">* 5개 구매</span>
+                                                <input type="text" class="form-control w-100px">
+                                                <span class="m-l-15">원<span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- //럭키템 정보 -->
+                <div class="info-lucky" id="div3">
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>럭키템 정보</span></p>
+                    </div>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>메인 럭키템 이미지 등록</th>
+                                <td>
+                                    <div class="upload-img d-flex align-items-center">
+                                        <div class="filebox">
+                                            <input type="file" id="input-img">
+                                            <label for="input-img"><img src="../../resources/images/@event_07.png" alt="" id="img"></label>
+                                        </div>
+                                        <div class="example-text m-l-15">
+                                            <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                            <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>메인 럭키템 타이틀</th>
+                                <td>
+                                    <input type="text" class="form-control w-1213px" placeholder="럭키템 타이틀을 입력해 주세요.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>메인 럭키템 설명</th>
+                                <td>
+                                    <input type="text" class="form-control w-1213px" placeholder="럭키템 설명을 간략하게 입력해 주세요." maxlength="90"  data-byte-target="#byte-check-lucky">
+                                    <span class="example-text m-l-15">(<span id="byte-check-lucky">0</span>/90)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>메인 럭키템 선정자 수</th>
+                                <td>
+                                    <input type="text" class="form-control w-100px">
+                                    <span class="m-l-15">명<span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>메인 럭키템 개당 예상 가격</th>
+                                <td>
+                                    <input type="text" class="form-control">
+                                    <span class="m-l-15">원<span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>럭키템 타입</th>
+                                <td>
+                                    <select name="" id="" class="select-md">
+                                        <option value="">상품</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>럭키템 이미지 등록</th>
+                                <td>
+                                    <div class="upload-img d-flex align-items-center">
+                                        <div class="filebox">
+                                            <input type="file" id="input-img">
+                                            <label for="input-img"><img src="" alt="" id="img"></label>
+                                        </div>
+                                        <div class="example-text m-l-15">
+                                            <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                            <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>럭키템 타이틀</th>
+                                <td>
+                                    <input type="text" class="form-control w-1213px" placeholder="럭키템 타이틀을 입력해 주세요.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>럭키템 선정자 수</th>
+                                <td>
+                                    <input type="text" class="form-control w-100px">
+                                    <span class="m-l-15">명<span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>럭키템 개당 예상 가격</th>
+                                <td>
+                                    <input type="text" class="form-control">
+                                    <span class="m-l-15">원<span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>럭키템 타입</th>
+                                <td>
+                                    <select name="" id="" class="select-md">
+                                        <option value="">포인트 지급</option>
+                                    </select>
+                                    <div class="m-t-10">
+                                        <span class="m-r-15">랜덤</span>
+                                        <input type="text" class="form-control w-100px" value="1,000">
+                                        <span class="m-l-15 m-r-15">명 에게</span>
+                                        <input type="text" class="form-control w-100px" value="1,500">
+                                        <span class="m-l-15">포인트 일괄 지급</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-next-button">
+                        <button type="button" class="btn btn-outline-dark w-400px">+ 럭키템 추가</button>
+                    </div>
+                </div>
+
+                <!-- //이벤트 상세 정보 -->
+                <div class="info-detail-event" id="div4">
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>이벤트 상세 정보</span></p>
+                    </div>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>이벤트 상세 정보</th>
+                                <td>에디터 영역</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>교환 / 환불 / 취소 정책</th>
+                                <td>
+                                    <textarea class="form-control w-1213px" placeholder="- 파손 또는 불량품 수령 시 [   ]일 이내로 교환이 가능합니다.
+- 교환 및 AS 문의는 판매자에게 직접 문의해주세요.
+- 파손이나 불량품 교환시 발생하는 비용은 판매자가 부담합니다.
+- 선물 확인을 위한 포장 훼손 외에 아이템의 가치가 훼손된 경우에는 교환 및 환불이 불가합니다."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>상품 필수 표기 정보</th>
+                                <td>
+                                    <textarea class="form-control w-1213px" placeholder="전자상거래 등에서의 상품 등의 정보제공에 관한 고시법에 따라, 이벤트 아이템 상품 정보를 고시하여야 합니다."></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>판매자 정보</th>
+                                <td>
+                                    <div class="row row-20 align-items-end">
+                                        <div class="col-auto">
+                                            <div class="form-fake w-1213px">
+                                                불러오면 해당 정보가 뿌려짐. <br>
+                                                불러오면 해당 정보가 뿌려짐. <br>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-outline-dark w-120px">변경</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div class="modal-footer-left d-flex">
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
+                </div>
+
+                <div class="modal-footer-right d-flex">
+                    <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal : 진행 상황 -->
+<div class="modal modal-size-fix" id="myModal2" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="event-detail-top">
+                    <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                    <p class="code">LEFAS201000152</p>
+                </div>
+                <div class="modal-title">
+                    <ul class="modal-step">
+                        <li class="active">이벤트 생성</li>
+                        <li class="active">진행 상황</li>
+                        <li>아이템 배송</li>
+                        <li>투표</li>
+                        <li>집행</li>
+                    </ul>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>이벤트 진행시간</span></p>
+                            </div>
+                            <div class="box" style="height:187px">
+                                <div class="modal-event-time">
+                                    <div class="deadline">
+                                        <p><strong>04</strong>일 <strong>18</strong>시 <strong>20</strong>분 <strong>40</strong></p>
+                                    </div>
+                                    <div class="term">
+                                        <p>이벤트 모집기간 : <strong>7일</strong></p>
+                                        <p>2020.08.15 ~ 2020.08.14</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>이벤트 달성률</span></p>
+                            </div>
+                            <div class="success-event box">
+                                <div class="success-event-percent">
+                                    <div class="box-title">이벤트 성공률</div>
+                                    <strong class="paint">90%</strong>
+                                </div>
+                                <div class="circle_percent">
+                                    <canvas id="chart-success"></canvas>
+                                    <div class="circle_inbox">
+                                        <dl class="circle-text">
+                                            <dt>총 이벤트 아이템 개수</dt>
+                                            <dd>1,200</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="event-count-summary">
+                                    <div class="success">
+                                        <span>총 이벤트 아이템 개수</span>
+                                        <strong>52,000</strong>
+                                    </div>
+                                    <div class="fail">
+                                        <span>남은 이벤트 아이템 개수</span>
+                                        <strong>500</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>구매 현황</span></p>
+                            </div>
+                            <table class="table table-bordered cell-height-40 mb-0">
+                                <colgroup>
+                                    <col width="30%">
+                                    <col width="40%">
+                                    <col width="100px">
+                                    <col width="100px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-center">아이템 명</th>
+                                        <th scope="col" class="text-center">옵션</th>
+                                        <th scope="col" class="text-center">판매 수량</th>
+                                        <th scope="col" class="text-center">재고</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td>에스카다</td>
+                                        <td class="text-center">3500</td>
+                                        <td class="text-center">5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td>에스카다</td>
+                                        <td class="text-center">3500</td>
+                                        <td class="text-center">5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td>에스카다</td>
+                                        <td class="text-center">3500</td>
+                                        <td class="text-center">5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td>에스카다</td>
+                                        <td class="text-center">3500</td>
+                                        <td class="text-center">5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td>에스카다</td>
+                                        <td class="text-center">3500</td>
+                                        <td class="text-center">5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td>에스카다</td>
+                                        <td class="text-center">3500</td>
+                                        <td class="text-center">5000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td>에스카다</td>
+                                        <td class="text-center">3500</td>
+                                        <td class="text-center">5000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>시간대별 구매 통계</span></p>
+                            </div>
+                            <div class="canvas-wrap box m-t--1">
+                                <div class="date">2020.08.10</div>
+                                <div class="canvas bar">
+                                    <canvas id="chart-purchase" style="width:100%;height:100%"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>성별 구매 통계</span></p>
+                            </div>
+                            <div class="canvas-wrap box">
+                                <div class="canvas">
+                                    <canvas id="chart-gender"></canvas>
+                                </div>
+                                <div class="legend-list">
+                                    <div class="yellow">
+                                        <p>여성</p>
+                                    </div>
+                                    <div class="black">
+                                        <p>남성</p>
+                                    </div>
+                                    <div class="gray">
+                                        <p>선택안함</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>연령대별 구매 통계</span></p>
+                            </div>
+                            <div class="canvas-wrap box">
+                                <div class="canvas">
+                                    <canvas id="chart-age"></canvas>
+                                </div>
+                                <div class="legend-list age">
+                                    <div class="blue">
+                                        <p>10대</p>
+                                    </div>
+                                    <div class="orange">
+                                        <p>20대</p>
+                                    </div>
+                                    <div class="red">
+                                        <p>30대</p>
+                                    </div>
+                                    <div class="green">
+                                        <p>40대</p>
+                                    </div>
+                                    <div class="gray"">
+                                        <p>50대 이상</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div class="modal-footer-left d-flex">
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
+                </div>
+
+                <div class="modal-footer-right d-flex">
+                    <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
+                    <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal : 아이템 배송 -->
+<div class="modal modal-size-fix" id="myModal3" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="event-detail-top">
+                    <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                    <p class="code">LEFAS201000152</p>
+                </div>
+                <div class="modal-title">
+                    <ul class="modal-step">
+                        <li class="active">이벤트 생성</li>
+                        <li class="active">진행 상황</li>
+                        <li class="active">아이템 배송</li>
+                        <li>투표</li>
+                        <li>집행</li>
+                    </ul>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div>
+                            <div class="title-square-wrap d-flex align-items-center justify-content-between">
+                                <p class="title-square"><span>상품 정보</span></p>
+                                <a href="" data-toggle="modal" data-role="button" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
+                            </div>
+                            <table class="table table-bordered cell-height-40 mb-0">
+                                <colgroup>
+                                    <col>
+                                    <col style="width:100px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">옵션</th>
+                                        <th class="text-center">판매 수량</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td class="text-center">5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td class="text-center">5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td class="text-center">5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td class="text-center">5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td class="text-center">5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td class="text-center">5,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>라피네르 로얄스페이드 …</td>
+                                        <td class="text-center">5,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>판매자 정보</span></p>
+                            </div>
+                            <ul class="box seller-info">
+                                <li> <span>상호명</span><span>주식회사 호호호</span> </li>
+                                <li> <span>대표자</span><span>정용채</span> </li>
+                                <li> <span>사업자 등록번호</span><span>101-20-02020</span> </li>
+                                <li> <span>통신 판매업 번호</span><span>101-20-02020</span> </li>
+                                <li> <span>사업자 소재지</span><span>서울시 강남구 논현동 101-1 3층</span> </li>
+                                <li> <span>담당자</span><span>정민우</span> </li>
+                                <li> <span>담당자 전화번호</span><span>010-2222-1111</span> </li>
+                                <li> <span>CS 전화번호</span><span>010-2102-1234</span> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>구매 현황</span></p>
+                        </div>
+                        <div class="row justify-content-between m-b-20">
+                            <div class="col-auto d-flex">
+                                <div>
+                                    <select class="select-md">
+                                        <option value="" disabled selected>결제 완료 순</option>
+                                        <option value="1">스페셜 태그(Blue)</option>
+                                    </select>
+                                </div>
+                                <div class="m-l-15">
+                                    <select class="select-md">
+                                        <option value="" disabled selected>결제 수단 별</option>
+                                        <option value="1">스페셜 태그(Blue)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-auto d-flex">
+                                <button type="button" class="btn btn-outline-dark btn-md text-lager">메일 일괄 전송</button>
+                                <button type="button" class="btn btn-outline-dark btn-md text-lager m-l-15">주문내역 다운로드</button>
+                                <button type="button" class="btn btn-outline-dark btn-md text-lager m-l-15">송장번호 업로드</button>
+                            </div>
+                        </div>
+                        <table class="table table-bordered text-center table-layout-auto cell-height-41 mb-0">
+                            <thead>
+                                <tr>
+                                    <th>주문 번호</th>
+                                    <th>주문 일자</th>
+                                    <th>주문 상품</th>
+                                    <th>수량</th>
+                                    <th>주문자</th>
+                                    <th>연락처</th>
+                                    <th>진행 상태</th>
+                                    <th>구매확정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>1</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>배송 완료</td>
+                                    <td>OK</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>3</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>상품 준비중</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>4</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>상품 준비중</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>2</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>상품 준비중</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>2</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>상품 준비중</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>2</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>상품 준비중</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>2</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>상품 준비중</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>1</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>배송 완료</td>
+                                    <td>OK</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>1</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>배송 완료</td>
+                                    <td>OK</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>1</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>배송 완료</td>
+                                    <td>OK</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>1</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>배송 완료</td>
+                                    <td>OK</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>1</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>배송 완료</td>
+                                    <td>OK</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>1</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>배송 완료</td>
+                                    <td>OK</td>
+                                </tr>
+                                <tr>
+                                    <td>1010-2020-0801</td>
+                                    <td>2020.08.01</td>
+                                    <td>라피네르 로얄스페이드 … / 컬러 1</td>
+                                    <td>1</td>
+                                    <td>호호호</td>
+                                    <td>010-2345-6789</td>
+                                    <td>배송 완료</td>
+                                    <td>OK</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="m-t-28">
+                            <ul class="pagination">
+                                <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div class="modal-footer-left d-flex">
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
+                </div>
+
+                <div class="modal-footer-right d-flex">
+                    <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
+                    <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal : 투표 -->
+<div class="modal modal-size-fix" id="myModal4" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="event-detail-top">
+                    <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                    <p class="code">LEFAS201000152</p>
+                </div>
+                <div class="modal-title">
+                    <ul class="modal-step">
+                        <li class="active">이벤트 생성</li>
+                        <li class="active">진행 상황</li>
+                        <li class="active">아이템 배송</li>
+                        <li class="active">투표</li>
+                        <li>집행</li>
+                    </ul>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-3">
+                        <div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>투표 잔여 시간</span></p>
+                            </div>
+                            <div class="box" style="height:187px">
+                                <div class="modal-event-time">
+                                    <div class="deadline">
+                                        <p><strong>18</strong>시 <strong>20</strong>분 <strong>40</strong></p>
+                                    </div>
+                                    <div class="term">
+                                        <p>남은 투표 수 : 99,991 / 100,000</p>
+                                        <p>2020.08.15 ~ 2020.08.14</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="title-square-wrap">
+                                <p class="title-square"><span>투표율</span></p>
+                            </div>
+                            <div class="success-event box">
+                                <div class="success-event-percent">
+                                    <div class="box-title">이벤트 직접 투표율</div>
+                                    <strong class="paint">90%</strong>
+                                </div>
+                                <div class="circle_percent">
+                                    <canvas id="chart-turnout"></canvas>
+                                    <div class="circle_inbox">
+                                        <dl class="circle-text">
+                                            <dt>총 이벤트 투표수</dt>
+                                            <dd>1,200</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="event-count-summary">
+                                    <div class="success">
+                                        <span>직접 투표한 투표수</span>
+                                        <strong>52,000</strong>
+                                    </div>
+                                    <div class="fail">
+                                        <span>자동 투표한 투표수</span>
+                                        <strong>500</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //투표중 -->
+                    <div class="col-9">
+                        <div class="box voting">
+                            <div class="bg-mix">
+                                <canvas id="balls"></canvas>
+                            </div>
+                            <p>투표중...</p>
+                        </div>
+                        <div class="row" id="voting-result" style="display: none;">
+                            <div class="col-4">
+                                <div class="title-square-wrap">
+                                    <p class="title-square"><span>루피커 리스트</span></p>
+                                </div>
+                                <div class="box lupicker-vote">
+                                    <div class="lupicker-vote-title">
+                                        <div class="box-title">루피커 득표수</div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <b>1</b>
+                                            <span>91번 오리</span>
+                                            <span class="paint">30표</span>
+                                        </li>
+                                        <li>
+                                            <b>2</b>
+                                            <span>1009번 후디</span>
+                                            <span class="paint">19표</span>
+                                        </li>
+                                        <li>
+                                            <b>3</b>
+                                            <span>2번 메이</span>
+                                            <span class="paint">3표</span>
+                                        </li>
+                                        <li>
+                                            <b>4</b>
+                                            <span>9999번 티도</span>
+                                            <span class="paint">3표</span>
+                                        </li>
+                                        <li>
+                                            <b>5</b>
+                                            <span>1000번 호빵이</span>
+                                            <span class="paint">1표</span>
+                                        </li>
+                                        <li>
+                                            <b>6</b>
+                                            <span>91번 오리</span>
+                                            <span class="paint">30표</span>
+                                        </li>
+                                        <li>
+                                            <b>7</b>
+                                            <span>1009번 후디</span>
+                                            <span class="paint">19표</span>
+                                        </li>
+                                        <li>
+                                            <b>8</b>
+                                            <span>2번 메이</span>
+                                            <span class="paint">3표</span>
+                                        </li>
+                                        <li>
+                                            <b>9</b>
+                                            <span>9999번 티도</span>
+                                            <span class="paint">3표</span>
+                                        </li>
+                                        <li>
+                                            <b>10</b>
+                                            <span>1000번 호빵이</span>
+                                            <span class="paint">1표</span>
+                                        </li>
+                                        <li>
+                                            <b>11</b>
+                                            <span>91번 오리</span>
+                                            <span class="paint">30표</span>
+                                        </li>
+                                        <li>
+                                            <b>12</b>
+                                            <span>1009번 후디</span>
+                                            <span class="paint">19표</span>
+                                        </li>
+                                        <li>
+                                            <b>13</b>
+                                            <span>2번 메이</span>
+                                            <span class="paint">3표</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="title-square-wrap d-flex align-items-center justify-content-between">
+                                    <p class="title-square"><span>직접 투표자 리스트</span></p>
+                                    <a href="#fsModal" data-toggle="modal" data-role="button" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
+                                </div>
+
+                                <table class="table table-bordered">
+                                    <colgroup>
+                                        <col style="width: 37%;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="text-center">투표자</th>
+                                            <th scope="col" class="text-center">고유번호</th>
+                                            <th scope="col" class="text-center">투표번호</th>
+                                            <th scope="col" class="text-center">득표수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left">오리</td>
+                                            <td class="text-center">91</td>
+                                            <td class="text-center">777</td>
+                                            <td class="text-center">30</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">후디</td>
+                                            <td class="text-center">1009</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">19</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">메이</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">호빵이</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">7777</td>
+                                            <td class="text-center">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">오리</td>
+                                            <td class="text-center">91</td>
+                                            <td class="text-center">777</td>
+                                            <td class="text-center">30</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">후디</td>
+                                            <td class="text-center">1009</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">19</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">메이</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">호빵이</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">7777</td>
+                                            <td class="text-center">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">오리</td>
+                                            <td class="text-center">91</td>
+                                            <td class="text-center">777</td>
+                                            <td class="text-center">30</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">후디</td>
+                                            <td class="text-center">1009</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">19</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">메이</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">호빵이</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">7777</td>
+                                            <td class="text-center">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-4">
+                                <div class="title-square-wrap d-flex align-items-center justify-content-between">
+                                    <p class="title-square"><span>자동 투표자 리스트</span></p>
+                                    <a href="#fsModal" data-toggle="modal" data-role="button" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
+                                </div>
+                                <table class="table table-bordered">
+                                    <colgroup>
+                                        <col style="width: 37%;">
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="text-center">투표자</th>
+                                            <th scope="col" class="text-center">고유번호</th>
+                                            <th scope="col" class="text-center">투표번호</th>
+                                            <th scope="col" class="text-center">득표수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-left">오리</td>
+                                            <td class="text-center">91</td>
+                                            <td class="text-center">777</td>
+                                            <td class="text-center">30</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">후디</td>
+                                            <td class="text-center">1009</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">19</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">메이</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">호빵이</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">7777</td>
+                                            <td class="text-center">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">오리</td>
+                                            <td class="text-center">91</td>
+                                            <td class="text-center">777</td>
+                                            <td class="text-center">30</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">후디</td>
+                                            <td class="text-center">1009</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">19</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">메이</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">호빵이</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">7777</td>
+                                            <td class="text-center">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">오리</td>
+                                            <td class="text-center">91</td>
+                                            <td class="text-center">777</td>
+                                            <td class="text-center">30</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">후디</td>
+                                            <td class="text-center">1009</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">19</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">메이</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">호빵이</td>
+                                            <td class="text-center">1000</td>
+                                            <td class="text-center">7777</td>
+                                            <td class="text-center">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div class="modal-footer-left d-flex">
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
+                </div>
+                <div class="modal-footer-right d-flex">
+                    <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
+                    <button type="button" class="btn btn-dark btn-lg" data-event="next-step">다음 단계</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal : 집행 -->
+<div class="modal modal-size-fix" id="myModal5" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="event-detail-top">
+                    <h1 class="subject paint">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</h1>
+                    <p class="code">LEFAS201000152</p>
+                </div>
+                <div class="modal-title">
+                    <ul class="modal-step">
+                        <li class="active">이벤트 생성</li>
+                        <li class="active">진행 상황</li>
+                        <li class="active">아이템 배송</li>
+                        <li class="active">투표</li>
+                        <li class="active">집행</li>
+                    </ul>
+                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>비용 결재</span></p>
+                        </div>
+                        <div class="modal-cost">
+
+                            <table class="table table-bordered table-form">
+                                <colgroup>
+                                    <col width="246px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>결재 내용</th>
+                                        <td>
+                                            <div class="input-group modal-textarea title align-items-end">
+                                                <textarea class="form-control" maxlength="40" placeholder="결재 내용을 간략하게 설명해주세요."></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>결재 금액</th>
+                                        <td>
+                                            <div class="form-term">
+                                                <input type="text" value="07" class="form-control">
+                                                <span>원</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>기타 인증 서류</th>
+                                        <td>
+                                            <form id="upload" action="" method="POST" enctype="multipart/form-data">
+                                                <fieldset>
+
+                                                    <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+
+                                                    <div class="file-upload">
+                                                        <div class="">
+                                                            <label class="btn btn-outline-dark btn-md" for="fileselect">파일 선택</label>
+                                                            <input type="file" id="fileselect" name="fileselect[]" multiple="multiple">
+                                                        </div>
+                                                        <div class="example-text m-l-15">
+                                                            <p>* 첨부 파일을 마우스로 끌어 넣으세요.</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="filedrag" id="filedrag">
+                                                        <div class="files" id="files"></div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-next-button">
+                            <button type="button" class="btn btn-outline-dark w-400px">+ 결재 정보 추가</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <div class="modal-footer-left d-flex">
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
+                </div>
+                <div class="modal-footer-right d-flex">
+                    <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
+                    <button type="button" class="btn btn-dark btn-lg">수정 요청</button>
+                    <button type="button" class="btn btn-dark btn-lg">결재 요청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //투표중 balls
+    var canvas = document.getElementById("balls");
+    var ctx = canvas.getContext("2d");
+    var canvasWidth;
+    var canvasHeight;
+    var colors = ["#ffff00", "#ffff00", "#ffff00", "#ffff00", "#ffff00", "#ffff00", "#000000"];
+    var setings = [];
+    var isMouseDown = false;
+    var SPRING = 0.1;
+    var BOUNCE = -0.3;
+    var GRAVITY = 0.3;
+    var mouse = {
+        x : 0,
+        y : 0
+    };
+
+    function mixInit() {
+        reset();
+
+        for( var i = 0; i < 10; i++ ) {
+            setings.push( new setBall( canvasWidth / 2, canvasHeight / 2 ) );
+        };
+
+        animate();
+    }
+
+    function reset() {
+        canvasWidth = $('.voting').width();
+        canvasHeight = $('.voting').height();
+        canvas.width = canvasWidth;
+        canvas.height = canvasHeight;
+    }
+    /**
+     *@param {Number} x
+    *@param {Number} y
+    */
+    function setBall( x, y ) {
+
+        this.x = x;
+        this.y = y;
+        this.vx = Math.random() * 6 - 3;
+        this.vy = Math.random() * 6 - 3;
+        this.radius = 60;
+        this.cor = colors[Math.random() * colors.length << 0];
+
+    }
+
+    function draw() {
+        setings.forEach( function( ball, i ) {
+            ctx.beginPath();
+            ctx.fillStyle = ball.cor;
+            ctx.arc( ball.x, ball.y, ball.radius, 0, Math.PI * 2, );
+            ctx.fill();
+
+            move( ball, i );
+
+        } );
+    }
+
+    function animate() {
+
+        ctx.clearRect( 0, 0, canvasWidth, canvasHeight );
+        draw();
+        active();
+        requestAnimationFrame( animate );
+
+    }
+
+    /**
+     *@param {Object} ball
+    *@param {Number} i
+    */
+    function move( ball, i ) {
+
+        for( var j = i + 1, len = setings.length; j < len; j++ ) {
+
+            var ball1 = ball;
+            var ball2 = setings[j];
+            var dx = ball2.x - ball1.x;
+            var dy = ball2.y - ball1.y;
+            var dist = Math.sqrt( dx * dx + dy * dy );
+            var distMin = ball1.radius + ball2.radius;
+
+            if( dist < distMin ) {
+
+                var angle = Math.atan2( dy, dx );
+                var tx = ball1.x + Math.cos( angle ) * distMin;
+                var ty = ball1.y + Math.sin( angle ) * distMin;
+                var ax = ( tx - ball2.x ) * SPRING * 0.5;
+                var ay = ( ty - ball2.y ) * SPRING * 0.5;
+                var depth = ( distMin - dist ) / ( dist + 1 );
+
+                ball1.x += ( ball1.x - ball2.x ) * depth * 0.5;
+                ball1.y += ( ball1.y - ball2.y ) * depth * 0.5;
+
+                ball1.vx -= ax;
+                ball1.vy -= ay;
+
+                ball2.vx += ax;
+                ball2.vy += ay;
+            }
+        }
+
+        ball.vy += GRAVITY;
+        ball.x += ball.vx;
+        ball.y += ball.vy;
+
+        if( ball.x + ball.radius > canvasWidth ) {
+            ball.x = canvasWidth - ball.radius;
+            ball.vx *= BOUNCE;
+        } else
+        if( ball.x - ball.radius < 0 ) {
+            ball.x = ball.radius;
+            ball.vx *= BOUNCE;
+        }
+
+        if( ball.y + ball.radius > canvasHeight ) {
+            ball.y = canvasHeight - ball.radius;
+            ball.vy *= BOUNCE;
+        } else
+        if( ball.y - ball.radius < 0 ) {
+            ball.y = ball.radius;
+            ball.vy *= BOUNCE;
+        }
+    }
+
+    function active() {
+        if( isMouseDown ) {
+            setings.push( new setBall( mouse.x, mouse.y ) );
+        }
+    }
+</script>
 <script>
     $(document).ready(function () {
-        /*
-            common.js 에 공통으로 호출하는 부분이 있긴 한데
-            $('footer').load() 의 영향으로 이벤트생성 모달 안에 있는 셀렉트들이 안나오네요.
-            그래서 여기서 한번 더 써줬어요~~~ 개발에서는 무시해주세요!
-        */
-        $(".select-sm").selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
-        $(".select-md").selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
-        $(".select-lg").selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
+        //아이템 배송비 select
+        $('#delivery-type').selectmenu({
+            change: function( event, ui ) {
+                var label = ui.item.label;
+                var value = ui.item.value;
+
+                console.log(label, value);
+                $('[data-delivery-type]').hide();
+                $('[data-delivery-type="' + value + '"]').show();
+
+                //선택된 아이템 비활성화
+                $('#delivery-type').selectmenu('refresh');
+            }
+        });
 
         //datetimepicker
         $('#datetimepicker1').datetimepicker({
@@ -583,5 +2319,251 @@
                 $('#datetimepicker1').prop('disabled',true);
             }
         });
+
+        //datetimepicker
+        $('#datetimepicker2').datetimepicker({
+            sideBySide: true,
+            dayViewHeaderFormat: "YYYY. M",
+            format: 'YYYY.MM.DD hh:mm',
+            icons: {
+                up: 'fas fa-angle-up',
+                down: 'fas fa-angle-down',
+            }
+        });
+
+        //이벤트 오픈 날짜 선택
+        $('[name="eventOpenDate"]').on('change',function(){
+            if($('[name="eventOpenDate"]:checked').val() == 'radio4'){
+                $('#datetimepicker2').prop('disabled',false);
+            }else{
+                $('#datetimepicker2').prop('disabled',true);
+            }
+        });
+
+        //다음,이전 단계 모달로 이동
+        $("div[id^='myModal']").each(function () {
+            var currentModal = $(this);
+            //click next
+            currentModal.find('[data-event="next-step"]').click(function () {
+                currentModal.modal('hide');
+                currentModal.next("div[id^='myModal']").modal('show');
+
+            });
+            //click prev
+            currentModal.find('[data-event="prev-step"]').click(function () {
+                currentModal.modal('hide');
+                currentModal.prev("div[id^='myModal']").modal('show');
+            });
+        });
+
+        $('#myModal2').on('shown.bs.modal', function () {
+            var success = document.getElementById('chart-success').getContext('2d');
+            window.myChart1 = new Chart(success, doughnutSuccess);
+
+            var purchase = document.getElementById('chart-purchase').getContext('2d');
+            window.myChart2 = new Chart(purchase, barChart);
+
+            var gender = document.getElementById('chart-gender').getContext('2d');
+            window.myChart3 = new Chart(gender, doughnutGender);
+
+            var age = document.getElementById('chart-age').getContext('2d');
+            window.myChart4 = new Chart(age, doughnutAge);
+        });
+
+        //로딩 후 결과 보여주기 샘플
+        $('#myModal4').on('shown.bs.modal', function () {
+            mixInit();
+            setTimeout(function(){
+                $('.voting').hide();
+                $('#voting-result').show();
+            },3500);
+
+            var turnout = document.getElementById('chart-turnout').getContext('2d');
+            window.myChart5 = new Chart(turnout, doughnutTurnout);
+        });
+
+
     });
+    //이벤트 달성률
+    var doughnutSuccess = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [91, 9],
+                borderWidth: 0,
+                backgroundColor: [
+                    '#ffff00',
+                    '#000'
+                ],
+            }],
+            labels: [
+                '구매한 이벤트 아이템 개수',
+                '남은 이벤트 아이템 개수'
+            ],
+        },
+        options: {
+            responsive: true,
+            rotation: -0.3 * Math.PI,
+            cutoutPercentage: 85,
+            maintainAspectRatio: false,
+            animation: {
+                animateScale: false,
+                animateRotate: false
+            },
+            legend: {
+                display: false
+            },
+        }
+    };
+
+    //시간대별 구매 통계
+    var barChart = {
+        type: 'bar',
+        data: {
+            datasets: [{
+                data: [20, 15, 16, 16, 20, 20, 60, 17, 17, 80, 85, 20],
+                barPercentage: 0.2,
+                backgroundColor: "#000000"
+            }],
+            labels: ["01-02h", "03-04h", "05-06h", "07-08h", "09-10h", "11-12h", "13-14h", "15-16h",
+                "17-18h", "19-20h", "21-22h", "23-24h"
+            ],
+        },
+        options: {
+            responsive: false,
+            maintainAspectRatio: true,
+            animation: {
+                animateScale: false,
+                animateRotate: false
+            },
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false,
+                        color: "black"
+                    },
+                    ticks: {
+                        fontColor : '#000000',
+                        fontSize : 10,
+                        fontFamily : 'NanumBarunGothic',
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                        fontColor : '#000000',
+                        fontSize : 10,
+                        fontFamily : 'NanumBarunGothic',
+                    }
+                }]
+            }
+        }
+    };
+
+    //성별 구매 통계
+    var doughnutGender = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [30, 32, 48],
+                weight: 1,
+                backgroundColor: [
+                    '#7b7b7b',
+                    '#000',
+                    '#ffff00',
+                ]
+            }],
+            labels: [
+                '선택안함',
+                '남성',
+                '여성',
+            ],
+        },
+        options: {
+            responsive: true,
+            rotation: 1 * Math.PI,
+            animation: {
+                animateScale: false,
+                animateRotate: false
+            },
+            cutoutPercentage: 85,
+            maintainAspectRatio: false,
+            legend: {
+                display: false
+            },
+        }
+    };
+
+    //연령대별 구매 통계
+    var doughnutAge = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [12, 28, 24, 22, 14],
+                weight: 1,
+                backgroundColor: [
+                    '#36a753',
+                    '#4286f5',
+                    '#ea4335',
+                    '#fabc05',
+                    '#8a8d92'
+                ]
+            }],
+            labels: [
+                '50대 이상',
+                '10대',
+                '30대',
+                '20대',
+                '40대',
+            ],
+        },
+        options: {
+            responsive: true,
+            rotation: -0.3 * Math.PI,
+            animation: {
+                animateScale: false,
+                animateRotate: false
+            },
+            cutoutPercentage: 85,
+            maintainAspectRatio: false,
+            legend: {
+                display: false
+            },
+        }
+    };
+
+    //투표율
+    var doughnutTurnout = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [91, 9],
+                borderWidth: 0,
+                backgroundColor: [
+                    '#ffff00',
+                    '#000'
+                ],
+            }],
+            labels: [
+                '구매한 이벤트 아이템 개수',
+                '남은 이벤트 아이템 개수'
+            ],
+        },
+        options: {
+            responsive: true,
+            rotation: -0.3 * Math.PI,
+            cutoutPercentage: 85,
+            maintainAspectRatio: false,
+            animation: {
+                animateScale: false,
+                animateRotate: false
+            },
+            legend: {
+                display: false
+            },
+        }
+    };
 </script>

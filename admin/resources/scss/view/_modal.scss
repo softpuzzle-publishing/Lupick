@@ -8,7 +8,7 @@
 .modal-step {
     display: flex;align-items: center;position: relative;
     li{
-        opacity: 0.3;font-size: 24px;line-height: 1.125;
+        opacity: 0.3;font-size: 24px;line-height: 1.125;font-weight: 400;
         & + li{
             &::before{
                 content: '';display: inline-block;background: url('../images/icon-month-next.svg') no-repeat 50% 50%;width: 10px;height: 20px;margin: 0 20px;transform: translateY(2px);
@@ -99,7 +99,7 @@
 }
 
 .voting{
-    width: 100%;height: 710px;margin-top: 69px;position: relative;
+    width: 100%;height: 715px;margin-top: 69px;position: relative;
     .bg-balls{height: 100%;}
     p{font-size:50px;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
 }
@@ -154,7 +154,7 @@
 }
 
 .seller-info{
-    padding: 30px;
+    padding: 29px 30px;
     li{
         display: flex;flex-wrap: wrap;position: relative;line-height: 1.143;padding-left: 15px;
         &::after{
@@ -215,7 +215,7 @@
     .modal-body{
         height: 814px;
         max-height: 814px;
-        padding: 0 40px 40px;
+        padding: 0 40px 0;
     }
     .modal-footer{
         padding: 20px 40px;
@@ -224,13 +224,23 @@
         .nav{margin-top: 30px;}
         .modal-header{padding-bottom: 0;}
         .modal-body{
-            height: 768px;
+            height: 769px;
         }
+    }
+    .m-l-15{margin-left: 11px !important;}
+    .m-r-15{margin-right: 11px !important;}
+    .d-flex >{
+        .m-l-15{margin-left: 15px !important;}
+        .m-r-15{margin-right: 15px !important;}
     }
 }
 
+.event-detail-top + .modal-title{
+    padding-top: 0;
+}
+
 .event-detail-top{
-    display: flex;align-items: center;margin-bottom: 27px;
+    display: flex;align-items: center;margin-bottom: 27px;margin-top: -10px;
     .subject{font-size: 20px;font-weight: 700;line-height: 1.15;margin-right: 20px;}
     .code{color: rgba(0,0,0,0.6);font-size: 20px;font-weight: 700;line-height: 1;font-family: 'Gilroy';}
 }
