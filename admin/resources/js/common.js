@@ -1,7 +1,3 @@
-//중첩된 모달이 닫힐때 스타일 삭제 방지
-$('[data-overlap="true"]').on('hidden.bs.modal', function (e) {
-    $('body').addClass('modal-open');
-});
 
 $('textarea, input').on("input", function () {
     if ($(this).attr('maxlength') !== "") {
@@ -57,6 +53,17 @@ $(document).ready(function () {
         if($('.colorpicker-group').length > 0){
             $('.colorpicker-group').colorpicker();
         }
+
+        //중첩된 모달이 닫힐때 스타일 삭제 방지
+        $('[data-overlap="true"]').on('hidden.bs.modal', function (e) {
+            $('body').addClass('modal-open');
+        });
+        //열려있는 모달 갯수 파악하여 3중 모달 이상일때 가장 최근 모달 z-index 올림 처리
+        $('.modal').on('show.bs.modal', function (e) {
+            if($('.modal.show').length > 1){
+                $(this).css('z-index','1600');
+            }
+        });
     });
 });
 
