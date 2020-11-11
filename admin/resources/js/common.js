@@ -31,11 +31,18 @@ $('aside').load('../_include/aside.html');
 $('footer').load('../_include/footer.html');
 
 $(document).ready(function () {
-    //select
+
     $(window).on('load', function(){
-        $(".select-sm").selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
-        $(".select-md").selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
-        $(".select-lg").selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
+        //select
+        $(".select-sm").each(function(){
+            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
+        });
+        $(".select-md").each(function(){
+            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
+        });
+        $(".select-lg").each(function(){
+            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
+        });
 
         // call initialization file
         if($('.file-upload').length > 0){
