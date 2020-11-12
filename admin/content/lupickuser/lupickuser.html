@@ -802,12 +802,11 @@
                     $('.operator').text('-');
                 }
             });
-
-            $(window).on('load', function(){
+            setTimeout(function(){
                 $('div[id^="myModal"]').each(function(){
                     $(this).attr('data-overlap','true');
                 });
-            });
+            }, 1000)
         });
     </script>
 

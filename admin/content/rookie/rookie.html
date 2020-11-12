@@ -509,11 +509,11 @@
     <script src="../../resources/js/common.js"></script>
     <script>
         $(document).ready(function () {
-            $(window).on('load', function(){
+            setTimeout(function(){
                 $('div[id^="myModal"]').each(function(){
                     $(this).attr('data-overlap','true');
                 });
-            });
+            }, 1000)
         });
     </script>
 
