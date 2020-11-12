@@ -607,7 +607,7 @@
                             <div class="title-square-wrap">
                                 <p class="title-square"><span>이벤트 달성률</span></p>
                             </div>
-                            <div class="success-event box">
+                            <div class="success-event box" style="height:453px;">
                                 <div class="success-event-percent">
                                     <div class="box-title">이벤트 성공률</div>
                                     <strong class="paint">90%</strong>
@@ -1748,11 +1748,12 @@
         $('#datetimepicker2').datetimepicker({
             sideBySide: true,
             dayViewHeaderFormat: "YYYY. M",
-            format: 'YYYY.MM.DD hh:mm',
+            format: 'YYYY.MM.DD HH:mm',
             icons: {
                 up: 'fas fa-angle-up',
                 down: 'fas fa-angle-down',
-            }
+            },
+            container:'#div1',
         });
 
         //이벤트 오픈 날짜 선택

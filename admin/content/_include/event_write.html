@@ -61,6 +61,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            
                             <tr>
                                 <th>이벤트 예약</th>
                                 <td>
@@ -575,13 +576,12 @@
         $('#datetimepicker1').datetimepicker({
             sideBySide: true,
             dayViewHeaderFormat: "YYYY. M",
-            format: 'YYYY.MM.DD hh:mm',
+            format: 'YYYY.MM.DD HH:mm',
             icons: {
                 up: 'fas fa-angle-up',
                 down: 'fas fa-angle-down',
-            }
+            },
         });
-
         //이벤트 오픈 날짜 선택
         $('[name="eventOpenDate"]').on('change',function(){
             if($('[name="eventOpenDate"]:checked').val() == 'radio2'){
