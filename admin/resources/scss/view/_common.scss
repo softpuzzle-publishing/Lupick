@@ -120,7 +120,7 @@ a:focus{outline: none;box-shadow: none !important;}
 .icon-file{width: 16px;height: 16px;background-image: url('../images/icon-file.svg');}
 .icon-heart{width: 14px;height: 13px;background-image: url('../images/icon-heart.svg');}
 .icon-bell{width: 16px;height: 13px;background-image: url('../images/icon-bell.svg');}
-.icon-link-arr{width: 8px;height: 13px;background-image: url('../images/icon-link-arr.svg');vertical-align: middle;}
+.icon-link-arr{width: 7px;height: 12px;background-image: url('../images/icon-link-arr.svg');vertical-align: middle;}
 .icon-download{width: 40px;height: 40px;background-image: url('../images/icon-download.svg');}
 
 .icon-dashboard{width: 24px;height: 24px;background-image: url('../images/icon-gnb-dashboard.svg');}
@@ -161,7 +161,7 @@ a:focus{outline: none;box-shadow: none !important;}
     &:focus{outline: none;}
 }
 textarea.form-control{
-    padding: 15px;
+    padding: 15px;line-height: 1.5;resize: none;
 }
 .form-fake{
     border: 1px solid $border-color;padding: 0.6125rem 1rem;
@@ -240,7 +240,6 @@ textarea.form-control{
         }
         &:focus{outline: 0;}
     }
-
 }
 
 #nav{
@@ -266,6 +265,9 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
 //button
 .btn{
     height: 40px;min-width:120px;padding: 12px;
+    td > &{
+        + .btn{margin-left: 6px;}
+    }
 }
 .btn-sm{
     height: 30px;min-width:80px;padding: 5px;
@@ -286,15 +288,16 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
     height: 65px;min-width:300px;font-size: 20px;font-weight: 700;padding: 20px;
 }
 .btn-outline-dark{
+    background-color: #fff;
     &:disabled{color: #c6c6c6;border-color: #c6c6c6 !important;}
 }
 
 //datetimepicker
 .bootstrap-datetimepicker-widget{
-    width: 320px !important;box-shadow: 3px 3px 10px rgba(0,0,0,0.15);
+    width: 320px !important;box-shadow: 3px 3px 10px rgba(0,0,0,0.15);background: #fff;
     > .row{margin: 0;}
     .datepicker{
-        flex: 0 0 100%;max-width: 100%;padding: 10px 30px 0;
+        flex: 0 0 100%;max-width: 100%;padding: 15px 30px 0;
         thead{border-bottom: 1px solid $border-color;}
     }
     .timepicker{
@@ -303,7 +306,6 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
     }
     &.dropdown-menu{padding: 0;}
 }
-.bootstrap-datetimepicker-widget{display:block !important;}
 .bootstrap-datetimepicker-widget table {
     table-layout: auto;
 }

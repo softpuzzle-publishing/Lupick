@@ -12,7 +12,13 @@
         opacity: 0.3;font-size: 24px;line-height: 1.125;font-weight: 400;
         & + li{
             &::before{
-                content: '';display: inline-block;background: url('../images/icon-month-next.svg') no-repeat 50% 50%;width: 10px;height: 20px;margin: 0 20px;transform: translateY(2px);
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                background: url('../images/icon-step-arr-active.svg') no-repeat 50% 50%;
+                width: 14px;
+                height: 24px;
+                margin: 0 20px;
             }
         }
         &.active{opacity: 1;}

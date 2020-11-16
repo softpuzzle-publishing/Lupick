@@ -9,7 +9,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <ul class="nav nav-pills" id="tab-event-add">
+                <ul class="nav nav-pills" id="tab-event-write-add">
                     <li class="nav-item modal-nav">
                         <a class="nav-link active" href="#tab1">이벤트 정보</a>
                     </li>
@@ -24,7 +24,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="modal-body p-b-25" data-spy="scroll" data-target="#tab-event-add" data-offset="0">
+            <div class="modal-body p-b-25" data-spy="scroll" data-target="#tab-event-write-add" data-offset="0">
                 <!-- //이벤트 정보 -->
                 <div class="info-event" id="tab1">
                     <div class="title-square-wrap">
@@ -61,7 +61,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            
+
                             <tr>
                                 <th>이벤트 예약</th>
                                 <td>
@@ -581,6 +581,10 @@
                 up: 'fas fa-angle-up',
                 down: 'fas fa-angle-down',
             },
+            widgetPositioning: {
+                horizontal: 'left',
+                vertical: 'bottom'
+            }
         });
         //이벤트 오픈 날짜 선택
         $('[name="eventOpenDate"]').on('change',function(){
