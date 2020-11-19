@@ -612,7 +612,10 @@
 			if (tooltip.opacity === 0) {
 				tooltipEl.style.opacity = 0;
 				return;
-			}
+			}else{
+                var a = $(this);
+                console.log(a);
+            }
 
 			// Set caret Position
 			tooltipEl.classList.remove('above', 'below', 'no-transform');
@@ -745,6 +748,10 @@
                             fontFamily : 'Gilroy',
                             stepSize: 1,
                             beginAtZero: true,
+                            padding:15,
+                        },
+                        gridLines:{
+                            drawBorder:false,
                         }
                     }]
                 }
