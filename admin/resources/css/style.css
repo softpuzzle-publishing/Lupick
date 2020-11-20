@@ -613,6 +613,8 @@ html.is-editing .save { display: block !important; position: relative; z-index: 
 
 .card-list.feed .info { height: 140px; }
 
+.card-list li.finished .progress-bar { background-color: #7b7b7b; }
+
 #resumeProficiencies { width: 100%; }
 
 #resumeProficienciesTop { width: 100%; text-align: left; font-weight: 600; }
