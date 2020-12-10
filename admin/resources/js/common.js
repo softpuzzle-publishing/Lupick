@@ -1,4 +1,3 @@
-
 $('textarea, input').on("input", function () {
     if ($(this).attr('maxlength') !== "") {
         console.log(1)
@@ -411,7 +410,3 @@ var fileUpload = {
         }
     }
 };
-
-
-
-

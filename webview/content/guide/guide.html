@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupick</title>
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div id="article">
+    <!-- 텍스트 -->
+    <div>
+
+    </div>
+    <!-- 버튼 -->
+    <section>
+        <div>
+            <button type="button" class="btn btn-outline-dark btn-sm">수정</button>
+            <button type="button" class="btn btn-outline-dark btn-sm">메일 발송</button>
+            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-outline-dark btn-md">인증번호 발송</button>
+            <button type="button" class="btn btn-outline-dark btn-md" disabled>인증번호 발송</button>
+            <button type="button" class="btn btn-outline-dark btn-md w-400px">+ 결재 정보 추가</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-outline-dark btn-md text-lager">주문내역 다운로드</button>
+            <button type="button" class="btn btn-outline-dark btn-md text-lager">송장번호 업로드</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-darkgray btn-lg">이전 단계</button>
+            <button type="button" class="btn btn-dark btn-lg">다음 단계</button>
+            <button type="button" class="btn btn-dark btn-lg" disabled>다음 단계</button>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-outline-dark btn-md"><strong>마진 계산기</strong></button>
+            <button type="button" class="btn btn-outline-dark btn-md"><strong>앱 프리뷰</strong></button>
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-dark btn-lg h-50">로그인</button>
+            <button type="button" class="btn btn-dark btn-lg h-50" disabled>로그인</button>
+        </div>
+        <div>
+            <button type="button" class="btn btn-dark btn-xl h-60">메일 발송</button>
+            <button type="button" class="btn btn-dark btn-xl h-60" disabled>메일 발송</button>
+        </div>
+        <div class="col-auto p-0">
+            <a href="">
+                <div class="create-banner">
+                    <i class="icon-plus"></i>
+                </div>
+            </a>
+        </div>
+        <div class="btn-next h-60">
+            <p class="font-16">상품정보고지</p>
+            <i class="icon-link-arr"></i>
+        </div>
+    </section>
+    <!-- 셀렉트박스 -->
+    <section>
+        <select class="select-md">
+            <option value="" disabled selected>배송비 옵션 선택</option>
+            <option value="1">기본 배송</option>
+            <option value="2">조건별 무료배송</option>
+            <option value="3">수량별 배송비</option>
+            <option value="4">착불 배송</option>
+            <option value="1">기본 배송</option>
+            <option value="2">조건별 무료배송</option>
+            <option value="3">수량별 배송비</option>
+            <option value="4">착불 배송</option>
+            <option value="1">기본 배송</option>
+            <option value="2">조건별 무료배송</option>
+            <option value="3">수량별 배송비</option>
+            <option value="4">착불 배송</option>
+        </select>
+        <select class="select-lg">
+            <option value="" selected>진행중인 이벤트</option>
+            <option value="1">대기중인 이벤트</option>
+            <option value="1">마감된 이벤트</option>
+        </select>
+    </section>
+    <!-- badge -->
+    <section>
+        <span class="badge badge-dark">예약 이벤트</span>
+        <span class="badge badge-gray">승인 대기</span>
+        <span class="badge badge-dark gilroy">LUPICK SPECIAL</span>
+        <span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span>
+    </section>
+    <section>
+        <div class="custom-control custom-check custom-control-inline">
+            <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk1" value="chk1">
+            <label class="custom-control-label" for="chk1"><span class="badge badge-dark">LOWEST PRICE</span></label>
+        </div>
+        <div class="custom-control custom-check custom-control-inline">
+            <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk2" value="chk2">
+            <label class="custom-control-label" for="chk2"><span class="badge badge-dark">LOWEST PRICE</span></label>
+        </div>
+        <div class="custom-control custom-check custom-control-inline">
+            <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk3" value="chk3">
+            <label class="custom-control-label" for="chk3">동의합니다</label>
+        </div>
+    </section>
+</div>
+
+    <script src="../../resources/js/common.js"></script>
+</body>
+</html>

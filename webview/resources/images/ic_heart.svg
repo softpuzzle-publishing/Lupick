@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#000" fill-rule="nonzero">
+            <g>
+                <g>
+                    <path d="M17 23v2h-4v-2h4zm-4-2v2h-2v-2h2zm6 0v2h-2v-2h2zm-8-2v2H9v-2h2zm10 0v2h-2v-2h2zM9 17v2H7v-2h2zm14 0v2h-2v-2h2zM7 9v8H5V9h2zm18 0v8h-2V9h2zm-9 0v4h-2V9h2zm-2-2v2H7V7h7zm9 0v2h-7V7h7z" transform="translate(-83 -364) translate(73 354) translate(10 10)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
