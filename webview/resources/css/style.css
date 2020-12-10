@@ -45,6 +45,8 @@ i, em { font-style: normal; }
 
 .m-b-10 { margin-bottom: 10px; }
 
+.m-r-10 { margin-right: 10px; }
+
 .g-b { font-family: 'Gilroy'; font-size: 18px; line-height: 1.35; }
 
 button { border: 0; background: transparent; padding: 0; }
@@ -87,7 +89,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .btn-lg.btn-outline-dark { min-width: 150px; }
 
-.btn-xl { min-width: 100%; font-size: 20px; font-weight: 700; padding: 15px 20px; }
+.btn-xl { min-width: 100%; font-size: 20px; font-weight: 700; padding: 25px 30px; }
 
 .btn-outline-dark { background-color: #fff; }
 
@@ -171,21 +173,35 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.detail { width: 100%; height: 100%; position: relative; margin: 0 auto; }
 
+.modal-dialog.detail .modal-alert { width: 100%; position: absolute; padding: 20px; bottom: 1000px; }
+
+.modal-dialog.detail .modal-alert .wrap { padding: 20px; background-color: #fff; border-radius: 7px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.modal-dialog.detail .modal-alert .wrap .icon { width: 20px; height: 20px; background-image: url(../../resources/images/ic_alert_large.svg); background-size: cover; background-position: center; margin-right: 15px; }
+
+.modal-dialog.detail .modal-alert.active { bottom: inherit; }
+
 .modal-dialog.detail .modal-content { width: 100%; position: absolute; bottom: 0; }
+
+.modal-dialog.detail .modal-content .wrap { padding: 30px 20px; }
 
 .modal-dialog.detail .modal-content .btn { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 .modal-dialog.detail .modal-content .title { display: inline-block; margin-bottom: 10px; }
 
-.modal-dialog.detail .wrap { padding: 30px 20px; }
-
 body { color: #000; line-height: 20px; font-size: 16px; word-break: keep-all; }
 
 .wrap { padding: 0 0 70px 0; }
 
+.close { width: 30px; height: 30px; display: inline-block; background-image: url(../../resources/images/btn_exit.svg); background-size: cover; background-position: center; background-repeat: no-repeat; position: fixed; top: 20px; right: 20px; }
+
 .container-wrap { padding: 0 20px; overflow: hidden; }
 
-.btn.fixed { position: fixed; bottom: 0; left: 0; z-index: 100; }
+.btn.fixed { position: fixed; bottom: 0; left: 0; z-index: 100; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.btn.fixed.yellow { color: #ffff00; }
+
+.btn.fixed .icon { width: 18px; height: 16px; display: inline-block; background-image: url(../../resources/images/arrow.svg); background-size: cover; background-position: center; background-repeat: no-repeat; vertical-align: middle; }
 
 .component { margin-top: 30px; }
 
@@ -317,9 +333,15 @@ body { color: #000; line-height: 20px; font-size: 16px; word-break: keep-all; }
 
 .item.share .ic-ask { width: 30px; height: 30px; background-image: url(../../resources/images/ic_ask.svg); background-size: cover; background-position: center; background-repeat: no-repeat; }
 
-.sel-option { padding: 20px 0; }
+.sel-option { padding: 20px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
-.sel-option .close { width: 15px; height: 15px; background-image: url("../../resources/images/ic_exit.svg"); background-position: center; background-size: cover; }
+.sel-option .sel-delete { width: 10px; height: 10px; background-image: url("../../resources/images/ic_exit.svg"); background-position: center; background-size: cover; }
 
 .sel-option .spinner-wrap { margin-top: 15px; }
+
+.total-price { padding: 15px 0; border-top: 2px solid #000; border-bottom: 2px solid #000; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.total-price p { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.total-price span { display: inline-block; }
 /*# sourceMappingURL=style.css.map */

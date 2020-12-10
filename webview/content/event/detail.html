@@ -16,6 +16,7 @@
 </head>
 <body>
     <div class="wrap">
+        <div class="close" onclick="closeBtn()"></div>
         <div class="detail-img" style="background-image:url('../../resources/images/@event_01.png')">
         </div>
         <div class="container-wrap">
@@ -29,7 +30,8 @@
                     <!-- <span class="date font-12">참여∙이벤트 실패</span> -->
                     <!-- <span class="date font-12">참여∙이벤트 성공</span> -->
                 </div>
-                <div class="badge badge-dark">LUPICK COLLAB</div>
+                <span class="badge badge-dark">LUPICK COLLAB</span>
+                <span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span>
             </div>
 
             <div class="notice">
@@ -278,11 +280,36 @@
                 <p>문의하기</p>
             </div>
         </div>
-        <button type="button" class="btn btn-dark btn-xl h-70 fixed" data-toggle="modal" data-target="#modal-detail">PICK</button>
+        <a href="#" class="btn btn-dark btn-xl h-70 fixed yellow" data-toggle="modal" data-target="#modal-detail">PICK</a>
+
+        <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed">결제정보 보기</a> -->
+        
+        <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed justify-content-between">
+            <p class="font-18 bold">투표하기 <span class="icon"></span></p>
+            <p class="font-18">23:19:07</p>
+        </a> -->
+
         <!-- <button type="button" class="btn btn-dark btn-xl h-60 fixed" disabled>이벤트 실패</button> -->
     </div>
+
+    <!-- //옵션선택화면 -->
     <div class="modal fade bd-example-modal-lg" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg detail">
+            <!-- min -->
+            <div class="modal-alert">
+                <div class="wrap">
+                    <div class="icon"></div>
+                    <p class="font-14 bold">아이템을 더이상 선택할 수 없습니다!</p>
+                </div>
+            </div>
+            <!-- max -->
+            <!-- <div class="modal-alert">
+                <div class="wrap">
+                    <div class="icon"></div>
+                    <p class="font-14 bold">아이템은 1개 이상 구매 가능합니다!</p>
+                </div>
+            </div> -->
+
             <div class="modal-content">
                 <div class="wrap">
                     <p class="title paint">총<span>3</span>개까지 구매할 수 있어요!</p>
@@ -292,10 +319,10 @@
                         <option value="1">미니 캐리어 테이블 (TEAK)</option>
                     </select>
 
-                    <div class="sel-option">
+                    <div class="sel-option" id="sel-1">
                         <div class="d-flex align-items-center justify-content-between">
                             <p class="name">미니 캐리어 테이블 (PLAIN)</p>
-                            <button type="button" class="close"></button>
+                            <button type="button" class="sel-delete" onclick="deleteOption(1);"></button>
                         </div>
                         <div class="spinner-wrap d-flex align-items-center justify-content-between">
                             <div class="spinner" data-max="99" data-min="1">
@@ -308,10 +335,10 @@
                             <p class="price">57,000원</p>
                         </div>
                     </div>
-                    <div class="sel-option">
+                    <div class="sel-option" id="sel-2">
                         <div class="d-flex align-items-center justify-content-between">
                             <p class="name">미니 캐리어 테이블 (PLAIN)</p>
-                            <button type="button" class="close"></button>
+                            <button type="button" class="sel-delete" onclick="deleteOption(2);"></button>
                         </div>
                         <div class="spinner-wrap d-flex align-items-center justify-content-between">
                             <div class="spinner" data-max="99" data-min="1">
@@ -323,6 +350,16 @@
                             </div>
                             <p class="price">57,000원</p>
                         </div>
+                    </div>
+                    <div class="total-price">
+                        <p>
+                            <span class="font-14">총 수량</span>
+                            <span class="font-14 bold"> 1개</span>
+                        </p>
+                        <p>
+                            <span class="font-14 m-r-10">총 금액</span>
+                            <span class="font-20 bold">171,000원</span>
+                        </p>
                     </div>
                 </div>
            
