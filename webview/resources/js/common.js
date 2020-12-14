@@ -27,13 +27,9 @@ $("input[type=checkbox]").click(function () {
     }
 });
 
-$('aside').load('../_include/aside.html');
-$('#event-write').load('../_include/event_write.html');
-$('#event-detail').load('../_include/event_detail.html');
-$('#event-common').load('../_include/event_common.html');
 
 $(document).ready(function () {
-
+   
     $(window).on('load', function(){
         //select
         $(".select-sm").each(function(){
@@ -89,7 +85,41 @@ $(document).ready(function () {
         }
     });
 
-});
+    // 아이템 정보
+    var length_product = $('.tab.item .product').length;
+    console.log(length_product);
+    if(length_product > 1){
+        var first_product = $('.tab.item .product').first();
+        first_product.show();
+        
+        $('.more').click(function(){
+         
+            if( !$(this).hasClass('active') ){
+                $('.tab.item .product').show();
+                $(this).addClass('active');
+                $(this).text('닫기');
+            }else{
+                $('.tab.item .product').hide();
+                $('.tab.item .product').first().show();
+                $(this).removeClass('active');
+                $(this).text('총'+length_product+"건 전체보기" );
+            }
+           
+        })
+    }
+    
+    //배송지 직접입력
+    $('#delivery-select').selectmenu({
+            change:function( event, ui ) {
+              if($(this).val() == '직접 입력') {
+                 $('.direct textarea').show();
+              }else{
+                $('.direct textarea').hide();
+              }
+            }
+        });
+    });
+    
 function closeBtn(){
     window.history.back();
 }

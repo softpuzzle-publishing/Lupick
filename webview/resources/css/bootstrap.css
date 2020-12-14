@@ -6234,6 +6234,11 @@ a.badge-gray:focus, a.badge-gray.focus {
           box-shadow: 0 0 0 0.2rem rgba(102, 102, 102, 0.5);
 }
 
+.badge-w-gray{
+  color:#000;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+}
 .badge-dark {
   color: #fff;
   background-color: #111;
