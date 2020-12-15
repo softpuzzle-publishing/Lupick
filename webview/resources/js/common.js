@@ -98,7 +98,6 @@ $(document).ready(function () {
         first_product.show();
         
         $('.more').click(function(){
-         
             if( !$(this).hasClass('active') ){
                 $('.tab.item .product').show();
                 $(this).addClass('active');
@@ -109,7 +108,6 @@ $(document).ready(function () {
                 $(this).removeClass('active');
                 $(this).text('총'+length_product+"건 전체보기" );
             }
-           
         })
     }
     

@@ -52,6 +52,10 @@ em{font-style: normal;}
 .m-b-15{margin-bottom:15px}
 
 .m-r-10{margin-right:10px;}
+
+.m-t-5{margin-top:5px;}
+.m-t-10{margin-top:10px;}
+.m-t-20{margin-top:20px;}
 .g-b{font-family: 'Gilroy';font-size:18px;line-height: 1.35;}
 
 button{border: 0;background: transparent;padding: 0;}
@@ -94,7 +98,7 @@ a:focus{outline: none;box-shadow: none !important;}
     &.text-lager{font-size: 16px;min-width: 150px;}
 }
 .btn-lg{
-    min-width: 155px;
+    min-width: 155px;padding:0;line-height:auto;
     &.text-smaller{font-size: 15px;}
     &.btn-outline-dark{min-width: 150px;}
     &.normal{font-weight: 400 !important;}
