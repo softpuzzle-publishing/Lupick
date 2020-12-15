@@ -213,7 +213,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.add .modal-content .modal-header { padding: 20px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin-bottom: 20px; }
 
-.modal-dialog.add .modal-content .modal-close { width: 20px; height: 20px; background-image: url(../../resources/images/ic_exit.svg); background-size: cover; background-position: center; }
+.modal-close { width: 20px; height: 20px; background-image: url(../../resources/images/ic_exit.svg); background-size: cover; background-position: center; }
 
 .modal-dialog.add .modal-content .info-list { margin-bottom: 30px; }
 

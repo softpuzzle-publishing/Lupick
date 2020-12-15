@@ -278,7 +278,9 @@ a:focus{outline: none;box-shadow: none !important;}
         .modal-content{
             width: 100%;height:100%;padding:0 20px;
             .modal-header{padding: 20px 0;display:flex;align-items: center;justify-content: space-between;margin-bottom:20px;}
-            .modal-close{width:20px;height:20px;background-image: url(../../resources/images/ic_exit.svg); background-size: cover; background-position: center;}
+            @at-root{
+                .modal-close{width:20px;height:20px;background-image: url(../../resources/images/ic_exit.svg); background-size: cover; background-position: center;}
+            }
             .info-list{margin-bottom:30px;
                 .info-list-header{ font-size:14px; font-weight: bold;}
             }
