@@ -22,12 +22,52 @@
             <span class="font-18 bold">결제하기</span>
         </div>
         <div class="payment-wrap">
+            <div class="">
+                <p class="tracking-title">아이템이 ‘결제 완료’되었어요.</p>
+                <!-- <p class="tracking-title">아이템 ‘상품 준비 중’이에요.</p> -->
+                <!-- <p class="tracking-title">아이템이 ‘배송 중’이에요.</p> -->
+                <!-- <p class="tracking-title">아이템이 ‘배송 완료’되었어요.</p> -->
+                <!-- <p class="tracking-title gray">아이템이 ‘결제 취소’되었어요.</p> -->
+                <!-- <p class="tracking-title gray">아이템이 ‘환불/반품’되었어요.</p> -->
+
+                <div class="m-t-20 d-flex justify-content-between">
+                    <div>
+                        <button type="button" class="btn btn-dark btn-lg h-40" disabled>구매확정 완료</button>
+                    </div>
+                    <div>
+                        <!-- 배송조회 불가 모달 -->
+                        <button type="button" class="btn btn-outline-dark btn-lg h-40" data-toggle="modal" data-target="#modal-none">배송 조회</button>
+                    </div>
+                </div>
+                <!-- case -->
+                <div class="m-t-20 d-flex justify-content-between">
+                    <div>
+                        <button type="button" class="btn btn-outline-dark btn-lg h-40">구매확정</button>
+                    </div>
+                    <div>
+                        <!-- 배송조회 모달 -->
+                        <button type="button" class="btn btn-outline-dark btn-lg h-40" data-toggle="modal" data-target="#modal-tracking">배송 조회</button>
+                    </div>
+                </div>
+                <!-- case -->
+                <div class="m-t-20 d-flex justify-content-between">
+                    <div>
+                        <button type="button" class="btn btn-outline-dark btn-lg h-40">주문취소</button>
+                    </div>
+                </div>
+                <p class="bold text-underline">거대벽화 그리기에 참여하는 911명 중 9명은 포르쉐 911 타고 귀가하자</p>
+
+                <a href="tracking_view.html" class="order-number m-b-10">
+                    <p class="tracking-order font-14"><span>2020.07.14</span>/<span>주문번호 200020264169</span></p>
+                </a>
+            </div>
+            
             <div class="tab item">
                 <div class="tab-title">
                     <p class="bold">아이템 정보</p>
                 </div>
                 <div class="desc">
-                    <div class="product">
+                    <div class="product tracking">
                         <div class="d-flex justify-content-between">
                             <div>
                                 <p class="nema">미니 캐리어 테이블 (PLAIN)</p>
@@ -37,7 +77,7 @@
                             <div class="img" style="background-image:url(../../resources/images/@event_07.png)"></div>
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product tracking">
                         <div class="d-flex justify-content-between">
                             <div>
                                 <p class="nema">미니 캐리어 테이블 (PLAIN)</p>
@@ -47,78 +87,42 @@
                             <div class="img" style="background-image:url(../../resources/images/@event_07.png)"></div>
                         </div>
                     </div>
-                    
-                    <div class="text-center">
-                        <button type="button" class="more font-13 gray bold">총 <span>2</span>건 전체보기</button>
-                    </div>
                 </div>
             </div>
             <div class="tab order">
                 <div class="tab-title">
-                    <p class="bold">주문자 정보</p>
-                </div>
-                <div class="desc">
-                    <ul>
-                        <li><span>이름</span><span>박수영</span></li>
-                        <li><span>휴대폰</span><span>010-1234-5678</span></li>
-                        <li><span>이메일</span><span>joy0903@gmail.com</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="tab delivery">
-                <div class="tab-title d-flex align-items-center justify-content-between">
                     <p class="bold">배송 정보</p>
-                    <button type="button"><span class="badge badge-w-gray bold" data-toggle="modal" data-target="#modal-change">변경하기</span></button>
                 </div>
-                
-                <!--배송지 등록이 안되어 있을 때-->
-                
-                <!-- <div class="desc">
-                    <button type="button" class="del-add h-50" data-toggle="modal" data-target="#modal-add">+ 배송지 추가</button>
-                </div> -->
-
                 <div class="desc">
                     <ul>
+                        <li><span>수령인</span><span>이정후</span></li>
+                        <li><span>연락처</span><span>010-1234-5678</span></li>
                         <li>
-                            <p class="bold">04720</p>
+                            <span>배송지</span>
+                            <span>  
+                                <span class="d-block">04720</span>서울시 강남구 도산대로 54길 32 (도산아파트) 도산아파트 101동 202호
+                            </span>
+                            
                         </li>
-                        <li>
-                            <p>서울시 강남구 도산대로 54길 32 (도산아파트) 도산아파트 101동 202호</p>
-                        </li>
-                        <li class="m-b-5">
-                            <span class="font-13 gray">이정후</span>, <span class="font-13 gray">010-1234-5678</span>
-                        </li>
-                        <li>
-                            <span class="badge badge-dark">기본 배송지</span>
-                        </li>
+                        <li><span>배송 메모</span><span>(직접 입력) 배송 시 꼭 연락주시고, 벨 누르지 말고 문 앞에서 노크해주세요</span></li>
                     </ul>
-                    <select class="del-select select-sm h-45" id="delivery-select">
-                        <option value="">배송 메모 (선택)</option>
-                        <option value="">배송 전에 미리 연락 바랍니다.</option>
-                        <option value="">부재 시 경비실에 맡겨주세요.</option>
-                        <option value="">부재 시 문 앞에 놓아주세요.</option>
-                        <option value="">부재 시 전화나 문자 남겨주세요.</option>
-                        <option value="직접 입력">직접 입력</option>
-                    </select>
-                    <div class="d-flex align-items-end direct">
-                        <textarea class="form-control h-100px " maxlength="100" placeholder="배송 시 꼭 연락주시고, 벨 누르지 말고 문 앞에서 노크해주세요" data-byte-target="#byte-check1"></textarea>
-                    </div>
                 </div>
             </div>
-            <div class="tab point">
-                <div class="tab-title d-flex align-items-center justify-content-between">
-                    <p class="bold">루픽 포인트</p>
-                    <p class="font-14">사용가능 포인트 <span class="bold">150P</span></p>
+            <div class="tab order">
+                <div class="tab-title">
+                    <p class="bold">결제 정보</p>
                 </div>
-                <div class="desc d-flex align-items-center ">
-                    <input type="text" class="form-control h-50">
-                    <button type="button" class="btn btn-outline-dark btn-md m-l-10 h-50">모두 사용</button>
+                <div class="desc">
+                    <ul>
+                        <li><span>결제 방법</span><span>네이버페이</span></li>
+                        <li><span>결제 일시</span><span>2020-08-21 13:22:31</span></li>
+                    </ul>
                 </div>
             </div>
             <div class="tab price">
                 <div class="tab-title d-flex align-items-center justify-content-between">
                     <p class="bold">결제 금액</p>
-                    <p class="font-20 bold paint">113,850원</p>
+                    <p class="font-20 bold paint">110,850원</p>
                 </div>
                 <div class="desc d-flex align-items-center justify-content-center">
                     <div>
@@ -136,188 +140,214 @@
                         <p class="font-15 bold">150P</p>
                     </div>
                 </div>
-                <p class="example-text font-12">*제주 및 도서산간 지역 : 추가 배송비 3,000원 발생</p>
             </div>
-            <div class="tab payment">
+
+            <!--결제 취소했을 때 추가-->
+            <div class="tab order">
                 <div class="tab-title">
-                    <p class="bold">결제 방법</p>
+                    <p class="bold">취소 정보</p>
                 </div>
                 <div class="desc">
-                   <div class="row">
-                        <div class="col-6">
-                            <a href="javascript:void(0)">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_card.svg" alt="신용카드">
-                                    <p class="font-14 ml-2">신용카드</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="javascript:void(0)">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_phone.svg" alt="휴대폰결제">
-                                    <p class="font-14 ml-2">휴대폰결제</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="javascript:void(0)">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_naver.png" alt="네이버페이">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="javascript:void(0)">
-                                <div class="way active">
-                                    <img src="../../resources/images/pay_kakao.png" alt="카카오페이">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="javascript:void(0)">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_toss.png" alt="토스">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="javascript:void(0)">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_smilepay.png" alt="스마일페이">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="javascript:void(0)">
-                                <div class="way mb-0">
-                                    <img src="../../resources/images/pay_payco.png" alt="페이코">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6">
-                            <a href="javascript:void(0)">
-                                <div class="way mb-0">
-                                    <img src="../../resources/images/pay_paynow.png" alt="페이나우">
-                                </div>
-                            </a>
-                        </div>
-                   </div>
+                    <ul>
+                        <li><span>취소 방법</span><span>결제수단으로 환불</span></li>
+                        <li><span>취소 일시</span><span>2020-08-21 13:22:31</span></li>
+                        <li><span>취소 금액</span><span>42,850원</span></li>
+                    </ul>
                 </div>
             </div>
-            <div class="tab agree">
-                <div class="custom-control custom-check custom-control-inline">
-                    <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk3" value="chk3">
-                    <label class="custom-control-label font-15" for="chk3">결제 정보를 확인하였으며, 동의합니다. (필수)</label>
+            <!-- // -->
+
+            <!--환불/반품 했을 때 추가-->
+            <div class="tab order">
+                <div class="tab-title">
+                    <p class="bold">환불 정보</p>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li><span>환불 방법</span><span>결제수단으로 환불</span></li>
+                        <li><span>환불 일시</span><span>2020-08-21 13:22:31</span></li>
+                        <li><span>환불 금액</span><span>42,850원</span></li>
+                    </ul>
                 </div>
             </div>
-            <a href="#" class="btn btn-dark btn-xl h-60">결제하기</a>
+            <!-- // -->
+            <button type="button" class="btn btn-outline-gray btn-xl h-60 normal font-16" data-toggle="modal" data-target="#modal-receipt">영수증 받기</button>
+
+            <!-- 배송완료 됐을 때 -->
+            <div class="success">
+                <p class="example-text font-13">아이템은 상품 하자에 의한 교환/환불/반품만 가능합니다. 교환/환불/반품 문의는 ‘1:1 문의’를 이용하시기 바랍니다.</p>
+                <a href="#" class="d-flex align-items-center font-13 bold">1:1문의 바로가기 <p class="font-12 m-l-10"><i class="fas fa-chevron-right"></i></p></a>
+            </div>
+
         </div>
     </div>
+   
+<!-- 배송 조회 불가 -->
+<div class="modal fade bd-example-modal-lg" id="modal-none" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg none">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="font-18 bold">배송 조회</p>
+                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="payment-wrap">
+                <div class=" text-center">
+                    <span class="font-20 bold paint">아직 배송 현황을 확인할 수 없네요.</span>
+                    <p class="example-text font-13 m-t-15">아이템이 발송되었으나, 아직 택배사로부터 배송 현황이 확인되지 않습니다.</p>
+                </div>
+                <div class="tab order">
+                    <div class="tab-title">
+                        <p class="bold">송장 정보</p>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li><span>송장번호</span><span>663583305725</span></li>
+                            <li><span>택배사</span><span>CJ대한통운</span></li>
+                            <li><span>대표번호</span><span>1588-1255</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab order">
+                    <div class="tab-title">
+                        <p class="bold">판매자 정보</p>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li><span>판매자</span><span>김뫄뫄</span></li>
+                            <li><span>연락처</span><span>010-1234-5678</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="example-text font-13 gray">※ 배송 문의사항은 판매자를 통해 확인해주세요.</p>
+            </div>
+          
+        </div>
+    </div>
+
+</div>
+
+<!-- 배송 조회 -->
+<div class="modal fade bd-example-modal-lg" id="modal-tracking" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg tracking">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="font-18 bold">배송 조회</p>
+                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="payment-wrap">
+                <div class="text-center">
+                    <span class="font-20 bold paint">배송 중</span>
+                    <p class="example-text font-13 m-t-15">담당자 : 김배송 (010-1234-5678)</p>
+                </div>
+                <div class="tab tracking">
+                    <div class="tab-title">
+                        <p class="bold">배송 추적</p>
+                    </div>
+                    <div class="desc">
+                        <div class="step">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="nema">서울신성수</p>
+                                    <span class="w-gray font-12">2020.10.12 14:07:38</span>
+                                </div>
+                                <div class=""><span class="w-gray paint">배달완료</span></div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="nema">서울신성수</p>
+                                    <span class="w-gray font-12">2020.10.12 13:07:38</span>
+                                </div>
+                                <div class=""><span class="w-gray">배달중</span></div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="nema">성동2Sub</p>
+                                    <span class="w-gray font-12">2020.10.12 09:07:38</span>
+                                </div>
+                                <div class=""><span class="w-gray">배송중(입고)</span></div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="nema">토평콘솔Hub</p>
+                                    <span class="w-gray font-12">2020.10.08 12:15:47</span>
+                                </div>
+                                <div class=""><span class="w-gray">배송중(출고)</span></div>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <p class="nema">서울성내</p>
+                                    <span class="w-gray font-12">2020.10.08 09:05:21</span>
+                                </div>
+                                <div class=""><span class="w-gray">집하</span></div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="tracking-more font-13 gray bold">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab order">
+                    <div class="tab-title">
+                        <p class="bold">송장 정보</p>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li><span>송장번호</span><span>663583305725</span></li>
+                            <li><span>택배사</span><span>CJ대한통운</span></li>
+                            <li><span>대표번호</span><span>1588-1255</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab order">
+                    <div class="tab-title">
+                        <p class="bold">판매자 정보</p>
+                    </div>
+                    <div class="desc">
+                        <ul>
+                            <li><span>판매자</span><span>김뫄뫄</span></li>
+                            <li><span>연락처</span><span>010-1234-5678</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="example-text font-13 gray">※ 배송 문의사항은 판매자를 통해 확인해주세요.</p>
+            </div>
+          
+        </div>
+    </div>
+</div>  
+
+<!-- 영수증 받기 -->
+<div class="modal fade bd-example-modal-lg" id="modal-receipt" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg receipt">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="font-18 bold">영수증 받기</p>
+                <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="title">
+                    이메일로 영수증을<br>
+                    받아보세요.
+                </p>
+                <input class="form-control ip-sign h-50" type="email" value="" placeholder="이메일을 입력해주세요">
+                <button type="button" class="btn btn-dark btn-xl h-60 normal font-16">보내기</button>
+
+                <p class="example-text font-12 gray">루픽은 상품 판매의 당사자가 아니며 상품 판매와 관련한 일체의 책임은 판매자에게 있습니다. 루픽 서비스는 결제정보의 중개 또는 통신판매중개시스템의 제공만을 대상으로 하고 루픽 서비스의 이용자와 판매자 간의 거래관계, 구매내용 및 이벤트 상세페이지에 게재된 상품 정보, 거래 조건 등에 대해서는 어떠한 보증이나 책임도 부담하지 않습니다.</p>
+            </div>
     
-    <!-- 배송지 추가 -->
-    <div class="modal fade bd-example-modal-lg" id="modal-add" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-overlap="true">
-        <div class="modal-dialog modal-lg add">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <p class="font-18 bold">배송지 추가</p>
-                    <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="wrap">
-                    <div class="info-list">
-                        <div class="info-list-header">
-                            <span>받는 분</span>
-                        </div>
-                        <input class="input-id form-control ip-sign" type="text" value="" placeholder="이름을 입력해주세요" maxlength="20">
-                    </div>
-                    <div class="info-list">
-                        <div class="info-list-header">
-                            <span>휴대폰 번호</span>
-                        </div>
-                        <div class="certification">
-                            <input class="input-phone form-control ip-sign" type="number" value="" placeholder="- 없이 입력해주세요.">
-                        </div>
-                    </div>
-
-                    <div class="info-list">
-                        <div class="info-list-header">
-                            <span>주소</span>
-                        </div>
-                        <div class="certification d-flex">
-                            <input class="input-phone form-control ip-sign" type="text" value="" placeholder="">
-                            <button type="button" class="btn btn-outline-dark btn-md ml-2 p-0" >우편번호 검색</button> 
-                        </div>
-                        <div class="certification-num">
-                            <input class="input-num form-control ip-sign" type="text" value="" placeholder="">
-                        </div>
-                        <div class="certification-num">
-                            <input class="input-num form-control ip-sign" type="text" value="" placeholder="상세주소를 입력해주세요">
-                        </div>
-                    </div>
-
-                    <div class="custom-control custom-check custom-control-inline">
-                        <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk4" value="chk4">
-                        <label class="custom-control-label font-15" for="chk4">결제 정보를 확인하였으며, 동의합니다. (필수)</label>
-                    </div>
-
-                </div>
-           
-                <!-- <button type="button" class="btn btn-dark btn-xl h-60">저장</button> -->
-                <button type="button" class="btn btn-dark btn-xl h-60" disabled>저장</button>
-            </div>
+          
         </div>
     </div>
-
-    <!-- 배송지 변경하기 -->
-    <div class="modal fade bd-example-modal-lg" id="modal-change" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg change">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <p class="font-18 bold">배송지 변경</p>
-                    <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="wrap">
-                  
-                    <button type="button" class="del-add h-50" data-toggle="modal" data-target="#modal-add">+ 배송지 추가</button>
-                
-                    
-                    <a href="#">
-                        <div class="desc">
-                            <ul>
-                                <li>
-                                    <p class="bold">04720</p>
-                                </li>
-                                <li>
-                                    <p>서울시 강남구 도산대로 54길 32 (도산아파트) 도산아파트 101동 202호</p>
-                                </li>
-                                <li class="m-b-5">
-                                    <span class="font-13 gray">이정후</span>, <span class="font-13 gray">010-1234-5678</span>
-                                </li>
-                                <li>
-                                    <span class="badge badge-dark">기본 배송지</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="desc">
-                            <ul>
-                                <li>
-                                    <p class="bold">04750</p>
-                                </li>
-                                <li>
-                                    <p>서울시 강남구 논현동 101-1 건물 3층 HOHOHO</p>
-                                </li>
-                                <li class="m-b-5">
-                                    <span class="font-13 gray">이정후</span>, <span class="font-13 gray">010-1234-5678</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="../../resources/js/common.js"></script>
+</div>  
+<script src="../../resources/js/common.js"></script>
 </body>
 </html>

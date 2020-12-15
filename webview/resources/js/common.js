@@ -92,7 +92,6 @@ $(document).ready(function () {
 
     // 아이템 정보
     var length_product = $('.tab.item .product').length;
-    console.log(length_product);
     if(length_product > 1){
         var first_product = $('.tab.item .product').first();
         first_product.show();
@@ -106,11 +105,29 @@ $(document).ready(function () {
                 $('.tab.item .product').hide();
                 $('.tab.item .product').first().show();
                 $(this).removeClass('active');
-                $(this).text('총'+length_product+"건 전체보기" );
+                $(this).text('총'+length_product+'건 전체보기' );
             }
         })
     }
     
+    var length_tracking = $('.tab.tracking .step').length;
+    if(length_product > 1){
+        var first_product = $('.tab.tracking .step').first();
+        first_product.show();
+        
+        $('.tracking-more').click(function(){
+            if( !$(this).hasClass('active') ){
+                $('.tab.tracking .step').show();
+                $(this).addClass('active');
+                $(this).text('간략히 보기');
+            }else{
+                $('.tab.tracking .step').hide();
+                $('.tab.tracking .step').first().show();
+                $(this).removeClass('active');
+                $(this).text('자세히 보기');
+            }
+        })
+    }
     //배송지 직접입력
     $('#delivery-select').selectmenu({
             change:function( event, ui ) {
