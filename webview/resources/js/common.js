@@ -51,6 +51,11 @@ $(document).ready(function () {
                 $(this).css('z-index','1600');
             }
         });
+
+         //bouncing balls
+         if($('#stage').length > 0){
+            bouncing();
+        }
     });
 
      //수량 입력
@@ -135,281 +140,274 @@ function deleteOption(idx){
     }
     
 }
-//로그인,회원가입 background balls
-// function bouncing(){
-//     var stage = document.getElementById('stage');
+//결제완료 background balls,
+function bouncing(){
+    var stage = document.getElementById('stage');
 
-//     var browserX = window.screenX;
-//     var browserY = window.screenY;
-//     var balls = [];
-//     var total = 10;
-//     var currentDrag = null;
-//     var mouseX = 0;
-//     var mouseY = 0;
-//     var stageWidth = $(document).width();
-//     var stageHeight = $(document).height();
-//     stage.width = stageWidth;
-//     stage.height = stageHeight;
+    var browserX = window.screenX;
+    var browserY = window.screenY;
+    var balls = [];
+    var total = 4;
+    var currentDrag = null;
+    var mouseX = 0;
+    var mouseY = 0;
+    var stageWidth = $('.result').width();
+    var stageHeight = $('.result').height();
+    stage.width = stageWidth;
+    stage.height = stageHeight;
 
-//     var IE = document.all ? true : false;
-//     if(!IE) document.addEventListener(Event.MOUSEMOVE, getMouseXY, false);
-//     document.onmousemove = getMouseXY;
+    var IE = document.all ? true : false;
+    if(!IE) document.addEventListener(Event.MOUSEMOVE, getMouseXY, false);
+    document.onmousemove = getMouseXY;
 
-//     window.onresize = function(event)
-//     {
-//         stage.width = 10;
-//         stage.height = 10;
-//         stageWidth = $(document).width();
-//         stageHeight = $(document).height();
-//         stage.width = stageWidth;
-//         stage.height = stageHeight;
-//     }
+    window.onresize = function(event)
+    {
+        stage.width = 5;
+        stage.height = 5;
+        stageWidth = $(document).width();
+        stageHeight = $(document).height();
+        stage.width = stageWidth;
+        stage.height = stageHeight;
+    }
 
-//     generate();
+    generate();
 
-//     var drawingCanvas = document.getElementById('stage');
-//     if(drawingCanvas.getContext)
-//     {
-//         var context = drawingCanvas.getContext('2d');
-//         setInterval(render, 20);
-//     }
-;
-//     jQuery(document).ready(function()
-//     {
-//         $(document).mousedown(function(e)
-//         {
-//             onMouseDown();
-//         });
+    var drawingCanvas = document.getElementById('stage');
+    if(drawingCanvas.getContext)
+    {
+        var context = drawingCanvas.getContext('2d');
+        setInterval(render, 20);
+    }
 
-//         $(document).mouseup(function(e)
-//         {
-//             onMouseUp();
-//         });
-//     });
+    jQuery(document).ready(function()
+    {
+        $(document).mousedown(function(e)
+        {
+            onMouseDown();
+        });
 
-//     function onMouseDown()
-//     {
-//         var j = balls.length;
-//         while(--j > -1)
-//         {
-//             var dx = mouseX - balls[j].x;
-//             var dy = mouseY - balls[j].y;
-//             var dist = Math.sqrt(dx * dx + dy * dy);
-//             if(dist < balls[j].size/2)
-//             {
-//                 currentDrag = balls[j];
-//                 currentDrag.dragging = true;
-//                 return;
-//             }
-//         }
-//     }
+        $(document).mouseup(function(e)
+        {
+            onMouseUp();
+        });
+    });
 
-//     function onMouseUp()
-//     {
-//         if(currentDrag != null) currentDrag.dragging = false;
-//     }
-//     function generate()
-//     {
-//         for(var i = 0; i < total; i++)
-//         {
-//             var ball = {};
-//             ball.color = genHex(i);
-//             ball.bounce = 1;
-//             ball.vx = Math.random() * 50 - 25;
-//             ball.vy = Math.random() * 50 - 25;
-//             ball.size = 60;
-//             ball.x = Math.random() * stageWidth;
-//             ball.y = Math.random() * stageHeight;
-//             balls[balls.length] = ball;
-//         }
-//     }
+    function onMouseDown()
+    {
+        var j = balls.length;
+        while(--j > -1)
+        {
+            var dx = mouseX - balls[j].x;
+            var dy = mouseY - balls[j].y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+            if(dist < balls[j].size/2)
+            {
+                currentDrag = balls[j];
+                currentDrag.dragging = true;
+                return;
+            }
+        }
+    }
 
-//     function genHex(i)
-//     {
-//         colors = new Array(10);
-//         colors[0]="#ffff00";
-//         colors[1]="#ffff00";
-//         colors[2]="#ffff00";
-//         colors[3]="#ffff00";
-//         colors[4]="#ffff00";
-//         colors[5]="#ffff00";
-//         colors[5]="#ffff00";
-//         colors[6]="#ffff00";
-//         colors[7]="#ffff00";
-//         colors[8]="#ffff00";
-//         colors[9]="#000";
+    function onMouseUp()
+    {
+        if(currentDrag != null) currentDrag.dragging = false;
+    }
+    function generate()
+    {
+        for(var i = 0; i < total; i++)
+        {
+            var ball = {};
+            ball.color = genHex(i);
+            ball.bounce = 1;
+            ball.vx = Math.random() * 50 - 25;
+            ball.vy = Math.random() * 50 - 25;
+            ball.size = 50;
+            ball.x = Math.random() * stageWidth;
+            ball.y = Math.random() * stageHeight;
+            balls[balls.length] = ball;
+        }
+    }
 
-//         return colors[i];
-//     }
+    function genHex(i)
+    {
+        colors = new Array(4);
+        colors[0]="#ffff00";
+        colors[1]="#ffff00";
+        colors[2]="#ffff00";
+        colors[3]="#ffff00";
 
-//     function render()
-//     {
-//         var isChange = (browserX != window.screenX || browserY != window.screenY);
-//         if(isChange)
-//         {
-//             var diffX = browserX - window.screenX;
-//             browserX = window.screenX;
+        return colors[i];
+    }
 
-//             var diffY = browserY - window.screenY;
-//             browserY = window.screenY;
-//         }
+    function render()
+    {
+        var isChange = (browserX != window.screenX || browserY != window.screenY);
+        if(isChange)
+        {
+            var diffX = browserX - window.screenX;
+            browserX = window.screenX;
 
-//         var j = balls.length;
-//         while(--j > -1)
-//         {
-//             update(balls[j]);
+            var diffY = browserY - window.screenY;
+            browserY = window.screenY;
+        }
 
-//             if(isChange)
-//             {
-//                 balls[j].vx += (diffX * .05);
-//                 balls[j].vy += (diffY * .1);
-//             }
-//         }
+        var j = balls.length;
+        while(--j > -1)
+        {
+            update(balls[j]);
 
-//         draw();
-//     }
+            if(isChange)
+            {
+                balls[j].vx += (diffX * .05);
+                balls[j].vy += (diffY * .1);
+            }
+        }
 
-//     function draw()
-//     {
-//         context.clearRect(0, 0, stageWidth, stageHeight);
-//         var i = balls.length;
-//         while(--i > -1)
-//         {
-//             context.fillStyle = balls[i].color;
-//             context.beginPath();
-//             context.arc(balls[i].x,balls[i].y,balls[i].size,0,Math.PI*2,true);
-//             context.closePath();
-//             context.fill();
-//         }
-//     }
+        draw();
+    }
 
-//     function update(ball)
-//     {
-//         collisionCheck();
+    function draw()
+    {
+        context.clearRect(0, 0, stageWidth, stageHeight);
+        var i = balls.length;
+        while(--i > -1)
+        {
+            context.fillStyle = balls[i].color;
+            context.beginPath();
+            context.arc(balls[i].x,balls[i].y,balls[i].size,0,Math.PI*2,true);
+            context.closePath();
+            context.fill();
+        }
+    }
 
-//         var gravity = 1.3;
-//         var drag = .95;
+    function update(ball)
+    {
+        collisionCheck();
 
-//         if(ball.dragging)
-//         {
-//             ball.vx = ball.x - ball.ox;
-//             ball.vy = ball.y - ball.oy;
-//             ball.ox = ball.x;
-//             ball.oy = ball.y;
+        var gravity = 1.3;
+        var drag = .95;
 
-//             ball.x = mouseX;
-//             ball.y = mouseY;
+        if(ball.dragging)
+        {
+            ball.vx = ball.x - ball.ox;
+            ball.vy = ball.y - ball.oy;
+            ball.ox = ball.x;
+            ball.oy = ball.y;
 
-//             if ((ball.x + ball.size) > stageWidth)
-//             {
-//                 ball.x = stageWidth - ball.size;
-//             }
-//             else if((ball.x - ball.size) < 0)
-//             {
-//                 ball.x = 0 + ball.size;
-//             }
+            ball.x = mouseX;
+            ball.y = mouseY;
 
-//             if ((ball.y + ball.size) > stageHeight)
-//             {
-//                 ball.y = stageHeight - ball.size;
-//             }
-//             else if((ball.y - ball.size) < 0)
-//             {
-//                 ball.y = 0 + ball.size;
-//             }
-//         }
-//         else
-//         {
-//             ball.x += ball.vx;
-//             ball.y += ball.vy;
+            if ((ball.x + ball.size) > stageWidth)
+            {
+                ball.x = stageWidth - ball.size;
+            }
+            else if((ball.x - ball.size) < 0)
+            {
+                ball.x = 0 + ball.size;
+            }
 
-//             if ((ball.x + ball.size) > stageWidth)
-//             {
-//                 ball.x = stageWidth - ball.size;
-//                 ball.vx = -ball.vx * ball.bounce;
-//             }
-//             else if((ball.x - ball.size) < 0)
-//             {
-//                 ball.x = 0 + ball.size;
-//                 ball.vx = -ball.vx * ball.bounce;
-//             }
+            if ((ball.y + ball.size) > stageHeight)
+            {
+                ball.y = stageHeight - ball.size;
+            }
+            else if((ball.y - ball.size) < 0)
+            {
+                ball.y = 0 + ball.size;
+            }
+        }
+        else
+        {
+            ball.x += ball.vx;
+            ball.y += ball.vy;
 
-//             if ((ball.y + ball.size) > stageHeight)
-//             {
-//                 ball.y = stageHeight - ball.size;
-//                 ball.vy = -ball.vy * ball.bounce;
-//             }
-//             else if((ball.y - ball.size) < 0)
-//             {
-//                 ball.y = 0 + ball.size;
-//                 ball.vy = -ball.vy * ball.bounce;
-//             }
+            if ((ball.x + ball.size) > stageWidth)
+            {
+                ball.x = stageWidth - ball.size;
+                ball.vx = -ball.vx * ball.bounce;
+            }
+            else if((ball.x - ball.size) < 0)
+            {
+                ball.x = 0 + ball.size;
+                ball.vx = -ball.vx * ball.bounce;
+            }
 
-//             ball.vx = ball.vx * drag;
-//             ball.vy = ball.vy * drag + gravity;
-//         }
-//     }
+            if ((ball.y + ball.size) > stageHeight)
+            {
+                ball.y = stageHeight - ball.size;
+                ball.vy = -ball.vy * ball.bounce;
+            }
+            else if((ball.y - ball.size) < 0)
+            {
+                ball.y = 0 + ball.size;
+                ball.vy = -ball.vy * ball.bounce;
+            }
 
-//     function collisionCheck()
-//     {
-//         var spring = 0.8;
+            ball.vx = ball.vx * drag;
+            ball.vy = ball.vy * drag + gravity;
+        }
+    }
 
-//         for(var i = 0; i < (total-1); ++i)
-//         {
-//             var ball0 = balls[i];
+    function collisionCheck()
+    {
+        var spring = 0.8;
 
-//             for(var j = i + 1; j < total; ++j)
-//             {
-//                 var ball1 = balls[j];
-//                 var dx = ball1.x - ball0.x;
-//                 var dy = ball1.y - ball0.y;
-//                 var dist = Math.sqrt(dx * dx + dy * dy);
-//                 var minDist = ball0.size + ball1.size;
+        for(var i = 0; i < (total-1); ++i)
+        {
+            var ball0 = balls[i];
 
-//                 if(dist < minDist)
-//                 {
-//                     var angle = Math.atan2(dy, dx);
-//                     var tx = ball0.x + dx / dist * minDist;
-//                     var ty = ball0.y + dy / dist * minDist;
-//                     var ax = (tx - ball1.x);
-//                     var ay = (ty - ball1.y);
+            for(var j = i + 1; j < total; ++j)
+            {
+                var ball1 = balls[j];
+                var dx = ball1.x - ball0.x;
+                var dy = ball1.y - ball0.y;
+                var dist = Math.sqrt(dx * dx + dy * dy);
+                var minDist = ball0.size + ball1.size;
+
+                if(dist < minDist)
+                {
+                    var angle = Math.atan2(dy, dx);
+                    var tx = ball0.x + dx / dist * minDist;
+                    var ty = ball0.y + dy / dist * minDist;
+                    var ax = (tx - ball1.x);
+                    var ay = (ty - ball1.y);
 
 
-//                     ball0.x -= ax;
-//                     ball0.y -= ay;
+                    ball0.x -= ax;
+                    ball0.y -= ay;
 
-//                     ball1.x += ax;
-//                     ball1.y += ay;
+                    ball1.x += ax;
+                    ball1.y += ay;
 
 
-//                     ball0.vx -= (ax * spring);
-//                     ball0.vy -= (ay * spring);
-//                     ball1.vx += (ax * spring);
-//                     ball1.vy += (ay * spring);
-//                 }
-//             }
-//         }
-//     }
+                    ball0.vx -= (ax * spring);
+                    ball0.vy -= (ay * spring);
+                    ball1.vx += (ax * spring);
+                    ball1.vy += (ay * spring);
+                }
+            }
+        }
+    }
 
-//     function getMouseXY(e)
-//     {
-//         if(IE)
-//         {
-//             mouseX = event.clientX + document.body.scrollLeft
-//             mouseY = event.clientY + document.body.scrollTop
-//         }
-//         else
-//         {
-//             mouseX = e.pageX
-//             mouseY = e.pageY
-//         }
+    function getMouseXY(e)
+    {
+        if(IE)
+        {
+            mouseX = event.clientX + document.body.scrollLeft
+            mouseY = event.clientY + document.body.scrollTop
+        }
+        else
+        {
+            mouseX = e.pageX
+            mouseY = e.pageY
+        }
 
-//         if(mouseX < 0) {mouseX = 0;}
-//         if(mouseY < 0) {mouseY = 0;}
+        if(mouseX < 0) {mouseX = 0;}
+        if(mouseY < 0) {mouseY = 0;}
 
-//         return true;
-//     }
-// }
+        return true;
+    }
+}
 
 
 // var fileUpload = {
