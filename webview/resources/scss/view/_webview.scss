@@ -215,9 +215,10 @@ body{color:$black;line-height: 22px;font-size:16px; word-break: keep-all;}
         }
         &.payment{
             .col-6{display:flex;align-items: center;justify-content: center;}
-            .way{width:155px;height:50px;border:1px solid $gray;display:flex;align-items: center;justify-content:center;margin-bottom:15px;
-                &.active{border:2px solid $black;}
+            a.active{
+                .way{border:2px solid $black;}
             }
+            .way{width:155px;height:50px;border:1px solid $gray;display:flex;align-items: center;justify-content:center;margin-bottom:15px;}
         }
     } 
 }

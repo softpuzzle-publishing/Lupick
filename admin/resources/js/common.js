@@ -31,6 +31,7 @@ $('#event-write').load('../_include/event_write.html');
 $('#event-detail').load('../_include/event_detail.html');
 $('#event-common').load('../_include/event_common.html');
 
+
 $(document).ready(function () {
 
     $(window).on('load', function(){

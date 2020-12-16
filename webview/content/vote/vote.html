@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupick</title>
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header d-flex justify-content-end">
+            <button type="button" class="help" data-toggle="modal" data-target="#modal-help"></button>
+            <button type="button" class="modal-close m-l-10"></button>
+        </div>
+    </div>
+    
+    <!-- 배송지 추가 -->
+    <div class="modal fade bd-example-modal-lg" id="modal-help" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-overlap="true">
+        <div class="modal-dialog modal-lg help">
+            <div class="modal-content">
+                <div class="modal-header justify-content-end">
+                    <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>
+                            <div class=""></div>
+                            <p>
+                                <span class="paint">구매한 아이템 개수만큼 투표</span>할 수 있는 칸이 주어집니다. 아이템 5개를 구매했다면 투표칸이 5개!
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+           
+                <!-- <button type="button" class="btn btn-dark btn-xl h-60">저장</button> -->
+                <button type="button" class="btn btn-dark btn-xl h-60" disabled>저장</button>
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="../../resources/js/common.js"></script>
+</body>
+</html>
