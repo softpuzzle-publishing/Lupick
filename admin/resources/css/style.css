@@ -2,7 +2,7 @@ a { text-decoration: none; }
 
 a:hover { text-decoration: underline; }
 
-p { margin: 0; }
+p { margin: 0;}
 
 i, em { font-style: normal; }
 

@@ -18,31 +18,48 @@
 <body>
     <div class="wrap">
         <div class="header d-flex justify-content-end">
-            <button type="button" class="help" data-toggle="modal" data-target="#modal-help"></button>
+            <button type="button" class="ic-help" data-toggle="modal" data-target="#modal-help"></button>
             <button type="button" class="modal-close m-l-10"></button>
         </div>
     </div>
     
-    <!-- 배송지 추가 -->
+    <!-- 도움말 -->
     <div class="modal fade bd-example-modal-lg" id="modal-help" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-overlap="true">
         <div class="modal-dialog modal-lg help">
             <div class="modal-content">
                 <div class="modal-header justify-content-end">
                     <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="content">
+                    <p class="font-18">루픽의 투표는 무엇인가요?</p>
+                    <p class="title font-22 bold">가장 많이 투표받은 숫자가
+                        곧 행운의 번호!</p>
+                </div>
+                <div class="desc">
                     <ul>
                         <li>
-                            <div class=""></div>
-                            <p>
+                            <div class="ic-vote vote1"></div>
+                            <p class="font-13">
+                                <span class="paint">구매한 아이템 개수만큼 투표</span>할 수 있는 칸이 주어집니다. 아이템 5개를 구매했다면 투표칸이 5개!
+                            </p>
+                        </li>
+                        <li>
+                            <div class="ic-vote vote2"></div>
+                            <p class="font-13">
+                                <span class="paint">구매한 아이템 개수만큼 투표</span>할 수 있는 칸이 주어집니다. 아이템 5개를 구매했다면 투표칸이 5개!
+                            </p>
+                        </li>
+                        <li>
+                            <div class="ic-vote vote3"></div>
+                            <p class="font-13">
                                 <span class="paint">구매한 아이템 개수만큼 투표</span>할 수 있는 칸이 주어집니다. 아이템 5개를 구매했다면 투표칸이 5개!
                             </p>
                         </li>
                     </ul>
                 </div>
-           
-                <!-- <button type="button" class="btn btn-dark btn-xl h-60">저장</button> -->
-                <button type="button" class="btn btn-dark btn-xl h-60" disabled>저장</button>
+                <div class="m-0-auto">
+                    <button type="button" class="btn btn-dark btn-lg w-150px h-50">다음부터 안볼래요</button>
+                </div>
             </div>
         </div>
     </div>
