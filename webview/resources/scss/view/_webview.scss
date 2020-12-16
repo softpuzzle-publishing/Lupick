@@ -256,12 +256,40 @@ body{color:$black;line-height: 22px;font-size:16px; word-break: keep-all;}
                 &::after{background-color:$gray;}
             }
         }
-        .text-underline{margin-top:50px;}
+    .text-underline{margin-top:50px;}
         .tracking-order{margin:30px 0 15px 0;}
         .success{margin-top:30px;
             .example-text{margin-bottom:15px;}
             a{
                 i{margin-top:5px;}
+            }
+        }
+    }
+}
+
+
+//투표하기
+.vote-wrap{
+    padding: 0 20px;
+    .content{
+        &.vote{
+            width: 100%;height:100%;position: relative;z-index: 2;padding: 0 0 35px 0;
+            .title{font-size:35px;line-height: 45px;}
+            .desc{
+                p{margin-top:30px;}
+            }
+            .form-control{margin-top:15px;
+                &:focus{border:1px solid $black;}
+            }
+            .bg-balls {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;height: 100%;z-index:-1;
+            }
+            .input-form{position: relative;}
+            .error-msg{color:$red;font-size:10px;position: absolute;right:10px;top:49%;
+                transform: translate(0, -50%);
             }
         }
     }
