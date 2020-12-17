@@ -18,114 +18,243 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="header d-flex justify-content-end">
-            <button type="button" class="ic-help" data-toggle="modal" data-target="#modal-help"></button>
-            <button type="button" class="modal-close m-l-10"></button>
+    <div class="wrap vote-result">
+        <div class="header">
+            <div class="top d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <div class="ic-back"></div>
+                    <span class="font-18 bold">결제하기</span>
+                </div>
+                <button type="button" class="ic-list" data-toggle="modal" data-target="#ic-list"></button>
+            </div>
+            <div class="search">
+                <p class="font-13">번호를 탭하면 닉네임, 득표수, 투표한 번호를 볼 수 있어요. </p>
+                <div class="input-search">
+                    <input type="text" class="form-control h-50" placeholder="닉네임 또는 번호를 검색하세요">
+                    <button type="button" class="ic-search" data-toggle="modal" data-target="#modal-fail"></button>
+                </div>
+            </div>
         </div>
-        <div class="vote-wrap">
-            <div class="content vote">
+       
+        <div class="vote-result-wrap">
+            <div class="balls">
                 <div class="bg-balls">
-                    <canvas id="vote" width="100%" height="100%"></canvas>
+                    <canvas id="winning" width="100%" height="100%"></canvas>
                 </div>
-                <p class="title">행운의 번호에<br>투표하세요.</p>
-
-                <div class="desc">
-                    <p>입력가능한 숫자범위 <span class="paint">1 ~ 1000</span></p>
-                    <div class="input-form">
-                        <input type="number" class="form-control h-50" placeholder="투표 1 : 숫자를 입력해주세요">
-                        <span class="error-msg">! 입력가능한 숫자범위가 아니에요</span>
-                    </div>
-                    <div class="input-form">
-                        <input type="number" class="form-control h-50" placeholder="투표 2 : 숫자를 입력해주세요">
-                        <span class="error-msg">! 입력가능한 숫자범위가 아니에요</span>
-                    </div>
-                    <div class="input-form">
-                        <input type="number" class="form-control h-50" placeholder="투표 3 : 숫자를 입력해주세요">
-                        <span class="error-msg">! 입력가능한 숫자범위가 아니에요</span>
-                    </div>
-                    <div class="input-form">
-                        <input type="number" class="form-control h-50" placeholder="투표 4 : 숫자를 입력해주세요">
-                        <span class="error-msg">! 입력가능한 숫자범위가 아니에요</span>
-                    </div>
-                    <div class="input-form">
-                        <input type="number" class="form-control h-50" placeholder="투표 5 : 숫자를 입력해주세요">
-                        <span class="error-msg">! 입력가능한 숫자범위가 아니에요</span>
-                    </div>
-                </div>
+             
             </div>
-            <div class="btn-group d-flex justify-content-between">
-                <button type="button" class="btn btn-outline-dark btn-lg w-150 h-50">랜덤 투표</button>
-                <button type="button" class="btn btn-dark btn-lg w-150 h-50 m-l-10">투표 완료</button>
-            </div>
+           
         </div>
     </div>
 
-    <!-- 도움말 -->
-    <div class="modal fade bd-example-modal-lg" id="modal-help" tabindex="-1" role="dialog"
-        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg help">
-            <div class="modal-content">
-                <div class="modal-header justify-content-end mb-0">
-                    <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="content">
-                    <p class="font-18">루픽의 투표는 무엇인가요?</p>
-                    <p class="title font-22 bold">가장 많이 투표받은 숫자가
-                        곧 행운의 번호!</p>
-                </div>
-                <div class="desc">
-                    <ul>
-                        <li>
-                            <div class="ic-vote vote1"></div>
-                            <p class="font-13">
-                                <span class="paint">구매한 아이템 개수만큼 투표</span>할 수 있는 칸이 주어집니다. 아이템 5개를 구매했다면 투표칸이 5개!
-                            </p>
-                        </li>
-                        <li>
-                            <div class="ic-vote vote2"></div>
-                            <p class="font-13">
-                                <span class="paint">구매한 아이템 개수만큼 투표</span>할 수 있는 칸이 주어집니다. 아이템 5개를 구매했다면 투표칸이 5개!
-                            </p>
-                        </li>
-                        <li>
-                            <div class="ic-vote vote3"></div>
-                            <p class="font-13">
-                                <span class="paint">구매한 아이템 개수만큼 투표</span>할 수 있는 칸이 주어집니다. 아이템 5개를 구매했다면 투표칸이 5개!
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="m-0-auto">
-                    <button type="button" class="btn btn-dark btn-lg w-150px h-50">다음부터 안볼래요</button>
-                </div>
+<!-- 투표 리스트 -->
+<div class="modal fade bd-example-modal-lg" id="ic-list" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg list">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="font-18 bold">투표결과 리스트 보기</p>
+                <button type="button" class="ic-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="wrap">
+                <table class="table table-bordered table-center">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="35%">
+                        <col width="20%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">닉네임</th>
+                            <th scope="col">득표수</th>
+                            <th scope="col">투표번호</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>루피커가될래요</td>
+                            <td>7</td>
+                            <td>828</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>다람쥐돌잉</td>
+                            <td>5</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>지렁지렁이</td>
+                            <td>3</td>
+                            <td>543</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>슈크림붕어빵</td>
+                            <td>0</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>한라산호랑이</td>
+                            <td>0</td>
+                            <td>763</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>백두산순록</td>
+                            <td>0</td>
+                            <td>123</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+</div>
+<!-- 당첨o -->
+<div class="modal fade bd-example-modal-lg" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg success">
+        <div class="modal-content">
+            <div class="desc">
+                <p class="number bold">102</p>
+                <p class="nic-name font-13 bold">지리산다람쥐</p>
+                <p class="font-13">득표수 :<span>57</span>표</p>
+                <p class="font-13">투표한 번호 : <span>999</span></p>
+            </div>
+        </div>
+        <p class="text font-14 bold">화면을 터치하여 닫기</p>
+    </div>
+</div>
+<!-- 당첨x -->
+<div class="modal fade bd-example-modal-lg" id="modal-fail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg fail">
+        <div class="modal-content">
+            <div class="desc">
+                <p class="number bold">102</p>
+                <p class="nic-name font-13 bold">지리산다람쥐</p>
+                <p class="font-13">득표수 :<span>57</span>표</p>
+                <p class="font-13">투표한 번호 : <span>999</span></p>
+            </div>
+        </div>
+        <p class="text font-14 bold">화면을 터치하여 닫기</p>
+    </div>
+</div>
 
     <script>
         $(document).ready(function () {
             $(window).on('load', function () {
                 //bouncing balls
-                if ($('#vote').length > 0) {
-                    bouncingVote();
+                if ($('#winning').length > 0) {
+                    bouncVoteresult();
                 }
             })
 
         })
         //투표하기 ball
-        function bouncingVote() {
-            var stage = document.getElementById('vote');
-
+        function bouncVoteresult() {
+            var stage = document.getElementById('winning');
             var browserX = window.screenX;
             var browserY = window.screenY;
             var balls = [];
-            var total = 4;
+            var total = 12;
             var currentDrag = null;
             var mouseX = 0;
             var mouseY = 0;
-            var stageWidth = $('.vote').width();
-            var stageHeight = $('.vote').height();
+            var stageWidth = $('.balls').width();
+            var stageHeight = $('.balls').height();
             stage.width = stageWidth;
             stage.height = stageHeight;
 
@@ -144,7 +273,7 @@
 
             generate();
 
-            var drawingCanvas = document.getElementById('vote');
+            var drawingCanvas = document.getElementById('winning');
             if (drawingCanvas.getContext) {
                 var context = drawingCanvas.getContext('2d');
                 setInterval(render, 20);
@@ -193,15 +322,21 @@
             }
 
             function genHex(i) {
-                colors = new Array(4);
+                colors = new Array(12);
                 colors[0] = "#ffff00";
                 colors[1] = "#ffff00";
                 colors[2] = "#ffff00";
                 colors[3] = "#ffff00";
-
+                colors[4] = "#ffff00";
+                colors[5] = "#ffff00";
+                colors[6] = "#ffff00";
+                colors[7] = "#ffff00";
+                colors[8] = "#ffff00";
+                colors[9] = "#ffff00";
+                colors[10] = "#ffff00";
+                colors[11] = "#000000";
                 return colors[i];
             }
-
             function render() {
                 var isChange = (browserX != window.screenX || browserY != window.screenY);
                 if (isChange) {

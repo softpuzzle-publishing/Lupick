@@ -20,15 +20,43 @@
 <body>
     <div class="wrap">
         <div class="header d-flex justify-content-end">
-            <button type="button" class="modal-close"></button>
+            <button type="button" class="ic-close"></button>
         </div>
         <div class="winning-wrap">
-            <p>축하해요.<br>
-                당신은 루피커!
-            </p>
-            <div class="img" style="background-images:url(../../resources/images/image_lucky_item_1.jpg)"></div>
-            <a href="#" class="btn btn-outline-dark btn-xl  h-50">랜덤 투표</a>
-            <a href="#" class="btn btn-dark btn-xl  h-50">투표 완료</a>
+            <div class="balls">
+                <div class="bg-balls">
+                    <canvas id="winning" width="100%" height="100%"></canvas>
+                </div>
+                <!-- 성공 했을 때 -->
+                <div class="result success">
+                    <p class="title">축하해요.<br>
+                        당신은 루피커!
+                    </p>
+                    <div class="img" style="background-image:url(../../resources/images/image_lucky_item_1.jpg)"></div>
+                    <p class="winning-name font-16 bold">‘포르쉐 911 카레라’ 득템!</p>
+                </div>
+                <!-- // -->
+
+                <!-- 실패 했을 때 -->
+                    <!-- <div class="result fail">
+                        <p class="title">꼭 오늘이<br>
+                            아니어도 괜찮아.
+                        </p>
+                        <p class="winning-name font-16">
+                            아쉽게도 루피커가 되지 못했어요.<br>
+                            다음번에 더 좋은 행운이 찾아오길<br>
+                            바랄게요.
+                        </p>
+                    </div> -->
+                <!-- // -->
+            </div>
+            <div class="line">
+                <p class="font-14 bold">고유번호 <span>384</span>번 / 득표수 <span>0</span>표</p>
+            </div>
+            <div class="">
+                <a href="#" class="btn btn-outline-dark btn-xl h-60 normal m-b-15">이벤트 페이지로 가기</a>
+                <a href="#" class="btn btn-dark btn-xl normal h-60">홈으로 가기</a>
+            </div>
         </div>
     </div>
 
@@ -38,7 +66,7 @@
         $(document).ready(function () {
             $(window).on('load', function () {
                 //bouncing balls
-                if ($('#vote').length > 0) {
+                if ($('#winning').length > 0) {
                     bouncVoteWinning();
                 }
             })
@@ -46,17 +74,16 @@
         })
         //투표하기 ball
         function bouncVoteWinning() {
-            var stage = document.getElementById('vote');
-
+            var stage = document.getElementById('winning');
             var browserX = window.screenX;
             var browserY = window.screenY;
             var balls = [];
-            var total = 4;
+            var total = 5;
             var currentDrag = null;
             var mouseX = 0;
             var mouseY = 0;
-            var stageWidth = $('.vote').width();
-            var stageHeight = $('.vote').height();
+            var stageWidth = $('.balls').width();
+            var stageHeight = $('.balls').height();
             stage.width = stageWidth;
             stage.height = stageHeight;
 
@@ -75,7 +102,7 @@
 
             generate();
 
-            var drawingCanvas = document.getElementById('vote');
+            var drawingCanvas = document.getElementById('winning');
             if (drawingCanvas.getContext) {
                 var context = drawingCanvas.getContext('2d');
                 setInterval(render, 20);
@@ -124,15 +151,14 @@
             }
 
             function genHex(i) {
-                colors = new Array(4);
+                colors = new Array(5);
                 colors[0] = "#ffff00";
                 colors[1] = "#ffff00";
                 colors[2] = "#ffff00";
                 colors[3] = "#ffff00";
-
+                colors[4] = "#ffff00";
                 return colors[i];
             }
-
             function render() {
                 var isChange = (browserX != window.screenX || browserY != window.screenY);
                 if (isChange) {

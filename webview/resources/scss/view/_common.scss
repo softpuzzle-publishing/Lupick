@@ -132,6 +132,12 @@ a:focus{outline: none;box-shadow: none !important;}
         border-color: #f2f2f2;
     }
 }
+
+.search{width:100%;text-align:center;margin-top:20px;
+    .input-search{position: relative;width:100%;margin:20px auto 0;
+        .ic-search{position: absolute;top:50%;right:15px;transform: translate(0, -50%);}
+    }
+}
 .ic-help{width:24px;height:24px;display:inline-block;background-image:url(../images/ic_help.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
 //select
 .ui-selectmenu-button.ui-button{
@@ -142,6 +148,9 @@ a:focus{outline: none;box-shadow: none !important;}
     }
     .select-sm + &{
         width: 100px;height: 50px;border:none;
+    }
+    .select-md + &{
+        width: 100%;height: 50px;
     }
     .select-lg + &{
         width: 100%;height: 65px;padding: 22px 30px 0;box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.1);border-color: #eee;
@@ -269,6 +278,9 @@ a:focus{outline: none;box-shadow: none !important;}
     }
 }
 // modal detail
+.modal[data-overlap=true]{
+    z-index: 1052;
+}
 .modal-dialog{
     width: 100%;
     height: 100%;
@@ -276,11 +288,11 @@ a:focus{outline: none;box-shadow: none !important;}
     margin: 0 auto;
     .modal-content{
         .modal-header{padding: 20px 0;display:flex;align-items: center;justify-content: space-between;margin-bottom:20px;}
-        .modal-close{width:20px;height:20px;background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center;}
+        .ic-close{width:20px;height:20px;background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center;}
     }
     &.detail{
         .modal-alert{
-            width:100%;position:absolute;padding:20px;bottom:1000px;
+            width:100%;position:absolute;padding:60px 20px 20px;bottom:1000px;
             .wrap{padding:20px;background-color: $white; border-radius: 7px;display:flex;align-items:center;
                  .icon{width: 20px;height: 20px;background-image: url(../images/ic_alert_large.svg); background-size: cover; background-position: center;margin-right:15px;}
              } 
@@ -300,8 +312,13 @@ a:focus{outline: none;box-shadow: none !important;}
     &.add{
         .modal-content{
             width: 100%;height:100%;padding:0 20px;
+            &.setting{padding:60px 20px 0;}
             @at-root{
-                .modal-close{width:20px;height:20px;background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center;}
+                .ic-close{width:20px;height:20px;background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center;}
+                .ic-list{width:20px;height:20px;background-image: url(../images/ic_list.svg); background-size: cover; background-position: center;}
+                .ic-search{width:20px;height:20px;background-image: url(../images/ic_search.svg); background-size: cover; background-position: center;}
+                .ic-home{width:20px;height:20px;background-image: url(../images/ic_home.svg); background-size: cover; background-position: center;}
+                .ic-feed{width:20px;height:20px;background-image: url(../images/navigation_feed.svg); background-size: cover; background-position: center;display:inline-block;}
             }
             .info-list{margin-bottom:30px;
                 .info-list-header{ font-size:14px; font-weight: bold;}
@@ -314,6 +331,7 @@ a:focus{outline: none;box-shadow: none !important;}
     &.change{
         .modal-content{
             width: 100%;height:100%;padding:0 20px;
+            &.setting{padding:60px 20px 0;}
             .info-list{margin-bottom:30px;
                 .info-list-header{ font-size:14px; font-weight: bold;}
             }
@@ -340,7 +358,7 @@ a:focus{outline: none;box-shadow: none !important;}
     }
     &.none{
         .modal-content{
-            width: 100%;height:100vh;padding:0 20px;
+            width: 100%;height:100vh;padding:60px 20px 0;
             .payment-wrap{padding:0;
                 .tab.order{
                     margin:50px 0 0 0;
@@ -350,7 +368,7 @@ a:focus{outline: none;box-shadow: none !important;}
     }
     &.tracking{
         .modal-content{
-            width: 100%;padding:0 20px 40px;
+            width: 100%;padding:60px 20px 40px;
             .payment-wrap{padding:0;
                 .tab.order{
                     margin:50px 0 0 0;
@@ -379,7 +397,7 @@ a:focus{outline: none;box-shadow: none !important;}
     }
     &.receipt{
         .modal-content{
-            width: 100%;height:100%;padding:0 20px 40px;
+            width: 100%;height:100%;padding:60px 20px 40px;
             .modal-body{padding:0;
                 .title{font-size:30px;line-height: 40px;}
             }
@@ -406,9 +424,40 @@ a:focus{outline: none;box-shadow: none !important;}
                 &.vote3{background-image:url(../images/image_vote_3.svg);}
             }
         }
-        
     }
-}
-.modal[data-overlap=true]{
-    z-index: 1052;
+    &.list{
+        .modal-content{
+            width: 90%;height:600px;padding:0 15px 40px;margin: 20px auto;border-radius: 7px;overflow-y:scroll;
+            .wrap{height: 100%;}
+            .table{
+                height:100%;word-break: break-all !important;border-left:2px solid $white;border-right:2px solid $white;
+                th{font-size:10px}
+                td{font-size:12px;padding:10px;}
+            }
+        }
+    }
+    &.success{display:flex;align-items:center;justify-content:center;flex-flow:column;
+        .modal-content{
+            width:240px;height: 240px;background-color: $black;border-radius: 50%;display:flex;
+            align-items: center;justify-content:center;text-align:center;
+            .desc{
+                p{color:$white;}
+                .number{font-size:40px; line-height: 40px;}
+                .nic-name{margin:5px 0 10px 0;}
+            }
+        }
+        .text{color:$white;margin-top: 20px;}
+    }
+    &.fail{display:flex;align-items:center;justify-content:center;flex-flow:column;
+        .modal-content{
+            width:240px;height: 240px;background-color: $yellow;border-radius: 50%;display:flex;
+            align-items: center;justify-content:center;text-align:center;
+            .desc{
+                p{color:$black;}
+                .number{font-size:40px; line-height: 40px;}
+                .nic-name{margin:5px 0 10px 0;}
+            }
+        }
+        .text{color:$white;margin-top: 20px;}
+    }
 }
