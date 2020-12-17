@@ -215,10 +215,11 @@ body{color:$black;line-height: 22px;font-size:16px; word-break: keep-all;}
         }
         &.payment{
             .col-6{display:flex;align-items: center;justify-content: center;}
-            a.active{
+            .way{width:155px;height:50px;border:1px solid $gray;display:flex;align-items: center;justify-content:center;margin-bottom:15px;}
+            input[type=radio]:not(old):checked + label {
                 .way{border:2px solid $black;}
             }
-            .way{width:155px;height:50px;border:1px solid $gray;display:flex;align-items: center;justify-content:center;margin-bottom:15px;}
+            input[type=radio]{display:none;}
         }
     } 
 }
@@ -289,8 +290,12 @@ body{color:$black;line-height: 22px;font-size:16px; word-break: keep-all;}
             }
             .input-form{position: relative;}
             .error-msg{color:$red;font-size:10px;position: absolute;right:10px;top:49%;
-                transform: translate(0, -50%);
+                transform: translate(0, -50%);opacity: 0;
+                &.active{opacity: 1;}
             }
         }
     }
+}
+.winning-wrap{
+    .img{width: 170px;height:170px;background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 50%;}
 }

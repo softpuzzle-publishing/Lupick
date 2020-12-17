@@ -1,7 +1,7 @@
 
 $('textarea, input').on("input", function () {
     if ($(this).attr('maxlength') !== "") {
-        console.log(1)
+       
         var maxlength = $(this).attr("maxlength");
         var content = $(this).val();
 
@@ -139,6 +139,14 @@ $(document).ready(function () {
             }
         });
     });
+
+    //투표 에러메시지
+    $('.vote .form-control').on('keyup', function(){
+        var value = $(this).val();
+        if(value > 1000){
+           $(this).next().addClass('active');
+        }
+    })
     
 function closeBtn(){
     window.history.back();

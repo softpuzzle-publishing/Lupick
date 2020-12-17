@@ -535,9 +535,11 @@ body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
 .payment-wrap .tab.payment .col-6 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-.payment-wrap .tab.payment a.active .way { border: 2px solid #000; }
-
 .payment-wrap .tab.payment .way { width: 155px; height: 50px; border: 1px solid rgba(0, 0, 0, 0.15); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 15px; }
+
+.payment-wrap .tab.payment input[type=radio]:not(old):checked + label .way { border: 2px solid #000; }
+
+.payment-wrap .tab.payment input[type=radio] { display: none; }
 
 .result { position: relative; }
 
@@ -593,5 +595,9 @@ body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
 .vote-wrap .content.vote .input-form { position: relative; }
 
-.vote-wrap .content.vote .error-msg { color: #d20000; font-size: 10px; position: absolute; right: 10px; top: 49%; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); }
+.vote-wrap .content.vote .error-msg { color: #d20000; font-size: 10px; position: absolute; right: 10px; top: 49%; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); opacity: 0; }
+
+.vote-wrap .content.vote .error-msg.active { opacity: 1; }
+
+.winning-wrap .img { width: 170px; height: 170px; background-size: cover; background-repeat: no-repeat; background-position: center; border-radius: 50%; }
 /*# sourceMappingURL=style.css.map */
