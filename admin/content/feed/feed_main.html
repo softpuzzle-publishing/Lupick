@@ -24,6 +24,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- chartjs -->
     <script src="../../resources/plugins/chart/Chart.min.js"></script>
+    <!-- 에디터 -->
+    <script src="../../resources/plugins/ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
@@ -311,7 +313,63 @@
                                 <tr>
                                     <th>피드 상세페이지</th>
                                     <td>
-                                        <textarea class="form-control w-100p h-570px" placeholder="피드 상세 페이지를 구성해 주세요."></textarea>
+                                        <textarea name="feedEditor" id="feedtEditor" class="form-control w-100p h-570px" placeholder="피드 상세 페이지를 구성해 주세요.">
+                                            <div class="wrapper" style="max-width:375px;">
+                                                <div class="wrap feed">
+                                                    <div class="header d-flex align-items-center">
+                                                        <a href="javascript:void(0)" class="ic-back"></a>
+                                                        <span class="font-18 bold">이벤트 후기</span>
+                                                    </div>
+                                                    <div class="container-wrap feed">
+                                                        <div class="item article">
+                                                            <div class="content">
+                                                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_01.png)"></div>
+                                                                <div class="desc">
+                                                                    <div class="text">
+                                                                        <p class="font-14">
+                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                            
+                                                            <div class="content">
+                                                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_04.png)"></div>
+                                                                <div class="desc">
+                                                                    <div class="text">
+                                                                        <p class="font-14">
+                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                            
+                                                            <div class="content">
+                                                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_02.png)"></div>
+                                                                <div class="desc">
+                                                                    <div class="text">
+                                                                        <p class="font-14">
+                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                            
+                                                            <div class="content">
+                                                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_03.png)"></div>
+                                                                <div class="desc">
+                                                                    <div class="text">
+                                                                        <p class="font-14">
+                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </textarea>
                                     </td>
                                 </tr>
                                 <tr>
@@ -870,6 +928,11 @@
     <script src="../../resources/plugins/bootstrap-colorpicker/bootstrap-colorpicker.js"></script>
     <script src="../../resources/js/common.js"></script>
     <script>
+         CKEDITOR.replace('feedEditor', {
+            height: 500,
+            contentsCss: '../../resources/css/style.css'
+        });
+
         $(document).ready(function () {
             $('[name=feedType]').on('change',function(){
                 console.log($('[name=feedType]:checked').val());
