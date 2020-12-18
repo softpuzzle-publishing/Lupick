@@ -1,7 +1,6 @@
-
 $('textarea, input').on("input", function () {
     if ($(this).attr('maxlength') !== "") {
-       
+
         var maxlength = $(this).attr("maxlength");
         var content = $(this).val();
 
@@ -29,16 +28,16 @@ $("input[type=checkbox]").click(function () {
 
 
 $(document).ready(function () {
-   
-    $(window).on('load', function(){
+
+    $(window).on('load', function () {
         //select
-        $(".select-sm").each(function(){
+        $(".select-sm").each(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
         });
-        $(".select-md").each(function(){
+        $(".select-md").each(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
         });
-        $(".select-lg").each(function(){
+        $(".select-lg").each(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
         });
         //중첩된 모달이 닫힐때 스타일 삭제 방지
@@ -47,80 +46,81 @@ $(document).ready(function () {
         });
         //열려있는 모달 갯수 파악하여 3중 모달 이상일때 가장 최근 모달 z-index 올림 처리
         $('.modal').on('show.bs.modal', function (e) {
-            if($('.modal.show').length > 1){
-                $(this).css('z-index','1600');
+            if ($('.modal.show').length > 1) {
+                $(this).css('z-index', '1600');
             }
         });
 
-         //bouncing balls
-         if($('#stage').length > 0){
+        //bouncing balls
+        if ($('#stage').length > 0) {
             bouncing();
         }
     });
 
-     //수량 입력
-     $('.spinner button').on('click',function(){
+    //수량 입력
+    $('.spinner button').on('click', function () {
         var max = parseInt($(this).closest('.spinner').attr('data-max'));
         var min = parseInt($(this).closest('.spinner').attr('data-min'));
         var count = $(this).siblings('.spinner-input').val();
 
-        if($(this).hasClass('spinner-increment')){
-            if(count < max){
+        if ($(this).hasClass('spinner-increment')) {
+            if (count < max) {
                 count++;
                 $(this).siblings('.spinner-input').val(count);
-                $(this).siblings('.spinner-decrement').prop('disabled',false);
-                $(this).prop('disabled',false);
+                $(this).siblings('.spinner-decrement').prop('disabled', false);
+                $(this).prop('disabled', false);
             }
-            if(count == max){
-                $(this).prop('disabled',true);
+            if (count == max) {
+                $(this).prop('disabled', true);
             }
-        }
-        else if($(this).hasClass('spinner-decrement')){
-            if(count > min){
+        } else if ($(this).hasClass('spinner-decrement')) {
+            if (count > min) {
                 count--;
                 $(this).siblings('.spinner-input').val(count);
-                $(this).siblings('.spinner-increment').prop('disabled',false);
-                $(this).prop('disabled',false);
-            }else{
+                $(this).siblings('.spinner-increment').prop('disabled', false);
+                $(this).prop('disabled', false);
+            } else {
                 $('.modal-alert').addClass('active');
-                setTimeout(function(){
+                setTimeout(function () {
                     $('.modal-alert').removeClass('active');
-                },2000)
+                }, 2000)
             }
         }
     });
 
     // 아이템 정보
     var length_product = $('.tab.item .product').length;
-    if(length_product > 1){
+    if (length_product > 1) {
         var first_product = $('.tab.item .product').first();
         first_product.show();
-        
-        $('.more').click(function(){
-            if( !$(this).hasClass('active') ){
+
+        $('.more').click(function () {
+            if (!$(this).hasClass('active')) {
                 $('.tab.item .product').show();
                 $(this).addClass('active');
                 $(this).text('닫기');
-            }else{
+            } else {
                 $('.tab.item .product').hide();
                 $('.tab.item .product').first().show();
                 $(this).removeClass('active');
-                $(this).text('총'+length_product+'건 전체보기' );
+                $(this).text('총' + length_product + '건 전체보기');
             }
         })
+    } else {
+        $('.tab.item .product').show();
     }
-    
+
     var length_tracking = $('.tab.tracking .step').length;
-    if(length_product > 1){
+    if (length_product > 1) {
         var first_product = $('.tab.tracking .step').first();
         first_product.show();
-        
-        $('.tracking-more').click(function(){
-            if( !$(this).hasClass('active') ){
+
+        $('.tracking-more').click(function () {
+            if (!$(this).hasClass('active')) {
                 $('.tab.tracking .step').show();
                 $(this).addClass('active');
                 $(this).text('간략히 보기');
-            }else{
+            } else {
                 $('.tab.tracking .step').hide();
                 $('.tab.tracking .step').first().show();
                 $(this).removeClass('active');
@@ -130,41 +130,42 @@ $(document).ready(function () {
     }
     //배송지 직접입력
     $('#delivery-select').selectmenu({
-            change:function( event, ui ) {
-              if($(this).val() == '직접 입력') {
-                 $('.direct textarea').show();
-              }else{
+        change: function (event, ui) {
+            if ($(this).val() == '직접 입력') {
+                $('.direct textarea').show();
+            } else {
                 $('.direct textarea').hide();
-              }
             }
-        });
-    });
-
-    //투표 에러메시지
-    $('.vote .form-control').on('keyup', function(){
-        var value = $(this).val();
-        if(value > 1000){
-           $(this).next().addClass('active');
         }
-    })
-    
-function closeBtn(){
+    });
+});
+
+//투표 에러메시지
+$('.vote .form-control').on('keyup', function () {
+    var value = $(this).val();
+    if (value > 1000) {
+        $(this).next().addClass('active');
+    }
+})
+
+function closeBtn() {
     window.history.back();
 }
-function deleteOption(idx){
-    $('#sel-'+idx).remove();
+
+function deleteOption(idx) {
+    $('#sel-' + idx).remove();
 
     var option = $('.sel-option');
     var option_length = option.length;
     console.log(option_length);
-    
-    if(option_length == 0){
+
+    if (option_length == 0) {
         $('.total-price').hide();
     }
-    
+
 }
 //결제완료 background balls,
-function bouncing(){
+function bouncing() {
     var stage = document.getElementById('stage');
 
     var browserX = window.screenX;
@@ -180,11 +181,10 @@ function bouncing(){
     stage.height = stageHeight;
 
     var IE = document.all ? true : false;
-    if(!IE) document.addEventListener(Event.MOUSEMOVE, getMouseXY, false);
+    if (!IE) document.addEventListener(Event.MOUSEMOVE, getMouseXY, false);
     document.onmousemove = getMouseXY;
 
-    window.onresize = function(event)
-    {
+    window.onresize = function (event) {
         stage.width = 5;
         stage.height = 5;
         stageWidth = $(document).width();
@@ -196,35 +196,28 @@ function bouncing(){
     generate();
 
     var drawingCanvas = document.getElementById('stage');
-    if(drawingCanvas.getContext)
-    {
+    if (drawingCanvas.getContext) {
         var context = drawingCanvas.getContext('2d');
         setInterval(render, 20);
     }
 
-    jQuery(document).ready(function()
-    {
-        $(document).mousedown(function(e)
-        {
+    jQuery(document).ready(function () {
+        $(document).mousedown(function (e) {
             onMouseDown();
         });
 
-        $(document).mouseup(function(e)
-        {
+        $(document).mouseup(function (e) {
             onMouseUp();
         });
     });
 
-    function onMouseDown()
-    {
+    function onMouseDown() {
         var j = balls.length;
-        while(--j > -1)
-        {
+        while (--j > -1) {
             var dx = mouseX - balls[j].x;
             var dy = mouseY - balls[j].y;
             var dist = Math.sqrt(dx * dx + dy * dy);
-            if(dist < balls[j].size/2)
-            {
+            if (dist < balls[j].size / 2) {
                 currentDrag = balls[j];
                 currentDrag.dragging = true;
                 return;
@@ -232,14 +225,12 @@ function bouncing(){
         }
     }
 
-    function onMouseUp()
-    {
-        if(currentDrag != null) currentDrag.dragging = false;
+    function onMouseUp() {
+        if (currentDrag != null) currentDrag.dragging = false;
     }
-    function generate()
-    {
-        for(var i = 0; i < total; i++)
-        {
+
+    function generate() {
+        for (var i = 0; i < total; i++) {
             var ball = {};
             ball.color = genHex(i);
             ball.bounce = 1;
@@ -252,22 +243,19 @@ function bouncing(){
         }
     }
 
-    function genHex(i)
-    {
+    function genHex(i) {
         colors = new Array(4);
-        colors[0]="#ffff00";
-        colors[1]="#ffff00";
-        colors[2]="#ffff00";
-        colors[3]="#ffff00";
+        colors[0] = "#ffff00";
+        colors[1] = "#ffff00";
+        colors[2] = "#ffff00";
+        colors[3] = "#ffff00";
 
         return colors[i];
     }
 
-    function render()
-    {
+    function render() {
         var isChange = (browserX != window.screenX || browserY != window.screenY);
-        if(isChange)
-        {
+        if (isChange) {
             var diffX = browserX - window.screenX;
             browserX = window.screenX;
 
@@ -276,12 +264,10 @@ function bouncing(){
         }
 
         var j = balls.length;
-        while(--j > -1)
-        {
+        while (--j > -1) {
             update(balls[j]);
 
-            if(isChange)
-            {
+            if (isChange) {
                 balls[j].vx += (diffX * .05);
                 balls[j].vy += (diffY * .1);
             }
@@ -290,29 +276,25 @@ function bouncing(){
         draw();
     }
 
-    function draw()
-    {
+    function draw() {
         context.clearRect(0, 0, stageWidth, stageHeight);
         var i = balls.length;
-        while(--i > -1)
-        {
+        while (--i > -1) {
             context.fillStyle = balls[i].color;
             context.beginPath();
-            context.arc(balls[i].x,balls[i].y,balls[i].size,0,Math.PI*2,true);
+            context.arc(balls[i].x, balls[i].y, balls[i].size, 0, Math.PI * 2, true);
             context.closePath();
             context.fill();
         }
     }
 
-    function update(ball)
-    {
+    function update(ball) {
         collisionCheck();
 
         var gravity = 1.3;
         var drag = .95;
 
-        if(ball.dragging)
-        {
+        if (ball.dragging) {
             ball.vx = ball.x - ball.ox;
             ball.vy = ball.y - ball.oy;
             ball.ox = ball.x;
@@ -321,47 +303,33 @@ function bouncing(){
             ball.x = mouseX;
             ball.y = mouseY;
 
-            if ((ball.x + ball.size) > stageWidth)
-            {
+            if ((ball.x + ball.size) > stageWidth) {
                 ball.x = stageWidth - ball.size;
-            }
-            else if((ball.x - ball.size) < 0)
-            {
+            } else if ((ball.x - ball.size) < 0) {
                 ball.x = 0 + ball.size;
             }
 
-            if ((ball.y + ball.size) > stageHeight)
-            {
+            if ((ball.y + ball.size) > stageHeight) {
                 ball.y = stageHeight - ball.size;
-            }
-            else if((ball.y - ball.size) < 0)
-            {
+            } else if ((ball.y - ball.size) < 0) {
                 ball.y = 0 + ball.size;
             }
-        }
-        else
-        {
+        } else {
             ball.x += ball.vx;
             ball.y += ball.vy;
 
-            if ((ball.x + ball.size) > stageWidth)
-            {
+            if ((ball.x + ball.size) > stageWidth) {
                 ball.x = stageWidth - ball.size;
                 ball.vx = -ball.vx * ball.bounce;
-            }
-            else if((ball.x - ball.size) < 0)
-            {
+            } else if ((ball.x - ball.size) < 0) {
                 ball.x = 0 + ball.size;
                 ball.vx = -ball.vx * ball.bounce;
             }
 
-            if ((ball.y + ball.size) > stageHeight)
-            {
+            if ((ball.y + ball.size) > stageHeight) {
                 ball.y = stageHeight - ball.size;
                 ball.vy = -ball.vy * ball.bounce;
-            }
-            else if((ball.y - ball.size) < 0)
-            {
+            } else if ((ball.y - ball.size) < 0) {
                 ball.y = 0 + ball.size;
                 ball.vy = -ball.vy * ball.bounce;
             }
@@ -371,24 +339,20 @@ function bouncing(){
         }
     }
 
-    function collisionCheck()
-    {
+    function collisionCheck() {
         var spring = 0.8;
 
-        for(var i = 0; i < (total-1); ++i)
-        {
+        for (var i = 0; i < (total - 1); ++i) {
             var ball0 = balls[i];
 
-            for(var j = i + 1; j < total; ++j)
-            {
+            for (var j = i + 1; j < total; ++j) {
                 var ball1 = balls[j];
                 var dx = ball1.x - ball0.x;
                 var dy = ball1.y - ball0.y;
                 var dist = Math.sqrt(dx * dx + dy * dy);
                 var minDist = ball0.size + ball1.size;
 
-                if(dist < minDist)
-                {
+                if (dist < minDist) {
                     var angle = Math.atan2(dy, dx);
                     var tx = ball0.x + dx / dist * minDist;
                     var ty = ball0.y + dy / dist * minDist;
@@ -412,21 +376,21 @@ function bouncing(){
         }
     }
 
-    function getMouseXY(e)
-    {
-        if(IE)
-        {
+    function getMouseXY(e) {
+        if (IE) {
             mouseX = event.clientX + document.body.scrollLeft
             mouseY = event.clientY + document.body.scrollTop
-        }
-        else
-        {
+        } else {
             mouseX = e.pageX
             mouseY = e.pageY
         }
 
-        if(mouseX < 0) {mouseX = 0;}
-        if(mouseY < 0) {mouseY = 0;}
+        if (mouseX < 0) {
+            mouseX = 0;
+        }
+        if (mouseY < 0) {
+            mouseY = 0;
+        }
 
         return true;
     }

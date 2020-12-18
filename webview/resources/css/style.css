@@ -63,6 +63,8 @@ i, em { font-style: normal; }
 
 .m-t-20 { margin-top: 20px !important; }
 
+.m-t-50 { margin-top: 50px !important; }
+
 .g-b { font-family: 'Gilroy'; font-size: 18px; line-height: 1.35; }
 
 button { border: 0; background: transparent; padding: 0; }
@@ -251,7 +253,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.add .modal-content { width: 100%; height: 100%; padding: 0 20px; }
 
-.modal-dialog.add .modal-content.setting { padding: 60px 20px 0; }
+.modal-dialog.add .modal-content.setting { padding: 0 20px 0; }
 
 .ic-close { width: 20px; height: 20px; background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center; }
 
@@ -275,7 +277,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.change .modal-content { width: 100%; height: 100%; padding: 0 20px; }
 
-.modal-dialog.change .modal-content.setting { padding: 60px 20px 0; }
+.modal-dialog.change .modal-content.setting { padding: 0 20px 0; }
 
 .modal-dialog.change .modal-content .info-list { margin-bottom: 30px; }
 
@@ -295,13 +297,13 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.change .modal-content .wrap a:last-child .desc { border-bottom: 0; }
 
-.modal-dialog.none .modal-content { width: 100%; height: 100vh; padding: 60px 20px 0; }
+.modal-dialog.none .modal-content { width: 100%; height: 100vh; padding: 0 20px 0; }
 
 .modal-dialog.none .modal-content .payment-wrap { padding: 0; }
 
 .modal-dialog.none .modal-content .payment-wrap .tab.order { margin: 50px 0 0 0; }
 
-.modal-dialog.tracking .modal-content { width: 100%; padding: 60px 20px 40px; }
+.modal-dialog.tracking .modal-content { width: 100%; padding: 0 20px 40px; }
 
 .modal-dialog.tracking .modal-content .payment-wrap { padding: 0; }
 
@@ -317,7 +319,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .tracking-more.active:after { content: '\f077'; font-family: "Font Awesome 5 Free"; padding: 0 5px; }
 
-.modal-dialog.receipt .modal-content { width: 100%; height: 100%; padding: 60px 20px 40px; }
+.modal-dialog.receipt .modal-content { width: 100%; height: 100%; padding: 0 20px 40px; }
 
 .modal-dialog.receipt .modal-content .modal-body { padding: 0; }
 
@@ -385,13 +387,15 @@ td > .btn + .btn { margin-left: 6px; }
 
 body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
-.wrap { padding: 0 0 70px 0; }
+.wrap { padding: 60px 0 70px 0; }
 
-.wrap .header { position: fixed; width: 100%; height: 60px; padding: 20px; margin-bottom: 20px; background-color: #fff; z-index: 40; }
+.wrap .header { position: fixed; width: 100%; height: 60px; padding: 20px; margin-bottom: 20px; top: 0; background-color: #fff; z-index: 40; }
 
 .wrap .header .ic-back { width: 20px; height: 15px; background-image: url(../images/ic_back.svg); background-size: cover; background-position: center; background-repeat: no-repeat; margin-right: 15px; }
 
 .wrap.vote-result { padding: 0; }
+
+.wrap.detail { padding: 0 0 70px 0; }
 
 .close { width: 30px; height: 30px; display: inline-block; background-image: url(../images/btn_exit.svg); background-size: cover; background-position: center; background-repeat: no-repeat; position: fixed; top: 20px; right: 20px; z-index: 5; }
 
@@ -401,7 +405,7 @@ body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
 .btn.fixed .icon { width: 18px; height: 16px; display: inline-block; background-image: url(../images/arrow.svg); background-size: cover; background-position: center; background-repeat: no-repeat; vertical-align: middle; }
 
-.container-wrap { padding: 60px 20px 0; overflow: hidden; }
+.container-wrap { padding: 0 20px 0; overflow: hidden; }
 
 .container-wrap .component { margin-top: 30px; }
 
@@ -409,7 +413,7 @@ body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
 .container-wrap .component .date { margin-left: 5px; }
 
-.container-wrap .detail-img { width: 100%; height: 360px; background-position: center; background-size: cover; background-repeat: no-repeat; }
+.detail-img { width: 100%; height: 360px; background-position: center; background-size: cover; background-repeat: no-repeat; }
 
 .container-wrap .notice { background-color: rgba(0, 0, 0, 0.15); padding: 20px 15px; margin-top: 30px; }
 
@@ -519,6 +523,14 @@ body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
 .container-wrap .item.process .desc .circle { width: 40px; height: 40px; border-radius: 50%; background-color: #ffff00; color: #000; font-size: 20px; font-weight: bold; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 5px 0 0 0; }
 
+.product-info-content { padding: 0 20px; }
+
+.product-info-content .desc { margin-top: 30px; }
+
+.product-info-content .desc p { line-height: 22px; font-size: 14px; }
+
+.product-info-content .desc li { line-height: 22px; font-size: 14px; }
+
 .item.move-btn { margin-top: 50px; }
 
 .item.share { margin: 40px 0 50px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
@@ -547,7 +559,7 @@ body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
 .total-price span { display: inline-block; }
 
-.payment-wrap { padding: 60px 20px 0; }
+.payment-wrap { padding: 0 20px 0; }
 
 .payment-wrap .tab { border-top: 2px solid #000; margin-bottom: 50px; }
 
@@ -635,7 +647,7 @@ body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
 .success a i { margin-top: 5px; }
 
-.vote-wrap { padding: 60px 20px 0; }
+.vote-wrap { padding: 0 20px 0; }
 
 .vote-wrap .content.vote { width: 100%; height: 100%; position: relative; z-index: 2; padding: 0 0 35px 0; }
 
@@ -655,7 +667,7 @@ body { color: #000; line-height: 22px; font-size: 16px; word-break: keep-all; }
 
 .vote-wrap .content.vote .error-msg.active { opacity: 1; }
 
-.winning-wrap { padding: 0 20px; text-align: center; }
+.winning-wrap { padding: 0 20px 0; text-align: center; }
 
 .winning-wrap .balls { position: relative; z-index: 2; height: 100%; }
 

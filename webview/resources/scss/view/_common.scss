@@ -57,6 +57,7 @@ em{font-style: normal;}
 .m-t-10{margin-top:10px !important;}
 .m-t-15{margin-top:15px !important;}
 .m-t-20{margin-top:20px !important;}
+.m-t-50{margin-top:50px !important;}
 .g-b{font-family: 'Gilroy';font-size:18px;line-height: 1.35;}
 
 button{border: 0;background: transparent;padding: 0;}
@@ -312,7 +313,7 @@ a:focus{outline: none;box-shadow: none !important;}
     &.add{
         .modal-content{
             width: 100%;height:100%;padding:0 20px;
-            &.setting{padding:60px 20px 0;}
+            &.setting{padding:0 20px 0;}
             @at-root{
                 .ic-close{width:20px;height:20px;background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center;}
                 .ic-list{width:20px;height:20px;background-image: url(../images/ic_list.svg); background-size: cover; background-position: center;}
@@ -331,7 +332,7 @@ a:focus{outline: none;box-shadow: none !important;}
     &.change{
         .modal-content{
             width: 100%;height:100%;padding:0 20px;
-            &.setting{padding:60px 20px 0;}
+            &.setting{padding:0 20px 0;}
             .info-list{margin-bottom:30px;
                 .info-list-header{ font-size:14px; font-weight: bold;}
             }
@@ -358,7 +359,7 @@ a:focus{outline: none;box-shadow: none !important;}
     }
     &.none{
         .modal-content{
-            width: 100%;height:100vh;padding:60px 20px 0;
+            width: 100%;height:100vh;padding:0 20px 0;
             .payment-wrap{padding:0;
                 .tab.order{
                     margin:50px 0 0 0;
@@ -368,7 +369,7 @@ a:focus{outline: none;box-shadow: none !important;}
     }
     &.tracking{
         .modal-content{
-            width: 100%;padding:60px 20px 40px;
+            width: 100%;padding:0 20px 40px;
             .payment-wrap{padding:0;
                 .tab.order{
                     margin:50px 0 0 0;
@@ -397,7 +398,7 @@ a:focus{outline: none;box-shadow: none !important;}
     }
     &.receipt{
         .modal-content{
-            width: 100%;height:100%;padding:60px 20px 40px;
+            width: 100%;height:100%;padding:0 20px 40px;
             .modal-body{padding:0;
                 .title{font-size:30px;line-height: 40px;}
             }
@@ -461,3 +462,20 @@ a:focus{outline: none;box-shadow: none !important;}
         .text{color:$white;margin-top: 20px;}
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
