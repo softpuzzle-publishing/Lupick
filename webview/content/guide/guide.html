@@ -129,8 +129,10 @@
         </div>
     </section>
     <section style="position:relative; width:100%;height:700px;">
-        <!-- //모달 사용시 style="display:block"은 지워주세요! -->
-        <div class="modal-alert" style="display:block;">
+     
+        <button class="toast" style="background-color:black;color:white;width:150px;height:50px;">toast</button>
+        <!-- 개발시 style = " border 1px solid #ddd"는 지워주세요! -->
+        <div class="modal-alert" style="border:1px solid #ddd;">
             <div class="toast">
                 <div class="icon"></div>
                 <p class="font-14 bold">아이템을 더이상 선택할 수 없습니다!</p>
@@ -138,7 +140,15 @@
         </div>
     </section>
 </div>
-
+    <script>
+        $('.toast').click(function(){
+            $('.modal-alert').addClass('active');
+            setTimeout(function () {
+                $('.modal-alert').removeClass('active');
+            }, 2000)
+        })
+    
+    </script>
     <script src="../../resources/js/common.js"></script>
 </body>
 </html>
