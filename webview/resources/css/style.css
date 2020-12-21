@@ -239,13 +239,13 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog .modal-content .ic-close { width: 20px; height: 20px; background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center; }
 
-.modal-alert { width: 100%; position: absolute; padding: 20px; bottom: 1000px; }
+.modal-alert { width: 100%; position: absolute; padding: 20px; top: 0; display: none; }
 
-.modal-alert .wrap { padding: 20px; background-color: #fff; border-radius: 7px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.modal-alert .toast { padding: 20px; background-color: #fff; border-radius: 7px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
-.modal-alert .wrap .icon { width: 20px; height: 20px; background-image: url(../images/ic_alert_large.svg); background-size: cover; background-position: center; margin-right: 15px; }
+.modal-alert .toast .icon { width: 20px; height: 20px; background-image: url(../images/ic_alert_large.svg); background-size: cover; background-position: center; margin-right: 15px; }
 
-.modal-alert.active { bottom: inherit; }
+.modal-alert.active { display: block; }
 
 .modal-dialog.detail .modal-content { width: 100%; position: absolute; bottom: 0; }
 
@@ -395,7 +395,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 body { color: #000; line-height: 22px; font-size: 16px; }
 
-.wrap { padding: 60px 0 70px 0; }
+.wrap { padding: 60px 0 70px 0; position: relative; }
 
 .wrap .header { position: fixed; width: 100%; height: 60px; padding: 20px; margin-bottom: 20px; top: 0; background-color: #fff; z-index: 40; }
 
