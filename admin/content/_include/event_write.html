@@ -500,7 +500,7 @@
                                 <th>이벤트 상세 정보</th>
                                 <td>
                                     <textarea name="eventEditor" id="eventEditor" cols="30" rows="10">
-                                        <div class="wrapper" style="max-width:375px;">
+                                        <div class="wrappers" style="max-width:375px;">
                                             <div class="container-wrap">
                                                 <div class="item article">
                                                     <div class="content">
@@ -539,9 +539,6 @@
                                             </div>
                                         </div>
                                 </textarea>
-                                    <div class="">
-
-                                    </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -634,13 +631,13 @@
 </div>
 
 <script>
-    CKEDITOR.replace('eventEditor', {
-        height: 500,
-        contentsCss: '../../resources/css/style.css'
-    });
+       CKEDITOR.replace('eventEditor', {
+            height: 500,
+            contentsCss: '../../resources/css/style.css'
+        });
 
     $(document).ready(function () {
-
+     
         //아이템 배송비 select
         $('#delivery-type-write').selectmenu({
             change: function (event, ui) {
