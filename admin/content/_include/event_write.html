@@ -95,6 +95,15 @@
                                 </td>
                             </tr>
                             <tr>
+                                <th>마감임박 알림</th>
+                                <td>
+                                    <input type="text" value="1" class="form-control text-center w-100px">
+                                    <span class="m-l-15">일</span>
+                                    <span class="example-text m-l-15">* 이벤트 기간이 끝나기 며칠 전에 푸시알림을 전송할 지 설정해주세요. (1일 ~ 3일 중
+                                        입력 가능)</span>
+                                </td>
+                            </tr>
+                            <tr>
                                 <th>이벤트 주제 태그</th>
                                 <td>
                                     <div class="d-flex align-items-center">
@@ -192,6 +201,15 @@
                                 <td>
                                     <input class="form-control w-1213px" maxlength="90" data-byte-target="#byte-check3">
                                     <span class="example-text m-l-15">(<span id="byte-check3">0</span>/90)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>아이템 구매개수 제한</th>
+                                <td>
+                                    <input type="text" value="1" class="form-control text-center w-100px">
+                                    <span class="m-l-15">개</span>
+                                    <span class="example-text m-l-15">* 유저 1인당 구매할 수 있는 개수를 제한합니다. (최대 5개까지 입력
+                                        가능)</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -631,13 +649,13 @@
 </div>
 
 <script>
-       CKEDITOR.replace('eventEditor', {
-            height: 500,
-            contentsCss: '../../resources/css/style.css'
-        });
+    CKEDITOR.replace('eventEditor', {
+        height: 500,
+        contentsCss: '../../resources/css/style.css'
+    });
 
     $(document).ready(function () {
-     
+
         //아이템 배송비 select
         $('#delivery-type-write').selectmenu({
             change: function (event, ui) {
