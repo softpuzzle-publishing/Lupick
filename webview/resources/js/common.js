@@ -31,11 +31,39 @@ $(document).ready(function () {
 
     $(window).on('load', function () {
         //select
+        
         $(".select-sm").each(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
         });
         $(".select-md").each(function () {
-            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-md");
+            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-md menuWidget");
+           
+            $('.ui-selectmenu-button').on('click', function () {
+                var option_height = $('.ui-menu').height();
+                var modal_height = $('.modal-content').height();
+                var total_height = option_height + modal_height;
+                var sel_length = $('.sel-option').length;
+                console.log(sel_length);
+                
+                if( sel_length  >= 1 ){
+                    $('.wrap').css('height', 'auto');
+                    return false;
+                }
+                if (!$('.ui-selectmenu-menu').hasClass('ui-selectmenu-open')) {
+                    $('.wrap').css('height', 'auto');
+    
+                } else {
+                    setTimeout(function () {
+                        $('.wrap').css('height', total_height);
+                    }, 100)
+                    setTimeout(function () {
+                        $(".select-md").selectmenu("open");
+                    }, 100)
+                }
+                $('.ui-selectmenu-menu').click(function () {
+                    $('.wrap').css('height', 'auto');
+                })
+            })
         });
         $(".select-lg").each(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
