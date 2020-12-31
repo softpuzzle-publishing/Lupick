@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lupick</title>
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
     <link rel="stylesheet" href="../../resources/css/style.css">
     <!-- jQuery -->
@@ -13,6 +15,7 @@
     <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
 </head>
 <body>
     <div class="wrap detail">
@@ -33,7 +36,6 @@
                 <span class="badge badge-dark">LUPICK COLLAB</span>
                 <span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span>
             </div>
-
             <div class="notice">
                 <div class="desc d-flex align-items-center m-b-10">
                     <p class="font-12 bold">이벤트 기간</p>
@@ -59,6 +61,88 @@
                         <li><span>상호명</span> <span>하이브로우</span></li>
                         <li><span>연락처</span> <span>02-1234-5678</span></li>
                     </ul>
+                </div>
+            </div>
+            <div class="item winning">
+                <div class="tracking-title">
+                    <h1>루피커, 럭키템을 겟!</h1>
+                    <p class="font-14">축하해요. 진정한 행운의 사람들 🎉</p>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
+                            <p class="num">1st</p>
+                            <p class="name">2020 랜드로버 디팬더</p>
+                            <div class="winning-list d-flex">
+                                <div class="list-wrap">
+                                    <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
+                                    <div class="people people-2" style="background-image:url('../../resources/images/Thumbnail_02.png')"></div>
+                                    <div class="people people-3" style="background-image:url('../../resources/images/Thumbnail_03.png')"></div>
+                                </div>
+                                <p class="font-12">총<span>3</span>명</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
+                            <p class="num">2st</p>
+                            <p class="name">2020 랜드로버 디팬더</p>
+                            <div class="winning-list d-flex">
+                                <div class="list-wrap">
+                                    <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
+                                    <div class="people people-2" style="background-image:url('../../resources/images/Thumbnail_02.png')"></div>
+                                </div>
+                                <p class="font-12">총<span>2</span>명</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
+                            <p class="num">3st</p>
+                            <p class="name">2020 랜드로버 디팬더</p>
+                            <div class="winning-list d-flex">
+                                <div class="list-wrap">
+                                    <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
+                                </div>
+                                <p class="font-12">총<span>1</span>명</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-20">
+                        <!-- 해당 결과페이지로 이동 -->
+                        <a href="../vote/vote.html">
+                            <div class="btn-next white h-60">
+                                <p class="font-16">결과 전체보기</p>
+                                <i class="icon-link-arr"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="event-review">
+                    <div class="card-box">
+                        <ul class="card-list feed">
+                            <li>
+                                <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb">
+                                        <span class="bg" style="background-image:url(../../resources/images/@event_01.png)"></span>
+                                    </div>
+                                    <div class="text">
+                                        <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="paint font-12">이벤트후기</div>
+                                            <div class="deadline">조회수 3.1만∙19시간 전</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="../vote/vote.html">
+                            <div class="btn-next black h-60">
+                                <p class="font-16">이벤트 후기 보러가기</p>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="item product">
@@ -318,9 +402,17 @@
                         <option value="" selected>옵션 선택</option>
                         <option value="1">미니 캐리어 테이블 (PLAIN)</option>
                         <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                        <option value="1">미니 캐리어 테이블 (asdasdasd)</option>
+
                     </select>
 
-                    <div class="sel-option" id="sel-1">
+                    <!-- <div class="sel-option" id="sel-1">
                         <div class="d-flex align-items-center justify-content-between">
                             <p class="name">미니 캐리어 테이블 (PLAIN)</p>
                             <button type="button" class="sel-delete" onclick="deleteOption(1);"></button>
@@ -361,13 +453,33 @@
                             <span class="font-14 m-r-10">총 금액</span>
                             <span class="font-20 bold">171,000원</span>
                         </p>
-                    </div>
+                    </div> -->
                 </div>
            
                 <a href="#" class="btn btn-dark btn-xl h-70">BYE ITEM</a>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+
+            var mySwiper = new Swiper('.swiper-container', {
+                speed: 400,
+                slidesPerGroup: 1,
+                slidesPerView:1.5,
+                on:{
+                    slideChange: function(){
+                        if(this.activeIndex == 0){
+                            
+                        }else if(this.activeIndex >= 1){
+                            
+                        }
+                    }
+                }
+            });
+        })
+        
+    </script>
     <script src="../../resources/js/common.js"></script>
 </body>
 </html>

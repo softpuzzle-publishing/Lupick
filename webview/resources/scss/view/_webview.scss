@@ -30,9 +30,9 @@ body{color:$black;line-height: 22px;font-size:16px; }
 }
 
 // event-detail
-.container-wrap{
-    padding: 0 20px 0;
+.container-wrap{padding:0 20px;
     overflow: hidden;
+    .p-20{padding: 0 20px;}
     .component{margin-top:30px;
         .price{margin:10px 0 20px;}
         .date{margin-left:5px;}
@@ -57,6 +57,30 @@ body{color:$black;line-height: 22px;font-size:16px; }
     }
     .item{
         margin-top:50px;
+        &.winning{padding:0;margin-left:-20px;margin-right:-20px;
+            .tracking-title{padding: 0 20px 0 40px;margin:80px 0 40px 0;
+                &::after{width:120px;height:120px;left:0;}
+                h1{font-size:26px;line-height: 26px;margin-bottom:5px;}
+                p{line-height: 20px;}
+            }
+            .swiper-wrapper{padding-left:40px;}
+            .swiper-slide{
+                .img{width:200px;height:200px;border-radius: 50%;background-size:cover;background-repeat: no-repeat;background-position: center;}
+                .num{font-size:20px;font-family: 'Gliroy'; font-weight: bold;margin-top: 10px;}
+                .name{margin-top:5px;font-size:20px;font-weight: bold;}
+                .winning-list{margin-top:10px;}
+                .list-wrap{position: relative;margin-right:5px;}
+                .people{width:20px;height:20px;display:inline-block;background-size:cover;background-repeat: no-repeat;background-position: center;border-radius:50%;border:1px solid $white;
+                    &.people-1{margin-left:0;z-index: 1;}
+                    &.people-2{margin-left:-10px;z-index: 2;}
+                    &.people-3{margin-left:-10px;z-index: 3;}
+                }
+            }
+            .event-review{
+                padding:0 20px 40px;
+                .card{border-bottom:1px solid #ddd;}
+            }
+        }
         &.product{
             .title{margin-bottom:20px; line-height: 15px;}
             .img{width: 100%;height: 320px;background-size: cover;background-position: center;background-repeat: no-repeat;}
@@ -88,7 +112,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
                     .point{width: 100px;height: 100px;border-radius: 50%;background-color: $yellow;
                         display:flex;align-items: center;justify-content: center;
                     }
-                    .text{margin-left:15px;
+                    .text{width:61%;margin-left:15px;
                         .name{margin: 10px 0 7px 0;}
                     }
                 }

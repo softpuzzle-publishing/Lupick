@@ -55,15 +55,14 @@
                 </div>
             </div>
             <div class="btn-group d-flex justify-content-between">
-                <button type="button" class="btn btn-outline-dark btn-lg w-150 h-50">랜덤 투표</button>
+                <button type="button" class="btn btn-outline-dark btn-lg w-150 h-50" data-toggle="modal" data-target="#modal-random">랜덤 투표</button>
                 <button type="button" class="btn btn-dark btn-lg w-150 h-50 m-l-10">투표 완료</button>
             </div>
         </div>
     </div>
 
     <!-- 도움말 -->
-    <div class="modal fade bd-example-modal-lg" id="modal-help" tabindex="-1" role="dialog"
-        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal fade bd-example-modal-lg" id="modal-help" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg help">
             <div class="modal-content">
                 <div class="modal-header justify-content-end mb-0">
@@ -102,7 +101,24 @@
             </div>
         </div>
     </div>
-
+    <!-- 랜덤 투표 -->
+    <div class="modal fade" id="modal-random" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-center random" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="font-14 text-center">
+                        랜덤 투표 시 입력하신 숫자가 모두
+                        초기화 되고 <span class="bold">새로운 숫자로 입력</span>됩니다.
+                        랜덤 투표 하시겠어요?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn h-50 font-14" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn h-50 font-14 bold">랜덤 투표</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         $(document).ready(function () {
             $(window).on('load', function () {
@@ -346,6 +362,8 @@
         }
     </script>
     <script src="../../resources/js/common.js"></script>
+
+   
 </body>
 
 </html>
