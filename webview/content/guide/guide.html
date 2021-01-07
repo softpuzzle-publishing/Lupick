@@ -138,6 +138,22 @@
                 <p class="font-14 bold">아이템을 더이상 선택할 수 없습니다!</p>
             </div>
         </div>
+
+        <button class="modal-error" data-toggle="modal" data-target="#modal-error" style="background-color:black;color:white;width:150px;height:50px;">alert</button>
+        <div class="modal fade" id="modal-error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog error" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <img src="../../resources/images/ic_alert_large.png" alt="">
+                    <p class="font-18 bold m-t-30">결제에 실패하였습니다</p>
+                    <p class="font-13 m-t-15">결제 시간이 초과되었습니다.</p>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-dark btn-lg h-50" data-dismiss="modal">확인</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
     <section>
         <ul class="card-list feed">

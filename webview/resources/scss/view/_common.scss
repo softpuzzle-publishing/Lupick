@@ -489,6 +489,10 @@ a:focus{outline: none;box-shadow: none !important;}
             }
         }
     }
+    &.error{
+        .modal-content{width:280px;height:350px;margin:50px auto;padding:40px 20px 30px;}
+        .modal-body{text-align: center;}
+    }
 }
 .card-list{
     display:flex;flex-flow:wrap;
