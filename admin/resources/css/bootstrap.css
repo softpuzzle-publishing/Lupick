@@ -5036,7 +5036,7 @@ input[type="button"].btn-block {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-right: 36px;
+  margin-right: 36px;margin-top:10px;margin-bottom:10px;
 }
 
 .custom-control-input {
