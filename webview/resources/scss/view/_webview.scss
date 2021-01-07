@@ -66,6 +66,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
             .swiper-wrapper{padding-left:40px;}
             .swiper-slide{
                 .img{width:200px;height:200px;border-radius: 50%;background-size:cover;background-repeat: no-repeat;background-position: center;}
+                .point{width: 200px;height: 200px;border-radius: 50%; background-color: #ffff00;display: flex;align-items: center;justify-content: center;}
                 .num{font-size:20px;font-family: 'Gliroy'; font-weight: bold;margin-top: 10px;}
                 .name{margin-top:5px;font-size:20px;font-weight: bold;}
                 .winning-list{margin-top:10px;}

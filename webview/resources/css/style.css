@@ -529,6 +529,8 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .container-wrap .item.winning .swiper-slide .img { width: 200px; height: 200px; border-radius: 50%; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
+.container-wrap .item.winning .swiper-slide .point { width: 200px; height: 200px; border-radius: 50%; background-color: #ffff00; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
 .container-wrap .item.winning .swiper-slide .num { font-size: 20px; font-family: 'Gliroy'; font-weight: bold; margin-top: 10px; }
 
 .container-wrap .item.winning .swiper-slide .name { margin-top: 5px; font-size: 20px; font-weight: bold; }
