@@ -199,6 +199,28 @@ html.is-editing{
             & + li{margin-top: 10px;}
         }
     }
+    .btn-multiple-ok{display: none;}
+
+    &.multiple{
+        ul{max-height: 350px;
+            li{
+                a{
+                    text-decoration: none;
+                    > span:first-child{
+                        position: relative;
+                        &::after{content: "";width: 0;height: 50%;position: absolute;bottom: 0;left: 0;background-color: #ffff00;z-index: -1;transition: width .2s}
+                    }
+                    &.active{
+                        > span:first-child{
+                            z-index: 2;
+                            &::after{width: 100%;}
+                        }
+                    }
+                }
+            }
+        }
+        .btn-multiple-ok{display: block;}
+    }
 }
 
 //배너

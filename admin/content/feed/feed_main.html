@@ -327,40 +327,40 @@
                                                                 <div class="desc">
                                                                     <div class="text">
                                                                         <p class="font-14">
-                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 
+                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                            
+
                                                             <div class="content">
                                                                 <div class="img" style="background-image:url(../../resources/images/Thumbnail_04.png)"></div>
                                                                 <div class="desc">
                                                                     <div class="text">
                                                                         <p class="font-14">
-                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 
+                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                            
+
                                                             <div class="content">
                                                                 <div class="img" style="background-image:url(../../resources/images/Thumbnail_02.png)"></div>
                                                                 <div class="desc">
                                                                     <div class="text">
                                                                         <p class="font-14">
-                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 
+                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
                                                                         </p>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                            
+
                                                             <div class="content">
                                                                 <div class="img" style="background-image:url(../../resources/images/Thumbnail_03.png)"></div>
                                                                 <div class="desc">
                                                                     <div class="text">
                                                                         <p class="font-14">
-                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 
+                                                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -888,7 +888,7 @@
                         <input class="form-control w-100" type="text" placeholder="기획전에 링크하고 싶은 이벤트가 있나요?">
                         <i></i>
                     </div>
-                    <div class="select-event-list">
+                    <div class="select-event-list multiple">
                         <ul>
                             <li>
                                 <a href="">
@@ -918,6 +918,9 @@
                                 </a>
                             </li>
                         </ul>
+                        <div class="text-center m-t-30 btn-multiple-ok">
+                            <button type="button" class="btn btn-dark btn-lg">선택완료</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -939,6 +942,15 @@
                 var t = $('[name=feedType]:checked').val();
                 $('[data-type]').hide();
                 $('[data-type=' + t + ']').show();
+            });
+
+            $('.select-event-list a').on('click',function(e){
+                var $item = $(this);
+                if($item.closest('.select-event-list').hasClass('multiple')){
+                    e.preventDefault();
+                    $item.toggleClass('active');
+                }
+
             });
         });
     </script>
