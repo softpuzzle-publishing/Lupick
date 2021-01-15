@@ -423,7 +423,6 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.error .modal-body { text-align: center; }
 
-<<<<<<< HEAD
 .modal-dialog.question .modal-header { -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; }
 
 .modal-dialog.question .modal-content { padding: 0 20px; height: auto; }
@@ -457,9 +456,6 @@ td > .btn + .btn { margin-left: 6px; }
 .modal-dialog.dim .modal-content { display: none; }
 
 .card-list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: wrap; flex-flow: wrap; }
-=======
-.card-list { display: flex; flex-flow: wrap; }
->>>>>>> 9600c84f802ec6519d7df8a1f8119457aad7b8bb
 
 .card-list li .item { width: 100%; display: block; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); margin-top: 40px; background: #fff; text-decoration: none; transition: all .2s; border-radius: 7px; }
 
@@ -489,7 +485,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .card-list .text .util span { font-size: 11px; font-weight: 700; display: block; text-align: center; margin-top: 6px; }
 
-.card-list .text .percent { line-height: 1.15; }
+.card-list .text .percent { line-height: 1.15;}
 
 .card-list .text .percent em { font-size: 12px; font-style: normal; color: #ff4841; font-weight: 700; }
 
