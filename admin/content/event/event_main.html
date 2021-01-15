@@ -45,7 +45,10 @@
             <div class="title-wrap justify-content-between">
                 <h1 class="title">Main Event</h1>
                 <a href="" class="edit" id="btn-edit"><b>Edit</b> <i class="icon-link-arr"></i></a>
-                <a href="" class="save" id="btn-save" style="display:none"><b>Save</b></a>
+                <div class="btn-group" style="display:none">
+                    <a href="" class="save" id="btn-save"><b>Save</b></a>
+                    <a href="" class="cancel" id="btn-cancel"><b>Cancel</b></a>
+                </div>
             </div>
 
             <div class="main-event">
@@ -53,10 +56,11 @@
                     <li>
                         <a href="" class="box">
                             <div>
-                                <span class="tag">예약 이벤트</span> <span class="deadline">07:01:30 </span><i> 남음</i>
+                                <span class="badge badge-dark">예약 이벤트</span> <span class="deadline">07:01:30 </span><i> 남음</i>
                             </div>
                             <p>9명에게 포르쉐911을 FLEX 해버릴까봐💥</p>
                         </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
                     </li>
                     <li>
                         <a href="" class="box">
@@ -65,14 +69,16 @@
                             </div>
                             <p>샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</p>
                         </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
                     </li>
                     <li>
                         <a href="" class="box">
                             <div>
-                                <span class="tag">예약 이벤트</span> <span class="deadline">2일</span><i>남음</i>
+                                <span class="badge badge-dark">예약 이벤트</span> <span class="deadline">2일</span><i>남음</i>
                             </div>
                             <p>방탄소년단 무대 보고 콘서트 티켓 받아가자</p>
                         </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
                     </li>
                     <li>
                         <a href="" class="box">
@@ -81,6 +87,7 @@
                             </div>
                             <p>3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</p>
                         </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
                     </li>
                     <li>
                         <a href="" class="box">
@@ -89,6 +96,7 @@
                             </div>
                             <p>스타벅스에서 7천원 쓰고 10만원 받아가자💰</p>
                         </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
                     </li>
                     <li class="item-disabled">
                         <a href="#modal-event-add" data-toggle="modal" class="filebox">
@@ -481,15 +489,16 @@
 
     <script src="../../resources/js/common.js"></script>
     <script>
-        
+
         $(document).ready(function () {
-         
+
             //카드 달성률
             $('.adobe').each(function(){
                 var data = $(this).attr('data-percent') + '%';
                 $(this).css('width', data);
             });
 
+            //Edit
             $('#btn-edit').on('click',function(e){
                 e.preventDefault();
                 /* https://api.jqueryui.com/sortable/ */
@@ -503,14 +512,29 @@
                     }
                 });
             });
+
+            //Save
             $('#btn-save').on('click',function(e){
                 e.preventDefault();
                 /* https://api.jqueryui.com/sortable/ */
                 $('html').removeClass('is-editing');
                 $( "#sortable" ).sortable( "destroy" );
             });
+
+            //Cancel
+            $('#btn-cancel').on('click',function(e){
+                e.preventDefault();
+                /* https://api.jqueryui.com/sortable/ */
+                $('html').removeClass('is-editing');
+                $( "#sortable" ).sortable( "destroy" );
+            });
+
+            //아이템 삭제
+            $('button.del').on('click',function(e){
+                $(this).closest('li').remove();
+            });
         });
-       
+
     </script>
 
 

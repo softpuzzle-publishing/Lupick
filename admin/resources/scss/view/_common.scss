@@ -146,6 +146,8 @@ a:focus{outline: none;box-shadow: none !important;}
 .icon-finance-expenditure{width: 40px;height: 40px;background-image: url('../images/icon-finance-expenditure.svg');}
 .icon-finance-revenue{width: 40px;height: 40px;background-image: url('../images/icon-finance-revenue.svg');}
 
+.icon-del{width: 24px;height: 24px;background-image: url('../images/btn-del.svg');}
+
 //폰트 사이즈
 .s-font{font-size: 14px;}
 .m-font{font-size: 18px;}
@@ -171,6 +173,9 @@ textarea.form-control{
 }
 
 //select
+select.select-sm{opacity: 0;width: 200px;}
+select.select-md{opacity: 0;width: 230px;}
+select.select-lg{opacity: 0;width: 300px;}
 .ui-selectmenu-button.ui-button{
     background: #fff !important;border: 1px solid $border-color;border-radius: 0;outline: 0;width: 230px;height: 40px;padding: 10.5px 15px 0;margin: 0;
     .ui-icon{transition: all .3s .05s;background: url('../images/select-md.svg') no-repeat 50% 50%;width: 8px;height: 8px;position: absolute;right: 15px;top: 50%;margin-top: -4px;}

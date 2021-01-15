@@ -478,6 +478,8 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 
 .icon-finance-revenue { width: 40px; height: 40px; background-image: url("../images/icon-finance-revenue.svg"); }
 
+.icon-del { width: 24px; height: 24px; background-image: url("../images/btn-del.svg"); }
+
 .s-font { font-size: 14px; }
 
 .m-font { font-size: 18px; }
@@ -497,6 +499,12 @@ textarea.form-control { padding: 15px; line-height: 1.5; resize: none; }
 .form-fake { border: 1px solid rgba(0, 0, 0, 0.15); padding: 0.6125rem 1rem; }
 
 .hyphen { width: 12px; height: 2px; background-color: #000; display: inline-block; margin: 0 15px; }
+
+select.select-sm { opacity: 0; width: 200px; }
+
+select.select-md { opacity: 0; width: 230px; }
+
+select.select-lg { opacity: 0; width: 300px; }
 
 .ui-selectmenu-button.ui-button { background: #fff !important; border: 1px solid rgba(0, 0, 0, 0.15); border-radius: 0; outline: 0; width: 230px; height: 40px; padding: 10.5px 15px 0; margin: 0; }
 
@@ -791,7 +799,9 @@ aside { position: fixed; z-index: 1000; background: #ffff; }
 
 #container-block .title-wrap .edit { font-size: 14px; }
 
-#container-block .title-wrap .save { font-size: 14px; color: #fff; font-weight: 700; }
+#container-block .title-wrap .save { font-size: 14px; font-weight: 700; }
+
+#container-block .title-wrap .cancel { font-size: 14px; font-weight: 700; margin-left: 20px; }
 
 #container-block .top + .title { margin-top: 0; }
 
@@ -799,33 +809,37 @@ aside { position: fixed; z-index: 1000; background: #ffff; }
 
 .main-event ul { display: flex; }
 
-.main-event ul .box { width: 220px; height: 130px; padding: 20px; }
+.main-event li { margin-right: 13px; position: relative; }
 
-.main-event ul .box > div { display: flex; align-items: center; }
+.main-event li .box { width: 220px; height: 130px; padding: 20px; }
 
-.main-event ul .box-placeholder { width: 220px; height: 130px; background: rgba(255, 255, 255, 0.5); }
+.main-event li .box > div { display: flex; align-items: center; }
 
-.main-event ul li + li { margin-left: 13px; }
+.main-event li .box .deadline { color: rgba(0, 0, 0, 0.6); margin-left: 10px; letter-spacing: -0.01em; }
 
-.main-event ul .deadline { color: rgba(0, 0, 0, 0.6); margin-left: 10px; letter-spacing: -0.01em; }
+.main-event li .box i { font-size: 12px; color: rgba(0, 0, 0, 0.6); margin-left: 4px; white-space: nowrap; }
 
-.main-event ul i { font-size: 12px; color: rgba(0, 0, 0, 0.6); margin-left: 4px; white-space: nowrap; }
+.main-event li .box em { font-weight: 700; }
 
-.main-event ul em { font-weight: 700; }
+.main-event li .box strong { font-size: 20px; line-height: 1.2; margin-left: 11px; }
 
-.main-event ul strong { font-size: 20px; line-height: 1.2; margin-left: 11px; }
+.main-event li .box p { font-size: 14px; line-height: 1.57; margin-top: 15px; }
 
-.main-event ul p { font-size: 14px; line-height: 1.57; margin-top: 15px; }
+.main-event li:last-child { margin-right: 0; }
 
-.main-event ul .filebox { background: #fff; }
+.main-event .box-placeholder { width: 220px; height: 130px; background: rgba(0, 0, 0, 0.1); }
 
-.main-event ul .filebox label { width: 220px; height: 130px; }
+.main-event .filebox { background: #fff; }
 
-html.is-editing #container-block::before { content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: rgba(0, 0, 0, 0.4); z-index: 1000; }
+.main-event .filebox label { width: 220px; height: 130px; }
+
+.main-event .del { position: absolute; right: -4px; top: -4px; display: none; }
 
 html.is-editing .ui-sortable { position: relative; z-index: 1001; }
 
-html.is-editing .ui-sortable li { cursor: move; }
+html.is-editing .ui-sortable li:not(.item-disabled) { cursor: move; }
+
+html.is-editing .ui-sortable li:not(.item-disabled)::before { content: ''; border: 1px dashed rgba(0, 0, 0, 0.2); position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
 
 html.is-editing .ui-sortable a { pointer-events: none; }
 
@@ -833,9 +847,13 @@ html.is-editing .ui-sortable .item-disabled { opacity: 1; cursor: default; }
 
 html.is-editing .ui-sortable .filebox label { cursor: default; }
 
+html.is-editing .ui-sortable .box { border-color: transparent; }
+
+html.is-editing .ui-sortable .del { display: block; }
+
 html.is-editing .edit { display: none; }
 
-html.is-editing .save { display: block !important; position: relative; z-index: 1001; }
+html.is-editing .btn-group { display: block !important; position: relative; z-index: 1001; }
 
 .item-search { position: relative; box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.1); }
 
