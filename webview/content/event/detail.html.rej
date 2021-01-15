@@ -1,0 +1,17 @@
+diff a/webview/content/event/detail.html b/webview/content/event/detail.html	(rejected hunks)
+@@ -367,13 +367,13 @@
+             </div>
+             <div class="list">
+                 <div class="desc">
+-                    <a href="javascript:void(0)" class="ic-share"></a>
++                    <a href="javascript:void(0)" class="ic-share" onclick="shareOpen()"></a>
+                 </div>
+                 <p>공유하기</p>
+             </div>
+             <div class="list">
+                 <div class="desc">
+-                    <a href="javascript:void(0)" class="ic-ask"></a>
++                    <a href="javascript:void(0)" class="ic-ask" data-toggle="modal" data-target="#modal-question"></a>
+                 </div>
+                 <p>문의하기</p>
+             </div>

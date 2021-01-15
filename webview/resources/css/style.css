@@ -251,6 +251,8 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog .modal-content .ic-close { width: 20px; height: 20px; background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center; }
 
+.modal-dialog .modal-content .ic-back { width: 20px; height: 15px; background-image: url(../images/ic_back.svg); background-size: cover; background-position: center; background-repeat: no-repeat; margin-right: 15px; }
+
 .modal-alert { width: 100%; position: absolute; padding: 20px; top: 0; display: none; }
 
 .modal-alert .toast { padding: 20px; background-color: #fff; border-radius: 7px; display: flex; align-items: center; }
@@ -421,7 +423,43 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.error .modal-body { text-align: center; }
 
+<<<<<<< HEAD
+.modal-dialog.question .modal-header { -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; }
+
+.modal-dialog.question .modal-content { padding: 0 20px; height: auto; }
+
+.modal-dialog.question .question-wrap .content { margin-bottom: 30px; }
+
+.modal-dialog.question .question-wrap .title { margin-bottom: 10px; }
+
+.modal-dialog.question .question-wrap .comm-textarea { position: relative; }
+
+.modal-dialog.question .question-wrap .comm-textarea textarea { height: 200px; }
+
+.modal-dialog.question .question-wrap .comm-textarea p { position: absolute; bottom: 10px; right: 15px; }
+
+.event-mini-card { width: 100%; padding: 15px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; border: 1px solid rgba(0, 0, 0, 0.15); border-radius: 7px; }
+
+.event-mini-card .img { width: 48px; height: 48px; border-radius: 50%; background-size: cover; background-repeat: no-repeat; background-position: center; }
+
+.event-mini-card .text { width: 80%; margin-left: 10px; }
+
+.modal-dialog.share { padding: 0 20px; border: 1px solid rgba(0, 0, 0, 0.15); position: relative; }
+
+.modal-dialog.share .modal-content { position: absolute; bottom: 30%; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); width: 95%; border: 1px solid rgba(0, 0, 0, 0.15); }
+
+.modal-dialog.share ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 20px; }
+
+.modal-dialog.share ul li { width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(0, 0, 0, 0.15); margin: 0 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.modal-dialog.share ul li i { font-size: 18px; vertical-align: middle; }
+
+.modal-dialog.dim .modal-content { display: none; }
+
+.card-list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: wrap; flex-flow: wrap; }
+=======
 .card-list { display: flex; flex-flow: wrap; }
+>>>>>>> 9600c84f802ec6519d7df8a1f8119457aad7b8bb
 
 .card-list li .item { width: 100%; display: block; box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); margin-top: 40px; background: #fff; text-decoration: none; transition: all .2s; border-radius: 7px; }
 
@@ -462,6 +500,14 @@ td > .btn + .btn { margin-left: 6px; }
 .card-list .text .progress { margin-top: 0; }
 
 .card-list li.finished .progress-bar { background-color: #7b7b7b; }
+
+.filebox .upload-name { width: 100%; height: 40px; display: none; height: 35px; font-size: 18px; padding: 0 10px; vertical-align: middle; background-color: #ddd; border: 0; margin-bottom: 10px; }
+
+.filebox .upload-name.active { display: block; }
+
+.filebox label { width: 100%; height: 50px; display: inline-block; padding: 10px 20px; color: #999; background-color: #fdfdfd; cursor: pointer; border: 1px solid #ebebeb; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.filebox input[type="file"] { position: absolute; width: 0; height: 0; padding: 0; overflow: hidden; border: 0; }
 
 body { color: #000; line-height: 22px; font-size: 16px; }
 
