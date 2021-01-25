@@ -234,3 +234,25 @@ body{color:#000;line-height: 22px;font-size:16px; }
     .ic-share{width: 30px;height: 30px;background-image:url(../images/ic_share.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
     .ic-ask{width: 30px;height: 30px;background-image:url(../images/ic_ask.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
 }
+.modal-dialog{
+    .modal-header{
+        .header{
+            position: fixed;width: 418px;height: 60px;padding: 20px;margin-bottom: 20px;top: 0;background-color: #fff;z-index: 40;
+            .ic-back{width: 20px;height: 15px;background-image: url(../images/ic_back.svg);background-size: cover;background-position: center;background-repeat: no-repeat;margin-right: 15px;}
+        }
+    }
+    .container-wrap{
+        &.feed{
+            .component{margin-bottom: 40px;}
+        }
+    }
+    .exhibition-main{width: 100%;height:calc(64vh - 60px);padding:20px; margin-bottom:40px;
+        .main-banner{width: 100%;padding-top:100%;background-position: center; background-size: cover;background-repeat: no-repeat;}
+        .title{color:#fff;margin:30px 0 15px 0; font-size:26px; font-weight: bold;}
+        .desc{color:#fff;line-height: 24px;}
+        .example-text{color:#fff;opacity: 0.5;margin:10px 0;}
+    }
+    .copyright{
+        font-size: 10px;color: #000;opacity: 0.4;margin-top: 20px;
+    }
+}
