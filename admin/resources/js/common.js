@@ -12,6 +12,7 @@ $('textarea, input').on("input", function () {
         }
     }
 });
+   
 
 //체크박스 두개
 $("input[type=checkbox]").click(function () {
@@ -33,7 +34,13 @@ $('#event-common').load('../_include/event_common.html');
 
 
 $(document).ready(function () {
-
+    // 앱 프리뷰 swiper
+    var mySwiper = new Swiper('#swiper-app-preview', {
+        speed: 400,
+        slidesPerGroup: 1,
+        slidesPerView:1.5,
+    });
+    
     $(window).on('load', function(){
         //select
         $(".select-sm").each(function(){
