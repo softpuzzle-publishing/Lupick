@@ -270,7 +270,7 @@ body.body-center-content{width: auto;background: #fff;}
 }
 
 .login-logo{
-    margin-right: 183px;
+    margin-right: 183px;position: relative;z-index: 1;
     .logo{
         width: 257px;height: 80px;background-image: url('../images/logo.svg');background-size: contain;background-repeat: no-repeat;margin-bottom: 30px;
     }

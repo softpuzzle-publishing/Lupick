@@ -38,6 +38,8 @@
 
 .btn-next.black i { color: white; font-size: 11px; background-size: contain; background-repeat: no-repeat; background-position: center; margin-bottom: 2px; }
 
+.preview-btn { height: 70px !important; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; font-size: 19px; font-weight: bold; }
+
 .card-list.preview { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-flow: wrap; flex-flow: wrap; }
 
 .card-list.preview li .item { width: 100%; display: block; -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1); margin-top: 40px; background: #fff; text-decoration: none; -webkit-transition: all .2s; transition: all .2s; border-radius: 7px; }
@@ -280,7 +282,7 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .item.share .ic-ask { width: 30px; height: 30px; background-image: url(../images/ic_ask.svg); background-size: cover; background-position: center; background-repeat: no-repeat; }
 
-.modal-dialog .modal-header .header { position: fixed; width: 418px; height: 60px; padding: 20px; margin-bottom: 20px; top: 0; background-color: #fff; z-index: 40; }
+.modal-dialog .modal-header .header { position: relative; width: 418px; height: 60px; padding: 20px; margin-bottom: 20px; top: 0; background-color: #fff; z-index: 40; }
 
 .modal-dialog .modal-header .header .ic-back { width: 20px; height: 15px; background-image: url(../images/ic_back.svg); background-size: cover; background-position: center; background-repeat: no-repeat; margin-right: 15px; }
 
@@ -309,6 +311,10 @@ i, em { font-style: normal; }
 .g-b { font-family: 'Gilroy'; font-size: 18px; line-height: 1.35; }
 
 button { border: 0; background: transparent; padding: 0; }
+
+.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before { background-color: #f7f7f7; }
+
+.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::after { background-color: #f7f7f7; }
 
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 
@@ -1031,7 +1037,7 @@ body.body-center-content { width: auto; background: #fff; }
 
 .login-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; }
 
-.login-logo { margin-right: 183px; }
+.login-logo { margin-right: 183px; position: relative; z-index: 1; }
 
 .login-logo .logo { width: 257px; height: 80px; background-image: url("../images/logo.svg"); background-size: contain; background-repeat: no-repeat; margin-bottom: 30px; }
 
