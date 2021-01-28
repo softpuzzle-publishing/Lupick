@@ -1,12 +1,9 @@
 body.body-dashboard{
-    .box{height: 100%;padding: 30px;}
+    .box{padding: 30px;}
     .row{margin: -15px;}
     [class^=col-]{padding: 15px;}
 }
 
-.dashboard-bottom{
-
-}
 
 .box-title{font-size: 20px;font-weight: 700;line-height: 1.15;}
 
@@ -28,6 +25,7 @@ body.body-dashboard{
         &:after{content:"";width:80px;height:80px;position: absolute;top: 50%;left: 20px;background-color:$gray;border-radius: 50%;z-index: 1;transform:translate(0,-50%)}
         &.ing:after{background-color:$yellow;}
     }
+    
     .popularity-event{
         height: 360px;
     }
@@ -46,7 +44,7 @@ body.body-dashboard{
 
 .management{
     .box{
-        display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 40px;
+        height:315px;display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 40px;
         p{font-size:14px;line-height: 1.43; margin-top: 15px;}
         strong{font-size:40px;font-weight: bold; margin:40px 0;line-height: 1.15;}
         a{font-size:14px;font-weight: bold;

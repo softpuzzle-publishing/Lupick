@@ -191,7 +191,11 @@
 .table-next-button{
     margin-left: 246px;
 }
-
+.modal-dialog{
+    &.banner{
+        .modal-body{max-height:885px;}
+    }
+}
 .modal.modal-size-fix{
     .modal-dialog{margin: 0 auto;}
     .modal-auto-height{
