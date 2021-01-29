@@ -558,6 +558,8 @@ select.select-lg { opacity: 0; width: 300px; }
 
 .ui-selectmenu-menu .ui-menu .ui-state-active { background: #888; border: 0; margin: 0; }
 
+.ui-selectmenu-menu .ui-menu.select-lg { max-height: 600px; }
+
 .ui-selectmenu-menu .ui-menu.select-lg .ui-menu-item-wrapper { height: 64px; padding: 20px 30px 0; font-size: 18px; }
 
 .filebox { display: block; }
