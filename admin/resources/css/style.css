@@ -20,6 +20,8 @@
 
 .bold { font-weight: bold; }
 
+.modal-app-preview .app-preview-close { z-index: 100 !important; }
+
 .example-text { opacity: .4; margin-top: 10px; }
 
 .btn-next { width: 360px; padding: 20px; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; border-top: 1px solid #ddd; }
@@ -89,6 +91,10 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 .container-wrap .component .price { margin: 10px 0 20px; }
 
 .container-wrap .component .date { margin-left: 5px; }
+
+.container-wrap .badge { padding: 5px; }
+
+.container-wrap .btn-xl { min-width: 100%; }
 
 .container-wrap .view-event { margin: 40px 0 20px 0; }
 
@@ -282,7 +288,7 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .item.share .ic-ask { width: 30px; height: 30px; background-image: url(../images/ic_ask.svg); background-size: cover; background-position: center; background-repeat: no-repeat; }
 
-.modal-dialog .modal-header .header { position: relative; width: 418px; height: 60px; padding: 20px; margin-bottom: 20px; top: 0; background-color: #fff; z-index: 40; }
+.modal-dialog .modal-header .header { position: relative; width: 418px; height: 60px; padding: 20px; margin-bottom: 0; top: 0; background-color: #fff; z-index: 40; }
 
 .modal-dialog .modal-header .header .ic-back { width: 20px; height: 15px; background-image: url(../images/ic_back.svg); background-size: cover; background-position: center; background-repeat: no-repeat; margin-right: 15px; }
 
