@@ -20,8 +20,6 @@
 
 .bold { font-weight: bold; }
 
-.modal-app-preview .app-preview-close { z-index: 100 !important; }
-
 .example-text { opacity: .4; margin-top: 10px; }
 
 .btn-next { width: 360px; padding: 20px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #ddd; }
@@ -86,13 +84,41 @@
 
 body { color: #000; line-height: 22px; font-size: 16px; }
 
+.modal-app-preview .modal-dialog-scrollable .modal-content { padding: 0; }
+
+.modal-app-preview .modal-header { padding: 0; }
+
+.modal-app-preview .modal-body { padding: 0; overflow-x: hidden; }
+
+.modal-app-preview .modal-footer { padding: 0; }
+
+.modal-app-preview .modal-footer .btn-pick { color: #ff0000; width: 100%; height: 89px; font-size: 24px; padding-top: 27px; }
+
+.modal-app-preview .app-preview-close { background: url("../images/btn_exit.svg") no-repeat 50% 50%; width: 30px; height: 30px; display: block; position: absolute; right: 20px; top: 15px; z-index: 100; }
+
+.app-preview .detail { padding: 30px 20px; }
+
+.app-preview .subject { font-size: 18px; line-height: 1.44; margin-bottom: 10px; }
+
+.app-preview .price { font-size: 22px; font-weight: 700; margin-right: 5px; line-height: 1.1818; }
+
+.app-preview .status { font-size: 12px; font-weight: 700; color: rgba(0, 0, 0, 0.6); }
+
+.app-preview .text { padding: 15px; margin-top: 35px; font-size: 12px; background: rgba(0, 0, 0, 0.05); }
+
+.app-preview .text em { margin-right: 6px; font-weight: 700; }
+
+.app-preview .desc { margin-top: 10px; }
+
+.app-preview .desc li { line-height: 1.66; color: rgba(0, 0, 0, 0.6); }
+
 .container-wrap .component.feed { border-bottom: 1px solid #ddd; }
 
 .container-wrap .component .price { margin: 10px 0 20px; }
 
 .container-wrap .component .date { margin-left: 5px; }
 
-.container-wrap .badge { padding: 5px; }
+.container-wrap .badge { padding: 5px; margin-right: 5px; margin-bottom: 5px; }
 
 .container-wrap .btn-xl { min-width: 100%; }
 
@@ -292,9 +318,11 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .modal-dialog .modal-header .header .ic-back { width: 20px; height: 15px; background-image: url(../images/ic_back.svg); background-size: cover; background-position: center; background-repeat: no-repeat; margin-right: 15px; }
 
-.modal-dialog .container-wrap.feed .component { margin-bottom: 40px; }
+.modal-dialog .container-wrap { padding: 0 20px; }
 
-.modal-dialog .exhibition-main { width: 100%; height: calc(64vh - 60px); padding: 20px; margin-bottom: 40px; }
+.modal-dialog .container-wrap.feed .component { margin-top: 30px; }
+
+.modal-dialog .exhibition-main { width: 100%; height: 100%; padding: 20px 20px 80px 20px; margin-bottom: 40px; }
 
 .modal-dialog .exhibition-main .main-banner { width: 100%; padding-top: 100%; background-position: center; background-size: cover; background-repeat: no-repeat; }
 
@@ -304,7 +332,7 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .modal-dialog .exhibition-main .example-text { color: #fff; opacity: 0.5; margin: 10px 0; }
 
-.modal-dialog .copyright { font-size: 10px; color: #000; opacity: 0.4; margin-top: 20px; }
+.modal-dialog .copyright { font-size: 10px; color: #000; opacity: 0.4; margin: 20px 0; }
 
 a { text-decoration: none; }
 
@@ -1296,34 +1324,6 @@ body.body-center-content { width: auto; background: #fff; }
 .calculator .luckytem ol .first i::after { content: ' *'; color: #ea4335; }
 
 .footnote { text-align: right; color: rgba(0, 0, 0, 0.5); line-height: 1.143; margin-top: 15px; font-size: 14px; font-weight: 700; }
-
-.modal-app-preview .modal-dialog-scrollable .modal-content { padding: 0; }
-
-.modal-app-preview .modal-header { padding: 0; }
-
-.modal-app-preview .modal-body { padding: 0 20px; overflow-x: hidden; }
-
-.modal-app-preview .modal-footer { padding: 0; }
-
-.modal-app-preview .modal-footer .btn-pick { color: #ffff00; width: 100%; height: 89px; font-size: 24px; padding-top: 27px; }
-
-.modal-app-preview .app-preview-close { background: url("../images/btn_exit.svg") no-repeat 50% 50%; width: 30px; height: 30px; display: block; position: absolute; right: 20px; top: 20px; z-index: 1; }
-
-.app-preview .detail { padding: 30px 20px; }
-
-.app-preview .subject { font-size: 18px; line-height: 1.44; margin-bottom: 10px; }
-
-.app-preview .price { font-size: 22px; font-weight: 700; margin-right: 5px; line-height: 1.1818; }
-
-.app-preview .status { font-size: 12px; font-weight: 700; color: rgba(0, 0, 0, 0.6); }
-
-.app-preview .text { padding: 15px; margin-top: 35px; font-size: 12px; background: rgba(0, 0, 0, 0.05); }
-
-.app-preview .text em { margin-right: 6px; font-weight: 700; }
-
-.app-preview .desc { margin-top: 10px; }
-
-.app-preview .desc li { line-height: 1.66; color: rgba(0, 0, 0, 0.6); }
 
 .operator { font-size: 28px; line-height: 1; width: 30px; font-weight: 400; }
 

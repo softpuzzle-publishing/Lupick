@@ -181,7 +181,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .ui-selectmenu-menu .ui-menu.select-lg .ui-menu-item-wrapper { height: 64px; padding: 20px 30px 0; font-size: 18px; }
 
-.badge { display: inline-block; min-width: 80px; padding: 5px; font-size: 12px; line-height: 20px; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0; }
+.badge { display: inline-block; min-width: 80px; padding: 5px; font-size: 12px; line-height: 20px; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0; margin-right: 5px; margin-bottom: 5px; }
 
 .custom-control-label { position: relative; margin-bottom: 0; vertical-align: top; }
 
