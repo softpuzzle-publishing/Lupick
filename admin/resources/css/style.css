@@ -1165,6 +1165,8 @@ body.body-center-content { width: auto; background: #fff; }
 
 .canvas-wrap .canvas.bar { width: 100%; height: 200px; }
 
+.chart-empty { border: 15px solid #d2d2d2; border-radius: 50%; overflow: hidden; width: 100%; height: 100%; }
+
 .popularity-event { height: 360px; padding: 30px; }
 
 .popularity-event .popularity-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; }
@@ -1407,6 +1409,8 @@ body.body-dashboard [class^=col-] { padding: 15px; }
 
 .modal[data-overlap=true] { z-index: 1052; }
 
+.modal-header-top h3 { font-size: 24px; font-weight: 400; }
+
 .modal-step { display: flex; align-items: center; position: relative; }
 
 .modal-step li { opacity: 0.3; font-size: 24px; line-height: 1.125; font-weight: 400; }
@@ -1467,7 +1471,7 @@ body.body-dashboard [class^=col-] { padding: 15px; }
 
 .modal-footer [class^=btn] + [class^=btn] { margin-left: 15px; }
 
-.modal-footer::before { content: ''; height: 2px; background: #000; position: absolute; left: 40px; right: 40px; top: 0; }
+.modal-footer::before { content: ''; height: 2px; background: #000; position: absolute; left: 40px; right: 40px; top: -2px; }
 
 .modal-footer.border-none::before { content: ''; height: 0; }
 

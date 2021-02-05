@@ -620,6 +620,7 @@
                                             <dd>1,200</dd>
                                         </dl>
                                     </div>
+                                    <!-- <div class="chart-empty"></div> -->
                                 </div>
                                 <div class="event-count-summary">
                                     <div class="success">
@@ -680,10 +681,22 @@
                                         <td class="text-center">5000</td>
                                     </tr>
                                     <tr>
-                                        <td>라피네르 로얄스페이드 …</td>
-                                        <td>에스카다</td>
-                                        <td class="text-center">3500</td>
-                                        <td class="text-center">5000</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="text-center"></td>
+                                        <td class="text-center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="text-center"></td>
+                                        <td class="text-center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="text-center"></td>
+                                        <td class="text-center"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -708,6 +721,7 @@
                             <div class="canvas-wrap box">
                                 <div class="canvas">
                                     <canvas id="chart-gender"></canvas>
+                                    <!-- <div class="chart-empty"></div> -->
                                 </div>
                                 <div class="legend-list">
                                     <div class="yellow">
@@ -729,6 +743,7 @@
                             <div class="canvas-wrap box">
                                 <div class="canvas">
                                     <canvas id="chart-age"></canvas>
+                                    <!-- <div class="chart-empty"></div> -->
                                 </div>
                                 <div class="legend-list age">
                                     <div class="blue">
@@ -1858,20 +1873,26 @@
                 xAxes: [{
                     gridLines: {
                         display: false,
-                        color: "black"
                     },
                     ticks: {
                         fontColor : '#000000',
                         fontSize : 10,
                         fontFamily : 'NanumBarunGothic',
+                        padding:5,
                     }
                 }],
                 yAxes: [{
+                    gridLines:{
+                        drawBorder:false,
+                        borderDash: [1, 4],
+                        color: "#8a8a8a"
+                    },
                     ticks: {
                         beginAtZero: true,
                         fontColor : '#000000',
                         fontSize : 10,
                         fontFamily : 'NanumBarunGothic',
+                        padding:15,
                     }
                 }]
             }

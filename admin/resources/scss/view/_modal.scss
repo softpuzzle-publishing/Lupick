@@ -6,6 +6,10 @@
     z-index: 1052;
 }
 
+.modal-header-top{
+    h3{font-size: 24px;font-weight: 400;}
+}
+
 .modal-step {
     display: flex;align-items: center;position: relative;
     li{
@@ -99,7 +103,7 @@
 .modal-footer{
     position: relative;padding: 22px 40px 20px;
     [class^=btn] + [class^=btn]{margin-left: 15px;}
-    &::before{content: '';height: 2px;background: #000;position: absolute;left: 40px;right: 40px;top: 0;}
+    &::before{content: '';height: 2px;background: #000;position: absolute;left: 40px;right: 40px;top: -2px;}
     &.border-none{
         &::before{content: '';height: 0;}
     }
