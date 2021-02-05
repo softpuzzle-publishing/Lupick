@@ -30,8 +30,9 @@ body{color:$black;line-height: 22px;font-size:16px; }
 }
 
 // event-detail
-.container-wrap{padding:0 20px;
-    overflow: hidden;
+.container-wrap{
+    padding:0 20px;overflow: hidden;
+    .container-wrap{margin: 0 -20px;}
     .p-20{padding: 0 20px;}
     .component{margin-top:30px;
         .price{margin:10px 0 20px;}
@@ -40,7 +41,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
     @at-root{
         .detail-img{width:100%;padding-top:100%;background-position: center;background-size:cover;background-repeat: no-repeat;}
     }
-    
+
     .notice{background-color: $gray; padding:20px 15px;margin-top:30px;
         .desc{font-size:12px;}
         li{font-size:12px;}
@@ -109,7 +110,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
             }
             .lucky-item{
                 .rank{display: flex; align-items: center;padding:15px 0;border-bottom:1px solid $gray;
-                    .img{width: 100px;height: 100px;background-size: cover;background-position: center;background-repeat: no-repeat;} 
+                    .img{width: 100px;height: 100px;background-size: cover;background-position: center;background-repeat: no-repeat;}
                     .point{width: 100px;height: 100px;border-radius: 50%;background-color: $yellow;
                         display:flex;align-items: center;justify-content: center;
                     }
@@ -122,6 +123,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
         &.article{
             margin-top:20px;
             .content{
+                img{margin: 30px 0 20px;width: 100% !important;height: auto !important;}
                 .img{width: 100%;height:207px;margin:30px 0 20px 0;background-size: cover;background-position: center;background-repeat: no-repeat;}
                 .content-title{line-height: 28px;
                     &.red{color:$red;}
@@ -167,7 +169,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
 //상품정보고지
 .product-info-content{
     padding: 0 20px;
-    
+
     .desc{
         margin-top:30px;
         p{line-height: 22px;font-size:14px;}
@@ -263,7 +265,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
             }
             input[type=radio]{display:none;}
         }
-    } 
+    }
 }
 
 //결제완료
@@ -290,7 +292,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
         .product{width:30%;text-align: right;}
         .img{width: 70px;height:70px;background-position: center;background-size: cover;background-repeat:no-repeat;float: right;}
     }
-  
+
     @at-root{
         .tracking-title{
             font-size:24px;position: relative;z-index:2;margin:40px 0 50px 0;padding:0 10px;
@@ -357,7 +359,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
             width: 100%;height: 100%;z-index:-1;
         }
     }
-    
+
     .img{width: 170px;height:170px;background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 50%;margin:20px auto;}
     .btn{font-size:16px;}
     .title{font-size:30px;line-height: 40px;}
@@ -378,7 +380,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
         .icon-like{width:30px;height:30px;background-image: url(../images/ic_btn_like_off.svg); background-position: center; background-repeat: no-repeat; background-size: cover;background-color: $black;display: inline-block;opacity: .5;border-radius: 50%; position: absolute;top:15px;right:15px;
             &.active{background-image: url(../images/ic_btn_like_on.svg);opacity: 1;}
         }
-        
+
     }
     .subject{margin-top:15px;}
     .feed-event-img{width: 163px;height: 163px;border-radius:7px;background-size: cover;background-repeat: no-repeat;background-position: center;position: relative;
