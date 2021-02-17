@@ -42,7 +42,7 @@ body{color:$black;line-height: 22px;font-size:16px; }
         .detail-img{width:100%;padding-top:100%;background-position: center;background-size:cover;background-repeat: no-repeat;}
     }
 
-    .notice{background-color: $gray; padding:20px 15px;margin-top:30px;
+    .notice{background-color: rgba(0,0,0,0.05); padding:20px 15px;margin-top:30px;
         .desc{font-size:12px;}
         li{font-size:12px;}
     }
@@ -179,10 +179,10 @@ body{color:$black;line-height: 22px;font-size:16px; }
 .item.move-btn{margin-top:50px;}
 .item.share{
     margin:40px 0 50px 0;display:flex;align-items: center;justify-content: center;
-    .list{width: 33%;text-align: center;
+    .list{width: 50px;text-align: center;margin:0 15px;
         p{font-size: 12px; font-weight: bold;}
     }
-    .desc{width:50px;height: 50px;display:flex;align-items: center;justify-content: center;background-color: $gray;border-radius: 50%;margin: 0 auto;}
+    .desc{width:50px;height: 50px;display:flex;align-items: center;justify-content: center;background-color: rgba(0, 0, 0, 0.05);border-radius: 50%;margin: 0 auto;}
     .ic-heart{width: 30px;height: 30px;background-image:url(../images/ic_heart.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
     .ic-share{width: 30px;height: 30px;background-image:url(../images/ic_share.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
     .ic-ask{width: 30px;height: 30px;background-image:url(../images/ic_ask.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
@@ -190,11 +190,14 @@ body{color:$black;line-height: 22px;font-size:16px; }
 .sel-option{
     padding:20px 0;border-bottom:1px solid $gray;
     .sel-delete{
-        width:10px;height: 10px;background-image:url(../images/ic_exit.svg);background-position: center;background-size: cover;
+        width:13px;height: 13px;background-image:url(../images/ic_exit.svg);background-position: center;background-size: cover;
     }
-    .spinner-wrap{margin-top:15px;}
+    .spinner-wrap{margin-top:15px;
+        .price{font-weight: bold;}
+    }
 }
 .total-price{padding:15px 0;border-top:2px solid $black;border-bottom:2px solid $black;display:flex;align-items:center;justify-content: space-between;
+    &.border-1{border-top:1px solid $black;border-bottom:1px solid $black;}
     p{display: flex;align-items: center;}
     span{display: inline-block;}
 }
@@ -408,3 +411,5 @@ body{color:$black;line-height: 22px;font-size:16px; }
 }
 hr{margin-top:40px;border-top:1px solid $gray;}
 .copyright{font-size:10px;color: $black;opacity: $opacity-4;margin-top: 20px;}
+#selectmenu-zone .ui-selectmenu-menu{position: static !important;}
+#selectmenu-zone .ui-selectmenu-menu .ui-menu{max-height: none !important}
