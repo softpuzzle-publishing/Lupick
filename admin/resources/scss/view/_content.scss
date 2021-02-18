@@ -567,7 +567,7 @@ body.body-center-content{width: auto;background: #fff;}
         display:flex;align-items: center;justify-content: space-between;margin-bottom:20px;
     }
     ul li{
-        display: flex;align-items: center;justify-content: space-between;padding:15px 0;line-height: 1.12;font-size: 14px;
+        display: flex;align-items: center;justify-content: space-between;line-height: 1.12;font-size: 14px;height:46px;
         + li{border-top: 1px solid $gray;}
         b{flex: 0 0 30px;width: 30px;line-height: 16px;}
         span:nth-of-type(1){

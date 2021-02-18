@@ -350,6 +350,8 @@ button { border: 0; background: transparent; padding: 0; }
 
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::after { background-color: #f7f7f7; }
 
+.custom-radio label { cursor: pointer; }
+
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 
 input:focus, button:focus, a:focus { outline: none; box-shadow: none !important; }
@@ -1333,7 +1335,7 @@ body.body-center-content { width: auto; background: #fff; }
 
 .lupicker-vote .lupicker-vote-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 
-.lupicker-vote ul li { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; line-height: 1.12; font-size: 14px; }
+.lupicker-vote ul li { display: flex; align-items: center; justify-content: space-between; line-height: 1.12; font-size: 14px; height: 46px; }
 
 .lupicker-vote ul li + li { border-top: 1px solid rgba(0, 0, 0, 0.15); }
 
