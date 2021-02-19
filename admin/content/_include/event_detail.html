@@ -1,6 +1,6 @@
 <!-- modal : 이벤트 상세 - 생성 -->
 <div class="modal modal-size-fix has-tab" id="myModal1" tabindex="-1" role="dialog" data-backdrop="static">
-    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable event">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="event-detail-top">
@@ -605,7 +605,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="title-square-wrap">
+                            <div class="title-square-wrap" style="padding-top: 41px;">
                                 <p class="title-square"><span>이벤트 달성률</span></p>
                             </div>
                             <div class="success-event box" style="height:453px;">
@@ -703,7 +703,7 @@
                             </table>
                         </div>
                         <div>
-                            <div class="title-square-wrap">
+                            <div class="title-square-wrap" style="padding-top: 41px;">
                                 <p class="title-square"><span>시간대별 구매 통계</span></p>
                             </div>
                             <div class="canvas-wrap box m-t--1">
@@ -738,7 +738,7 @@
                             </div>
                         </div>
                         <div>
-                            <div class="title-square-wrap">
+                            <div class="title-square-wrap" style="padding-top: 41px;">
                                 <p class="title-square"><span>연령대별 구매 통계</span></p>
                             </div>
                             <div class="canvas-wrap box">
@@ -1219,19 +1219,12 @@
                                             <span class="paint">1표</span>
                                         </li>
                                         <li>
-                                            <b>11</b>
-                                            <span>91번 오리</span>
-                                            <span class="paint">30표</span>
                                         </li>
                                         <li>
-                                            <b>12</b>
-                                            <span>1009번 후디</span>
-                                            <span class="paint">19표</span>
                                         </li>
                                         <li>
-                                            <b>13</b>
-                                            <span>2번 메이</span>
-                                            <span class="paint">3표</span>
+                                        </li>
+                                        <li>
                                         </li>
                                     </ul>
                                 </div>
@@ -1242,7 +1235,7 @@
                                     <a href="#modal-voter-list" data-toggle="modal" data-role="button" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
                                 </div>
 
-                                <table class="table table-bordered">
+                                <table class="table table-bordered cell-height-40" style="height: 720px;">
                                     <colgroup>
                                         <col style="width: 37%;">
                                         <col>
@@ -1251,10 +1244,10 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col" class="text-center">투표자</th>
-                                            <th scope="col" class="text-center">고유번호</th>
-                                            <th scope="col" class="text-center">투표번호</th>
-                                            <th scope="col" class="text-center">득표수</th>
+                                            <th scope="col" class="text-center" style="height:39px">투표자</th>
+                                            <th scope="col" class="text-center" style="height:39px">고유번호</th>
+                                            <th scope="col" class="text-center" style="height:39px">투표번호</th>
+                                            <th scope="col" class="text-center" style="height:39px">득표수</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1347,6 +1340,12 @@
                                             <td class="text-center">1000</td>
                                             <td class="text-center">7777</td>
                                             <td class="text-center">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">티도</td>
+                                            <td class="text-center">9999</td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">3</td>
                                         </tr>
                                         <tr>
                                             <td class="text-left">티도</td>
@@ -1362,7 +1361,7 @@
                                     <p class="title-square"><span>자동 투표자 리스트</span></p>
                                     <a href="#modal-voter-list" data-toggle="modal" data-role="button" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
                                 </div>
-                                <table class="table table-bordered">
+                                <table class="table table-bordered cell-height-40" style="height: 720px;">
                                     <colgroup>
                                         <col style="width: 37%;">
                                         <col>
@@ -1371,10 +1370,10 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th scope="col" class="text-center">투표자</th>
-                                            <th scope="col" class="text-center">고유번호</th>
-                                            <th scope="col" class="text-center">투표번호</th>
-                                            <th scope="col" class="text-center">득표수</th>
+                                            <th scope="col" class="text-center" style="height:39px">투표자</th>
+                                            <th scope="col" class="text-center" style="height:39px">고유번호</th>
+                                            <th scope="col" class="text-center" style="height:39px">투표번호</th>
+                                            <th scope="col" class="text-center" style="height:39px">득표수</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1473,6 +1472,12 @@
                                             <td class="text-center">9999</td>
                                             <td class="text-center">10</td>
                                             <td class="text-center">3</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">후디</td>
+                                            <td class="text-center">1009</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">19</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1582,20 +1587,20 @@
                     </div>
                 </div>
             </div>
-          
+
+            <div class="modal-footer d-flex justify-content-between">
+                <div class="modal-footer-left d-flex">
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
+                    <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
+                </div>
+                <div class="modal-footer-right d-flex">
+                    <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
+                    <button type="button" class="btn btn-dark btn-lg">수정 요청</button>
+                    <button type="button" class="btn btn-dark btn-lg">결재 요청</button>
+                </div>
+            </div>
         </div>
 
-        <div class="modal-footer d-flex justify-content-between">
-            <div class="modal-footer-left d-flex">
-                <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-calculator"><strong>마진 계산기</strong></button>
-                <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-preview"><strong>앱 프리뷰</strong></button>
-            </div>
-            <div class="modal-footer-right d-flex">
-                <button type="button" class="btn btn-darkgray btn-lg" data-event="prev-step">이전 단계</button>
-                <button type="button" class="btn btn-dark btn-lg">수정 요청</button>
-                <button type="button" class="btn btn-dark btn-lg">결재 요청</button>
-            </div>
-        </div>
     </div>
 </div>
 </div>
