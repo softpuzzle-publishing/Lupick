@@ -1129,7 +1129,7 @@ body.body-center-content { width: auto; background: #fff; }
 
 .info-form .info-form-bottom span a { font-weight: 700; text-decoration: underline; }
 
-.success-event { height: 459px; padding: 34px 30px 30px; }
+.success-event { height: 464px; padding: 34px 30px 30px; }
 
 .success-event .success-event-percent { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(0, 0, 0, 0.15); padding-bottom: 10px; }
 
@@ -1331,11 +1331,11 @@ body.body-center-content { width: auto; background: #fff; }
 
 .operator { font-size: 28px; line-height: 1; width: 30px; font-weight: 400; }
 
-.lupicker-vote { padding: 30px; }
+.lupicker-vote { padding: 30px; height: 720px; }
 
 .lupicker-vote .lupicker-vote-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 
-.lupicker-vote ul li { display: flex; align-items: center; justify-content: space-between; line-height: 1.12; font-size: 14px; height: 46px; }
+.lupicker-vote ul li { display: flex; align-items: center; justify-content: space-between; line-height: 1.12; font-size: 14px; height: 47px; }
 
 .lupicker-vote ul li + li { border-top: 1px solid rgba(0, 0, 0, 0.15); }
 
@@ -1521,7 +1521,7 @@ body.body-dashboard [class^=col-] { padding: 15px; }
 
 .legend-list > div.orange p::before { background-color: #fabc05; }
 
-.seller-info { padding: 29px 30px; }
+.seller-info { padding: 30px; }
 
 .seller-info li { display: flex; flex-wrap: wrap; position: relative; line-height: 1.143; padding-left: 15px; font-size: 14px; }
 
