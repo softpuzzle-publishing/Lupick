@@ -1477,7 +1477,7 @@ body.body-dashboard [class^=col-] { padding: 15px; }
 
 .modal-footer.border-none::before { content: ''; height: 0; }
 
-.voting { width: 100%; height: 715px; margin-top: 69px; position: relative; }
+.voting { width: 100%; height: 720px; margin-top: 69px; position: relative; }
 
 .voting .bg-balls { height: 100%; }
 
@@ -1536,6 +1536,8 @@ body.body-dashboard [class^=col-] { padding: 15px; }
 .table-next-button { margin-left: 246px; }
 
 .modal-dialog.banner .modal-body { max-height: 885px; }
+
+.modal-dialog.event .modal-content { max-width: 1800px; max-height: 1000px; }
 
 .modal.modal-size-fix .modal-dialog { margin: 0 auto; }
 

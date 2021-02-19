@@ -172,7 +172,7 @@
             content:"";
             position: absolute;
             top: 50%;
-            left:0;`
+            left:0;
             width: 5px;
             height: 5px;
             background-color:$black;
@@ -198,6 +198,9 @@
 .modal-dialog{
     &.banner{
         .modal-body{max-height:885px;}
+    }
+    &.event{
+        .modal-content{max-width:1800px; max-height:1000px;}
     }
 }
 .modal.modal-size-fix{
