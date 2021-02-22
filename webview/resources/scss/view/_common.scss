@@ -42,6 +42,7 @@ em{font-style: normal;}
 .font-22{font-size:22px;}
 .font-24{font-size:24px;}
 .bold{font-weight: bold;}
+.regular{font-weight: 400 !important;}
 //
 .gilroy{
     font-family: 'Gilroy';
@@ -150,19 +151,19 @@ a:focus{outline: none;box-shadow: none !important;}
 //select
 .ui-selectmenu-button.ui-button{
     background: #fff !important;border: 1px solid $border-color;border-radius: 0;outline: 0;width: 230px;height: 40px;padding: 15px 15px 0;margin: 0;font-size: 14px;
-    .ui-icon{background: url('../images/select-webview.svg') no-repeat 50% 50%;width: 12px;height: 6px;position: absolute;right: 15px;top: 50%;margin-top: -4px;}
+    .ui-icon{background: url('../images/arrow_down.png') no-repeat 50% 50%;width: 14px;height: 10px;position: absolute;right: 15px;top: 50%;margin-top: -4px; background-size: contain;}
     &[aria-expanded="true"]{
         .ui-icon{transform: rotate(180deg);}
     }
     .select-sm + &{
-        width: 100px;height: 50px;border:none;
+        width: 100px;height: 45px;
     }
     .select-md + &{
-        width: 100%;height: 45px;
+        width: 100%;height:50px;
     }
     .select-lg + &{
         width: 100%;height: 65px;padding: 22px 30px 0;box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.1);border-color: #eee;
-        .ui-icon{background: url('../images/select-webview.svg') no-repeat 50% 50%;width: 15px;height: 10px;right: 30px;margin-top: -5px;}
+        .ui-icon{background: url('../images/arrow_down.png') no-repeat 50% 50%;width: 14px;height: 10px;right: 30px;margin-top: -5px; background-size: contain;}
         .ui-selectmenu-text{font-size: 18px;}
     }
 }
@@ -530,6 +531,14 @@ a:focus{outline: none;box-shadow: none !important;}
     }
     &.dim{
         .modal-content{display:none;}
+    }
+    &.point{
+        height:100%;display:flex;align-items:center;justify-content: center;
+        .modal-content{
+            width:280px;height:165px;border-radius: 7px;
+        }
+        .modal-body{display:flex;align-items: center;justify-content: center;padding:45px 55px 25px; font-size:14px;text-align: center;}
+        .modal-footer{border-top:1px solid $gray;padding: 15px 0;}
     }
 }
 .card-list{

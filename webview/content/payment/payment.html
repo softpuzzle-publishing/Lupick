@@ -24,13 +24,13 @@
         <div class="payment-wrap">
             <div class="tab item">
                 <div class="tab-title">
-                    <p class="bold">아이템 정보</p>
+                    <p class="bold">주문 정보</p>
                 </div>
                 <div class="desc">
                     <div class="product">
                         <div class="d-flex justify-content-between">
                             <div>
-                                <p class="nema">미니 캐리어 테이블 (PLAIN)</p>
+                                <p class="name">미니 캐리어 테이블 (PLAIN)</p>
                                 <span class="count font-14 bold">1개 /</span>
                                 <span class="price font-14 bold">57,000원</span>
                             </div>
@@ -68,7 +68,7 @@
             <div class="tab delivery">
                 <div class="tab-title d-flex align-items-center justify-content-between">
                     <p class="bold">배송 정보</p>
-                    <button type="button"><span class="badge badge-w-gray bold" data-toggle="modal" data-target="#modal-change">변경하기</span></button>
+                    <button type="button"><span class="badge badge-w-gray bold change-badge" data-toggle="modal" data-target="#modal-change">변경하기</span></button>
                 </div>
                 
                 <!--배송지 등록이 안되어 있을 때-->
@@ -86,13 +86,13 @@
                             <p>서울시 강남구 도산대로 54길 32 (도산아파트) 도산아파트 101동 202호</p>
                         </li>
                         <li class="m-b-5">
-                            <span class="font-13 gray">이정후</span>, <span class="font-13 gray">010-1234-5678</span>
+                            <span class="font-13 gray bold">이정후</span>, <span class="font-13 gray bold">010-1234-5678</span>
                         </li>
                         <li>
-                            <span class="badge badge-dark">기본 배송지</span>
+                            <span class="badge badge-dark bold">기본 배송지</span>
                         </li>
                     </ul>
-                    <select class="del-select select-md h-50" id="delivery-select">
+                    <select class="del-select select-md" id="delivery-select">
                         <option value="">배송 메모 (선택)</option>
                         <option value="">배송 전에 미리 연락 바랍니다.</option>
                         <option value="">부재 시 경비실에 맡겨주세요.</option>
@@ -101,7 +101,7 @@
                         <option value="직접 입력">직접 입력</option>
                     </select>
                     <div class="d-flex align-items-end direct">
-                        <textarea class="form-control h-100px " maxlength="100" placeholder="배송 시 꼭 연락주시고, 벨 누르지 말고 문 앞에서 노크해주세요" data-byte-target="#byte-check1"></textarea>
+                        <textarea class="form-control h-100px " maxlength="100" placeholder="직접 입력" data-byte-target="#byte-check1"></textarea>
                     </div>
                 </div>
             </div>
@@ -111,8 +111,8 @@
                     <p class="font-14">사용가능 포인트 <span class="bold">150P</span></p>
                 </div>
                 <div class="desc d-flex align-items-center ">
-                    <input type="text" class="form-control h-50">
-                    <button type="button" class="btn btn-outline-dark btn-md m-l-10 h-50">모두 사용</button>
+                    <input type="text" class="form-control h-50 rounded-0" placeholder="0">
+                    <button type="button" class="btn btn-outline-dark btn-md m-l-10 h-50" data-toggle="modal" data-target="#modal-point">모두 사용</button>
                 </div>
             </div>
             <div class="tab price">
@@ -123,17 +123,17 @@
                 <div class="desc d-flex align-items-center justify-content-center">
                     <div>
                         <p class="font-13 m-b-5">상품 금액</p>
-                        <p class="font-15 bold">114,000원</p>
+                        <p class="money">114,000원</p>
                     </div>
-                    <span><i class="fas fa-plus"></i></span>
+                    <span class="plus"></span>
                     <div>
                         <p class="font-13 m-b-5">배송비</p>
-                        <p class="font-15 bold">3,000원</p>
+                        <p class="money">3,000원</p>
                     </div>
-                    <span><i class="fas fa-minus"></i></span>
+                    <span class="minus"></span>
                     <div>
                         <p class="font-13 m-b-5">루픽 포인트</p>
-                        <p class="font-15 bold">150P</p>
+                        <p class="point">150P</p>
                     </div>
                 </div>
                 <p class="example-text font-12">*제주 및 도서산간 지역 : 추가 배송비 3,000원 발생</p>
@@ -219,7 +219,7 @@
                     <label class="custom-control-label font-15" for="chk3">결제 정보를 확인하였으며, 동의합니다. (필수)</label>
                 </div>
             </div>
-            <a href="#" class="btn btn-dark btn-xl h-60">결제하기</a>
+            <a href="#" class="btn btn-dark btn-xl h-60 regular">결제하기</a>
         </div>
     </div>
     
@@ -236,14 +236,14 @@
                         <div class="info-list-header">
                             <span>받는 분</span>
                         </div>
-                        <input class="input-id form-control ip-sign" type="text" value="" placeholder="이름을 입력해주세요" maxlength="20">
+                        <input class="input-id form-control ip-sign rounded-0" type="text" value="" placeholder="이름을 입력해주세요" maxlength="20">
                     </div>
                     <div class="info-list">
                         <div class="info-list-header">
                             <span>휴대폰 번호</span>
                         </div>
                         <div class="certification">
-                            <input class="input-phone form-control ip-sign" type="number" value="" placeholder="- 없이 입력해주세요.">
+                            <input class="input-phone form-control ip-sign rounded-0" type="number" value="" placeholder="- 없이 입력해주세요.">
                         </div>
                     </div>
 
@@ -252,14 +252,14 @@
                             <span>주소</span>
                         </div>
                         <div class="certification d-flex">
-                            <input class="input-phone form-control ip-sign" type="text" value="" placeholder="">
+                            <input class="input-phone form-control ip-sign rounded-0" type="text" value="" placeholder="">
                             <button type="button" class="btn btn-outline-dark btn-md ml-2 p-0" >우편번호 검색</button> 
                         </div>
                         <div class="certification-num">
-                            <input class="input-num form-control ip-sign" type="text" value="" placeholder="">
+                            <input class="input-num form-control ip-sign rounded-0" type="text" value="" placeholder="">
                         </div>
                         <div class="certification-num">
-                            <input class="input-num form-control ip-sign" type="text" value="" placeholder="상세주소를 입력해주세요">
+                            <input class="input-num form-control ip-sign rounded-0" type="text" value="" placeholder="상세주소를 입력해주세요">
                         </div>
                     </div>
 
@@ -270,8 +270,8 @@
 
                 </div>
            
-                <!-- <button type="button" class="btn btn-dark btn-xl h-60 m-t-50"">저장</button> -->
-                <button type="button" class="btn btn-dark btn-xl h-60 m-t-50" disabled>저장</button>
+                <!-- <button type="button" class="btn btn-dark btn-xl h-60 m-t-50  regular">저장</button> -->
+                <button type="button" class="btn btn-dark btn-xl h-60 m-t-50 regular" disabled>저장</button>
             </div>
         </div>
     </div>
@@ -299,7 +299,7 @@
                                     <p>서울시 강남구 도산대로 54길 32 (도산아파트) 도산아파트 101동 202호</p>
                                 </li>
                                 <li class="m-b-5">
-                                    <span class="font-13 gray">이정후</span>, <span class="font-13 gray">010-1234-5678</span>
+                                    <span class="font-13 gray bold">이정후</span>, <span class="font-13 gray bold">010-1234-5678</span>
                                 </li>
                                 <li>
                                     <span class="badge badge-dark">기본 배송지</span>
@@ -317,11 +317,25 @@
                                     <p>서울시 강남구 논현동 101-1 건물 3층 HOHOHO</p>
                                 </li>
                                 <li class="m-b-5">
-                                    <span class="font-13 gray">이정후</span>, <span class="font-13 gray">010-1234-5678</span>
+                                    <span class="font-13 gray bold">이정후</span>, <span class="font-13 gray bold">010-1234-5678</span>
                                 </li>
                             </ul>
                         </div>
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 포인트 사용 -->
+     <div class="modal fade" id="modal-point" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog point">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>사용가능한 최대 루픽포인트는<br>
+                        150P 입니다.</p>
+                </div>
+                <div class="modal-footer text-center">
+                    <p class="font-14 bold" data-dismiss="modal" aria-label="Close">확인</p>
                 </div>
             </div>
         </div>

@@ -45,7 +45,7 @@ $(document).ready(function () {
             
                 if( $('[aria-expanded="true"]') ){
                     if(option_length <= 3){
-                        $('.ui-selectmenu-menu .ui-menu').css('max-height','100px');
+                        
                     }else if(option_legnth >= 4){
                         $('.ui-selectmenu-menu .ui-menu').css('max-height','400px');
                     }
