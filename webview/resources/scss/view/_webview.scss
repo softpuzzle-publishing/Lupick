@@ -189,15 +189,16 @@ body{color:$black;line-height: 22px;font-size:16px; }
 }
 .sel-option{
     padding:20px 0;border-bottom:1px solid $gray;
+    .name{font-size: 14px;}
     .sel-delete{
         width:13px;height: 13px;background-image:url(../images/ic_exit.svg);background-position: center;background-size: cover;
     }
-    .spinner-wrap{margin-top:15px;
+    .spinner-wrap{margin-top:13px;
         .price{font-weight: bold;}
     }
 }
 .total-price{padding:15px 0;border-top:2px solid $black;border-bottom:2px solid $black;display:flex;align-items:center;justify-content: space-between;
-    &.border-1{border-top:1px solid $black;border-bottom:1px solid $black;}
+    &.border-1{border-top:1px solid $black;border-bottom:1px solid $black;margin-top: -1px;}
     p{display: flex;align-items: center;}
     span{display: inline-block;}
 }
@@ -411,5 +412,9 @@ body{color:$black;line-height: 22px;font-size:16px; }
 }
 hr{margin-top:40px;border-top:1px solid $gray;}
 .copyright{font-size:10px;color: $black;opacity: $opacity-4;margin-top: 20px;}
-#selectmenu-zone .ui-selectmenu-menu{position: static !important;}
-#selectmenu-zone .ui-selectmenu-menu .ui-menu{max-height: none !important}
+
+#selectmenu-zone{
+    .ui-selectmenu-menu{position: static !important;}
+    .ui-selectmenu-menu .ui-menu{max-height: none !important;width: auto !important;}
+    .ui-selectmenu-menu .ui-menu .ui-state-active{background: transparent;color: #000;}
+}
