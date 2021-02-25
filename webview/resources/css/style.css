@@ -47,6 +47,8 @@ i, em { font-style: normal; }
 
 .gilroy { font-family: 'Gilroy'; -webkit-font-smoothing: antialiased; }
 
+.ex-text { font-size: 12px; color: #000; opacity: .4; }
+
 .example-text { opacity: 0.4; margin-top: 10px; }
 
 .m-l-10 { margin-left: 10px !important; }
@@ -183,13 +185,19 @@ td > .btn + .btn { margin-left: 6px; }
 
 .ui-selectmenu-menu .ui-menu.select-lg .ui-menu-item-wrapper { height: 64px; padding: 20px 30px 0; font-size: 18px; }
 
-.badge { display: inline-block; min-width: 80px; padding: .1rem 8px 0; font-size: 12px; height: 24px; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0; margin-right: 3px; margin-bottom: 5px; }
+.badge { display: inline-block; min-width: 80px; padding: .1rem 8px 0; font-size: 12px; height: 25px; font-weight: bold; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0; margin-right: 3px; margin-bottom: 5px; }
 
 .custom-control-label { position: relative; margin-bottom: 0; vertical-align: top; }
 
 .custom-control-label::before { position: absolute; top: 1px; left: -35px; display: block; width: 20px; height: 20px; pointer-events: none; content: ""; background-color: #fff; border: #000 solid 1px; }
 
 .custom-control-label::after { position: absolute; top: 5px; left: -31px; display: block; width: 12px; height: 12px; content: ""; background: no-repeat 50% / 50% 50%; }
+
+.check-delivery { position: relative; margin-bottom: 0; vertical-align: top; font-size: 14px; font-weight: bold; }
+
+.check-delivery::before { content: ""; position: absolute; left: -35px; top: 1px; width: 20px; height: 20px; display: block; background-image: url("../images/checkbox_nor.png"); background-size: cover; background-repeat: no-repeat; }
+
+.custom-control-input:checked ~ .check-delivery::after { content: ""; position: absolute; left: -35px; top: 1px; width: 20px; height: 20px; display: block; background-image: url("../images/checkbox_sel.png"); background-size: cover; background-repeat: no-repeat; background-color: #000; }
 
 .custom-checkbox .custom-control-label::before { border-radius: 0.25rem; }
 
@@ -273,7 +281,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.add .modal-content { width: 100%; height: 100%; padding: 0 20px; }
 
-.modal-dialog.add .modal-content.setting { padding: 0 20px 0; }
+.modal-dialog.add .modal-content.setting { padding: 20px 20px 0; }
 
 .ic-close { width: 20px; height: 20px; background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center; }
 
@@ -283,7 +291,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .ic-home { width: 20px; height: 20px; background-image: url(../images/ic_home.svg); background-size: cover; background-position: center; }
 
-.ic-feed { width: 20px; height: 20px; background-image: url(../images/navigation_feed.svg); background-size: cover; background-position: center; display: inline-block; }
+.ic-feed { width: 20px; height: 20px; background-image: url(../images/ic_edit.png); background-size: cover; background-position: center; display: inline-block; }
 
 .modal-dialog.add .modal-content .info-list { margin-bottom: 30px; }
 
@@ -301,7 +309,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.change .modal-content { width: 100%; height: 100%; padding: 0 20px; }
 
-.modal-dialog.change .modal-content.setting { padding: 0 20px 0; }
+.modal-dialog.change .modal-content.setting { padding: 20px 20px 0; }
 
 .modal-dialog.change .modal-content .info-list { margin-bottom: 30px; }
 
@@ -316,6 +324,8 @@ td > .btn + .btn { margin-left: 6px; }
 .modal-dialog.change .modal-content .desc { padding: 30px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
 .modal-dialog.change .modal-content .desc li { line-height: 24px; }
+
+.modal-dialog.change .modal-content .desc .address { width: 265px; }
 
 .modal-dialog.change .modal-content .del-add { width: 100%; border: 1px solid rgba(0, 0, 0, 0.15); text-align: left; padding: 0 15px; color: #999; }
 
@@ -335,13 +345,15 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.tracking .modal-content .payment-wrap .tab.tracking { margin: 50px 0 0 0; }
 
-.modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .step { display: none; padding: 15px 0; border-top: 1px solid rgba(0, 0, 0, 0.15); border-bottom: 1px solid rgba(0, 0, 0, 0.15); margin-bottom: -1px; }
+.modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .step { display: none; padding: 15px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.15); margin-bottom: -1px; }
+
+.modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .step:first-child { border-top: 1px solid rgba(0, 0, 0, 0.15); }
 
 .modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .tracking-more { position: relative; margin-top: 20px; }
 
-.modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .tracking-more::after { content: '\f078'; font-family: "Font Awesome 5 Free"; padding: 0 5px; }
+.modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .tracking-more::after { content: ""; width: 14px; height: 10px; display: inline-block; margin: 0 5px; background-image: url(../images/arrow_down.png); background-repeat: no-repeat; background-position: center; background-size: contain; }
 
-.modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .tracking-more.active:after { content: '\f077'; font-family: "Font Awesome 5 Free"; padding: 0 5px; }
+.modal-dialog.tracking .modal-content .payment-wrap .tab.tracking .tracking-more.active:after { background-image: url(../images/arrow_up.png); }
 
 .modal-dialog.receipt .modal-content { width: 100%; height: 100%; padding: 0 20px 40px; }
 
@@ -421,7 +433,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .modal-dialog.random .modal-footer button:first-child { border-right: 0; }
 
-.modal-dialog.error .modal-content { width: 280px; height: 350px; margin: 50px auto; padding: 40px 20px 30px; }
+.modal-dialog.error .modal-content { width: 280px; height: 350px; margin: 50px auto; padding: 40px 20px 30px; border-radius: 7px; }
 
 .modal-dialog.error .modal-body { text-align: center; }
 
@@ -721,7 +733,9 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .item.share .ic-ask { width: 30px; height: 30px; background-image: url(../images/ic_ask.svg); background-size: cover; background-position: center; background-repeat: no-repeat; }
 
-.sel-option { padding: 20px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+.sel-option { padding: 20px 0; }
+
+.sel-option:first-child { border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
 .sel-option .name { width: 265px; font-size: 14px; }
 
@@ -741,11 +755,13 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .payment-wrap { padding: 0 20px 0; }
 
-.payment-wrap .tab { border-top: 2px solid #000; margin-bottom: 50px; }
+.payment-wrap .tab { border-top: 2px solid #000; margin-bottom: 40px; }
 
 .payment-wrap .tab .tab-title { padding: 15px 0; }
 
-.payment-wrap .tab.item .desc .product { padding: 20px 0; display: none; border-top: 1px solid rgba(0, 0, 0, 0.15); border-bottom: 1px solid rgba(0, 0, 0, 0.15); margin-top: -1px; }
+.payment-wrap .tab.item .desc .product { padding: 20px 0; display: none; border-bottom: 1px solid rgba(0, 0, 0, 0.15); margin-top: -1px; }
+
+.payment-wrap .tab.item .desc .product:first-child { border-top: 1px solid rgba(0, 0, 0, 0.15); }
 
 .payment-wrap .tab.item .desc .product .img { width: 70px; height: 70px; background-size: cover; background-position: center; background-repeat: no-repeat; }
 
@@ -785,17 +801,19 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .payment-wrap .tab.price .desc { padding: 15px 0; text-align: center; border-top: 1px solid rgba(0, 0, 0, 0.15); border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
-.payment-wrap .tab.price .money { font-size: 15px; font-weight: bold; width: 110px; }
+.payment-wrap .tab.price .money { font-size: 15px; font-weight: bold; width: 100px; }
 
-.payment-wrap .tab.price .point { font-size: 15px; font-weight: bold; width: 110px; }
+.payment-wrap .tab.price .point { font-size: 15px; font-weight: bold; width: 100px; }
 
-.payment-wrap .tab.price .plus { width: 20px; height: 20px; display: inline-block; background-image: url(../images/spinner_plus.svg); background-size: contain; background-position: center; background-repeat: no-repeat; }
+.payment-wrap .tab.price .plus { width: 20px; height: 20px; display: inline-block; background-image: url(../images/ic_plus.png); background-size: contain; background-position: center; background-repeat: no-repeat; }
 
-.payment-wrap .tab.price .minus { width: 20px; height: 20px; display: inline-block; background-image: url(../images/spinner_minus.svg); background-size: contain; background-position: center; background-repeat: no-repeat; }
+.payment-wrap .tab.price .minus { width: 20px; height: 20px; display: inline-block; background-image: url(../images/ic_minus.png); background-size: contain; background-position: center; background-repeat: no-repeat; }
 
 .payment-wrap .tab.agree .custom-control-inline { margin-right: 0; margin-top: 15px; }
 
 .payment-wrap .tab.agree .custom-control-label { padding-top: 2px; }
+
+.payment-wrap .tab.payment { margin-bottom: 35px; }
 
 .payment-wrap .tab.payment .row { margin-left: -5px; margin-right: -5px; }
 
@@ -812,6 +830,14 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 .payment-wrap .tab.point .btn.btn-outline-dark { font-size: 16px; }
 
 .payment-wrap .tab.point .btn.btn-outline-dark:hover { background-color: inherit; color: inherit; }
+
+.payment-wrap .tracking-btn { width: 100%; height: 40px; font-size: 14px; color: #000; border: 1px solid rgba(0, 0, 0, 0.15); }
+
+.payment-wrap .tracking-btn:disabled { background-color: rgba(0, 0, 0, 0.05); border: 0; }
+
+.payment-wrap .tracking-content { margin-right: -5px; margin-left: -5px; margin-top: 20px; justify-content: space-between; }
+
+.payment-wrap .tracking-content .col-6 { padding-left: 5px; padding-right: 5px; }
 
 .result { position: relative; }
 
@@ -841,7 +867,7 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .tracking-title.gray::after { background-color: rgba(0, 0, 0, 0.15); }
 
-.text-underline { margin-top: 50px; }
+.text-underline { margin-top: 50px; line-height: 26px; }
 
 .tracking-order { margin: 30px 0 15px 0; }
 
