@@ -498,6 +498,8 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 
 .icon-link-arr { width: 7px; height: 12px; background-image: url("../images/icon-link-arr.svg"); vertical-align: middle; }
 
+.icon-link-arr-bold { width: 9px; height: 12px; background-image: url("../images/icon-link-arr-bold.svg"); vertical-align: middle; }
+
 .icon-download { width: 40px; height: 40px; background-image: url("../images/icon-download.svg"); }
 
 .icon-dashboard { width: 24px; height: 24px; background-image: url("../images/icon-gnb-dashboard.svg"); }
@@ -893,13 +895,17 @@ aside { position: fixed; z-index: 1000; background: #ffff; }
 
 .main-event li .box p { font-size: 14px; line-height: 1.57; margin-top: 15px; height: 3.14em; text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 
+.main-event li .box:focus { box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2) !important; }
+
 .main-event li:last-child { margin-right: 0; }
 
 .main-event .box-placeholder { width: 220px; height: 130px; background: rgba(0, 0, 0, 0.1); }
 
-.main-event .filebox { background: #fff; }
+.main-event .filebox, .main-event .filebox:focus { background: #fff; box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2) !important; }
 
 .main-event .filebox label { width: 220px; height: 130px; }
+
+.main-event .filebox label::before { border-color: rgba(0, 0, 0, 0.1); }
 
 .main-event .del { position: absolute; right: -4px; top: -4px; display: none; }
 

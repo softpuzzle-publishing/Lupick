@@ -25,13 +25,16 @@
             strong{font-size: 20px;line-height: 1.2;margin-left: 11px;}
             p{font-size:14px;line-height: 1.57;margin-top: 15px;height: 3.14em;text-overflow: ellipsis;overflow: hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
         }
+        .box:focus{box-shadow: 0 5px 10px -5px rgba(0,0,0,0.2) !important;}
     }
     li:last-child{margin-right: 0;}
     .box-placeholder{
         width: 220px;height: 130px;background: rgba(0,0,0,0.1);
     }
-    .filebox{background: #fff;}
+    .filebox,
+    .filebox:focus{background: #fff;box-shadow: 0 5px 10px -5px rgba(0,0,0,0.2) !important;}
     .filebox label{width: 220px;height: 130px;}
+    .filebox label::before{border-color: rgba(0,0,0,0.1);}
     .del{position: absolute;right: -4px;top: -4px;display: none;}
 }
 
