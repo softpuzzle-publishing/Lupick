@@ -2868,8 +2868,9 @@ input::placeholder {
 @media (max-width: 991.98px) {
   .form-control {
     font-size: 0.8125rem;
-    padding-left: .5rem;
-    padding-right: .5rem;
+    padding-left: .938rem;
+    padding-right: .938rem;
+    font-size: 16px;
   }
 }
 

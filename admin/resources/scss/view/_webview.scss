@@ -1,3 +1,22 @@
+$d-gray:#666;
+$gray: rgba(0,0,0,0.15);
+$gray-f2:#f2f2f2;
+$white:#fff;
+$black:#000;
+$red:#d20000;
+$yellow:#ffff00;
+
+$border-color:rgba(0,0,0,0.15);
+
+//opacity
+$gray-opacity:.3;
+$d-opacity:.05;
+$opacity-4:.4;
+$opacity-5:.5;
+$opacity-6:.6;
+$d-gray-opacity:.6;
+$w-gray-opacity:.25;
+
 //font
 .font-11{font-size:11px;}
 .font-12{font-size:12px;}
@@ -100,7 +119,6 @@ body{color:#000;line-height: 22px;font-size:16px; }
         .price{margin:10px 0 20px;}
         .date{margin-left:5px;}
     }
-    .badge{padding:5px;margin-right: 5px;margin-bottom: 5px;}
     .btn-xl{min-width: 100%;}
     .view-event{margin:40px 0 20px 0;}
     .feed-img{width: 100%;padding-top:100%;background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 7px; position: relative;
@@ -229,23 +247,23 @@ body{color:#000;line-height: 22px;font-size:16px; }
                 .text{margin-top: 15px;}
             }
         }
-        &.process{border-top:1px solid #000;padding:15px 0 0 0;margin-top:40px;
+        &.process{border-top:1px solid $black;padding:15px 0 0 0;margin-top:40px;
             .title{line-height: 30px;}
             .desc{
                 .list{display:flex;align-items: center;justify-content: center;margin-top:25px;position:relative;
                     &.top::after{content:"";position: absolute;top:30%;width: 100%;
-                    height: 2px;background-color: #ddd; transform:translate(0,-50%);left:50px;z-index: -1;}
+                    height: 2px;background-color: $gray; transform:translate(0,-50%);left:50px;z-index: 0;}
                     &.bottom::after{content:"";position: absolute;top:30%;width: 100%;
-                    height: 2px;background-color: #ddd; transform:translate(0,-50%);right:50px;z-index: -1;}
+                    height: 2px;background-color: $gray; transform:translate(0,-50%);right:50px;z-index: 0;}
                 }
-                .step{width: 25%;display:flex; align-items: center; flex-flow: column;
+                .step{width: 25%;display:flex; align-items: center; flex-flow: column;position: relative;z-index: 1;
                     &.active{
-                        .circle{background-color: #000;color:#ffff00;}
+                        .circle{background-color: $black;color:$yellow;}
                     }
                     p{font-size:14px;font-weight: bold;margin-top:7px;}
                 }
-                .circle{width:40px;height:40px;border-radius: 50%;background-color: #ffff00;
-                    color:#000;font-size:20px;font-weight: bold;display: flex;align-items: center;justify-content: center;padding:5px 0 0 0;
+                .circle{width:40px;height:40px;border-radius: 50%;background-color: $yellow;
+                    color:$black;font-size:20px;font-weight: bold;display: flex;align-items: center;justify-content: center;padding:5px 0 0 0;
                 }
             }
         }
@@ -254,10 +272,10 @@ body{color:#000;line-height: 22px;font-size:16px; }
 .item.move-btn{margin-top:50px;}
 .item.share{
     margin:40px 0 50px 0;display:flex;align-items: center;justify-content: center;
-    .list{width: 33%;text-align: center;
+    .list{width: 50px;text-align: center;margin:0 15px;
         p{font-size: 12px; font-weight: bold;}
     }
-    .desc{width:50px;height: 50px;display:flex;align-items: center;justify-content: center;background-color: #ddd;border-radius: 50%;margin: 0 auto;}
+    .desc{width:50px;height: 50px;display:flex;align-items: center;justify-content: center;background-color: rgba(0, 0, 0, 0.05);border-radius: 50%;margin: 0 auto;}
     .ic-heart{width: 30px;height: 30px;background-image:url(../images/ic_heart.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
     .ic-share{width: 30px;height: 30px;background-image:url(../images/ic_share.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
     .ic-ask{width: 30px;height: 30px;background-image:url(../images/ic_ask.svg);background-size: cover;background-position: center;background-repeat: no-repeat;}
@@ -271,6 +289,7 @@ body{color:#000;line-height: 22px;font-size:16px; }
     }
     .container-wrap{
         padding: 0 20px;
+        .container-wrap{padding:  0;}
         &.feed{
             .component{margin-top: 30px;}
         }

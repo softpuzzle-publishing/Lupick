@@ -49,7 +49,7 @@ em{font-style: normal;}
     -webkit-font-smoothing: antialiased;
 
 }
-
+.ex-text{font-size: 12px;color:#000;opacity: .4;}
 .example-text{opacity: $opacity-4;margin-top:10px;}
 // layout
 .m-l-10{margin-left:10px !important;}
@@ -104,8 +104,12 @@ a:focus{outline: none;box-shadow: none !important;}
     }
 }
 .btn-sm{
-    min-width:70px;padding: 5px;
+    min-width:70px;padding: 5px;height: 35px;font-size: 13px;font-weight: 700;
 }
+.btn-sm.btn-light{
+    background: rgba(0,0,0,0.05);color: rgba(0,0,0,0.6);
+}
+
 .btn-md{
     min-width: 100px;
     &.text-lager{font-size: 16px;min-width: 150px;}
@@ -151,15 +155,15 @@ a:focus{outline: none;box-shadow: none !important;}
 //select
 .ui-selectmenu-button.ui-button{
     background: #fff !important;border: 1px solid $border-color;border-radius: 0;outline: 0;width: 230px;height: 40px;padding: 15px 15px 0;margin: 0;font-size: 14px;
-    .ui-icon{background: url('../images/arrow_down.png') no-repeat 50% 50%;width: 14px;height: 10px;position: absolute;right: 15px;top: 50%;margin-top: -4px; background-size: contain;}
+    .ui-icon{background: url('../images/btn_arrow.svg') no-repeat 50% 50%;width: 12px;height: 6px;position: absolute;right: 15px;top: 50%;margin-top: -4px; background-size: contain;}
     &[aria-expanded="true"]{
         .ui-icon{transform: rotate(180deg);}
     }
     .select-sm + &{
-        width: 100px;height: 45px;
+        width: 100%;height: 45px;font-size: 14px;
     }
     .select-md + &{
-        width: 100%;height:50px;
+        width: 100%;height:50px;font-size: 16px;
     }
     .select-lg + &{
         width: 100%;height: 65px;padding: 22px 30px 0;box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.1);border-color: #eee;
@@ -184,7 +188,7 @@ a:focus{outline: none;box-shadow: none !important;}
     min-width: 80px;
     padding: .1rem 8px 0;
     font-size:12px;
-    height: 24px;
+    height: 25px;font-weight: bold;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
@@ -196,9 +200,9 @@ a:focus{outline: none;box-shadow: none !important;}
     position: relative;
     margin-bottom: 0;
     vertical-align: top;
-  }
+}
 
-  .custom-control-label::before {
+.custom-control-label::before {
     position: absolute;
     top: 1px;
     left: -35px;
@@ -209,9 +213,9 @@ a:focus{outline: none;box-shadow: none !important;}
     content: "";
     background-color: #fff;
     border: #000 solid 1px;
-  }
+}
 
-  .custom-control-label::after {
+.custom-control-label::after {
     position: absolute;
     top: 5px;
     left: -31px;
@@ -220,43 +224,58 @@ a:focus{outline: none;box-shadow: none !important;}
     height: 12px;
     content: "";
     background: no-repeat 50% / 50% 50%;
-  }
 
-  .custom-checkbox .custom-control-label::before {
+}
+.check-delivery{
+    position: relative;margin-bottom: 0;vertical-align: top;font-size:14px;font-weight: bold;
+    &::before{
+        content:"";position:absolute;left:-35px;top:1px;width:20px;height:20px;display:block;background-image:url('../images/checkbox_nor.png');
+        background-size:cover;background-repeat: no-repeat;
+    }
+
+}
+.custom-control-input:checked ~ .check-delivery{
+    &::after{
+        content:"";position:absolute;left:-35px;top:1px;width:20px;height:20px;display:block;background-image:url('../images/checkbox_sel.png');
+        background-size:cover;background-repeat: no-repeat;background-color:#000;
+    }
+}
+.custom-checkbox .custom-control-label::before {
     border-radius: 0.25rem;
-  }
+}
 
-  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
     background-image: url("../images/checkbox_sel.svg");
-  }
 
-  .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+}
+
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
     border-color: #682dd2;
     background-color: #682dd2;
-  }
+}
 
-  .custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23682dd2' d='M0 2h4'/%3e%3c/svg%3e");
-  }
+}
 
-  .custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
     background-color: rgba(104, 45, 210, 0.5);
-  }
+}
 
-  .custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
     background-color: rgba(104, 45, 210, 0.5);
-  }
+}
 
-  .title-ball{
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      margin-right:7px;
-      &.yellow{background: $yellow;}
-      &.black{background-color: $black;}
-  }
-  .icon-link-arr {
+.title-ball{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right:7px;
+    &.yellow{background: $yellow;}
+    &.black{background-color: $black;}
+}
+.icon-link-arr {
     width: 7px;
     height: 12px;
     background-image: url(../images/icon-link-arr.svg);
@@ -334,13 +353,13 @@ a:focus{outline: none;box-shadow: none !important;}
     &.add{
         .modal-content{
             width: 100%;height:100%;padding:0 20px;
-            &.setting{padding:0 20px 0;}
+            &.setting{padding:20px 20px 0;}
             @at-root{
                 .ic-close{width:20px;height:20px;background-image: url(../images/ic_exit.svg); background-size: cover; background-position: center;}
                 .ic-list{width:20px;height:20px;background-image: url(../images/ic_list.svg); background-size: cover; background-position: center;}
                 .ic-search{width:20px;height:20px;background-image: url(../images/ic_search.svg); background-size: cover; background-position: center;}
                 .ic-home{width:20px;height:20px;background-image: url(../images/ic_home.svg); background-size: cover; background-position: center;}
-                .ic-feed{width:20px;height:20px;background-image: url(../images/navigation_feed.svg); background-size: cover; background-position: center;display:inline-block;}
+                .ic-feed{width:18px;height:18px;background-image: url(../images/ic_edit.svg); background-size: cover; background-position: center;display:inline-block;}
             }
             .info-list{margin-bottom:30px;
                 .info-list-header{ font-size:14px; font-weight: bold;}
@@ -357,7 +376,7 @@ a:focus{outline: none;box-shadow: none !important;}
     &.change{
         .modal-content{
             width: 100%;height:100%;padding:0 20px;
-            &.setting{padding:0 20px 0;}
+            &.setting{padding:20px 20px 0;}
             .info-list{margin-bottom:30px;
                 .info-list-header{ font-size:14px; font-weight: bold;}
             }
@@ -367,6 +386,7 @@ a:focus{outline: none;box-shadow: none !important;}
             .desc{
                 padding: 30px 0;border-bottom:1px solid $gray;
                 li{line-height: 24px;}
+                .address{width:265px;}
             }
             .del-add{
                 width: 100%;
@@ -401,19 +421,19 @@ a:focus{outline: none;box-shadow: none !important;}
                 }
                 .tab.tracking{
                     margin:50px 0 0 0;
-                    .step{display:none;padding:15px 0; border-top:1px solid $gray;border-bottom:1px solid $gray;margin-bottom:-1px;}
+                    .step{display:none;padding:15px 0; border-bottom:1px solid $gray;margin-bottom:-1px;
+                        &:first-child{border-top:1px solid $gray}
+                    }
                     .tracking-more{
                         position: relative;margin-top:20px;
                         &::after{
-                            content:'\f078';
-                            font-family: "Font Awesome 5 Free";
-                            padding:0 5px;
+                            content:"";width: 12px;height: 6px; display: inline-block;
+                            margin: 0 5px;background-image: url(../images/btn_arrow.svg);
+                            background-repeat: no-repeat;background-position: center;background-size: contain;
                         }
                         &.active{
                             &:after{
-                                content:'\f077';
-                                font-family: "Font Awesome 5 Free";
-                                padding:0 5px;
+                                transform: rotate(180deg);
                             }
                         }
                     }
@@ -497,7 +517,7 @@ a:focus{outline: none;box-shadow: none !important;}
         }
     }
     &.error{
-        .modal-content{width:280px;height:350px;margin:50px auto;padding:40px 20px 30px;}
+        .modal-content{width:280px;height:350px;margin:50px auto;padding:40px 20px 30px;border-radius: 7px;}
         .modal-body{text-align: center;}
     }
     &.question{
@@ -592,11 +612,3 @@ a:focus{outline: none;box-shadow: none !important;}
         position: absolute;width: 0;height: 0;padding: 0;overflow: hidden;border: 0;
     }
 }
-
-
-
-
-
-
-
-

@@ -176,6 +176,7 @@
             width: 5px;
             height: 5px;
             background-color:$black;
+            transform: translate(0,-50%);
             -webkit-transform: translate(0,-50%);
             -ms-transform: translate(0,-50%);
             -moz-transform: translate(0,-50%);
@@ -231,8 +232,8 @@
         .close{right: 40px;top: 40px;}
     }
     .modal-body{
-        height: 814px;
-        max-height: 814px;
+        height: 815px;
+        max-height: 815px;
         padding: 0 40px 0;
     }
     .modal-footer{
@@ -242,7 +243,7 @@
         .nav{margin-top: 30px;}
         .modal-header{padding-bottom: 0;}
         .modal-body{
-            height: 769px;
+            height: 770px;
         }
     }
     .m-l-15{margin-left: 11px !important;}
