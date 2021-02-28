@@ -23,44 +23,51 @@
         <div class="header d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
                 <a href="javascript:void(0)" class="ic-back"></a>
-                <span class="font-18 bold">결제하기</span>
+                <span class="font-18 bold">주문내역</span>
             </div>
-            <p>전체</p>
+            <select class="select-text" id="statusSelect">
+                <option value="">전체</option>
+                <option value="PAY_COMPLETE">결제 완료</option>
+                <option value="PAY_CANCEL">결제 취소</option>
+                <option value="DELIVERY_ING">배송 중</option>
+                <option value="DELIVERY_COMPLETE">배송 완료</option>
+                <option value="REFUND">환불/반품</option>
+            </select>
         </div>
         <div class="tracking-wrap">
             <div class="content">
                 <a href="tracking_view.html" class="order-number d-flex justify-content-between m-b-10">
-                    <p class="font-12"><span>2020.07.14</span>/<span>주문번호 200020264169</span></p>
-                    <p class="font-12"><i class="fas fa-chevron-right"></i></p>
+                    <p class="font-12"><span>2020.07.14</span> / <span>주문번호</span> <span>200020264169</span></p>
+                    <p class="font-12"><i class="icon-arrow-right"></i></p>
                 </a>
                 <div class="desc">
                     <div class="text">
                         <p class="text-truncate font-12 bold m-b-10">거대벽화 그리기에 참여하는 911명 중 몇명이</p>
-                        <p class="font-14 m-b-5">이화동 벽화마을 벽화그리기 체험권 (성인) 외 <span>1</span>건</p>
+                        <p class="font-14 line-height-20 mb-1">이화동 벽화마을 벽화그리기 체험권 (성인) 외 <span>1</span>건</p>
                         <p class="font-14 bold">20,000원</p>
                     </div>
                     <div class="product">
                         <div class="img" style="background-image:url(../../resources/images/@event_07.png)"></div>
                     </div>
                 </div>
-                <div class="m-t-20 d-flex justify-content-between">
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>배송 완료</button>
+                <div class="row row-10 m-t-20">
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>배송 완료</button>
                     </div>
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>구매확정 완료</button>
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>구매확정 완료</button>
                     </div>
                 </div>
             </div>
             <div class="content">
                 <a href="tracking_view.html" class="order-number d-flex justify-content-between m-b-10">
-                    <p class="font-12"><span>2020.07.14</span>/<span>주문번호 200020264169</span></p>
-                    <p class="font-12"><i class="fas fa-chevron-right"></i></p>
+                    <p class="font-12"><span>2020.07.14</span> / <span>주문번호</span> <span>200020264169</span></p>
+                    <p class="font-12"><i class="icon-arrow-right"></i></p>
                 </a>
                 <div class="desc">
                     <div class="text">
                         <p class="text-truncate font-12 bold m-b-10">거대벽화 그리기에 참여하는 911명 중 몇명이</p>
-                        <p class="font-14 m-b-5">이화동 벽화마을 벽화그리기 체험권 (성인) 외 <span>1</span>건</p>
+                        <p class="font-14 line-height-20 mb-1">이화동 벽화마을 벽화그리기 체험권 (성인) 외 <span>1</span>건</p>
                         <p class="font-14 bold">20,000원</p>
                     </div>
                     <div class="product">
@@ -68,55 +75,55 @@
                     </div>
                 </div>
                 <!-- case 1 -->
-                <div class="m-t-20 d-flex justify-content-between">
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>배송 완료</button>
+                <div class="row row-10 m-t-20">
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>배송 완료</button>
                     </div>
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>구매확정 완료</button>
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>구매확정 완료</button>
                     </div>
                 </div>
 
                 <!-- case 2 -->
-                <div class="m-t-20 d-flex justify-content-between">
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>배송 완료</button>
+                <div class="row row-10 m-t-20">
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>배송 완료</button>
                     </div>
-                    <div class="">
-                        <button type="button" class="btn btn-outline-dark btn-lg h-40" >구매확정</button>
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" >구매확정</button>
                     </div>
                 </div>
                 <!-- case 3 -->
-                <div class="m-t-20 d-flex justify-content-between">
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>배송 중</button>
+                <div class="row row-10 m-t-20">
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>배송 중</button>
                     </div>
-                    <div class="">
-                        <button type="button" class="btn btn-outline-dark btn-lg h-40" >구매확정</button>
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" >구매확정</button>
                     </div>
                 </div>
                 <!-- case 4 -->
-                <div class="m-t-20 d-flex justify-content-between">
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>상품 준비 중</button>
+                <div class="row row-10 m-t-20">
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>상품 준비 중</button>
                     </div>
                 </div>
                  <!-- case 5 -->
-                 <div class="m-t-20 d-flex justify-content-between">
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>결제 완료</button>
+                 <div class="row row-10 m-t-20">
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>결제 완료</button>
                     </div>
                 </div>
                  <!-- case 6 -->
-                 <div class="m-t-20 d-flex justify-content-between">
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>결제 취소</button>
+                 <div class="row row-10 m-t-20">
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>결제 취소</button>
                     </div>
                 </div>
                   <!-- case 7 -->
-                  <div class="m-t-20 d-flex justify-content-between">
-                    <div class="">
-                        <button type="button" class="btn btn-dark btn-lg h-40 black" disabled>환불/반품</button>
+                  <div class="row row-10 m-t-20">
+                    <div class="col-6">
+                        <button type="button" class="tracking-btn" disabled>환불/반품</button>
                     </div>
                 </div>
             </div>

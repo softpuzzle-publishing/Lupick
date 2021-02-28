@@ -546,6 +546,10 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 
 .icon-finance-revenue { width: 40px; height: 40px; background-image: url("../images/icon-finance-revenue.svg"); }
 
+.icon-pager-prev { width: 8px; height: 14px; background-image: url("../images/icon-pager-prev.svg"); }
+
+.icon-pager-next { width: 8px; height: 14px; background-image: url("../images/icon-pager-next.svg"); }
+
 .icon-del { width: 24px; height: 24px; background-image: url("../images/btn-del.svg"); }
 
 .s-font { font-size: 14px; }
@@ -637,9 +641,11 @@ select.select-lg { opacity: 0; width: 300px; }
 #nav .nav a { font-size: 20px; font-weight: bold; margin-right: 40px; line-height: 1.15; }
 
 /* pagination */
-.pagination li { margin: 0 15px; line-height: 1.2857; }
+.pagination li { margin: 0 14px; line-height: 1; font-size: 14px; }
 
-.pagination li a { line-height: 1.2857; }
+.pagination li a { line-height: 1; }
+
+.pagination li i { vertical-align: middle; }
 
 button.close { display: inline-block; background: url("../images/icon-x.svg") no-repeat 50% 50%; width: 32px; height: 32px; }
 
@@ -796,6 +802,8 @@ td > .btn + .btn { margin-left: 6px; }
 .table .badge { min-width: 60px; }
 
 .text-center .btn-lg + .btn-lg { margin-left: 26px; }
+
+#event_vote_time { font-weight: 700; font-size: 30px; }
 
 html, body { height: 100%; }
 
@@ -1529,15 +1537,17 @@ body.body-dashboard [class^=col-] { padding: 15px; }
 
 .legend-list > div.orange p::before { background-color: #fabc05; }
 
-.seller-info { padding: 30px; }
+.seller-info { padding: 30px; height: 370px; }
 
-.seller-info li { display: flex; flex-wrap: wrap; position: relative; line-height: 1.143; padding-left: 15px; font-size: 14px; }
+.seller-info li { display: flex; flex-wrap: wrap; position: relative; line-height: 1.36; padding-left: 15px; font-size: 14px; }
 
-.seller-info li::after { content: ""; position: absolute; top: 50%; left: 0; width: 5px; height: 5px; background-color: #000; transform: translate(0, -50%); -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); -moz-transform: translate(0, -50%); -o-transform: translate(0, -50%); }
+.seller-info li::after { content: ""; position: absolute; top: 5px; left: 0; width: 5px; height: 5px; background-color: #000; }
 
 .seller-info li span:nth-child(1) { color: rgba(0, 0, 0, 0.6); margin-right: 20px; }
 
-.seller-info li + li { margin-top: 20px; }
+.seller-info li span:nth-child(2) { flex: 1; }
+
+.seller-info li + li { margin-top: 18px; }
 
 .modal-more { margin-top: 10px; }
 

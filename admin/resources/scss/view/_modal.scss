@@ -165,28 +165,19 @@
 }
 
 .seller-info{
-    padding: 30px;
+    padding: 30px;height: 370px;
     li{
-        display: flex;flex-wrap: wrap;position: relative;line-height: 1.143;padding-left: 15px;
+        display: flex;flex-wrap: wrap;position: relative;line-height: 1.36;padding-left: 15px;
         &::after{
             content:"";
-            position: absolute;
-            top: 50%;
-            left:0;
-            width: 5px;
-            height: 5px;
-            background-color:$black;
-            transform: translate(0,-50%);
-            -webkit-transform: translate(0,-50%);
-            -ms-transform: translate(0,-50%);
-            -moz-transform: translate(0,-50%);
-            -o-transform: translate(0,-50%);
+            position: absolute;top: 5px;left:0;width: 5px;height: 5px;background-color:$black;
 
         }
         font-size: 14px;
         span:nth-child(1){color: rgba(0,0,0,0.6);margin-right: 20px;}
+        span:nth-child(2){flex: 1;}
     }
-    li + li{margin-top: 20px;}
+    li + li{margin-top: 18px;}
 }
 
 .modal-more{

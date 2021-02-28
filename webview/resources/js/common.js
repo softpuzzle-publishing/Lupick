@@ -31,7 +31,9 @@ $(document).ready(function () {
 
     $(window).on('load', function () {
         //select
-        
+        $(".select-text").each(function () {
+            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-text");
+        });
         $(".select-sm").each(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
         });
@@ -42,16 +44,16 @@ $(document).ready(function () {
                 setTimeout(function(){
                     console.log(option_length);
                 },1000)
-            
+
                 if( $('[aria-expanded="true"]') ){
                     if(option_length <= 3){
-                        
+
                     }else if(option_legnth >= 4){
                         $('.ui-selectmenu-menu .ui-menu').css('max-height','400px');
                     }
                 }
             })
-           
+
         });
         $(".select-lg").each(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
