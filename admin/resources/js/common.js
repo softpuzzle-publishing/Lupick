@@ -12,7 +12,7 @@ $('textarea, input').on("input", function () {
         }
     }
 });
-   
+
 
 //체크박스 두개
 $("input[type=checkbox]").click(function () {
@@ -34,7 +34,7 @@ $('#event-common').load('../_include/event_common.html');
 
 
 $(document).ready(function () {
-   
+
     $(window).on('load', function(){
         //select
         $(".select-sm").each(function(){
@@ -76,8 +76,8 @@ $(document).ready(function () {
         });
     });
 
-   
-  
+
+
 });
 
 //로그인,회원가입 background balls

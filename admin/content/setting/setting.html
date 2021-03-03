@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <!-- swiper css 모든 페이지에 들어가야 함 -->
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="../../resources/css/style.css">
     <!-- jQuery -->
     <script src="../../resources/plugins/jquery/jquery.min.js"></script>
@@ -26,6 +28,20 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
     <!-- chartjs -->
     <script src="../../resources/plugins/chart/Chart.min.js"></script>
+    <!-- 에디터 -->
+    <script src="../../resources/plugins/ckeditor/ckeditor.js"></script>
+    <!-- swiper 모든 페이지에 들어가야 함 -->
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+    <script>
+        //썸네일 꽉 채우기
+        function setDirection(element) {
+            if (element.naturalWidth / element.naturalHeight / element.parentNode.offsetWidth * element.parentNode.offsetHeight > 1) {
+                element.classList.add('horizontal');
+            } else {
+                element.classList.add('vertical');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -44,9 +60,9 @@
                     <tr>
                         <th>프로필 사진</th>
                         <td>
-                            <div class="filebox profile">
+                            <div class="filebox profile thumb">
                                 <input type="file" id="profile-img">
-                                <label for="profile-img"><img src="../../resources/images/avatar3.png" alt="" id="sel-img"></label>
+                                <label for="profile-img"><img src="../../resources/images/@landscape.jpg" alt="" id="sel-img"></label>
                             </div>
                         </td>
                     </tr>
@@ -59,13 +75,13 @@
                     <tr>
                         <th>비밀번호</th>
                         <td>
-                            <input type="text" value="****" class="form-control w-382px">
+                            <input type="text" value="****" class="form-control w-476px" placeholder="신규 비밀번호를 입력해 주세요. (8-20자 영문, 숫자, 특수문자 조합)">
                         </td>
                     </tr>
                     <tr>
                         <th>비밀번호 확인</th>
                         <td>
-                            <input type="text" value="*****" class="form-control w-382px">
+                            <input type="text" value="*****" class="form-control w-476px" placeholder="신규 비밀번호를 한 번 더 입력해 주세요.">
                         </td>
                     </tr>
                     <tr>
