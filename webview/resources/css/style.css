@@ -265,7 +265,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 .spinner .spinner-box i { vertical-align: top; }
 
-.spinner .spinner-box .spinner-input { display: block; width: 40px; border: 0; margin: 0; background: #fff; text-align: center; border-radius: 0; }
+.spinner .spinner-box .spinner-input { display: block; width: 40px; border: 0; margin: 0; background: #fff; text-align: center; border-radius: 0; line-height: 17px; padding: 1px 0 0 0; font-size: 15px; color: #000; }
 
 .spinner .spinner-box .icon-minus { width: 100%; height: 100%; background-image: url(../images/spinner_minus.svg); background-position: center; background-size: cover; display: inline-block; }
 
@@ -553,7 +553,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 body { color: #000; line-height: 22px; font-size: 16px; }
 
-.wrap { padding: 60px 0 70px 0; position: relative; }
+.wrap { padding: 0 0 70px 0; position: relative; }
 
 .wrap .header { position: fixed; width: 100%; height: 60px; padding: 20px; margin-bottom: 20px; top: 0; background-color: #fff; z-index: 40; }
 
@@ -998,4 +998,6 @@ hr { margin-top: 40px; border-top: 1px solid rgba(0, 0, 0, 0.15); }
 #selectmenu-zone .ui-selectmenu-menu .ui-menu { max-height: none !important; width: auto !important; }
 
 #selectmenu-zone .ui-selectmenu-menu .ui-menu .ui-state-active { background: transparent; color: #000; }
+
+.badge-shipping { min-width: 0; font-family: 'NanumBarunGothic'; margin: 0; }
 /*# sourceMappingURL=style.css.map */

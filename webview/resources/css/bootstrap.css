@@ -2073,7 +2073,7 @@ mt-1 : { margin-top : 1px; }
 }
 
 .p-t-20 {
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 
 .p-b-20 {

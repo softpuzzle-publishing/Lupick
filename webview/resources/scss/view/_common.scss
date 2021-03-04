@@ -329,7 +329,7 @@ a:focus{outline: none;box-shadow: none !important;}
         display: flex;overflow: hidden;
         button{width:17px;height:17px;border: 0;padding: 0;background: $black;}
         i{vertical-align: top;}
-        .spinner-input{display: block;width: 40px;border: 0;margin: 0;background: #fff;text-align: center;border-radius: 0;}
+        .spinner-input{display: block;width: 40px;border: 0;margin: 0;background: #fff;text-align: center;border-radius: 0;line-height: 17px;padding: 1px 0 0 0;font-size: 15px;color: #000;}
         .icon-minus{width:100%;height:100%;background-image: url(../images/spinner_minus.svg); background-position: center; background-size: cover;display: inline-block;}
         .icon-plus{width:100%;height:100%;background-image: url(../images/spinner_plus.svg); background-position: center; background-size: cover;display: inline-block;}
     }
