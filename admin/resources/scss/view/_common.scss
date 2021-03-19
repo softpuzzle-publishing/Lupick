@@ -162,7 +162,6 @@ a:focus{outline: none;box-shadow: none !important;}
 .icon-pager-last{width: 13px;height: 14px;background-image: url('../images/icon-pager-last.svg');}
 
 
-
 .icon-del{width: 24px;height: 24px;background-image: url('../images/btn-del.svg');}
 
 //폰트 사이즈
@@ -332,14 +331,20 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
     width: 320px !important;box-shadow: 3px 3px 10px rgba(0,0,0,0.15);background: #fff;
     > .row{margin: 0 !important;}
     .datepicker{
-        flex: 0 0 100%;max-width: 100%;padding: 15px 30px 0;
+        flex: 0 0 100%;max-width: 100%;padding: 14px 30px 0;
         thead{border-bottom: 1px solid $border-color;}
     }
     .timepicker{
-        flex: 0 0 100%;max-width: 100%;border-top: 1px solid $border-color;padding: 8px 30px;
+        flex: 0 0 100%;max-width: 100%;border-top: 1px solid $border-color;padding: 4px 30px;
         td{height: auto;line-height: 1;}
     }
-    &.dropdown-menu{padding: 0;}
+    &.dropdown-menu{padding: 0;margin: -1px 0 0;border-radius: 0;
+        &::before,
+        &::after{display: none;}
+    }
+
+    .icon-month-prev{width: 11px;height: 16px;background: url('../images/icon-month-prev.svg') 0 0 no-repeat;vertical-align: middle;}
+    .icon-month-next{width: 11px;height: 16px;background: url('../images/icon-month-next.svg') 0 0 no-repeat;vertical-align: middle;}
 }
 .bootstrap-datetimepicker-widget table {
     table-layout: auto;
@@ -353,10 +358,10 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
     padding: 10px 0;
 }
 .bootstrap-datetimepicker-widget table th.dow{
-    height: 30px;line-height: 30px;padding-bottom: 5px;
+    line-height: 29px;padding-bottom: 3px;font-weight: 700;
 }
 .bootstrap-datetimepicker-widget table th.picker-switch {
-    width: 145px;font-size: 20px;font-family: 'Gilroy' !important;font-weight: 700;
+    width: 145px;font-size: 20px;font-family: 'Gilroy' !important;font-weight: 700;padding-top: 14px;
 }
 .bootstrap-datetimepicker-widget table th.disabled,
 .bootstrap-datetimepicker-widget table th.disabled:hover {
@@ -369,7 +374,7 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
     height: 38px;line-height: 38px;width: auto;font-family: 'Gilroy';font-weight: 700;font-size: 13px;border: 0;
 }
 .bootstrap-datetimepicker-widget table td.day {
-    height: 38px;width: auto;position: relative
+    height: 38px;width: auto;position: relative;line-height: 1;padding-top: 1px;
 }
 .bootstrap-datetimepicker-widget table td.new,
 .bootstrap-datetimepicker-widget table td.old {
@@ -406,10 +411,10 @@ content: '';display: block;color: $black;width: 30px;height: 30px;border-radius:
     padding: 5px 0;
 }
 .bootstrap-datetimepicker-widget table td span {
-    display: inline-block;padding: 3px 0;margin: 0;vertical-align: top;
+    display: inline-block;padding: 3px 0;margin: 0;vertical-align: middle;
 }
 .bootstrap-datetimepicker-widget table td span:hover {
-    background: #eee
+    background: none;
 }
 .bootstrap-datetimepicker-widget table td span.active {
     background-color: #337ab7;color: #fff;text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
@@ -424,7 +429,10 @@ content: '';display: block;color: $black;width: 30px;height: 30px;border-radius:
 .bootstrap-datetimepicker-widget .timepicker-hour,
 .bootstrap-datetimepicker-widget .timepicker-minute,
 .bootstrap-datetimepicker-widget .timepicker-second{
-    height: auto;line-height: 25px;
+    height: auto;line-height: 19px;padding-top: 5px;width: 52px;
+}
+.bootstrap-datetimepicker-widget .timepicker-hour{
+
 }
 .bootstrap-datetimepicker-widget a[data-action]{
     height: auto;min-width: 0;padding: 3px 0;
@@ -432,9 +440,14 @@ content: '';display: block;color: $black;width: 30px;height: 30px;border-radius:
 .bootstrap-datetimepicker-widget button[data-action]{
     min-width: 0;height: auto;
 }
-.bootstrap-datetimepicker-widget .fa-angle-up,
-.bootstrap-datetimepicker-widget .fa-angle-down{
-    color: #416af2;padding: 0;line-height: 1;height: auto;
+.bootstrap-datetimepicker-widget{
+    .icon-time-up{width: 11px;height: 7px;background: url('../images/icon-time-prev.svg') 0 0 no-repeat !important;background-size: auto;}
+    .icon-time-down{width: 11px;height: 7px;background: url('../images/icon-time-next.svg') 0 0 no-repeat !important;background-size: auto;}
+    .icon-time-up,
+    .icon-time-down{
+        padding: 0;line-height: 1;height: 7px;vertical-align: middle;
+        &:hover{}
+    }
 }
 .bootstrap-datetimepicker-widget .timepicker-picker .table-condensed{
    width: 100px !important;
