@@ -403,7 +403,7 @@ body.body-center-content{width: auto;background: #fff;}
         span:nth-of-type(1){
             flex: 1 1 auto;max-width: 240px;white-space: nowrap;text-overflow: ellipsis;overflow:hidden;font-size: 14px;display: block;
         }
-        .paint{flex: 0 0 auto;margin-left: 20px;text-align: right;}
+        .paint{flex: 1 0 auto;margin-left: 20px;text-align: right;}
     }
 }
 

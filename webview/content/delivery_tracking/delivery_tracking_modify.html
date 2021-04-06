@@ -26,7 +26,14 @@
         </div> -->
         <div class="modal-dialog modal-lg add">
             <div class="modal-content setting">
-                <div class="wrapper d-flex flex-column justify-content-between" style="min-height:calc(100vh - 100px)">
+                <style>
+                    .modal-content .wrapper{
+                        min-height: calc(100vh - 100px- 66px);
+                        min-height: calc(100vh - 100px - 66px - constant(safe-area-inset-top));
+                        min-height: calc(100vh - 100px - 66px - env(safe-area-inset-top));
+                    }
+                </style>
+                <div class="wrapper d-flex flex-column justify-content-between">
                     <div>
                         <div class="info-list">
                             <div class="info-list-header">
@@ -66,7 +73,7 @@
                         </div>
                     </div>
                     <div class="m-t-20">
-                        <button type="button" class="btn btn-dark btn-xl h-60 normal font-16" disabled>저장</button>
+                        <button type="button" class="btn btn-dark btn-xl h-60 normal font-16 mt-4" disabled>저장</button>
                     </div>
                 </div>
             </div>
