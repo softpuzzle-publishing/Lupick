@@ -474,7 +474,8 @@ body{color:$black;line-height: 22px;font-size:16px;touch-action: manipulation;}
         &:nth-of-type(6){right: 8%;bottom: 12%;}
         &:nth-of-type(7){left: 25%;bottom: 0;}
     }
-    .deeplink{text-align: center;width: 100%;
+    .deeplink{
+        text-align: center;width: 100%;
         .lupick{display: inline-block;background: url('../images/logo.svg') no-repeat 0 0;background-size: contain;width: 146px;height: 45px;margin-bottom: 30px;}
         p{font-size: 16px;line-height: 24px;color: #000;}
         a{display: inline-block;border-radius: 50rem;color: #fff;line-height: 50px;height: 50px;width: 180px;font-size: 16px;font-weight: 700;font-family: 'Gilroy';background-color: #000;text-decoration: none;padding-top: 2px;margin-top: 60px;}
