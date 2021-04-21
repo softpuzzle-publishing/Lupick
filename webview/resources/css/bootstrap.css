@@ -110,6 +110,7 @@ body {
   color: #111;
   text-align: left;
   background-color: #fff;
+  -webkit-font-smoothing: antialiased;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2298,6 +2299,26 @@ mt-1 : { margin-top : 1px; }
 
 .m-b-50 {
   margin-bottom: 50px;
+}
+
+.m--60 {
+  margin: 60px;
+}
+
+.m-l-60 {
+  margin-left: 60px;
+}
+
+.m-r-560 {
+  margin-right: 60px;
+}
+
+.m-t-60 {
+  margin-top: 60px;
+}
+
+.m-b-60 {
+  margin-bottom: 60px;
 }
 
 .p--50 {
@@ -6451,19 +6472,34 @@ a.badge-outline-gray:focus, a.badge-outline-gray.focus {
 }
 
 .badge-outline-dark {
-  color: #111;
-  border: 1px solid #111;
+  color: #000;
+  border: 1px solid #000;
 }
 
 a.badge-outline-dark:hover, a.badge-outline-dark:focus {
   color: #fff;
-  background-color: #111;
+  background-color: #000;
 }
 
 a.badge-outline-dark:focus, a.badge-outline-dark.focus {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(17, 17, 17, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(17, 17, 17, 0.5);
+}
+
+.badge-outline-dark-primary {
+  color: #000;
+  background-color: #ffff00;
+  border: 1px solid #000;
+}
+
+a.badge-outline-dark-primary:hover, a.badge-outline-dark-primary:focus {
+  color: #000;
+  background-color: black;
+}
+
+a.badge-outline-dark-primary:focus, a.badge-outline-dark-primary.focus {
+  outline: 0;
 }
 
 .badge-outline-peach {
@@ -6722,10 +6758,10 @@ a.badge-outline-lavender:focus, a.badge-outline-lavender.focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 1rem;
+  height: 4px;
   overflow: hidden;
   font-size: 0.75rem;
-  background-color: #f2f2f2;
+  background-color: rgba(0,0,0,0.12);
   border-radius: 0.25rem;
 }
 
@@ -6744,7 +6780,7 @@ a.badge-outline-lavender:focus, a.badge-outline-lavender.focus {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #ff4841;
+  background-color: #000000;
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
 }

@@ -587,3 +587,14 @@ body.body-center-content{width: auto;background: #fff;}
         .paint{flex: 0 0 auto;margin-left: 20px;text-align: right;}
     }
 }
+
+.html-terms{
+    body{min-width: none;width: auto;}
+    #container-block{padding: 0;margin: 0;}
+    .terms{
+        padding: 0 5px;font-size: 13px;
+        h4{margin-bottom: 1rem;margin-top: 2rem;}
+        h4:first-of-type{margin-top: 0;}
+        strong{display: block;margin-bottom: .5rem;margin-top: .75rem;}
+    }
+}
