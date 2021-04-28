@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- <div class="header d-flex align-items-center">
+            <a href="javascript:void(0)" class="ic-back"></a>
+            <span class="font-18 bold">배송지 추가</span>
+        </div> -->
+        <div class="modal-dialog modal-lg add">
+            <div class="modal-content setting">
+                <style>
+                    .modal-content .wrapper{
+                        min-height: calc(100vh - 100px- 66px);
+                        min-height: calc(100vh - 100px - 66px - constant(safe-area-inset-top));
+                        min-height: calc(100vh - 100px - 66px - env(safe-area-inset-top));
+                    }
+                    @media screen and (-webkit-device-pixel-ratio: 1.5) {
+
+                    }
+
+                    @media screen and (-webkit-device-pixel-ratio: 1) {
+
+                    }
+
+                    @media screen and (-webkit-device-pixel-ratio: 0.75) {
+
+                    }
+                </style>
+                <div class="wrapper d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="info-list">
+                            <div class="info-list-header">
+                                <span>받는 분</span>
+                            </div>
+                            <input class="input-id form-control ip-sign p-0 font-14" type="text" value="" placeholder="이름을 입력해주세요" maxlength="20">
+                        </div>
+                        <div class="info-list">
+                            <div class="info-list-header">
+                                <span>휴대폰 번호</span>
+                            </div>
+                            <div class="certification">
+                                <input class="input-phone form-control ip-sign p-0 font-14" type="number" value="" placeholder="- 없이 입력해주세요.">
+                            </div>
+                        </div>
+                        <div class="info-list">
+                            <div class="info-list-header">
+                                <span>주소</span>
+                            </div>
+                            <div class="certification d-flex">
+                                <input class="input-phone form-control ip-sign p-0 font-14" type="text" value="" placeholder="">
+                                <button type="button" class="btn btn-outline-dark btn-md ml-2 p-0" >우편번호 검색</button>
+                            </div>
+                            <div class="certification-num">
+                                <input class="input-num form-control ip-sign p-0 font-14" type="text" value="" placeholder="">
+                            </div>
+                            <div class="certification-num">
+                                <input class="input-num form-control ip-sign p-0 font-14" type="text" value="" placeholder="상세주소를 입력해주세요">
+                            </div>
+                        </div>
+                        <div class="custom-control custom-check custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk4" value="chk4">
+                            <label class="check-delivery" for="chk4">기본 배송지로 등록</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- <button type="button" class="btn btn-dark btn-xl h-60">저장</button> -->
+                        <button type="button" class="btn btn-dark btn-xl h-60 normal font-16 mt-5" disabled>저장</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- 배송지 변경하기 -->
+    <!-- <div class="modal fade bd-example-modal-lg" id="modal-change" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg change">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="font-18 bold">배송지 변경</p>
+                    <button type="button" class="ic-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="wrap">
+                    <button type="button" class="del-add h-50" data-toggle="modal" data-target="#modal-add">+ 배송지 추가</button>
+                    <a href="#">
+                        <div class="desc">
+                            <ul>
+                                <li>ol
+                                    <p class="bold">04720</p>
+                                </li>
+                                <li>
+                                    <p>서울시 강남구 도산대로 54길 32 (도산아파트) 도산아파트 101동 202호</p>
+                                </li>
+                                <li class="m-b-5">
+                                    <span class="font-13 gray">이정후</span>, <span class="font-13 gray">010-1234-5678</span>
+                                </li>
+                                <li>
+                                    <span class="badge badge-dark">기본 배송지</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="desc">
+                            <ul>
+                                <li>
+                                    <p class="bold">04750</p>
+                                </li>
+                                <li>
+                                    <p>서울시 강남구 논현동 101-1 건물 3층 HOHOHO</p>
+                                </li>
+                                <li class="m-b-5">
+                                    <span class="font-13 gray">이정후</span>, <span class="font-13 gray">010-1234-5678</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script src="../../resources/js/common.js"></script>
+</body>
+</html>

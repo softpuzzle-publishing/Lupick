@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- <div class="header d-flex align-items-center">
+            <a href="javascript:void(0)" class="ic-back"></a>
+            <span class="font-18 bold">결제하기</span>
+        </div> -->
+        <div class="payment-wrap p-t-20">
+            <div class="tab item">
+                <div class="tab-title">
+                    <p class="bold">주문 정보</p>
+                </div>
+                <div class="desc">
+                    <div class="product">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="name line-height-22 mb-1">미니 캐리어 테이블 (PLAIN)</p>
+                                <span class="count font-14 bold">1개 /</span>
+                                <span class="price font-14 bold">57,000원</span>
+                            </div>
+                            <div class="img" style="background-image:url(../../resources/images/@event_07.png)"></div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="nema line-height-22 mb-1">미니 캐리어 테이블 (PLAIN)미니 캐리어 테이블 (PLAIN)미니 캐리어 테이블 (PLAIN)</p>
+                                <span class="count font-14 bold">1개 /</span>
+                                <span class="price font-14 bold">55,000원</span>
+                            </div>
+                            <div class="img" style="background-image:url(../../resources/images/@event_07.png)"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="button" class="more font-13 gray bold">총 <span>2</span>건 전체보기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab order">
+                <div class="tab-title">
+                    <p class="bold">주문자 정보</p>
+                </div>
+                <div class="desc">
+                    <ul>
+                        <li><span>이름</span><span>박수영</span></li>
+                        <li><span>휴대폰</span><span>010-1234-5678</span></li>
+                        <li><span>이메일</span><span>joy0903@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab delivery">
+                <div class="tab-title d-flex align-items-center justify-content-between">
+                    <p class="bold">배송 정보</p>
+                    <button type="button" class="btn btn-sm btn-light" data-toggle="modal" data-target="#modal-change">변경하기</button>
+                </div>
+
+                <!--배송지 등록이 안되어 있을 때-->
+
+                <!-- <div class="desc">
+                    <button type="button" class="del-add h-50" data-toggle="modal" data-target="#modal-add">+ 배송지 추가</button>
+                </div> -->
+
+                <div class="desc">
+                    <ul>
+                        <li>
+                            <p class="bold">04720</p>
+                        </li>
+                        <li>
+                            <p>서울시 강남구 도산대로 54길 32 (도산아파트) 도산아파트 101동 202호</p>
+                        </li>
+                        <li class="m-b-5 font-13 gray bold">
+                            <span>이정후</span>, <span>010-1234-5678</span>
+                        </li>
+                        <li>
+                            <span class="badge badge-dark bold">기본 배송지</span>
+                        </li>
+                    </ul>
+                    <select class="del-select select-md" id="delivery-select">
+                        <option value="">배송 메모 (선택)</option>
+                        <option value="">배송 전에 미리 연락 바랍니다.</option>
+                        <option value="">부재 시 경비실에 맡겨주세요.</option>
+                        <option value="">부재 시 문 앞에 놓아주세요.</option>
+                        <option value="">부재 시 전화나 문자 남겨주세요.</option>
+                        <option value="직접 입력">직접 입력</option>
+                    </select>
+                    <div class="d-flex align-items-end direct">
+                        <textarea class="form-control h-80 font-14" maxlength="100" placeholder="직접 입력" data-byte-target="#byte-check1"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="tab point">
+                <div class="tab-title d-flex align-items-center justify-content-between">
+                    <p class="bold">루픽 포인트</p>
+                    <p class="font-14">사용가능 포인트 <span class="bold">150P</span></p>
+                </div>
+                <div class="desc d-flex align-items-center ">
+                    <input type="text" class="form-control h-50 rounded-0" placeholder="0">
+                    <button type="button" class="btn btn-outline-dark btn-md m-l-10 h-50" data-toggle="modal" data-target="#modal-point">모두 사용</button>
+                </div>
+            </div>
+            <div class="tab price">
+                <div class="tab-title d-flex align-items-center justify-content-between">
+                    <p class="bold">결제 금액</p>
+                    <p class="font-20 bold paint">113,850원</p>
+                </div>
+                <div class="desc d-flex align-items-center justify-content-center">
+                    <div>
+                        <p class="font-13 m-b-5">상품 금액</p>
+                        <p class="money">114,000원</p>
+                    </div>
+                    <span class="plus"></span>
+                    <div>
+                        <p class="font-13 m-b-5">배송비</p>
+                        <p class="money">3,000원</p>
+                    </div>
+                    <span class="minus"></span>
+                    <div>
+                        <p class="font-13 m-b-5">루픽 포인트</p>
+                        <p class="point">150P</p>
+                    </div>
+                </div>
+                <p class="example-text font-12">*제주 및 도서산간 지역 : 추가 배송비 3,000원 발생</p>
+            </div>
+            <div class="tab payment">
+                <div class="tab-title">
+                    <p class="bold">결제 방법</p>
+                </div>
+                <div class="desc">
+                   <div class="row">
+                        <div class="col-6">
+                            <input type="radio" name="radio" id="credit" value="">
+                            <label for="credit">
+                                <div class="way">
+                                    <img src="../../resources/images/pay_card.svg" alt="신용카드">
+                                    <p class="font-14 ml-2">신용카드</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" name="radio" id="phone" value="">
+                            <label for="phone">
+                                <div class="way">
+                                    <img src="../../resources/images/pay_phone.svg" alt="휴대폰결제">
+                                    <p class="font-14 ml-2">휴대폰결제</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" name="radio" id="naver" value="">
+                            <label for="naver">
+                                <div class="way">
+                                    <img src="../../resources/images/pay_naver.svg" alt="네이버페이">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" name="radio" id="kakao" value="">
+                            <label for="kakao">
+                                <div class="way active">
+                                    <img src="../../resources/images/pay_kakao.png" alt="카카오페이" style="width:58px;height:24px">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" name="radio" id="toss" value="">
+                            <label for="toss">
+                                <div class="way">
+                                    <img src="../../resources/images/pay_toss.svg" alt="토스">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" name="radio" id="smile" value="">
+                            <label for="smile">
+                                <div class="way">
+                                    <img src="../../resources/images/pay_smilepay.png" alt="스마일페이">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" name="radio" id="payco" value="">
+                            <label for="payco">
+                                <div class="way">
+                                    <img src="../../resources/images/pay_payco.svg" alt="페이코">
+                                </div>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="radio" name="radio" id="paynow" value="">
+                            <label for="paynow">
+                                <div class="way">
+                                    <img src="../../resources/images/pay_paynow.png" alt="페이나우">
+                                </div>
+                            </label>
+                        </div>
+                   </div>
+                </div>
+            </div>
+            <div class="tab agree">
+                <div class="custom-control custom-check custom-control-inline">
+                    <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk3" value="chk3">
+                    <label class="custom-control-label font-15" for="chk3">결제 정보를 확인하였으며, 동의합니다. (필수)</label>
+                </div>
+            </div>
+            <div class="feed-text">
+                <div id="alert" class="text-danger font-14 m-b-10">결제 정보 확인 후 동의 버튼에 체크해주세요.</div>
+            </div>
+            <a href="#" class="btn btn-dark btn-xl h-60 normal font-16">결제하기</a>
+        </div>
+    </div>
+
+    <!-- 배송지 추가 -->
+    <div class="modal fade bd-example-modal-lg" id="modal-add" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-overlap="true">
+        <div class="modal-dialog modal-lg add">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="font-18 bold">배송지 추가</p>
+                    <button type="button" class="ic-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="wrapper">
+                    <div class="info-list">
+                        <div class="info-list-header">
+                            <span>받는 분</span>
+                        </div>
+                        <input class="input-id form-control ip-sign rounded-0" type="text" value="" placeholder="이름을 입력해주세요" maxlength="20">
+                    </div>
+                    <div class="info-list">
+                        <div class="info-list-header">
+                            <span>휴대폰 번호</span>
+                        </div>
+                        <div class="certification">
+                            <input class="input-phone form-control ip-sign rounded-0" type="tel" value="" placeholder="- 없이 입력해주세요.">
+                        </div>
+                    </div>
+
+                    <div class="info-list">
+                        <div class="info-list-header">
+                            <span>주소</span>
+                        </div>
+                        <div class="certification d-flex">
+                            <input class="input-phone form-control ip-sign rounded-0" type="text" value="" placeholder="">
+                            <button type="button" class="btn btn-outline-dark btn-md ml-2 p-0" >우편번호 검색</button>
+                        </div>
+                        <div class="certification-num">
+                            <input class="input-num form-control ip-sign rounded-0" type="text" value="" placeholder="">
+                        </div>
+                        <div class="certification-num">
+                            <input class="input-num form-control ip-sign rounded-0" type="text" value="" placeholder="상세주소를 입력해주세요">
+                        </div>
+                    </div>
+
+                    <div class="custom-control custom-check custom-control-inline">
+                        <input type="checkbox" class="custom-control-input check" name="chkSubject" id="chk4" value="chk4">
+                        <label class="check-delivery" for="chk4">기본 배송지로 등록</label>
+                    </div>
+
+                </div>
+
+                <!-- <button type="button" class="btn btn-dark btn-xl h-60 m-t-50  regular">저장</button> -->
+                <button type="button" class="btn btn-dark btn-xl h-60 m-t-50 normal font-16" disabled>저장</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 배송지 변경하기 -->
+    <div class="modal fade bd-example-modal-lg" id="modal-change" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg change">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="font-18 bold">배송지 변경</p>
+                    <button type="button" class="ic-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="wrapper">
+
+                    <button type="button" class="del-add h-50" data-toggle="modal" data-target="#modal-add">+ 배송지 추가</button>
+
+
+                    <a href="#">
+                        <div class="desc">
+                            <ul>
+                                <li>
+                                    <p class="bold">04720</p>
+                                </li>
+                                <li>
+                                    <p>서울시 강남구 도산대로 54길 32 (도산아파트) 도산아파트 101동 202호</p>
+                                </li>
+                                <li class="m-b-5">
+                                    <span class="font-13 gray bold">이정후</span>, <span class="font-13 gray bold">010-1234-5678</span>
+                                </li>
+                                <li>
+                                    <span class="badge badge-dark">기본 배송지</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="desc">
+                            <ul>
+                                <li>
+                                    <p class="bold">04750</p>
+                                </li>
+                                <li>
+                                    <p>서울시 강남구 논현동 101-1 건물 3층 HOHOHO</p>
+                                </li>
+                                <li class="m-b-5">
+                                    <span class="font-13 gray bold">이정후</span>, <span class="font-13 gray bold">010-1234-5678</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 포인트 사용 -->
+     <div class="modal fade" id="modal-point" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog point">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>사용가능한 최대 루픽포인트는<br>
+                        150P 입니다.</p>
+                </div>
+                <div class="modal-footer text-center">
+                    <p class="font-14 bold" data-dismiss="modal" aria-label="Close">확인</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../resources/js/common.js"></script>
+</body>
+</html>
