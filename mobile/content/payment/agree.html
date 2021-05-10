@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="payment-agree-wrap">
+            <p class="title-small">결제하기 전에 잠깐!</p>
+            <p class="title"><strong>이벤트 참여</strong>의 의미를 <br>한 번 더 확인해주세요.</p>
+
+            <div class="agree-before-payment">
+                <div class="item">
+
+                    <div class="custom-control custom-check">
+                        <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk1" value="chk1">
+                        <label class="custom-control-label font-14 bold" for="chk1">루픽에서의 '이벤트 참여'는 일반 쇼핑이 아닌 이벤트 쇼핑을 의미합니다.</label>
+                    </div>
+                    <div class="cont">
+                        루픽은 일반상품을 구매하면 구매자 중 루피커를 선정하여 럭키상품을 지급하는 이벤트 쇼핑 플랫폼입니다. 상품 구매로 끝나는 것이 아닌 구매하는 행위를 통해 이벤트라는 새로운 경험을 전달하기 위해 일반적인 쇼핑 프로세스를 따르지 않는 부분을 꼭 확인해 주세요.
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="custom-control custom-check">
+                        <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk2" value="chk2">
+                        <label class="custom-control-label font-14 bold" for="chk2">이벤트 마감이 12시간 남은 상태에서는 이벤트 진행을 위해 결제 취소가 불가능합니다.</label>
+                    </div>
+                    <div class="cont">
+                        루픽의 일반상품 결제취소는 이벤트 시작부터 이벤트 종료 12시간이 남기 전까지 가능합니다. 루픽의 일반상품은 상품으로의 가치와 이벤트로의 가치를 동시에 갖고 있어 시간이 지남에 따라 그 가치가 현저히 감소되기 때문에 12시간이 남은 상태부터는 결제취소가 불가한 부분 꼭 확인해 주세요.
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="custom-control custom-check">
+                        <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk3" value="chk3">
+                        <label class="custom-control-label font-14 bold" for="chk3">구매하시는 일반상품 배송은 '이벤트 성공' 후에 일괄 배송됩니다.</label>
+                    </div>
+                    <div class="cont">
+                        루픽은 이벤트 성공 여부에 따라 배송이 시작됩니다. 이벤트 성공 시 일반상품은 일괄 배송되는 부분 꼭 확인해 주세요. (상품 특성에 따라 배송일정이 상이할 수 있으니 상세페이지 참고해 주세요) 배송조회는 MY - 주문내역에서 해당 이벤트 내역의 '배송조회'버튼을 통해 확인하실 수 있습니다.
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="custom-control custom-check">
+                        <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk4" value="chk4">
+                        <label class="custom-control-label font-14 bold" for="chk4">이벤트 모집에 실패할 경우 구매금액 전액이 환불처리 됩니다.</label>
+                    </div>
+                    <div class="cont">
+                        루픽은 일반상품의 모집 100% 완료 시 이벤트 진행이 가능한 구조를 갖고 있습니다. 일반상품의 목표 모집이 완료되지 않고 이벤트 기간이 종료될 시에는 루픽 정책에 따라 일반상품 구매금액 전액이 환불 처리되는 부분 꼭 확인해 주세요.
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-dark btn-xl h-60 normal font-16" disabled id="goBuy">구매하러 가기</button>
+        </div>
+    </div>
+
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $('[name="chkSubject"]').on('change',function(){
+            /** 체크된 수 */
+            var chkedBoxesCnt    = $('[name="chkSubject"]:checked').length;
+            /** 총수 */
+            var totalChkBoxesCnt = $('[name="chkSubject"]').length;
+
+            console.log( chkedBoxesCnt + '  :  ' + totalChkBoxesCnt  );
+
+            console.log( chkedBoxesCnt == totalChkBoxesCnt);
+
+            /** 체크된수 == 총수 로 분기 */
+            if(chkedBoxesCnt == totalChkBoxesCnt){
+                $('#goBuy').prop('disabled',false);
+            }else{
+                $('#goBuy').prop('disabled',true);
+            }
+        });
+    </script>
+</body>
+</html>

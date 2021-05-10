@@ -109,7 +109,6 @@
             <script>
                 //스티커 6종 랜덤출 력
                 const randomNum = Math.round(Math.random() * 5) + 1;
-                console.log(randomNum);
                 $('#stamp-success').addClass('success-' + randomNum);
                 $('#stamp-end').addClass('end-' + randomNum);
             </script>
@@ -287,6 +286,7 @@
                             <span class="paint font-15 bold">4위 럭키템</span>
                             <p class="name font-16 bold">루픽 포인트 1,000P</p>
                             <p class="font-14">1000명</p>
+                            <p class="font-12 m-t-5">*득표수와 관계없이 랜덤 지급됩니다.</p>
                         </div>
                     </div>
                 </div>
@@ -453,6 +453,8 @@
         </div>
 
         <a href="#" class="btn btn-dark btn-xl h-70 fixed yellow gilroy" data-toggle="modal" data-target="#modal-detail">PICK</a>
+        <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed font-18"><i class="icon-bell-white m-r-5"></i>알림받기</a>
+        <a href="#" class="btn btn-dark btn-xl h-70 fixed font-18 yellow"><i class="icon-alarm-yellow m-r-5"></i>알림등록</a> -->
 
         <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed">결제정보 보기</a> -->
 
@@ -484,61 +486,62 @@
 
             <div class="modal-content">
                 <div class="wrap">
-                    <p class="title paint font-12">총<span>3</span>개까지 구매할 수 있어요!</p>
-                    <select class="select-sm" id="select-option">
-                        <option value="" selected>옵션 선택</option>
-                        <option value="1">미니 캐리어 테이블 (PLAIN)</option>
-                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
-                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
-                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
-                        <option value="1">미니 캐리어 테이블 (TEAK)</option>
-                        <option value="1">미니 캐리어 테이블 (asdasdasd)</option>
-                    </select>
-                    <div id="selectmenu-zone"></div>
-
-                    <div>
-                        <div class="sel-option" id="sel-1">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <p class="name">미니 캐리어 테이블 (PLAIN)</p>
-                                <button type="button" class="sel-delete" onclick="deleteOption(1);"></button>
-                            </div>
-                            <div class="spinner-wrap d-flex align-items-center justify-content-between">
-                                <div class="spinner" data-max="99" data-min="1">
-                                    <div class="spinner-box">
-                                        <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
-                                        <input type="tel" class="spinner-input" readonly="" value="1">
-                                        <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
-                                    </div>
+                    <div class="scroll-area">
+                        <p class="title paint font-12">총<span>3</span>개까지 구매할 수 있어요!</p>
+                        <select class="select-sm" id="select-option">
+                            <option value="" selected>옵션 선택</option>
+                            <option value="1">미니 캐리어 테이블 (PLAIN)</option>
+                            <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                            <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                            <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                            <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                            <option value="1">미니 캐리어 테이블 (asdasdasd)</option>
+                        </select>
+                        <div id="selectmenu-zone"></div>
+                        <div>
+                            <div class="sel-option" id="sel-1">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="name">미니 캐리어 테이블 (PLAIN)</p>
+                                    <button type="button" class="sel-delete" onclick="deleteOption(1);"></button>
                                 </div>
-                                <p class="price">57,000원</p>
+                                <div class="spinner-wrap d-flex align-items-center justify-content-between">
+                                    <div class="spinner" data-max="99" data-min="1">
+                                        <div class="spinner-box">
+                                            <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
+                                            <input type="tel" class="spinner-input" readonly="" value="1" disabled>
+                                            <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <p class="price">57,000원</p>
+                                </div>
+                            </div>
+                            <div class="sel-option" id="sel-2">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="name">미니 캐리어 테이블 (PLAIN)</p>
+                                    <button type="button" class="sel-delete" onclick="deleteOption(2);"></button>
+                                </div>
+                                <div class="spinner-wrap d-flex align-items-center justify-content-between">
+                                    <div class="spinner" data-max="99" data-min="1">
+                                        <div class="spinner-box">
+                                            <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
+                                            <input type="tel" class="spinner-input" readonly="" value="1" disabled>
+                                            <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <p class="price">57,000원</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="sel-option" id="sel-2">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <p class="name">미니 캐리어 테이블 (PLAIN)</p>
-                                <button type="button" class="sel-delete" onclick="deleteOption(2);"></button>
-                            </div>
-                            <div class="spinner-wrap d-flex align-items-center justify-content-between">
-                                <div class="spinner" data-max="99" data-min="1">
-                                    <div class="spinner-box">
-                                        <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
-                                        <input type="tel" class="spinner-input" readonly="" value="1">
-                                        <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
-                                    </div>
-                                </div>
-                                <p class="price">57,000원</p>
-                            </div>
+                        <div class="total-price border-1">
+                            <p>
+                                <span class="font-14 mr-1">총 수량</span>
+                                <span class="font-14 bold"> 1개</span>
+                            </p>
+                            <p>
+                                <span class="font-14 m-r-10">총 금액</span>
+                                <span class="font-20 bold">171,000원</span>
+                            </p>
                         </div>
-                    </div>
-                    <div class="total-price border-1">
-                        <p>
-                            <span class="font-14 mr-1">총 수량</span>
-                            <span class="font-14 bold"> 1개</span>
-                        </p>
-                        <p>
-                            <span class="font-14 m-r-10">총 금액</span>
-                            <span class="font-20 bold">171,000원</span>
-                        </p>
                     </div>
                 </div>
 
@@ -596,5 +599,25 @@
 
     </script>
     <script src="../../resources/js/common.js"></script>
+
+    <script>
+        const $body = document.querySelector('body');
+        let scrollPosition = 0;
+        $('#modal-detail').on('show.bs.modal', function () {
+            scrollPosition = window.pageYOffset;
+            $body.style.overflow = 'hidden';
+            $body.style.position = 'fixed';
+            $body.style.top = `-${scrollPosition}px`;
+            $body.style.width = '100%';
+            $('body').addClass('scoll-prevent');
+        }).on('hide.bs.modal', function () {
+            $('body').removeClass('scoll-prevent');
+            $body.style.removeProperty('overflow');
+            $body.style.removeProperty('position');
+            $body.style.removeProperty('top');
+            $body.style.removeProperty('width');
+            window.scrollTo(0, scrollPosition);
+        });
+    </script>
 </body>
 </html>

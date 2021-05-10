@@ -52,7 +52,7 @@ $w-gray-opacity:.25;
 .example-text{opacity: .4;margin-top:10px;}
 
 .btn-next{
-    width:360px;padding:20px;margin:0 auto;display:flex;align-items: center;justify-content: space-between;border-top:1px solid #ddd;
+    padding:20px;display:flex;align-items: center;justify-content: space-between;border-top:1px solid #ddd;
     &.border-b{border-bottom:1px solid#ddd;}
     &.white{border:1px solid #000;justify-content: center;margin-top:30px;
         p{margin-right:5px;}
@@ -144,10 +144,18 @@ body{color:#000;line-height: 22px;font-size:16px; }
     &.feed{padding: 0 0 0 0;}
 }
 
-.btn{
+.btn.fixed{
+    position:absolute;bottom: 0;left: 0;z-index: 100;display:flex;align-items: center;justify-content: center;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + 9.5px);
+    padding-bottom: calc(env(safe-area-inset-bottom) + 9.5px);
+    height: calc(constant(safe-area-inset-bottom) + 70px) !important;
+    height: calc(env(safe-area-inset-bottom) + 70px) !important;
     &.yellow{color:$yellow;}
-    &.h-70{
-        display: flex;align-items: center;justify-content: center;font-size: 22px;position: absolute;left: 0;bottom: 0;right: 0;z-index: 10;
+    .icon{
+        width:18px;height:16px;display:inline-block;background-image:url(../images/arrow.svg);background-size: cover;background-position: center;background-repeat: no-repeat;vertical-align: middle;
+    }
+    .icon-active{
+        width:18px;height:16px;display:inline-block;background-image:url(../images/ic_vote_check.svg);background-size: cover;background-position: center;background-repeat: no-repeat;vertical-align: middle;
     }
 }
 
@@ -202,12 +210,13 @@ body{color:#000;line-height: 22px;font-size:16px; }
     .event-deadline{
         border-top: 1px solid rgba(0,0,0,0.15);border-bottom: 1px solid rgba(0,0,0,0.15);padding: 20px 0;
         .tit{
-            font-size: 12px;font-weight: 700;margin-bottom: 7px;display: flex;align-items: center;
+            font-size: 12px;font-weight: 700;margin-bottom: 8px;display: flex;align-items: center;line-height: 1.16666;
             i{margin-right: 5px;transform: translateY(-1px);}
         }
         .d-flex{
-            height: 45px;
-            strong{font-size: 30px;font-weight: 700;}
+            height: 35px;
+            strong{font-size: 30px;font-weight: 700;line-height: 1.16666;}
+            .day{margin-right: 5px;}
         }
         .period{
             margin-top: 10px;font-size: 12px;color: rgba(0,0,0,0.6);display: flex;

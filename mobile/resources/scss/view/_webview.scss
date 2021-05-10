@@ -31,6 +31,9 @@ body{touch-action: manipulation;}
     .icon{
         width:18px;height:16px;display:inline-block;background-image:url(../images/arrow.svg);background-size: cover;background-position: center;background-repeat: no-repeat;vertical-align: middle;
     }
+    .icon-active{
+        width:18px;height:16px;display:inline-block;background-image:url(../images/ic_vote_check.svg);background-size: cover;background-position: center;background-repeat: no-repeat;vertical-align: middle;
+    }
 }
 
 .badge-shipping{
@@ -80,12 +83,13 @@ body{touch-action: manipulation;}
     .event-deadline{
         border-top: 1px solid rgba(0,0,0,0.15);border-bottom: 1px solid rgba(0,0,0,0.15);padding: 20px 0;
         .tit{
-            font-size: 12px;font-weight: 700;margin-bottom: 7px;display: flex;align-items: center;
+            font-size: 12px;font-weight: 700;margin-bottom: 8px;display: flex;align-items: center;line-height: 1.16666;
             i{margin-right: 5px;transform: translateY(-1px);}
         }
         .d-flex{
-            height: 45px;
-            strong{font-size: 30px;font-weight: 700;}
+            height: 35px;
+            strong{font-size: 30px;font-weight: 700;line-height: 1.16666;}
+            .day{margin-right: 5px;}
         }
         .period{
             margin-top: 10px;font-size: 12px;color: rgba(0,0,0,0.6);display: flex;
@@ -271,6 +275,7 @@ body{touch-action: manipulation;}
                         .paint{line-height: 1.33333;vertical-align: bottom;}
                         .name{margin: 10px 0 7px 0;line-height: 1.1876;}
                         .font-14{line-height: 1.1428;}
+                        .font-12{color: rgba(0,0,0,0.4);line-height: 1;margin-top: 5px;}
                     }
                 }
             }
@@ -557,26 +562,31 @@ body{touch-action: manipulation;}
         }
     }
 }
-// 투표하기
-.winning-wrap{
-    padding:0 20px 0;text-align:center;
-    .balls{position: relative;z-index: 2;height:100%;
-        .result{height:350px;
-            &.success{
-                .winning-name{padding-bottom:40px;}
-            }
-            &.fail{
-                .winning-name{padding-top:50px;line-height: 28px;}
-            }
-        }
+
+.balls{
+    &.back{
+        position: fixed;left: 0;top: 0;width: 100vw;height: 100vh;z-index: -1;overflow: hidden;
         .bg-balls {
             position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index:-1;
         }
+        & + .wrap{z-index: 1;}
     }
+}
 
-    .img{width: 170px;height:170px;background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 50%;margin:20px auto;}
+// 투표하기
+.winning-wrap{
+    padding:0 20px 0;text-align:center;
+    .result{
+        .winning-name{font-size: 16px;line-height: 1.1875;font-weight: 700;}
+        .winning-num{font-size: 14px;line-height: 1.1428;}
+        &.fail{
+            padding-top: 44px;
+        }
+    }
+    .img{width: 260px;height:260px;background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 50%;margin:15px auto;}
+    .point{width: 260px;height: 260px;border-radius: 50%;overflow: hidden;display: flex;align-items: center;justify-content: center;text-align: center;color: $yellow;font-size: 40px;font-weight: 700;font-family: 'Gilroy';background-color: #000;margin:15px auto;}
     .btn{font-size:16px;}
-    .title{font-size:30px;line-height: 40px;}
+    .title{font-size:30px;line-height: 1.2857;}
     .line{border-top:2px solid $black;padding:20px 0;}
 }
 // 투표결과
@@ -625,5 +635,18 @@ body{touch-action: manipulation;}
         .lupick{display: inline-block;background: url('../images/logo.svg') no-repeat 0 0;background-size: contain;width: 146px;height: 45px;margin-bottom: 30px;}
         p{font-size: 16px;line-height: 24px;color: #000;}
         a{display: inline-block;border-radius: 50rem;color: #fff;line-height: 50px;height: 50px;width: 180px;font-size: 16px;font-weight: 700;font-family: 'Gilroy';background-color: #000;text-decoration: none;padding-top: 2px;margin-top: 60px;}
+    }
+}
+
+.payment-agree-wrap{
+    padding: 0 20px 0;
+    .title-small{color: rgba(0,0,0,0.6);font-size: 16px;line-height: 1.25;font-weight: 700;margin-bottom: 10px;padding-top: 10px;}
+    .title{font-size:30px;line-height: 40px;margin-bottom: 50px;}
+}
+
+.agree-before-payment{
+    .item{
+        border-top: 2px solid #000;padding: 20px 0 50px;
+        .cont{padding-left: 35px;font-size: 13px;line-height: 1.538;margin-top: 15px;}
     }
 }

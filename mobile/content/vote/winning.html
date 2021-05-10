@@ -22,41 +22,30 @@
 
 <body>
     <div class="wrap">
-        <div class="header d-flex justify-content-end">
-            <button type="button" class="ic-close"></button>
+        <div class="balls back">
+            <div class="bg-balls">
+                <canvas id="winning" width="100%" height="100%"></canvas>
+            </div>
         </div>
+        <style>
+            .wrap{
+                padding-bottom: 175px;min-height: 100vh
+            }
+            .balls{
+                height: calc(100vh - 155px) !important;
+            }
+        </style>
+        <button type="button" class="ic-close m-l-10"><span class="sr-only">닫기</span></button>
         <div class="winning-wrap">
-            <div class="balls">
-                <div class="bg-balls">
-                    <canvas id="winning" width="100%" height="100%"></canvas>
-                </div>
-                <!-- 성공 했을 때 -->
-                <div class="result success">
-                    <p class="title">축하해요.<br>
-                        당신은 루피커!
-                    </p>
-                    <div class="img" style="background-image:url(../../resources/images/image_lucky_item_1.jpg)"></div>
-                    <p class="winning-name font-16 bold">‘포르쉐 911 카레라’ 득템!</p>
-                </div>
-                <!-- // -->
-
-                <!-- 실패 했을 때 -->
-                    <!-- <div class="result fail">
-                        <p class="title">꼭 오늘이<br>
-                            아니어도 괜찮아.
-                        </p>
-                        <p class="winning-name font-16">
-                            아쉽게도 루피커가 되지 못했어요.<br>
-                            다음번에 더 좋은 행운이 찾아오길<br>
-                            바랄게요.
-                        </p>
-                    </div> -->
-                <!-- // -->
+            <!-- 성공 했을 때 -->
+            <div class="result success">
+                <p class="title">축하해요.<br>당신은 루피커!</p>
+                <div class="img" style="background-image:url(../../resources/images/image_lucky_item_1.jpg)"></div>
+                <div class="point">1000P</div>
+                <p class="winning-name m-b-10">‘포르쉐 911 카레라’ 득템!</p>
             </div>
-            <div class="line">
-                <p class="font-14 bold">고유번호 <span>384</span>번 / 득표수 <span>0</span>표</p>
-            </div>
-            <div class="">
+            <div class="winning-num">고유번호 <span>384</span>번 / 득표수 <span>0</span>표</div>
+            <div style="position: absolute;bottom: 20px;left: 20px;right: 20px;">
                 <a href="#" class="btn btn-outline-dark btn-xl h-60 normal m-b-15">이벤트 페이지로 가기</a>
                 <a href="#" class="btn btn-dark btn-xl normal h-60">홈으로 가기</a>
             </div>
@@ -148,7 +137,7 @@
                     ball.bounce = 1;
                     ball.vx = Math.random() * 50 - 25;
                     ball.vy = Math.random() * 50 - 25;
-                    ball.size = 50;
+                    ball.size = 40;
                     ball.x = Math.random() * stageWidth;
                     ball.y = Math.random() * stageHeight;
                     balls[balls.length] = ball;

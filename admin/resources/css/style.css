@@ -52,7 +52,7 @@
 
 .example-text { opacity: .4; margin-top: 10px; }
 
-.btn-next { width: 360px; padding: 20px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #ddd; }
+.btn-next { padding: 20px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #ddd; }
 
 .btn-next.border-b { border-bottom: 1px solid #ddd; }
 
@@ -156,9 +156,13 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .wrap.feed { padding: 0 0 0 0; }
 
-.btn.yellow { color: #ffff00; }
+.btn.fixed { position: absolute; bottom: 0; left: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding-bottom: calc(constant(safe-area-inset-bottom) + 9.5px); padding-bottom: calc(env(safe-area-inset-bottom) + 9.5px); height: calc(constant(safe-area-inset-bottom) + 70px) !important; height: calc(env(safe-area-inset-bottom) + 70px) !important; }
 
-.btn.h-70 { display: flex; align-items: center; justify-content: center; font-size: 22px; position: absolute; left: 0; bottom: 0; right: 0; z-index: 10; }
+.btn.fixed.yellow { color: #ffff00; }
+
+.btn.fixed .icon { width: 18px; height: 16px; display: inline-block; background-image: url(../images/arrow.svg); background-size: cover; background-position: center; background-repeat: no-repeat; vertical-align: middle; }
+
+.btn.fixed .icon-active { width: 18px; height: 16px; display: inline-block; background-image: url(../images/ic_vote_check.svg); background-size: cover; background-position: center; background-repeat: no-repeat; vertical-align: middle; }
 
 .title-ball { display: inline-block; width: 20px; height: 20px; border-radius: 50%; transform: translateY(-1px); }
 
@@ -212,13 +216,15 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .container-wrap .event-deadline { border-top: 1px solid rgba(0, 0, 0, 0.15); border-bottom: 1px solid rgba(0, 0, 0, 0.15); padding: 20px 0; }
 
-.container-wrap .event-deadline .tit { font-size: 12px; font-weight: 700; margin-bottom: 7px; display: flex; align-items: center; }
+.container-wrap .event-deadline .tit { font-size: 12px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; line-height: 1.16666; }
 
 .container-wrap .event-deadline .tit i { margin-right: 5px; transform: translateY(-1px); }
 
-.container-wrap .event-deadline .d-flex { height: 45px; }
+.container-wrap .event-deadline .d-flex { height: 35px; }
 
-.container-wrap .event-deadline .d-flex strong { font-size: 30px; font-weight: 700; }
+.container-wrap .event-deadline .d-flex strong { font-size: 30px; font-weight: 700; line-height: 1.16666; }
+
+.container-wrap .event-deadline .d-flex .day { margin-right: 5px; }
 
 .container-wrap .event-deadline .period { margin-top: 10px; font-size: 12px; color: rgba(0, 0, 0, 0.6); display: flex; }
 
@@ -765,6 +771,14 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 .icon-pager-last { width: 13px; height: 14px; background-image: url("../images/icon-pager-last.svg"); }
 
 .icon-del { width: 24px; height: 24px; background-image: url("../images/btn-del.svg"); }
+
+.icon-clock { width: 12px; height: 12px; background-image: url("../images/icon-clock.svg"); }
+
+.icon-clock-white { width: 12px; height: 12px; background-image: url("../images/icon-clock-white.svg"); }
+
+.icon-bell-white { width: 30px; height: 30px; background-image: url("../images/ic-bell-white.svg"); }
+
+.icon-alarm-yellow { width: 30px; height: 30px; background-image: url("../images/ic-alarm-yellow.svg"); }
 
 .s-font { font-size: 14px; }
 

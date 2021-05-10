@@ -22,12 +22,22 @@
 
 <body>
     <div class="wrap">
+        <div class="balls back">
+            <div class="bg-balls">
+                <canvas id="vote" width="100%" height="100%"></canvas>
+            </div>
+        </div>
+        <style>
+            .wrap{
+                padding-bottom: 75px;min-height: 100vh
+            }
+            .balls{
+                min-height: calc(100vh - 80px) !important;height: auto !important;
+            }
+        </style>
         <button type="button" class="ic-close m-l-10"></button>
         <div class="vote-wrap">
             <div class="content vote">
-                <div class="bg-balls">
-                    <canvas id="vote" width="100%" height="100%"></canvas>
-                </div>
                 <p class="title">행운의 번호에<br>투표하세요.</p>
 
                 <div class="desc">
@@ -54,9 +64,15 @@
                     </div>
                 </div>
             </div>
-            <div class="btn-group d-flex justify-content-between">
-                <button type="button" class="btn btn-outline-dark btn-lg w-150 h-50" data-toggle="modal" data-target="#modal-random">랜덤 투표</button>
-                <button type="button" class="btn btn-dark btn-lg w-150 h-50 m-l-10">투표 완료</button>
+            <div style="position: absolute;bottom: 30px;left: 20px;right: 20px;">
+                <div class="row row-10">
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-dark btn-lg h-50 font-16 btn-block" data-toggle="modal" data-target="#modal-random">랜덤 투표</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-dark btn-lg h-50 font-16 btn-block">투표 완료</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -140,8 +156,8 @@
             var currentDrag = null;
             var mouseX = 0;
             var mouseY = 0;
-            var stageWidth = $('.vote').width();
-            var stageHeight = $('.vote').height();
+            var stageWidth = $('.balls').width();
+            var stageHeight = $('.balls').height();
             stage.width = stageWidth;
             stage.height = stageHeight;
 
@@ -201,7 +217,7 @@
                     ball.bounce = 1;
                     ball.vx = Math.random() * 50 - 25;
                     ball.vy = Math.random() * 50 - 25;
-                    ball.size = 50;
+                    ball.size = 40;
                     ball.x = Math.random() * stageWidth;
                     ball.y = Math.random() * stageHeight;
                     balls[balls.length] = ball;
