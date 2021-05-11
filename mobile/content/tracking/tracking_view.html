@@ -20,10 +20,6 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="header d-flex align-items-center">
-            <a href="javascript:void(0)" class="ic-back"></a>
-            <span class="font-18 bold">주문내역 상세정보</span>
-        </div>
         <div class="payment-wrap">
             <div class="">
                 <p class="tracking-title">‘결제 완료’되었어요.</p>
@@ -60,9 +56,9 @@
                 </div>
                 <p class="bold text-underline m-t-50 m-b-30">거대벽화 그리기에 참여하는 911명 중 9명은 포르쉐 911 타고 귀가하자</p>
 
-                <a href="tracking_view.html" class="order-number m-b-10">
+                <div class="order-number m-b-10">
                     <p class="tracking-order font-14"><span>2020.07.14 </span>/ <span> 주문번호 </span><span> 200020264169</span></p>
-                </a>
+                </div>
             </div>
 
             <div class="tab item">
@@ -158,7 +154,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- // -->
 
             <!--환불/반품 했을 때 추가-->
             <div class="tab order">
@@ -173,8 +168,9 @@
                     </ul>
                 </div>
             </div>
-            <!-- // -->
-            <button type="button" class="btn btn-outline-gray btn-xl h-60 normal font-16" data-toggle="modal" data-target="#modal-receipt">영수증 받기</button>
+
+            <button type="button" class="btn btn-outline-gray btn-xl h-60 normal font-16" data-toggle="modal" data-target="#modal-receipt">주문 취소</button>
+            <button type="button" class="btn btn-outline-gray btn-xl h-60 normal font-16 m-t-15" data-toggle="modal" data-target="#modal-receipt">영수증 받기</button>
 
             <!-- 배송완료 됐을 때 -->
             <div class="success">

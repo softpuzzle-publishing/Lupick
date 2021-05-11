@@ -28,7 +28,7 @@
             <div class="component"> <!-- 이벤트 실패 일때 .fail 추가 -->
                 <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
                 <div class="price">
-                    <div class="row justify-content-between">
+                    <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="font-22 bold">57,000원</div>
                         </div>
@@ -53,7 +53,7 @@
                 <div class="tit"><i class="icon-clock"></i>남은 시간</div>
                 <div class="d-flex" id="event_rest_time">
                     <strong class="day">4일</strong>
-                    <strong class="time m-l-5">22:08:17</strong>
+                    <strong class="time">22:08:17</strong>
                 </div>
                 <div class="period"><b>이벤트 기간</b> <span>2021.03.25 오후 12시 ~ 2021.03.31 오후 12시</span></div>
             </div>
@@ -102,7 +102,7 @@
                 <h2>이벤트가 종료되었습니다</h2>
                 <p>
                     투표가 마무리되어 이벤트가 종료되었습니다. <br>
-                    나의 당첨 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 당첨 결과 전체를 보고 싶다면 상세페이지 내 ‘당첨 결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
+                    나의 럭키상품 선정 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 선정 결과 전체를 보고 싶다면 상세페이 지 내 ‘결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
                 </p>
                 <i class="stamp" id="stamp-end"></i> <!-- .end-1 ~ .end-6 -->
             </div>
@@ -266,6 +266,7 @@
                     <ul>
                         <li><span class="bold">지급</span> <span>1명</span></li>
                         <li><span class="bold">가격</span> <span>75,600,000원</span></li>
+                        <li class="mt-0"><span class="bold"></span> <p>*럭키상품 금액은 판매가 기준으로 상이할 수 있습니다.</p></li>
                     </ul>
                 </div>
 
@@ -273,9 +274,19 @@
                     <div class="rank">
                         <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
                         <div class="text">
-                            <span class="paint font-15 bold">3위 럭키템</span>
+                            <div><span class="paint font-15 bold">2위 럭키상품</span></div>
+                            <p class="name font-16 bold">나바호 인디언 빅 돔 텐트</p>
+                            <div class="d-flex font-14"><span class="bold" style="width:40px">지급</span> <span>50명</span></div>
+                            <div class="d-flex font-14 m-t-5"><span class="bold" style="width:40px">가격</span> <span>20,000원</span></div>
+                        </div>
+                    </div>
+                    <div class="rank">
+                        <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                        <div class="text">
+                            <div><span class="paint font-15 bold">3위 럭키상품</span></div>
                             <p class="name font-16 bold">웰리 밴디지 패브릭 반창고 5종</p>
-                            <p class="font-14">50명</p>
+                            <div class="d-flex font-14"><span class="bold" style="width:40px">지급</span> <span>50명</span></div>
+                            <div class="d-flex font-14 m-t-5"><span class="bold" style="width:40px">가격</span> <span>20,000원</span></div>
                         </div>
                     </div>
                     <div class="rank">
@@ -283,7 +294,7 @@
                             <p class="font-16 bold">1000P</p>
                         </div>
                         <div class="text">
-                            <span class="paint font-15 bold">4위 럭키템</span>
+                            <div><span class="paint font-15 bold">랜덤 럭키포인트</span></div>
                             <p class="name font-16 bold">루픽 포인트 1,000P</p>
                             <p class="font-14">1000명</p>
                             <p class="font-12 m-t-5">*득표수와 관계없이 랜덤 지급됩니다.</p>
@@ -353,18 +364,18 @@
                     <p class="font-12 bold">안내사항</p>
                 </div>
                 <ul>
-                    <li>• 일반상품 배송은 결제 순서대로 순차 출고됩니다.</li>
-                    <li>• 럭키상품에 대한 제세공과금은 루픽이 부담합니다.</li>
-                    <li>• 개인소득에 따른 차이로 발생하는 추가 공과금은 개인이 부담하여야 합니다.</li>
-                    <li>• 주문취소로 인해 발생하는 차액은 ‘포인트’ 럭키템에서 차감되며 이벤트 상세페이지 내 명시된 포인트와 이후 지급되는 포인트에 차이가 있을 수 있습니다.</li>
+                    <li>일반상품 배송은 결제 순서대로 순차 출고됩니다.</li>
+                    <li>럭키상품에 대한 제세공과금은 루픽이 부담합니다.</li>
+                    <li>개인소득에 따른 차이로 발생하는 추가 공과금은 개인이 부담하여야 합니다.</li>
+                    <li>주문취소로 인해 발생하는 차액은 ‘포인트’ 럭키템에서 차감되며 이벤트 상세페이지 내 명시된 포인트와 이후 지급되는 포인트에 차이가 있을 수 있습니다.</li>
                 </ul>
             </div>
             <div class="item lupick m-t-50">
-               <div class="title font-24 bold gilroy">LUPICK?</div>
+               <div class="title font-24 bold gilroy">Lupick?</div>
                 <div class="desc">
                     <div class="text">
                         <p class="font-14">
-                            루픽은 구매자에게 행운을 주는 이벤트 쇼핑입니다. 루키가 기획한 상품(아이템)을 구매한 참여자들을 모아 직접 투표를 진행하여 루피커(선정자)를 뽑아 이벤트 상품(럭키템)을 지급 하는 형태를 갖고 있습니다. 루픽의 가치는 쇼핑을 더 재미있게 하고 소비자들로부터 발생되는 이윤을 다시 소비자에게 되돌려 주는 것에 있습니다.
+                            루픽은 소비자들에게 쇼핑의 경험을 확장시켜주는 이벤트쇼핑 플랫폼입니다. 일반상품을 구매한 소비자들이 참여자가 되고, 직접 투표를 진행하여 루피커(선정자)를 선정하여 다양한 럭키상품을 지급합니다. 루픽의 가치는 상품이윤을 다양한 럭키상품의 형태로 소비자들에게 되돌려주는 것에 있습니다.
                         </p>
                     </div>
                </div>
@@ -459,15 +470,20 @@
         <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed">결제정보 보기</a> -->
 
         <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed justify-content-between">
-            <p class="font-18 bold">투표하기 <span class="icon"></span></p>
+            <p class="font-18 bold">투표하기<span class="icon"></span></p>
             <p class="font-18">23:19:07</p>
         </a> -->
 
-        <!-- <button type="button" class="btn btn-dark btn-xl h-60 fixed" disabled>이벤트 실패</button> -->
+        <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed justify-content-between">
+            <p class="font-18 bold">투표완료<span class="icon-active"></span></p>
+            <p class="font-18">23:19:07</p>
+        </a> -->
+
+        <!-- <button type="button" class="btn btn-dark btn-xl h-70 fixed" disabled>이벤트 실패</button> -->
     </div>
 
     <!-- //옵션선택화면 -->
-    <div class="modal fade bd-example-modal-lg " id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+    <div class="modal fade bd-example-modal-lg" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
         <div class="modal-dialog modal-lg detail">
             <!-- min -->
             <div class="modal-alert">
@@ -484,8 +500,8 @@
                 </div>
             </div> -->
 
-            <div class="modal-content">
-                <div class="wrap">
+            <div class="modal-content bg-transparent">
+                <div class="wrap animate-bottom bg-white" style="padding-top: 30px">
                     <div class="scroll-area">
                         <p class="title paint font-12">총<span>3</span>개까지 구매할 수 있어요!</p>
                         <select class="select-sm" id="select-option">
@@ -515,10 +531,26 @@
                                     <p class="price">57,000원</p>
                                 </div>
                             </div>
-                            <div class="sel-option" id="sel-2">
+                            <div class="sel-option" id="sel-1">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <p class="name">미니 캐리어 테이블 (PLAIN)</p>
-                                    <button type="button" class="sel-delete" onclick="deleteOption(2);"></button>
+                                    <button type="button" class="sel-delete" onclick="deleteOption(1);"></button>
+                                </div>
+                                <div class="spinner-wrap d-flex align-items-center justify-content-between">
+                                    <div class="spinner" data-max="99" data-min="1">
+                                        <div class="spinner-box">
+                                            <button type="button" class="spinner-decrement" disabled=""><i class="icon-minus"></i></button>
+                                            <input type="tel" class="spinner-input" readonly="" value="1" disabled>
+                                            <button type="button" class="spinner-increment"><i class="icon-plus"></i></button>
+                                        </div>
+                                    </div>
+                                    <p class="price">57,000원</p>
+                                </div>
+                            </div>
+                            <div class="sel-option" id="sel-1">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="name">미니 캐리어 테이블 (PLAIN)</p>
+                                    <button type="button" class="sel-delete" onclick="deleteOption(1);"></button>
                                 </div>
                                 <div class="spinner-wrap d-flex align-items-center justify-content-between">
                                     <div class="spinner" data-max="99" data-min="1">
@@ -545,7 +577,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="btn btn-dark btn-xl h-70">BYE ITEM</a>
+                <a href="#" class="btn btn-dark btn-xl h-70 gilroy">BUY ITEM</a>
             </div>
         </div>
     </div>

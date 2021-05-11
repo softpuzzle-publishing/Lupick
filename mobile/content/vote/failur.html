@@ -29,21 +29,24 @@
         </div>
         <style>
             .wrap{
-                padding-bottom: 175px;min-height: 100vh
+                height: 100%
             }
             .balls{
-                height: calc(100vh - 155px) !important;
+                height: calc(100vh - 165px) !important;
+            }
+            .winning-wrap{
+                min-height: 100%
             }
         </style>
         <button type="button" class="ic-close m-l-10"><span class="sr-only">닫기</span></button>
-        <div class="winning-wrap">
+        <div class="winning-wrap d-flex flex-column justify-content-between">
             <!-- 실패 했을 때 -->
             <div class="result fail">
                 <p class="title">꼭 오늘이<br>아니어도 괜찮아.</p>
                 <p class="fail-text m-t-40 m-b-20">아쉽게도 루피커가 되지 못했어요.<br>다음번에 더 좋은 행운이 찾아오길<br>바랄게요.</p>
             </div>
             <div class="winning-num">고유번호 <span>384</span>번 / 득표수 <span>0</span>표</div>
-            <div style="position: absolute;bottom: 20px;left: 20px;right: 20px;">
+            <div>
                 <a href="#" class="btn btn-outline-dark btn-xl h-60 normal m-b-15">이벤트 페이지로 가기</a>
                 <a href="#" class="btn btn-dark btn-xl normal h-60">홈으로 가기</a>
             </div>

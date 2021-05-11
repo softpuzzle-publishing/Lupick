@@ -27,21 +27,19 @@
         </div>
         <style>
             .wrap{
-                padding-bottom: 0;min-height: 100vh
+                height: 100%
             }
             .balls{
                 height: calc(100vh - 155px) !important;
             }
             .payment-wrap{
-                min-height: calc(100vh - 66px);
-                min-height: calc(100vh - 66px - calc(constant(safe-area-inset-bottom)));
-                min-height: calc(100vh - 66px - calc(env(safe-area-inset-bottom)));
+                min-height: 100%
             }
         </style>
         <button type="button" class="ic-close m-l-10"><span class="sr-only">닫기</span></button>
         <div class="payment-wrap d-flex flex-column justify-content-between">
             <div>
-                <div class="result p-t-20">
+                <div class="result">
                     <h1 class="regular">곧 행운이<br>찾아올 거에요.</h1>
                     <p class="text font-15" style="word-break: keep-all;">
                         이벤트에 참여해주셔서 감사합니다.<br>
@@ -50,7 +48,7 @@
                     </p>
                 </div>
             </div>
-            <div class="p-b-20">
+            <div>
                 <div class="tab price">
                     <div class="tab-title d-flex align-items-center justify-content-between">
                         <p class="bold">결제 금액</p>
