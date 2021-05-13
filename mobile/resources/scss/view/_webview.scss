@@ -66,8 +66,8 @@ html,body{height: 100%;}
 
 .detail-img{
     width:100%;padding-top:100%;height: 0;background-position: center;background-size:cover;background-repeat: no-repeat;position: relative;
-    .icon-like{width:30px;height:30px;background-image: url(../images/ic_btn_like_off.svg); background-position: center; background-repeat: no-repeat; background-size: cover;background-color: $black;display: inline-block;opacity: .5;border-radius: 50%; position: absolute;top:15px;right:15px;
-        &.active{background-image: url(../images/ic_btn_like_on.svg);opacity: 1;}
+    .icon-like{width:30px;height:30px;display: inline-block;border-radius: 50%; position: absolute;top:15px;right:15px;background: rgba(0,0,0,.5) url('../images/ic_btn_like_off.svg') no-repeat 0 0;
+        &.active{background: rgba(0,0,0,1) url('../images/ic_btn_like_on.svg') no-repeat 0 0;}
     }
 }
 
@@ -425,9 +425,7 @@ html,body{height: 100%;}
 
 //결제정보
 .payment-wrap{
-    padding: 20px 20px 30px;
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
+    padding: 20px 20px 0;
     .tab{border-top:2px solid $black;margin-bottom:40px;
         .tab-title{padding:15px 0;}
         &.item{
@@ -560,7 +558,7 @@ html,body{height: 100%;}
 
 //투표하기
 .vote-wrap{
-    padding: 0 20px 0;
+    padding: 20px 20px 0;
     .content{
         &.vote{
             width: 100%;height:100%;position: relative;z-index: 2;padding: 0 0 35px 0;
@@ -594,31 +592,6 @@ html,body{height: 100%;}
         }
         & + .wrap{z-index: 1;}
     }
-}
-
-// 투표하기
-.winning-wrap{
-    padding:0 20px 30px;text-align:center;
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
-    .result{
-        .winning-name{font-size: 16px;line-height: 1.1875;font-weight: 700;}
-        .winning-num{font-size: 14px;line-height: 1.1428;}
-        &.fail{
-            padding-top: 44px;
-        }
-    }
-    .img{width: 260px;height:260px;background-size: cover;background-repeat: no-repeat;background-position: center;border-radius: 50%;margin:15px auto;}
-    .point{width: 260px;height: 260px;border-radius: 50%;overflow: hidden;display: flex;align-items: center;justify-content: center;text-align: center;color: $yellow;font-size: 40px;font-weight: 700;font-family: 'Gilroy';background-color: #000;margin:15px auto;}
-    .btn{font-size:16px;}
-    .title{font-size:30px;line-height: 1.2857;}
-    .line{border-top:2px solid $black;padding:20px 0;}
-}
-// 투표결과
-.vote-result-wrap{
-    height:100vh;padding:95px 0 0 0;
-    .balls{height: 100%;}
-    .bg-balls{height: 100%;}
 }
 
 .exhibition-main{
@@ -664,17 +637,16 @@ html,body{height: 100%;}
 }
 
 .payment-agree-wrap{
-    padding: 0 20px 30px;
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 30px);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 30px);
+    padding: 0 20px;
     .title-small{color: rgba(0,0,0,0.6);font-size: 16px;line-height: 1.25;font-weight: 700;margin-bottom: 10px;padding-top: 10px;}
     .title{font-size:30px;line-height: 40px;margin-bottom: 32px;}
 }
 
 .agree-before-payment{
+    margin-bottom: 18px;
     .item{
-        border-top: 2px solid #000;padding: 20px 0 32px;
-        .cont{padding-left: 35px;font-size: 13px;line-height: 1.538;margin-top: 15px;}
+        border-top: 2px solid #000;padding: 15px 0 32px;
+        .cont{padding-left: 35px;padding-top: 15px;font-size: 13px;line-height: 20px;margin-top: 12px;border-top: 1px solid rgba(0,0,0,0.15);}
         .custom-control-input:not(:checked) + .custom-control-label::before{border-color: rgba(0,0,0,0.3);}
         .custom-control-input:not(:checked) + .custom-control-label {color: rgba(0,0,0,0.3);}
     }

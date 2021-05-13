@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Lupick</title>
     <link rel="icon" href="../../resources/images/favicon.png">
     <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
@@ -30,7 +30,7 @@
                 height: 100%
             }
             .balls{
-                height: calc(100vh - 155px) !important;
+                height: calc(100vh - 305px) !important;
             }
             .payment-wrap{
                 min-height: 100%
@@ -48,8 +48,8 @@
                     </p>
                 </div>
             </div>
-            <div>
-                <div class="tab price">
+            <div class="p-b-40 btn-bottom-spacing">
+                <div class="tab price m-b-30">
                     <div class="tab-title d-flex align-items-center justify-content-between">
                         <p class="bold">결제 금액</p>
                         <p class="font-20 bold paint">113,850원</p>
@@ -69,7 +69,7 @@
             $(window).on('load', function () {
                 //bouncing balls
                 if ($('#winning').length > 0) {
-                    //bouncVoteWinning();
+                    bouncVoteWinning();
                 }
             })
 

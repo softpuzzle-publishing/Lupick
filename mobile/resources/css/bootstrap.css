@@ -2138,7 +2138,7 @@ mt-1 : { margin-top : 1px; }
 }
 
 .m-b-30 {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
 
 .p--30 {

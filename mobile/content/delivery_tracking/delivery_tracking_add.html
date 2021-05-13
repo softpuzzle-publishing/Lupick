@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Lupick</title>
     <link rel="icon" href="../../resources/images/favicon.png">
     <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
@@ -20,31 +20,14 @@
 </head>
 <body>
     <div class="wrap">
-        <!-- <div class="header d-flex align-items-center">
-            <a href="javascript:void(0)" class="ic-back"></a>
-            <span class="font-18 bold">배송지 추가</span>
-        </div> -->
+        <style>
+            .wrap{
+                height: 100%
+            }
+        </style>
         <div class="modal-dialog modal-lg add">
             <div class="modal-content setting">
-                <style>
-                    .modal-content .wrapper{
-                        min-height: calc(100vh - 100px- 66px);
-                        min-height: calc(100vh - 100px - 66px - constant(safe-area-inset-top));
-                        min-height: calc(100vh - 100px - 66px - env(safe-area-inset-top));
-                    }
-                    @media screen and (-webkit-device-pixel-ratio: 1.5) {
-
-                    }
-
-                    @media screen and (-webkit-device-pixel-ratio: 1) {
-
-                    }
-
-                    @media screen and (-webkit-device-pixel-ratio: 0.75) {
-
-                    }
-                </style>
-                <div class="wrapper d-flex flex-column justify-content-between">
+                <div class="wrapper d-flex flex-column justify-content-between h-100">
                     <div>
                         <div class="info-list">
                             <div class="info-list-header">
@@ -81,8 +64,7 @@
                         </div>
                     </div>
 
-                    <div>
-                        <!-- <button type="button" class="btn btn-dark btn-xl h-60">저장</button> -->
+                    <div class="p-b-40 btn-bottom-spacing">
                         <button type="button" class="btn btn-dark btn-xl h-60 normal font-16 mt-5" disabled>저장</button>
                     </div>
                 </div>
