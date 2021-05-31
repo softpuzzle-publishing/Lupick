@@ -653,6 +653,8 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 
 .w-60px { width: 60px !important; }
 
+.w-70px { width: 70px !important; }
+
 .w-100px { width: 100px !important; }
 
 .w-110px { width: 110px !important; }
@@ -667,6 +669,8 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 
 .w-220px { width: 220px !important; }
 
+.w-230px { width: 230px !important; }
+
 .w-250px { width: 250px !important; }
 
 .w-270px { width: 270px !important; }
@@ -680,6 +684,8 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 .w-418px { width: 418px !important; }
 
 .w-476px { width: 476px !important; }
+
+.w-568px { width: 568px !important; }
 
 .w-600px { width: 600px !important; }
 
@@ -797,6 +803,10 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 
 .icon-pager-last { width: 13px; height: 14px; background-image: url("../images/icon-pager-last.svg"); }
 
+.icon-month-prev { width: 11px; height: 16px; background: url("../images/icon-month-prev.svg"); vertical-align: middle; }
+
+.icon-month-next { width: 11px; height: 16px; background: url("../images/icon-month-next.svg"); vertical-align: middle; }
+
 .icon-del { width: 24px; height: 24px; background-image: url("../images/btn-del.svg"); }
 
 .icon-clock { width: 12px; height: 12px; background-image: url("../images/icon-clock.svg"); }
@@ -817,6 +827,8 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 
 .sub-title { font-size: 14px; font-weight: normal; color: #000; margin-top: 40px; margin-left: 30px; }
 
+.modal-title-desc { font-size: 14px; color: rgba(0, 0, 0, 0.6); font-weight: 700; margin-top: 15px; }
+
 .form-control { width: 230px; display: inline-block; height: 40px; padding: 8px 15px; }
 
 .form-control:focus { outline: none; }
@@ -829,7 +841,7 @@ textarea.form-control { padding: 15px; line-height: 1.5; resize: none; }
 
 select.select-sm { opacity: 0; width: 200px; }
 
-select.select-md { opacity: 0; width: 230px; }
+select.select-md { opacity: 0; width: 230px; height: 40px; }
 
 select.select-lg { opacity: 0; width: 300px; }
 
@@ -846,6 +858,10 @@ select.select-lg { opacity: 0; width: 300px; }
 .select-lg + .ui-selectmenu-button.ui-button .ui-icon { background: url("../images/select-lg.svg") no-repeat 50% 50%; width: 15px; height: 10px; right: 30px; margin-top: -5px; }
 
 .select-lg + .ui-selectmenu-button.ui-button .ui-selectmenu-text { font-size: 18px; }
+
+.w-230px + .ui-selectmenu-button.ui-button { width: 230px !important; }
+
+.w-246px + .ui-selectmenu-button.ui-button { width: 246px !important; }
 
 .ui-selectmenu-menu { z-index: 1052; margin-top: -1px; }
 
@@ -924,7 +940,11 @@ td > .btn + .btn { margin-left: 6px; }
 
 .btn-md { height: 40px; }
 
-.btn-md.text-lager { font-size: 16px; min-width: 150px; }
+.btn-md.text-lager { font-size: 16px; min-width: 150px; padding: 10px 12px; }
+
+.btn-md.text-lager[type=button] { padding: 12px; }
+
+.btn-md.w-70px { min-width: 0; }
 
 .btn-lg { height: 50px; min-width: 220px; padding: 11px; }
 
@@ -940,11 +960,13 @@ td > .btn + .btn { margin-left: 6px; }
 
 .btn-outline-dark:disabled { color: #c6c6c6; border-color: #c6c6c6 !important; }
 
+.date-only + .bootstrap-datetimepicker-widget .datepicker { padding-bottom: 25px; }
+
 .bootstrap-datetimepicker-widget { width: 320px !important; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15); background: #fff; }
 
 .bootstrap-datetimepicker-widget > .row { margin: 0 !important; }
 
-.bootstrap-datetimepicker-widget .datepicker { flex: 0 0 100%; max-width: 100%; padding: 14px 30px 0; }
+.bootstrap-datetimepicker-widget .datepicker { flex: 0 0 100%; max-width: 100%; padding: 14px 25px 0; }
 
 .bootstrap-datetimepicker-widget .datepicker thead { border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
 
@@ -955,10 +977,6 @@ td > .btn + .btn { margin-left: 6px; }
 .bootstrap-datetimepicker-widget.dropdown-menu { padding: 0; margin: -1px 0 0; border-radius: 0; }
 
 .bootstrap-datetimepicker-widget.dropdown-menu::before, .bootstrap-datetimepicker-widget.dropdown-menu::after { display: none; }
-
-.bootstrap-datetimepicker-widget .icon-month-prev { width: 11px; height: 16px; background: url("../images/icon-month-prev.svg") 0 0 no-repeat; vertical-align: middle; }
-
-.bootstrap-datetimepicker-widget .icon-month-next { width: 11px; height: 16px; background: url("../images/icon-month-next.svg") 0 0 no-repeat; vertical-align: middle; }
 
 .bootstrap-datetimepicker-widget table { table-layout: auto; }
 
@@ -1080,7 +1098,7 @@ td > .btn + .btn { margin-left: 6px; }
 
 html, body { height: 100%; }
 
-body { width: 1920px; background: #fafafa; padding: 0 !important; }
+body { width: 1920px; background: #fafafa; padding: 0 !important; -webkit-font-smoothing: antialiased; }
 
 #wrap { width: 100%; display: flex; }
 
@@ -1508,6 +1526,8 @@ body.body-center-content { width: auto; background: #fff; }
 
 .table-form > tbody > tr > td { font-size: 16px; padding: 15px; height: 70px; }
 
+.table-form.border-color-light th, .table-form.border-color-light td { border-color: #d2d2d2; }
+
 .cell-height-40 > thead > tr > th, .cell-height-40 > thead > tr > td, .cell-height-40 > tbody > tr > th, .cell-height-40 > tbody > tr > td { height: 40px; }
 
 .cell-height-41 > thead > tr > th, .cell-height-41 > thead > tr > td, .cell-height-41 > tbody > tr > th, .cell-height-41 > tbody > tr > td { height: 41px; }
@@ -1534,7 +1554,13 @@ body.body-center-content { width: auto; background: #fff; }
 
 .qna-summary.desc li span.gray { width: 96px; opacity: 0.6; }
 
-.legend-custom { display: flex; align-items: center; margin-left: 40px; }
+.chart-finance .year { position: absolute; left: 50%; top: 6px; transform: translateX(-50%); font-family: 'Gilroy'; font-size: 20px; font-weight: 700; display: flex; align-items: center; }
+
+.chart-finance .year a { line-height: 1; }
+
+.chart-finance .year span { padding-top: 5px; margin: 0 37px; }
+
+.legend-custom { display: flex; align-items: center; margin-left: 40px; padding-top: 2px; }
 
 .legend-custom dt { margin-right: 10px; }
 
@@ -1550,7 +1576,7 @@ body.body-center-content { width: auto; background: #fff; }
 
 .legend-custom dd + dt { margin-left: 25px; }
 
-.finance-canvas { height: 325px; width: 100%; }
+.finance-canvas { height: 350px; width: 100%; }
 
 .finance-canvas canvas { width: 100%; height: 100%; padding: 0 40px; }
 

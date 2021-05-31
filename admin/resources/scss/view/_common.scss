@@ -84,13 +84,15 @@ a:focus{outline: none;box-shadow: none !important;}
 .m-small{width: 230px !important;}
 .small{width: 100px !important;}
 .w-60px{width: 60px !important;}
+.w-70px{width: 70px !important;}
 .w-100px{width: 100px !important;}
 .w-110px{width: 110px !important;}
 .w-120px{width: 120px !important;}
-.w-172px{ width: 172px !important; }
+.w-172px{ width: 172px !important;}
 .w-180px{width: 180px !important;}
 .w-200px{width: 200px !important;}
 .w-220px{width: 220px !important;}
+.w-230px{width: 230px !important;}
 .w-250px{width: 250px !important;}
 .w-270px{width: 270px !important;}
 .w-350px{width: 350px !important;}
@@ -98,6 +100,7 @@ a:focus{outline: none;box-shadow: none !important;}
 .w-400px{width: 400px !important;}
 .w-418px{width: 418px !important;}
 .w-476px{width: 476px !important;}
+.w-568px{width: 568px !important;}
 .w-600px{width: 600px !important;}
 .w-610px{width: 610px !important;}
 .w-772px{width: 772px !important;}
@@ -161,6 +164,9 @@ a:focus{outline: none;box-shadow: none !important;}
 .icon-pager-first{width: 13px;height: 14px;background-image: url('../images/icon-pager-first.svg');}
 .icon-pager-last{width: 13px;height: 14px;background-image: url('../images/icon-pager-last.svg');}
 
+.icon-month-prev{width: 11px;height: 16px;background: url('../images/icon-month-prev.svg');vertical-align: middle;}
+.icon-month-next{width: 11px;height: 16px;background: url('../images/icon-month-next.svg');vertical-align: middle;}
+
 
 .icon-del{width: 24px;height: 24px;background-image: url('../images/btn-del.svg');}
 
@@ -179,6 +185,8 @@ a:focus{outline: none;box-shadow: none !important;}
     font-size: 14px;font-weight: normal;color: $black;margin-top: 40px;margin-left: 30px;
 }
 
+.modal-title-desc{font-size: 14px;color: rgba(0,0,0,0.6);font-weight: 700;margin-top: 15px;}
+
 .form-control{
     width:230px;display: inline-block;height: 40px;padding: 8px 15px;
     &:focus{outline: none;}
@@ -195,7 +203,7 @@ textarea.form-control{
 
 //select
 select.select-sm{opacity: 0;width: 200px;}
-select.select-md{opacity: 0;width: 230px;}
+select.select-md{opacity: 0;width: 230px;height: 40px;}
 select.select-lg{opacity: 0;width: 300px;}
 .ui-selectmenu-button.ui-button{
     background: #fff !important;border: 1px solid $border-color;border-radius: 0;outline: 0;width: 230px;height: 40px;padding: 10.5px 15px 0;margin: 0;
@@ -211,6 +219,8 @@ select.select-lg{opacity: 0;width: 300px;}
         .ui-icon{background: url('../images/select-lg.svg') no-repeat 50% 50%;width: 15px;height: 10px;right: 30px;margin-top: -5px;}
         .ui-selectmenu-text{font-size: 18px;}
     }
+    .w-230px + &{width: 230px !important;}
+    .w-246px + &{width: 246px !important;}
 }
 .ui-selectmenu-menu{
     z-index: 1052;margin-top: -1px;
@@ -313,7 +323,9 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
 }
 .btn-md{
     height: 40px;
-    &.text-lager{font-size: 16px;min-width: 150px;}
+    &.text-lager{font-size: 16px;min-width: 150px;padding: 10px 12px;}
+    &.text-lager[type=button]{padding: 12px;}
+    &.w-70px{min-width: 0;}
 }
 .btn-lg{
     height: 50px;min-width:220px;padding: 11px;
@@ -331,12 +343,16 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
     &:disabled{color: #c6c6c6;border-color: #c6c6c6 !important;}
 }
 
+.date-only + .bootstrap-datetimepicker-widget{
+    .datepicker{padding-bottom: 25px;}
+}
+
 //datetimepicker
 .bootstrap-datetimepicker-widget{
     width: 320px !important;box-shadow: 3px 3px 10px rgba(0,0,0,0.15);background: #fff;
     > .row{margin: 0 !important;}
     .datepicker{
-        flex: 0 0 100%;max-width: 100%;padding: 14px 30px 0;
+        flex: 0 0 100%;max-width: 100%;padding: 14px 25px 0;
         thead{border-bottom: 1px solid $border-color;}
     }
     .timepicker{
@@ -347,9 +363,6 @@ button.close{display: inline-block;background: url('../images/icon-x.svg') no-re
         &::before,
         &::after{display: none;}
     }
-
-    .icon-month-prev{width: 11px;height: 16px;background: url('../images/icon-month-prev.svg') 0 0 no-repeat;vertical-align: middle;}
-    .icon-month-next{width: 11px;height: 16px;background: url('../images/icon-month-next.svg') 0 0 no-repeat;vertical-align: middle;}
 }
 .bootstrap-datetimepicker-widget table {
     table-layout: auto;

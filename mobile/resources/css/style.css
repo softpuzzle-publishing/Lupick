@@ -948,7 +948,7 @@ html, body { height: 100%; }
 
 .container-wrap.feed .relation .progress { height: 2px; }
 
-.product-info-content { padding: 0 20px; }
+.product-info-content { padding: 0 20px; white-space: pre-wrap; }
 
 .product-info-content .desc { margin-top: 30px; }
 

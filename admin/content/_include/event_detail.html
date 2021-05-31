@@ -1658,17 +1658,20 @@
 
         //datetimepicker
         $('#datetimepicker2').datetimepicker({
+            locale: 'ko',
             sideBySide: true,
-            dayViewHeaderFormat: "YYYY. M",
+            dayViewHeaderFormat: 'YYYY. M',
             format: 'YYYY.MM.DD HH:mm',
             icons: {
-                up: 'fas fa-angle-up',
-                down: 'fas fa-angle-down',
+                previous: 'icon-month-prev',
+                next: 'icon-month-next',
+                up: 'icon-time-up',
+                down: 'icon-time-down'
             },
             widgetPositioning: {
                 horizontal: 'left',
                 vertical: 'bottom'
-            }
+            },
         });
 
         //이벤트 오픈 날짜 선택
