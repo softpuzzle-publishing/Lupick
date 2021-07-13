@@ -23,14 +23,20 @@
 <body>
     <div class="wrap detail">
         <div class="close" onclick="closeBtn()"></div>
-        <div class="detail-img" style="background-image:url('../../resources/images/@event_01.png')"></div>
+        <div class="detail-img" style="background-image:url('../../resources/images/@event_01.png')">
+            <span class="label-event label-event-yellow">🎊포인트 이벤트</span>
+            <span class="label-event label-event-dark">🎉 프리 이벤트</span>
+        </div>
         <div class="container-wrap">
             <div class="component"> <!-- 이벤트 실패 일때 .fail 추가 -->
                 <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
                 <div class="price">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
-                            <div class="font-22 bold">57,000원</div>
+                            <div class="d-flex align-items-center">
+                                <i class="icon-point"></i>
+                                <div class="font-22 bold">57,000원</div>
+                            </div>
                         </div>
                         <div class="col-auto">
                             <span class="sale paint font-18 bold">88%</span>
@@ -228,6 +234,24 @@
                         <li><span>배송비</span> <span>기본 배송 2,500원 (CJ대한통운) <br>* 제주 및 도서산간 지역은 추가 배송비 부담</span></li>
                         <li><span>상호명</span> <span>하이브로우</span></li>
                         <li><span>연락처</span> <span>02-1234-5678</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item product m-t-60">
+                <div class="title d-flex align-items-center">
+                    <span class="title-ball yellow"></span>
+                    <p class="font-20 bold">누구나 참여 가능!</p>
+                </div>
+                <div class="text-center" style="margin: 35px 0 17px;">
+                    <img src="../../resources/images/img-event-all-free.svg" alt="" class="align-top">
+                </div>
+                <div class="desc">
+                    <p class="font-14">무료로 참여가 가능한 ‘프리 이벤트’는 루픽 유저 누구나 참여하여 다양한 럭키상품을 받을 수 있는 행운이 가득한 이벤트입니다. 이런 이벤트, 놓칠 수 없겠죠?</p>
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li><span class="bold">모집</span> <span>200,000명 (1인당 1회 참여 가능)</span></li>
                     </ul>
                 </div>
             </div>

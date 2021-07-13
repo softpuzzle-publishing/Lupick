@@ -186,11 +186,19 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .tracking-title.gray::after { background-color: rgba(0, 0, 0, 0.15); }
 
+.label-event { font-size: 12px; width: 113px; height: 39px; font-weight: 700; text-align: center; line-height: 40px; }
+
+.label-event.label-event-yellow { background: url("../images/eventSticker1.svg") no-repeat 50% 50%; background-size: contain; }
+
+.label-event.label-event-dark { background: url("../images/eventSticker2.svg") no-repeat 50% 50%; background-size: contain; color: #fff; }
+
 .detail-img { width: 100%; padding-top: 100%; height: 0; background-position: center; background-size: cover; background-repeat: no-repeat; position: relative; }
 
 .detail-img .icon-like { width: 30px; height: 30px; background-image: url(../images/ic_btn_like_off.svg); background-position: center; background-repeat: no-repeat; background-size: cover; background-color: #000; display: inline-block; opacity: .5; border-radius: 50%; position: absolute; top: 15px; right: 15px; }
 
 .detail-img .icon-like.active { background-image: url(../images/ic_btn_like_on.svg); opacity: 1; }
+
+.detail-img .label-event { position: absolute; left: 20px; bottom: 20px; }
 
 .container-wrap { padding: 0 20px; overflow: hidden; }
 
@@ -205,6 +213,8 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 .container-wrap .component .subject { line-height: 1.44; }
 
 .container-wrap .component .price { margin: 10px 0 15px; line-height: 1; }
+
+.container-wrap .component .price .icon-point { margin-right: 4px; transform: translateY(-1px); }
 
 .container-wrap .component .date { margin-left: 5px; }
 
@@ -485,19 +495,19 @@ body { color: #000; line-height: 22px; font-size: 16px; }
 
 .container-wrap .item.process .title { line-height: 30px; }
 
-.container-wrap .item.process .desc .list { display: flex; align-items: center; justify-content: center; margin-top: 25px; position: relative; }
+.container-wrap .item.process .desc .list { display: flex; align-items: center; margin-top: 25px; }
 
-.container-wrap .item.process .desc .list.top::after { content: ""; position: absolute; top: 30%; width: 100%; height: 2px; background-color: rgba(0, 0, 0, 0.1); transform: translate(0, -50%); left: 50px; z-index: 0; }
+.container-wrap .item.process .desc .list.top .step::after { content: ""; display: block; height: 2px; background-color: #e5e5e5; position: absolute; top: 19px; left: 50%; width: 100vw; z-index: 0; }
 
-.container-wrap .item.process .desc .list.bottom::after { content: ""; position: absolute; top: 30%; width: 100%; height: 2px; background-color: rgba(0, 0, 0, 0.1); transform: translate(0, -50%); right: 50px; z-index: 0; }
+.container-wrap .item.process .desc .list.bottom .step::after { content: ""; display: block; height: 2px; background-color: #e5e5e5; position: absolute; top: 19px; right: 50%; width: 100vw; z-index: 0; }
 
-.container-wrap .item.process .desc .step { width: 25%; display: flex; align-items: center; flex-flow: column; position: relative; z-index: 1; }
+.container-wrap .item.process .desc .step { width: 25%; display: flex; align-items: center; flex-flow: column; position: relative; }
 
 .container-wrap .item.process .desc .step.active .circle { background-color: #000; color: #ffff00; }
 
-.container-wrap .item.process .desc .step p { font-size: 14px; font-weight: bold; margin-top: 7px; }
+.container-wrap .item.process .desc .step p { font-size: 14px; font-weight: bold; margin-top: 7px; line-height: 1.142; }
 
-.container-wrap .item.process .desc .circle { width: 40px; height: 40px; border-radius: 50%; background-color: #ffff00; font-family: 'Gilroy'; color: #000; font-size: 20px; font-weight: bold; display: flex; align-items: center; justify-content: center; padding: 5px 0 0 0; }
+.container-wrap .item.process .desc .circle { width: 40px; height: 40px; border-radius: 50%; font-family: 'Gilroy'; background-color: #ffff00; padding-top: 3px; color: #000; font-size: 20px; font-weight: bold; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
 
 .container-wrap.feed .component.feed .subject { font-size: 20px; line-height: 1.3; }
 
@@ -816,6 +826,8 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 .icon-bell-white { width: 30px; height: 30px; background-image: url("../images/ic-bell-white.svg"); }
 
 .icon-alarm-yellow { width: 30px; height: 30px; background-image: url("../images/ic-alarm-yellow.svg"); }
+
+.icon-point { width: 24px; height: 24px; background-image: url("../images/ic-point.svg"); }
 
 .s-font { font-size: 14px; }
 
@@ -1267,6 +1279,8 @@ html.is-editing .btn-group { display: block !important; position: relative; z-in
 .card-list .thumb .badge { position: absolute; left: 0; bottom: 0; }
 
 .card-list .thumb .badge-warning { font-weight: 700; }
+
+.card-list .thumb .label-event { position: absolute; right: 15px; top: 15px; }
 
 .card-list .info { padding: 15px 20px; height: 130px; }
 
