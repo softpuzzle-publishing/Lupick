@@ -53,6 +53,9 @@ em{font-style: normal;}
 .bold{font-weight: bold;}
 .regular{font-weight: 400 !important;}
 //
+.nanumBarunGothic{
+    font-family: 'NanumBarunGothic';
+}
 .gilroy{
     font-family: 'Gilroy';
     -webkit-font-smoothing: antialiased;
@@ -219,8 +222,17 @@ a:focus{outline: none;box-shadow: none !important;}
     }
 }
 .badge{
-    display:inline-block;min-width: 80px;padding: .1rem 8px 0;font-size:12px;height: 25px;font-weight: bold;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: 0;margin-right: 3px;margin-bottom: 5px;
+    display:inline-block;min-width: 80px;padding: .1rem 8px 0;font-size:12px;height: 25px;font-weight: bold;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: 0;margin-right: 3px;margin-bottom: 5px;font-family: 'Gilroy','NanumBarunGothic';
     i{vertical-align: middle;transform: translateY(-1px);margin-right: 1px;}
+}
+.badge-event{
+    height: 32px;padding-top: 6px;width: 84px;margin: 0;
+    &.badge-yellow{
+        background: $yellow;border-color: #000;
+    }
+    &.badge-dark{
+        color: $yellow;
+    }
 }
 
 .min-width-0{min-width: 0;}

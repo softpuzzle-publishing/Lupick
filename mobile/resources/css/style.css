@@ -40,6 +40,8 @@ i, em { font-style: normal; }
 
 .regular { font-weight: 400 !important; }
 
+.nanumBarunGothic { font-family: 'NanumBarunGothic'; }
+
 .gilroy { font-family: 'Gilroy'; -webkit-font-smoothing: antialiased; }
 
 .ex-text { font-size: 12px; color: #000; opacity: .4; }
@@ -216,9 +218,15 @@ td > .btn + .btn { margin-left: 6px; }
 
 .ui-selectmenu-menu .select-text .ui-menu-item-wrapper { padding: 0 15px; height: auto; line-height: 40px; }
 
-.badge { display: inline-block; min-width: 80px; padding: .1rem 8px 0; font-size: 12px; height: 25px; font-weight: bold; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0; margin-right: 3px; margin-bottom: 5px; }
+.badge { display: inline-block; min-width: 80px; padding: .1rem 8px 0; font-size: 12px; height: 25px; font-weight: bold; text-align: center; white-space: nowrap; vertical-align: baseline; border-radius: 0; margin-right: 3px; margin-bottom: 5px; font-family: 'Gilroy','NanumBarunGothic'; }
 
 .badge i { vertical-align: middle; transform: translateY(-1px); margin-right: 1px; }
+
+.badge-event { height: 32px; padding-top: 6px; width: 84px; margin: 0; }
+
+.badge-event.badge-yellow { background: #ffff00; border-color: #000; }
+
+.badge-event.badge-dark { color: #ffff00; }
 
 .min-width-0 { min-width: 0; }
 
@@ -1108,7 +1116,11 @@ html, body { height: 100%; }
 
 .tracking-wrap .content:first-child { border-top: 0; }
 
-.tracking-wrap .order-number { border-bottom: 1px solid rgba(0, 0, 0, 0.15); padding: 0 0 10px 0; color: rgba(0, 0, 0, 0.6); line-height: 1; }
+.tracking-wrap .order-type { border-bottom: 1px solid rgba(0, 0, 0, 0.15); padding-bottom: 15px; margin-bottom: 15px; }
+
+.tracking-wrap .order-type p { color: rgba(0, 0, 0, 0.6); line-height: 1; padding-top: 1px; }
+
+.tracking-wrap .order-type p + p { margin-top: 6px; }
 
 .tracking-wrap .desc { width: 100%; display: flex; justify-content: space-between; }
 
@@ -1231,4 +1243,26 @@ html, body { height: 100%; }
 .agree-before-payment .item .custom-control-input:not(:checked) + .custom-control-label::before { border-color: rgba(0, 0, 0, 0.3); }
 
 .agree-before-payment .item .custom-control-input:not(:checked) + .custom-control-label { color: rgba(0, 0, 0, 0.3); }
+
+.event-detailinfo-wrap { padding: 0 20px; }
+
+.event-detailinfo-wrap img { width: auto !important; height: auto !important; max-width: 100%; }
+
+.terms { padding: 20px 0; font-size: 12px; color: #888; }
+
+.terms h2 { margin-bottom: .75rem; margin-top: 2rem; color: #000; font-size: 14px; font-weight: 500; }
+
+.terms h2:first-of-type { margin-top: 0; }
+
+.terms strong { display: block; margin-bottom: .5rem; margin-top: 1.25rem; color: #000; font-weight: 500; font-size: 13px; }
+
+.terms strong:first-of-type { margin-top: 0; }
+
+.terms h2 + strong { margin-top: .75rem; }
+
+.terms .table { margin: 10px 0; font-size: 11px; color: #666; }
+
+.terms .table th, .terms .table td { padding: 8px; height: auto; }
+
+.terms .table td { color: #666; }
 /*# sourceMappingURL=style.css.map */

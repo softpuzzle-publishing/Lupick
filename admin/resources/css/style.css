@@ -928,15 +928,19 @@ select.select-lg { opacity: 0; width: 300px; }
 #nav .nav a { font-size: 20px; font-weight: bold; margin-right: 40px; line-height: 1.15; }
 
 /* pagination */
-.pagination li { margin: 0 14px; line-height: 1; font-size: 14px; }
+.pagination li { margin: 0 10px; line-height: 1; font-size: 14px; }
 
-.pagination li a { line-height: 1; }
+.pagination li a { line-height: 1; text-decoration: none; padding: 0 4px; }
 
 .pagination li i { vertical-align: middle; }
 
 .pagination li.disabled a { pointer-events: none; color: #ddd; }
 
 .pagination li.disabled i { opacity: .15; }
+
+.pagination li.active a { position: relative; }
+
+.pagination li.active a::before { content: ''; display: block; width: 8px; height: 1px; background: #666; position: absolute; bottom: -2px; left: 50%; margin-left: -4px; }
 
 button.close { display: inline-block; background: url("../images/icon-x.svg") no-repeat 50% 50%; width: 32px; height: 32px; }
 
@@ -1873,6 +1877,8 @@ body.body-dashboard [class^=col-] { padding: 15px; }
 .legend-list > div.red p::before { background-color: #ea4335; }
 
 .legend-list > div.orange p::before { background-color: #fabc05; }
+
+.legend-list > div.purple p::before { background-color: #9966cc; }
 
 .seller-info { padding: 30px; height: 370px; }
 
