@@ -1226,7 +1226,7 @@ html, body { height: 100%; }
 
 .agree-before-payment ul { margin-bottom: 30px; }
 
-.agree-before-payment ul li { font-size: 14px; line-height: 1.57; display: flex; }
+.agree-before-payment ul li { font-size: 13px; line-height: 1.57; display: flex; word-break: keep-all; }
 
 .agree-before-payment ul li span { flex: 0 0 17px; }
 
@@ -1247,22 +1247,4 @@ html, body { height: 100%; }
 .event-detailinfo-wrap { padding: 0 20px; }
 
 .event-detailinfo-wrap img { width: auto !important; height: auto !important; max-width: 100%; }
-
-.terms { padding: 20px 0; font-size: 12px; color: #888; }
-
-.terms h2 { margin-bottom: .75rem; margin-top: 2rem; color: #000; font-size: 14px; font-weight: 500; }
-
-.terms h2:first-of-type { margin-top: 0; }
-
-.terms strong { display: block; margin-bottom: .5rem; margin-top: 1.25rem; color: #000; font-weight: 500; font-size: 13px; }
-
-.terms strong:first-of-type { margin-top: 0; }
-
-.terms h2 + strong { margin-top: .75rem; }
-
-.terms .table { margin: 10px 0; font-size: 11px; color: #666; }
-
-.terms .table th, .terms .table td { padding: 8px; height: auto; }
-
-.terms .table td { color: #666; }
 /*# sourceMappingURL=style.css.map */
