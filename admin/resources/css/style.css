@@ -1676,7 +1676,7 @@ body.body-center-content { width: auto; background: #fff; }
 
 .operator { font-size: 28px; line-height: 1; width: 30px; font-weight: 400; }
 
-.lupicker-vote { padding: 30px; height: 720px; }
+.lupicker-vote { padding: 30px; }
 
 .lupicker-vote .lupicker-vote-title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 
