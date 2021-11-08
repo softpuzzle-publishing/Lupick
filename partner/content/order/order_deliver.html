@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="top">
+                <h2 class="hello">안녕하세요 <span id="sId">TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+                <div class="latest">최근 업데이트 : 2021.11.08 17:16</div>
+            </div>
+
+            <h1 class="title">배송관리</h1>
+            <div class="delivery-summary">
+                <div class="row">
+                    <div class="col-auto">
+                        <p class="paint d-inline-block mb-2">먼저 확인하고 처리해주세요!</p>
+                        <ul>
+                            <li class="status-box">
+                                <span>주문취소</span>
+                                <div class="text-right">
+                                    <strong>0</strong>
+                                    <i>건</i>
+                                </div>
+                            </li>
+                            <li class="status-box">
+                                <span>미출고 (최근 1달)</span>
+                                <div class="text-right">
+                                    <strong>0</strong>
+                                    <i>건</i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p class="paint d-inline-block mb-2">배송처리를 진행해주세요</p>
+                        <ol>
+                            <li class="status-box bg-black">
+                                <span>결제완료</span>
+                                <div class="text-right">
+                                    <strong>999</strong>
+                                    <i>건</i>
+                                </div>
+                            </li>
+                            <li class="status-box">
+                                <span>상품준비중</span>
+                                <div class="text-right">
+                                    <strong>0</strong>
+                                    <i>건</i>
+                                </div>
+                            </li>
+                            <li class="status-box">
+                                <span>배송지시</span>
+                                <div class="text-right">
+                                    <strong>0</strong>
+                                    <i>건</i>
+                                </div>
+                            </li>
+                            <li class="status-box">
+                                <span>배송중</span>
+                                <div class="text-right">
+                                    <strong>0</strong>
+                                    <i>건</i>
+                                </div>
+                            </li>
+                            <li class="status-box">
+                                <span>배송완료</span>
+                                <div class="text-right">
+                                    <strong>0</strong>
+                                    <i>건</i>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-bordered table-form border-color-light">
+                <colgroup>
+                    <col width="246px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>검색어</th>
+                        <td>
+                            <div class="custom-control custom-check custom-control-inline">
+                                상품번호<input type="text" class="form-control" name="productNo" id="productNo" value="">
+                                이벤트명<input type="text" class="form-control" name="eventName" id="eventName" value="">
+                                등록상품명<input type="text" class="form-control" name="productName" id="productName" value="">
+                                <!--   사업자명<input type="text" class="form-control" name="sellerNo" id="sellerNo" value="">-->
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>기간</th>
+                        <td>
+                            <div class="row row-10 align-items-center">
+                                <div class="col-auto">
+                                    <input type="text" class="form-control datetimepicker-input text-center date-only" style="width:246px" autocomplete="no" id="startDate" data-toggle="datetimepicker"
+                                        data-target="#startDate">
+                                </div>
+                                <div class="col-auto">~</div>
+                                <div class="col-auto">
+                                    <input type="text" class="form-control datetimepicker-input text-center date-only" style="width:246px" autocomplete="no" id="endDate" data-toggle="datetimepicker"
+                                        data-target="#endDate">
+                                </div>
+                                <div class="col-auto m-l-5">
+                                    <button type="button" class="btn btn-outline-gray btn-md text-lager w-70px" name="dateSelector" data-date="0">오늘</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-gray btn-md text-lager w-70px" name="dateSelector" data-date="7">1주일</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-gray btn-md text-lager w-70px" name="dateSelector" data-date="1">1개월</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-gray btn-md text-lager w-70px" name="dateSelector" data-date="3">3개월</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-gray btn-md text-lager w-70px" name="dateSelector" data-date="6">6개월</button>
+                                </div>
+                            </div>
+                            <div class="m-t-15">
+                                <select class="select-md w-246px" name="selectDate" id="selectDate" style="display: none;">
+                                    <!-- <option value="" selected>2020년 8월</option> -->
+                                    <option value="2021-11" selected="">2021 년 11월</option>
+                                    <option value="2021-10">2021 년 10월</option>
+                                    <option value="2021-09">2021 년 9월</option>
+                                    <option value="2021-08">2021 년 8월</option>
+                                    <option value="2021-07">2021 년 7월</option>
+                                    <option value="2021-06">2021 년 6월</option>
+                                    <option value="2021-05">2021 년 5월</option>
+                                    <option value="2021-04">2021 년 4월</option>
+                                    <option value="2021-03">2021 년 3월</option>
+                                    <option value="2021-02">2021 년 2월</option>
+                                    <option value="2021-01">2021 년 1월</option>
+                                    <option value="2020-12">2020 년 12월</option>
+                                    <option value="2020-11">2020 년 11월</option>
+                                </select><span tabindex="0" id="selectDate-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="selectDate-menu" aria-haspopup="true"
+                                    class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"><span
+                                        class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">2021 년 11월</span></span>
+                                <select class="select-md w-246px" name="selectDate2" id="selectDate2" style="display: none;">
+                                    <!-- <option value="" selected>2020년 8월</option> -->
+                                    <option value="2021-11" selected="">2021 년 11월</option>
+                                    <option value="2021-10">2021 년 10월</option>
+                                    <option value="2021-09">2021 년 9월</option>
+                                    <option value="2021-08">2021 년 8월</option>
+                                    <option value="2021-07">2021 년 7월</option>
+                                    <option value="2021-06">2021 년 6월</option>
+                                    <option value="2021-05">2021 년 5월</option>
+                                    <option value="2021-04">2021 년 4월</option>
+                                    <option value="2021-03">2021 년 3월</option>
+                                    <option value="2021-02">2021 년 2월</option>
+                                    <option value="2021-01">2021 년 1월</option>
+                                    <option value="2020-12">2020 년 12월</option>
+                                    <option value="2020-11">2020 년 11월</option>
+                                </select><span tabindex="0" id="selectDate2-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="selectDate2-menu" aria-haspopup="true"
+                                    class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"><span
+                                        class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">2021 년 11월</span></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <div style="display: none;" id="hiddenTotalTable"></div>
+            <div style="display: none;" id="hiddenSearchTable"></div>
+            <div style="display: none;" id="hiddenSearchExcelTable"></div>
+            <div class="table-next-button">
+            	<button type="button" class="btn btn-outline-dark font-weight-bold w-180px" id="reset">초기화</button>
+                <button type="button" class="btn btn-outline-dark font-weight-bold w-180px" id="search">검색</button>
+            </div>
+
+
+            <h1 class="title">상품준비 목록</h1>
+            <div class="border-top-gray m-b-15 p-t-15">
+                <div class="row">
+                    <div class="col">
+                        <div class="row row-10 align-items-center">
+                            <div class="col-auto">
+                                <div class="mr-4"><i>1</i> 선택됨</div>
+                            </div>
+                            <div class="col-auto">
+                                <select name="" id="" class="select-md">
+                                    <option value="">택배사 선택</option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-dark" disabled>선택물품 배송</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="row row-10">
+                            <div class="col-auto">
+                                <a href="#" data-toggle="modal">
+                                    <button type="button" class="btn btn-outline-dark font-weight-bold"><i class="far fa-file-excel"></i>엑셀 대량배송</button>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                <a href="#modal-select-excel" data-toggle="modal">
+                                    <button type="button" class="btn btn-outline-dark font-weight-bold"><i class="far fa-file-excel"></i>엑셀 다운로드</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tableBox">
+                <div>
+                    <div>
+                        <div class="main_search_result_list">
+                            <table class="table table-bordered table-center">
+                                <thead>
+                                    <tr>
+                                        <th data-column="s_order_status" style="width: 132px; cursor: pointer;">체크박스 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                        <th data-column="i_seq" style="width: 372px; cursor: pointer;">상품번호 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                        <th data-column="s_img_path" style="width: 180px; cursor: pointer;">이미지 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                        <th data-column="s_item_title" style="cursor: pointer;">상품명 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                        <th data-column="s_create_id" style="width: 108px; cursor: pointer;">진행 이벤트 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                        <th data-column="dt_pay_time" style="width: 261px; cursor: pointer;">판매상태 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                        <th data-column="i_pay_price" style="width: 138px; cursor: pointer;">배송구분 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                        <th data-column="i_sell_price" style="width: 148px; cursor: pointer;">판매가 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                        <th data-column="i_buy_price" style="width: 148px; cursor: pointer;">공급원가 <span class="sorting-indicator"><i class="fa" aria-hidden="true"></i></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="9">등록된 데이터가 없습니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+        })
+    </script>
+
+</body>
+
+</html>

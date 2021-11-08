@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/plugins/chart/Chart.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+</head>
+
+<body class="body-dashboard">
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="top">
+                <h2 class="hello">안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+                <div class="latest">최근 업데이트 : 2020.08.07 17:49</div>
+            </div>
+            <h3 class="title">Lupick Report</h3>
+            <div class="lupick-report">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="box">
+                            <div class="statistics">
+                                <i class="icon-dash-connect"></i>
+                                <p data-count="313523">0</p>
+                            </div>
+                            <div class="info">
+                                <p>현재 루픽 접속 유저 (명)</p>
+                                <p class="comment">*새로고침하여 실시간 확인 가능</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <div class="statistics">
+                                <i class="icon-dash-user"></i>
+                                <p data-count="2746103">0</p>
+                            </div>
+                            <div class="info">
+                                <p>루픽 총 가입 유저 (명)</p>
+                                <p class="paint">전일대비 +1,274</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <div class="statistics">
+                                <i class="icon-dash-money"></i>
+                                <p data-count="92561512648">0</p>
+                            </div>
+                            <div class="info">
+                                <p>오늘 매출 금액 (원)</p>
+                                <p class="paint">전일대비 +48%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box">
+                            <div class="statistics">
+                                <i class="icon-dash-check"></i>
+                                <p data-count="1586627">0</p>
+                            </div>
+                            <div class="info">
+                                <p>오늘 주문수 (주문번호기준)</p>
+                                <p class="paint">전일대비 +1,274건</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 pt-0">
+                    <h3 class="title">Event Report</h3>
+                    <div class="event-report">
+                        <div class="row h-690px">
+                            <div class="col-6">
+                                <div class="row h-690px">
+                                    <div class="col-12">
+                                        <div class="event-count box">
+                                            <p>오픈 대기 중 이벤트 수</p>
+                                            <p>3</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="event-count ing box">
+                                            <p>진행 중 이벤트 수</p>
+                                            <p>5</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="popularity-event box">
+                                            <div class="popularity-title">
+                                                <div class="box-title">인기이벤트 TOP 5</div>
+                                                <span class="comment">* 조회수 순</span>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <b>1</b>
+                                                    <span>거대벽화 그리기에 참여하는 911명 중 거대벽화 그리기에 참여하는 911명 중</span>
+                                                    <span class="paint">2.1M</span>
+                                                </li>
+                                                <li>
+                                                    <b>2</b>
+                                                    <span>에어팟 애정하는 뮤지션들 주목! 홍대 스스스</span>
+                                                    <span class="paint">2.1M</span>
+                                                </li>
+                                                <li>
+                                                    <b>3</b>
+                                                    <span>을지로 ‘감각의 제국’에서 불량식품 입에입에</span>
+                                                    <span class="paint">1M</span>
+                                                </li>
+                                                <li>
+                                                    <b>4</b>
+                                                    <span>세븐틴 LEFT & RIGHT MV 한 번만 봐세븐틴 LEFT & RIGHT MV 한 번만 봐</span>
+                                                    <span class="paint">1M</span>
+                                                </li>
+                                                <li>
+                                                    <b>5</b>
+                                                    <span>OFF WHITE 전시장에서 그래피티를 그FF WHITE 전시장에서 그래피티를 그</span>
+                                                    <span class="paint">10K</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 h-100">
+                                <div class="success-event box">
+                                    <div class="success-event-percent">
+                                        <div class="box-title">이벤트 성공률</div>
+                                        <strong class="paint">90%</strong>
+                                    </div>
+                                    <p class="comment pt-3">마감된 이벤트 중 성공한 이벤트와 무산된 이벤트를 집계하여 성공률을 환산합니다.</p>
+                                    <div class="circle_percent">
+                                        <canvas id="chart-success"></canvas>
+                                        <div class="circle_inbox">
+                                            <dl class="circle-text">
+                                                <dt>마감된 이벤트</dt>
+                                                <dd>52,500</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="event-count-summary">
+                                        <div class="success">
+                                            <span>성공한 이벤트</span>
+                                            <strong>52,000</strong>
+                                        </div>
+                                        <div class="fail">
+                                            <span>무산된 이벤트</span>
+                                            <strong>500</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 pt-0">
+                    <h3 class="title">Management</h3>
+                    <div class="management">
+                        <div class="row h-690px">
+                            <div class="col-6 h-50">
+                                <div class="box">
+                                    <div class="box-title">이벤트 승인 요청 건</div>
+                                    <p>이벤트에 대한 승인이 필요해요!</p>
+                                    <strong>52</strong>
+                                    <a href="">바로가기 <i class="icon-link-arr"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-6 h-50">
+                                <div class="box">
+                                    <div class="box-title">이벤트 결재 요청 건</div>
+                                    <p>마감된 이벤트에 대한 결재가 필요해요!</p>
+                                    <strong>52</strong>
+                                    <a href="">바로가기 <i class="icon-link-arr"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-6 h-50">
+                                <div class="box">
+                                    <div class="box-title">피드 승인 요청 건</div>
+                                    <p>피드에 대한 승인이 필요해요!</p>
+                                    <strong>0</strong>
+                                    <a href="">바로가기 <i class="icon-link-arr"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-6 h-50">
+                                <div class="box">
+                                    <div class="box-title">루픽 문의 건</div>
+                                    <p>문의에 대한 답변을 기다리고 있어요!</p>
+                                    <strong>1</strong>
+                                    <a href="">바로가기 <i class="icon-link-arr"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(function () {
+             ///이벤트 성공률
+             window.onload = function() {
+                var success = document.getElementById('chart-success').getContext('2d');
+                window.myChart1 = new Chart(success, doughnutSuccess);
+            };
+            var doughnutSuccess = {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [91, 9],
+                        borderWidth: 0,
+                        backgroundColor: [
+                            '#ffff00',
+                            '#000'
+                        ],
+                    }],
+                    labels: [
+                        '구매한 이벤트 아이템 개수',
+                        '남은 이벤트 아이템 개수'
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    rotation: -0.3 * Math.PI,
+                    cutoutPercentage: 90,
+                    maintainAspectRatio: false,
+                    animation: {
+                        animateScale: false,
+                        animateRotate: false
+                    },
+                    legend: {
+                        display: false
+                    },
+                }
+            };
+        });
+
+        $(window).on('load', function () {
+            $('[data-count]').not('.finish').each(function() {
+                console.log(1);
+                var $this = $(this),
+                countTo = $this.attr('data-count');
+                $this.addClass('finish');
+                $({
+                    countNum: $this.text()
+                    }).stop().animate({
+                        countNum: countTo
+                    },
+                    {
+                        duration: 1500,
+                        easing: 'linear',
+                        step: function() {
+                            $this.text(commaSeparateNumber(Math.floor(this.countNum)));
+                        },
+                        complete: function() {
+                            $this.text(commaSeparateNumber(this.countNum));
+                            //$this.addClass('finish');
+                        }
+                    }
+                );
+            });
+            function commaSeparateNumber(val) {
+                while (/(\d+)(\d{3})/.test(val.toString())) {
+                val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+                }
+                return val;
+            }
+        });
+    </script>
+</body>
+</html>

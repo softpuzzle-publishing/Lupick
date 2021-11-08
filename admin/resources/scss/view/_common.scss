@@ -31,6 +31,18 @@ button{border: 0;background: transparent;padding: 0;}
 .custom-radio{
     label{cursor: pointer;}
 }
+
+.custom-control-sm{
+    padding-left: 30px;min-height: 18px;line-height: normal;
+    .custom-control-input{width: 18px;height: 18px;}
+    .custom-control-label{
+        line-height: 18px;font-weight: 700;
+        &::before{left: -30px;width: 18px;height: 18px;}
+    }
+    .custom-control-input:checked ~ .custom-control-label::after{left: -26px;width: 10px;height: 10px;}
+}
+
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -129,6 +141,7 @@ a:focus{outline: none;box-shadow: none !important;}
 .gilroy{font-family: 'Gilroy' !important;font-weight: 700 !important;}
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 50% 50%;line-height: 1;font-size: 0;}
 .icon-x{width: 12px;height: 12px;background-image: url('../images/icon-x.svg');}
+.icon-x-white{width: 14px;height: 14px;background-image: url('../images/icon-x-white.svg');}
 .icon-file{width: 16px;height: 16px;background-image: url('../images/icon-file.svg');}
 .icon-heart{width: 14px;height: 13px;background-image: url('../images/icon-heart.svg');}
 .icon-bell{width: 16px;height: 13px;background-image: url('../images/icon-bell.svg');}
@@ -565,3 +578,13 @@ content: '';display: block;color: $black;width: 30px;height: 30px;border-radius:
 }
 
 #event_vote_time{font-weight: 700;font-size: 30px;}
+
+.full-video{
+    position: relative;height: 0;padding-bottom: 56.25%;margin: 0 -20px 20px;
+    > iframe{position: absolute;left: 0;top: 0;width: 100% !important;height: 100% !important;}
+}
+
+.full-img{
+    margin: 0 -20px;overflow: hidden;
+    img{width: auto !important;max-width: 100% !important;height: auto !important;}
+}

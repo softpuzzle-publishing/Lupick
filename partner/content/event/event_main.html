@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <!-- swiper css 모든 페이지에 들어가야 함 -->
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+    <!-- 에디터 -->
+    <script src="../../resources/plugins/ckeditor/ckeditor.js"></script>
+    <!-- swiper 모든 페이지에 들어가야 함 -->
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="top">
+                <h2 class="hello">안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+                <div class="latest">최근 업데이트 : 2020.08.07 17:49</div>
+            </div>
+
+            <div class="title-wrap justify-content-between">
+                <h1 class="title">Main Event</h1>
+                <a href="" class="edit" id="btn-edit"><b>Edit</b> <i class="icon-link-arr-bold"></i></a>
+                <div class="btn-group" style="display:none">
+                    <a href="" class="save" id="btn-save"><b>Save</b></a>
+                    <a href="" class="cancel" id="btn-cancel"><b>Cancel</b></a>
+                </div>
+            </div>
+
+            <div class="main-event">
+                <ul id="sortable">
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <span class="badge badge-dark">예약 이벤트</span> <span class="deadline">07:01:30 </span><i> 남음</i>
+                            </div>
+                            <p class="text-truncate-two">9명에게 포르쉐911을 FLEX 해버릴까봐💥</p>
+                        </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
+                    </li>
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <em>이벤트 달성률</em> <strong class="paint">96%</strong>
+                            </div>
+                            <p class="text-truncate-two">샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</p>
+                        </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
+                    </li>
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <span class="badge badge-dark">예약 이벤트</span> <span class="deadline">2일</span><i>남음</i>
+                            </div>
+                            <p class="text-truncate-two">방탄소년단 무대 보고 콘서트 티켓 받아가자</p>
+                        </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
+                    </li>
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <em>이벤트 달성률</em> <strong class="paint">96%</strong>
+                            </div>
+                            <p class="text-truncate-two">3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</p>
+                        </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
+                    </li>
+                    <li>
+                        <a href="" class="box">
+                            <div>
+                                <em>이벤트 달성률</em> <strong class="paint">96%</strong>
+                            </div>
+                            <p class="text-truncate-two">스타벅스에서 7천원 쓰고 10만원 받아가자💰</p>
+                        </a>
+                        <button class="del"><i class="icon-del"><span class="sr-only">이벤트 삭제</span></i></button>
+                    </li>
+                    <li class="item-disabled">
+                        <a href="#modal-event-add" data-toggle="modal" class="filebox">
+                            <label></label>
+                        </a>
+                    </li>
+                    <li class="item-disabled">
+                        <a href="#modal-event-add" data-toggle="modal" class="filebox">
+                            <label></label>
+                        </a>
+                    </li>
+                    <li class="item-disabled">
+                        <a href="#modal-event-add" data-toggle="modal" class="filebox">
+                            <label></label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="title-wrap">
+                <span class="title">Event</span><p class="title-desc">총 792개의 이벤트 중 현재 67개의 이벤트를 진행중이에요</p>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="찾고 싶은 이벤트가 있나요?">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="1" selected>전체 이벤트</option>
+                        <option value="2">진행중인 이벤트</option>
+                        <option value="3">대기중인 이벤트</option>
+                        <option value="3">마감된 이벤트</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="m-t-30">
+                <ul class="card-list">
+                    <!-- 진행중 -->
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb">
+                                <span class="bg"><img src="../../resources/images/@event_01.png" alt=""></span>
+                                <span class="label-event label-event-yellow">🎊 포인트 이벤트</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                    <div class="util">
+                                        <div class="icon">
+                                        	<i class="icon-heart"></i>
+                                        </div>
+                                        <span>1,234</span>
+                                    </div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="20">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">00:17:09:28</div>
+                                    <div class="percent">
+                                        <em>2자리 남았어요!</em> <span>98%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb">
+                                <span class="bg"><img src="../../resources/images/@event_01.png" alt=""></span>
+                                <span class="badge badge-gray">승인 대기</span>
+                                <span class="label-event label-event-dark">🎉 프리 이벤트</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">승인 대기 이벤트</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb">
+                                <span class="bg"><img src="../../resources/images/@event_01.png" alt=""></span>
+                                <span class="badge badge-gray">임시 저장</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">임시 저장 이벤트</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="finished">
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb">
+                                <span class="bg"><img src="../../resources/images/@event_01.png" alt=""></span>
+                                <span class="badge badge-warning">이벤트 성공</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="100">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">이벤트 성공 (종료)</div>
+                                    <div class="percent">
+                                        <span class="bold">100%</span>
+                                     </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="finished">
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb">
+                                <span class="bg"><img src="../../resources/images/@event_01.png" alt=""></span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                    <div class="util">
+                                        <div class="icon">
+                                            <i class="icon-bell"></i>
+                                        </div>
+                                        <span>1,234</span>
+                                    </div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="98">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">이벤트 실패</div>
+                                    <div class="percent">
+                                       <span>98%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                            <div class="thumb">
+                                <span class="bg"><img src="../../resources/images/@event_01.png" alt=""></span>
+                                <span class="badge badge-dark">예약 이벤트</span>
+                            </div>
+                            <div class="info">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="subject">9명에게 포르쉐911을 FLEX 해버릴까봐💥</div>
+                                </div>
+                                <div class="event-progress">
+                                    <div id="resumeProficiencies">
+                                        <div id="resumeProficienciesTop" class="resumeProficienciesTop1"></div>
+                                        <div id="resumeProficienciesBottom">
+                                            <div class="progress">
+                                                <div class="adobe progress-bar progress-bar-info"
+                                                    role="progressbar" style="width: 0%" data-percent="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="deadline">
+                                        <span>2020.08.20</span>
+                                        <span>10:00:00</span>
+                                    </div>
+                                    <div class="percent">
+                                        <span class="bold">100%</span>
+                                     </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            //카드 달성률
+            $('.adobe').each(function(){
+                var data = $(this).attr('data-percent') + '%';
+                $(this).css('width', data);
+            });
+
+            //Edit
+            $('#btn-edit').on('click',function(e){
+                e.preventDefault();
+                /* https://api.jqueryui.com/sortable/ */
+                $('html').addClass('is-editing');
+                $( "#sortable" ).sortable({
+                    cursor: "move",
+                    items: "li:not(.item-disabled)",
+                    placeholder: "box-placeholder",
+                    change: function( event, ui ) {
+                        console.log('change');
+                    }
+                });
+            });
+
+            //Save
+            $('#btn-save').on('click',function(e){
+                e.preventDefault();
+                /* https://api.jqueryui.com/sortable/ */
+                $('html').removeClass('is-editing');
+                $( "#sortable" ).sortable( "destroy" );
+            });
+
+            //Cancel
+            $('#btn-cancel').on('click',function(e){
+                e.preventDefault();
+                /* https://api.jqueryui.com/sortable/ */
+                $('html').removeClass('is-editing');
+                $( "#sortable" ).sortable( "destroy" );
+            });
+
+            //아이템 삭제
+            $('button.del').on('click',function(e){
+                $(this).closest('li').remove();
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

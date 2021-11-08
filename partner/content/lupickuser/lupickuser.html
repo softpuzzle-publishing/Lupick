@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Lupick User</h1>
+            </div>
+            <div class="row align-items-center m-b-30">
+                <div class="col">
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="찾고 싶은 유저가 있나요?" aria-label="Search">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="1" selected>전체 유저</option>
+                        <option value="2">대기중인 이벤트</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="1" selected>가입 순</option>
+                        <option value="2">대기중인 이벤트</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-dark btn-xl-65" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                </div>
+            </div>
+            <table class="table table-bordered table-center table-layout-auto">
+                <thead>
+                    <tr>
+                        <th scope="col">유저 이름</th>
+                        <th scope="col">이메일</th>
+                        <th scope="col">닉네임</th>
+                        <th scope="col">보유 포인트</th>
+                        <th scope="col">주문 건수</th>
+                        <th scope="col">회원 가입일</th>
+                        <th scope="col">최종 로그인</th>
+                        <th scope="col">연락처</th>
+                        <th scope="col">메일/SMS 발송</th>
+                        <th scope="col">회원관리</th>
+                        <th scope="col">정보 수정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-danger">Red</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이찬란</td>
+                        <td>brilliant512.92@gmail.com</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>1,000 p</td>
+                        <td>1건</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>010-2345-6789</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                            <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                        </td>
+                        <td><span class="badge badge-dark">Black</span></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="m-t-30">
+                <ul class="pagination">
+                    <li><a href="#"><i class="icon-pager-prev"></i></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#"><i class="icon-pager-next"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- modal : 유저 관리 -->
+    <div class="modal fade" id="modal-user" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-1400px" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">유저 관리</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="title-square-wrap pt-0">
+                        <p class="title-square"><span>회원 정보</span></p>
+                    </div>
+                    <table class="table table-bordered table-user">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">회원관리</th>
+                                <td colspan="3">
+                                    <div class="row align-items-center justify-content-between">
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-radio custom-control-inline mt-0 mb-0">
+                                                <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio11" value="radio11">
+                                                <label class="custom-control-label" for="radio11"><span class="badge badge-outline-gray">-</span></label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline mt-0 mb-0">
+                                                <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio12" value="radio12">
+                                                <label class="custom-control-label" for="radio12"><span class="badge badge-dark">Black</span></label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline mt-0 mb-0">
+                                                <input type="radio" class="custom-control-input" name="eventOpenDate" id="radio13" value="radio13">
+                                                <label class="custom-control-label" for="radio13"><span class="badge badge-danger">Red</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" style="float: right;" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user-quit">탈퇴처리</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">이름</th>
+                                <td> <input type="text" value="김지민" class="form-control w-250px h-30px">
+                                </td>
+                                <th class="text-center">닉네임</th>
+                                <td>
+                                    <span>지미</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">생년월일</th>
+                                <td> 1990.10.10 </td>
+                                <th class="text-center">성별</th>
+                                <td>
+                                    <span>선택안함</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">이메일</th>
+                                <td>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>hohoho@hohohogroup.com</span>
+                                        <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-send-email">메일 발송</button>
+                                    </div>
+                                </td>
+                                <th class="text-center">전화번호</th>
+                                <td>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>010-1234-5678</span>
+                                        <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-role="#modal-send-sms">SMS 발송</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">가입일</th>
+                                <td>2020.10.05</td>
+                                <th class="text-center">최종 접속일</th>
+                                <td>
+                                    <span>2020.10.06</span><span>20:15:01</span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th class="text-center">마케팅 동의</th>
+                                <td>거부 : 2020.10.05</td>
+                                <th class="text-center">포인트</th>
+                                <td>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>1000 p</span>
+                                        <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-payments">지급 / 차감</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>주문 내역</span></p>
+                    </div>
+                    <table class="table table-bordered table-center">
+                        <colgroup>
+                            <col style="width:205px">
+                            <col style="width:180px">
+                            <col>
+                            <col style="width:320px">
+                            <col style="width:140px">
+                            <col style="width:140px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">주문번호</th>
+                                <th scope="col">주문일시</th>
+                                <th scope="col">이벤트 명</th>
+                                <th scope="col">주문 상품</th>
+                                <th scope="col">주문 금액</th>
+                                <th scope="col">배송상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#modal-lupick-breakdown" data-toggle="modal">ORD20210216-0000001</a></td>
+                                <td>2020.08.20. 13:34:00</td>
+                                <td><div class="text-truncate">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴</div></td>
+                                <td><div class="text-truncate">미니 캐리어 테이블 (PLAIN) - 외 2건</div> </td>
+                                <td>114,000원</td>
+                                <td>상품준비중</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>문의 내역</span></p>
+                    </div>
+                    <table class="table table-bordered table-center table-layout-auto">
+                        <thead>
+                            <tr>
+                                <th scope="col">문의구분</th>
+                                <th scope="col">이벤트 명</th>
+                                <th scope="col">내용</th>
+                                <th scope="col">접수일</th>
+                                <th scope="col">처리 상태</th>
+                                <th scope="col">처리일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>이벤트 문의</td>
+                                <td>9명에게 포르쉐911을 FLEX 해버릴까봐💥</td>
+                                <td><a href="#myModal1" data-toggle="modal">이벤트 내용을 더 자세히 알고싶어요.</a></td>
+                                <td>2020.08.20 12:34:21</td>
+                                <td>답변대기</td>
+                                <td>-</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">수정하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal: 포인트 지급 차감 -->
+    <div class="modal fade" id="modal-payments" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-820px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">포인트 지급 / 차감</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-center table-form">
+                        <colgroup>
+                            <col style="width:130px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>지급/차감 여부</th>
+                                <td class="text-left p-25">
+                                    <div class="custom-control custom-radio custom-control-inline mt-0 mb-0">
+                                        <input type="radio" class="custom-control-input" name="paymentType" id="payment-1" value="payment-1" checked="checked">
+                                        <label class="custom-control-label" for="payment-1">지급 (+)</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline mt-0 mb-0">
+                                        <input type="radio" class="custom-control-input" name="paymentType" id="deduction-1" value="deduction-1">
+                                        <label class="custom-control-label" for="deduction-1">차감 (-)</label>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>금액설정</th>
+                                <td class="text-left">
+                                    <div class="d-flex align-items-center">
+                                        <div class="operator">+</div>
+                                        <input type="text" class="form-control w-200px" placeholder="포인트를 입력해주세요.">
+                                        <span class="m-l-10">P</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사유</th>
+                                <td class="text-left">
+                                    <select class="select-md">
+                                        <option value="" disabled selected>포인트 지급/차감 사유 선택</option>
+                                        <option value="1">상품 구매 시 사용</option>
+                                        <option value="2">포인트 환원 (취소/환불)</option>
+                                        <option value="2">루피커 선정 포인트 지급</option>
+                                        <option value="2">기타</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">처리하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 메일 발송 -->
+    <div class="modal fade" id="modal-send-email" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-820px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">개별/전체 메일 발송</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>발송 대상</th>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-1" value="send-radio-1">
+                                        <label class="custom-control-label" for="send-radio-1">선택 유저</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-2" value="send-radio-2">
+                                        <label class="custom-control-label" for="send-radio-2">수신 동의 유저</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="eventOpenDate" id="send-radio-3" value="send-radio-3">
+                                        <label class="custom-control-label" for="send-radio-3">전체 유저</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>제목</th>
+                                <td> <input type="text" class="form-control w-610px"></td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <textarea class="form-control d-block w-610px h-495px s-font" maxlength="40" placeholder="내용을 입력해 주세요." data-byte-target="#byte-check1"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">메일 발송하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 주문내역 -->
+    <div class="modal fade" id="modal-lupick-breakdown" tabindex="-1" role="dialog" data-overlap="true">
+    <div class="modal-dialog modal-dialog-centered w-820px">
+        <div class="modal-content">
+            <div class="modal-header gray-bg">
+                <div class="modal-title">루픽 문의</div>
+                <ul class="qna-summary">
+                    <li><span>주문 번호</span><p>시스템 문의</p></li>
+                    <li><span>주문자</span><p>루피</p></li>
+                    <li><span>주문 일시</span><p>2020.09.07 15:41</p></li>
+                    <li><span>주문 상품</span><p class="text-truncate">이화동 벽화마을 벽화그리기 이화동 벽화마을 벽화그리기</p>-외 2건</li>
+                    <li><span>이벤트 명</span><p class="text-truncate">거대벽화 그리기에 참여하는 거대벽화 그리기에 참여하는</p></li>
+                    <li><span>주문 금액</span><p>42,850원</p></li>
+                </ul>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <div class="modal-body m-t-30">
+                <table class="table table-bordered table-form">
+                    <colgroup>
+                        <col width="120px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>아이템 정보</th>
+                            <td>
+                                <ul class="qna-summary desc">
+                                    <li><span>이화동 벽화마을 벽화그리기 체험권 (성인) / 1개 / 20,000원</span></li>
+                                    <li><span>이화동 벽화마을 벽화그리기 체험권 (소인) / 1개 / 20,000원</span></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-form">
+                    <colgroup>
+                        <col width="120px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>배송 정보</th>
+                            <td>
+                                <ul class="qna-summary desc">
+                                    <li><span class="gray">수령인</span> <p>이정후</p></li>
+                                    <li><span class="gray">연락처</span><p>010-1234-5678</p></li>
+                                    <li><span class="gray">배송지</span> <p>04720
+                                        서울시 강남구 도산대로 54길 32
+                                        도산아파트 101동 202호</p></li>
+                                    <li><span class="gray">배송 메모</span><p>(직접입력) 배송 시 꼭 연락주시고, 벨 누르지 말고 문 앞에서 노크해주세요</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-form">
+                    <colgroup>
+                        <col width="120px">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>결제 정보</th>
+                            <td>
+                                <ul class="qna-summary desc">
+                                    <li><span class="gray">결제 방법</span> <p>네이버페이</p></li>
+                                    <li><span class="gray">결제 일시</span><p>2020-08-21 13:33:21</p></li>
+                                    <li><span class="gray">결제 금액</span> <p>2020-08-21 13:33:21</p></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[name=paymentType]').on('change',function(){
+                if($('[name=paymentType]:checked').val() == 'payment-1'){
+                    $('.operator').text('+');
+                }else if($('[name=paymentType]:checked').val() == 'deduction-1'){
+                    $('.operator').text('-');
+                }
+            });
+            setTimeout(function(){
+                $('div[id^="myModal"]').each(function(){
+                    $(this).attr('data-overlap','true');
+                });
+            }, 1000)
+        });
+    </script>
+
+</body>
+
+</html>

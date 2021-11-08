@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+    <script src="https://beready.co.kr/wp-content/themes/beready/js/jt-ball.js?ver=1.2.79"></script>
+</head>
+
+<body class="body-center-content"> <!-- 로그인, 회원가입, 아이디/비번 찾기 -->
+
+    <div class="bg-balls">
+        <canvas id="stage" width="400" height="400"></canvas>
+    </div>
+    <div class="login-wrap">
+        <div class="login-logo">
+            <div class="logo"><span class="sr-only">Lupick.</span></div>
+            <p class="copyright">
+                <b>Lupick Admin Page</b>
+                <span>© 2020 LUPICK. ALL RIGHTS RESERVED.</span>
+            </p>
+        </div>
+        <div class="login-box">
+            <div class="info-form">
+                <div class="info-form-top m-b-40">
+                    <h1>계정 찾기</h1>
+                    <a href="find_id.html" class="paint lg-font">아이디 찾기</a>
+                    <a href="find_pw.html" class="lg-font m-l-20">비밀번호 찾기</a>
+                </div>
+
+                <!-- //아이디 찾기 -->
+                <div id="contents1">
+                    <div class="info-form-content m-b-40">
+                        <div class="info-list">
+                            <span>아이디</span>
+                            <input class="input-id  form-control" type="email" value="" placeholder="아이디를 입력해주세요.">
+                        </div>
+                        <div class="info-list">
+                            <div class="info-list-header">
+                                <span>휴대폰 번호</span> <span class="error-msg">! 본인 인증이 필요합니다</span>
+                            </div>
+                            <div class="certification">
+                                <input class="input-phone form-control" type="tel" value="" placeholder="- 없이 입력해주세요.">
+                                <button type="button" class="btn btn-outline-dark btn-md">인증번호 발송</button>
+                            </div>
+
+                            <div class="certification-num">
+                                <input class="input-num form-control" type="tel" value="" placeholder="인증번호를 입력해주세요">
+                                <span class="timer"></span>
+                                <span class="error-msg"><i class="fas fa-times"></i> 인증 실패! 인증 번호를 확인하거나 다시 시도해주세요</span>
+                                <span class="success-msg"><i class="fas fa-check"></i> 인증 완료</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="find-btn btn btn-dark btn-xl btn-block" disabled>아이디 찾기</button>
+                </div>
+
+                <!-- //아이디 찾기 완료 -->
+                <div style="display:none" id="contents2">
+                    <div class="info-form-content m-b-40">
+                        <p class="">고객님의 정보와 일치하는 아이디 입니다.</p>
+                        <p class="find-id m-font bold m-t-40">hohoho_tido</p>
+                    </div>
+                    <a href="login.html" class="btn btn-dark btn-xl btn-block">로그인 하기</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(".form-control").on("change keyup paste",function () {
+            if(!$(this).val() == ""){
+                $(this).addClass('active');
+            }else{
+                $(this).removeClass('active');
+            }
+
+            var id = $('.input-id').val();
+            var phone = $('.input-phone').val();
+            var num = $('.input-num').val();
+
+            if (!id == "" && !phone == "" && !num== "") {
+                $('.find-btn').prop('disabled',false);
+            }else{
+                $('.find-btn').prop('disabled',true);
+            }
+        });
+
+        $('.find-btn').on('click',function(){
+            $('#contents1').hide();
+            $('#contents2').show();
+        });
+    </script>
+</body>
+
+</html>

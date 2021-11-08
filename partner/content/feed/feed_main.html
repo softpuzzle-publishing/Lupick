@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+    <!-- 에디터 -->
+    <script src="../../resources/plugins/ckeditor/ckeditor.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="top">
+                <h2 class="hello">안녕하세요 <span>TIDO</span>님 :) 오늘도 행운 가득한 하루를 만들어봐요</h2>
+                <div class="latest">최근 업데이트 : 2020.08.07 17:49</div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center m-b-25">
+                <nav id="nav">
+                    <div class="nav" id="nav-tab" role="tablist">
+                        <a class="nav-link active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab">전체 피드</a>
+                        <a class="nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab">이벤트 후기</a>
+                        <a class="nav-link" id="nav-story-tab" data-toggle="tab" href="#nav-story" role="tab">루픽 스토리</a>
+                        <a class="nav-link" id="nav-exhibition-tab" data-toggle="tab" href="#nav-exhibition" role="tab">기획전</a>
+                    </div>
+                </nav>
+                <p class="feed-count">총 792개의 피드 중 현재 <strong>67개</strong> 피드의 메이커 입니다.</p>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="찾고 싶은 피드가 있나요?">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="" selected>전체 피드</option>
+                        <option value="1">이벤트 후기</option>
+                        <option value="2">루픽 스토리</option>
+                        <option value="3">기획전</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-dark btn-xl btn-feed-write" data-toggle="modal" data-role="button" data-target="#edit-feed">+ 피드 작성하기</button>
+                </div>
+            </div>
+
+            <div class="tab-content p-0" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+                    <div class="m-t-30">
+                        <ul class="card-list feed">
+                            <li>
+                                <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb">
+                                        <span class="bg"><img src="../../resources/images/@event_01.png" alt="" onload="setDirection(this)"></span>
+                                        <span class="badge badge-warning">루픽 스토리</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge badge-gray">임시 저장</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb">
+                                        <span class="bg"><img src="../../resources/images/@event_01.png" alt="" onload="setDirection(this)"></span>
+                                        <span class="badge badge-warning">이벤트 후기</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="deadline">조회수 3.1만∙19시간 전</div>
+                                            <div class="nickname">RANI</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb">
+                                        <span class="bg"><img src="../../resources/images/@event_01.png" alt="" onload="setDirection(this)"></span>
+                                        <span class="badge badge-warning">이벤트 후기</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge badge-gray">승인 대기</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb">
+                                        <span class="bg"><img src="../../resources/images/@event_01.png" alt="" onload="setDirection(this)"></span>
+                                        <span class="badge badge-warning">루픽 스토리</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="badge badge-gray">임시 저장</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#feed-management" class="item" data-toggle="modal" data-role="button">
+                                    <div class="thumb">
+                                        <span class="bg"><img src="../../resources/images/@event_01.png" alt="" onload="setDirection(this)"></span>
+                                        <span class="badge badge-warning">이벤트 후기</span>
+                                    </div>
+                                    <div class="info">
+                                        <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="deadline">조회수 3.1만∙19시간 전</div>
+                                            <div class="nickname">RANI</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+
+                </div>
+                <div class="tab-pane fade" id="nav-story" role="tabpanel" aria-labelledby="nav-story-tab">
+
+                </div>
+                <div class="tab-pane fade" id="nav-exhibition" role="tabpanel" aria-labelledby="nav-exhibition-tab">
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal : 피드 작성 -->
+    <div class="modal modal-size-fix" id="edit-feed" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header-top m-0">
+                        <h3>피드 작성</h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="info-event" id="div1">
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>피드 작성</span></p>
+                        </div>
+                        <table class="table table-bordered table-form">
+                            <colgroup>
+                                <col width="246px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>피드 종류</th>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="feedType" id="feed-type1" value="review" checked>
+                                            <label class="custom-control-label" for="feed-type1"><span class="paint s-font">이벤트 후기</span></label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="feedType" id="feed-type2" value="story">
+                                            <label class="custom-control-label" for="feed-type2"><span class="paint s-font">루픽 스토리</span></label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="feedType" id="feed-type3" value="planning">
+                                            <label class="custom-control-label" for="feed-type3"><span class="paint s-font">기획전</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- 이벤트 후기 -->
+                            <tbody data-type="review">
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <input type="file" id="input-img">
+                                                <label for="input-img"><img src="" alt="" id="img"></label>
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 500KB 이하, 파일 형식 JPG, PNG</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>피드 타이틀</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50" placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check-feed-title"></textarea>
+                                            <span class="example-text m-l-15">(<span id="byte-check-feed-title">0</span>/50)</span>
+                                            <span class="example-text m-l-20">* 피드 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>피드 상세페이지</th>
+                                    <td>
+                                        <textarea name="feedEditor" id="feedtEditor" class="form-control w-100p h-570px" placeholder="피드 상세 페이지를 구성해 주세요.">
+                                            <div class="wrapper" style="max-width:375px;">
+                                                <div class="wrap feed">
+                                                    <div class="container-wrap feed">
+                                                        <div class="item article">
+                                                            <div class="content">
+                                                                <img src="../../resources/images/templete-default-feed.png" alt="" width="100%" height="207px">
+                                                                <div class="desc">
+                                                                    <div class="text">
+                                                                        <p class="font-14">
+                                                                            루픽의 이벤트 후기, 다채로운 이벤트 기획전, 그리고 루픽만의 이야기를 담은 루픽 스토리까지. 루픽에서 일어나는 모든 활동과 즐거움을 글로 소통해봐요.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="content">
+                                                                <img src="../../resources/images/templete-default-feed.png" alt="" width="100%" height="207px">
+                                                                <div class="desc">
+                                                                    <div class="text">
+                                                                        <p class="font-14">
+                                                                            루픽의 이벤트 후기, 다채로운 이벤트 기획전, 그리고 루픽만의 이야기를 담은 루픽 스토리까지. 루픽에서 일어나는 모든 활동과 즐거움을 글로 소통해봐요.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="content">
+                                                                <img src="../../resources/images/templete-default-feed.png" alt="" width="100%" height="207px">
+                                                                <div class="desc">
+                                                                    <div class="text">
+                                                                        <p class="font-14">
+                                                                            루픽의 이벤트 후기, 다채로운 이벤트 기획전, 그리고 루픽만의 이야기를 담은 루픽 스토리까지. 루픽에서 일어나는 모든 활동과 즐거움을 글로 소통해봐요.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이벤트 링크</th>
+                                    <td>
+                                        <div class="select-file d-flex align-items-center">
+                                            <button class="btn btn-outline-dark btn-md" data-toggle="modal" data-role="button" data-target="#modal-select-event">이벤트 선택</button>
+                                            <div class="example-text m-l-15">
+                                                <p>* 해당 이벤트 후기의 관련 이벤트를 선택해 주세요. (1개)</p>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="files m-t-20">
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                        </div> -->
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- 루픽 스토리 -->
+                            <tbody data-type="story" style="display:none">
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <input type="file" id="input-img">
+                                                <label for="input-img"><img src="" alt="" id="img"></label>
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 500KB 이하, 파일 형식 JPG, PNG</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>피드 타이틀</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50" placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check-feed-title"></textarea>
+                                            <span class="example-text m-l-15">(<span id="byte-check-feed-title">0</span>/50)</span>
+                                            <span class="example-text m-l-20">* 피드 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>피드 상세페이지</th>
+                                    <td>
+                                        <textarea class="form-control w-100p h-570px" placeholder="피드 상세 페이지를 구성해 주세요."></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                            <!-- 기획전 -->
+                            <tbody data-type="planning" style="display:none">
+                                <tr>
+                                    <th>기획전 기간</th>
+                                    <td>
+                                        <input type="text" value="30" class="form-control text-center w-100px">
+                                        <span class="m-l-15">일</span>
+                                        <span class="example-text m-l-15">* 평균 기획전 권장 기간은 30일 입니다. 특별한 경우 마스터와 협의해 주세요.
+                                            * 해당 기간이 지나면 기획전은 자동으로 종료되어 피드에 노출되지 않습니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <input type="file" id="input-img">
+                                                <label for="input-img"><img src="" alt="" id="img"></label>
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기획전 타이틀</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <input type="text" class="form-control w-772px h-40px" maxlength="40" placeholder="기획전 제목을 입력해주세요." data-byte-target="#byte-check-event-title">
+                                            <span class="example-text m-l-15">(<span id="byte-check-event-title">0</span>/40)</span>
+                                            <span class="example-text m-l-20">* 기획전 타이틀은 최소 25자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기획전 내용</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50" placeholder="기획전 내용을 입력해 주세요." data-byte-target="#byte-check-event-cont"></textarea>
+                                            <span class="example-text m-l-15">(<span id="byte-check-event-cont">0</span>/85)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>배경 컬러</th>
+                                    <td>
+                                        <div class="input-group colorpicker-group">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                                            </span>
+                                            <input type="text" class="form-control w-110px text-center m-l-15" value="#ffffff">
+                                            <span class="example-text m-l-15">* 기획전 배경 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>텍스트 컬러</th>
+                                    <td>
+                                        <div class="input-group colorpicker-group">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                                            </span>
+                                            <input type="text" class="form-control w-110px text-center m-l-15" value="#ffffff">
+                                            <span class="example-text m-l-15">* 기획전 텍스트 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이벤트 링크</th>
+                                    <td>
+                                        <div class="select-file d-flex align-items-center">
+                                            <button class="btn btn-outline-dark btn-md" data-toggle="modal" data-role="button" data-target="#modal-select-event">이벤트 선택</button>
+                                            <div class="example-text m-l-15">
+                                                <p>* 기획전에 엮고 싶은 이벤트를 선택해 주세요. (최대 15개)</p>
+                                            </div>
+                                        </div>
+                                        <div class="files m-t-20">
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                            <div class="item">
+                                                <i class="icon-file"></i>
+                                                <div class="status">
+                                                    <div class="name">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지 </div>
+                                                </div>
+                                                <a href="">
+                                                    <i class="icon-x"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller"><strong>앱 프리뷰</strong></button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-darkgray btn-lg" data-event="next-step">임시 저장</button>
+                        <button type="button" class="btn btn-dark btn-lg" data-event="next-step">승인 요청</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal : 피드 관리 -->
+    <div class="modal modal-size-fix" id="feed-management" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header-top m-0">
+                        <h3>피드 관리</h3>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-b-25">
+                    <!-- //피드작성 /이벤트 후기-->
+                    <div class="info-event" id="div1">
+                        <div class="title-square-wrap">
+                            <p class="title-square"><span>피드 관리</span></p>
+                        </div>
+                        <table class="table table-bordered table-form">
+                            <colgroup>
+                                <col width="246px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>피드 종류</th>
+                                    <td>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-4" value="feed-select-4" selected>
+                                            <label class="custom-control-label" for="feed-select-4"><span class="paint s-font">이벤트 후기</span></label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-5" value="feed-select-5">
+                                            <label class="custom-control-label" for="feed-select-5"><span class="paint s-font">루픽 스토리</span></label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" name="eventOpenDate" id="feed-select-6" value="feed-select-6">
+                                            <label class="custom-control-label" for="feed-select-6"><span class="paint s-font">기획전</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <input type="file" id="input-img">
+                                                <label for="input-img"><img src="../../resources/images/@picture.png" alt="" id="img"></label>
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 동영상 : 16:9 비율 (해상도:..)</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>피드 타이틀</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50" placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check-feed-title2"></textarea>
+                                            <span class="example-text m-l-15">(<span id="byte-check-feed-title2">0</span>/50)</span>
+                                            <span class="example-text m-l-20">* 피드 타이틀은 최소 20자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>피드 상세페이지</th>
+                                    <td>
+                                        <textarea class="form-control w-100p h-570px" placeholder="피드 상세 페이지를 구성해 주세요."></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <!-- //기획전 -->
+                            <!-- <tbody class="radio-select" id="radio-select-3">
+                                <tr>
+                                    <th>기획전 기간</th>
+                                    <td>
+                                        <input type="text" value="30" class="form-control text-center w-100px">
+                                        <span class="m-l-15">일</span>
+                                        <span class="example-text m-l-15">* 평균 기획전 권장 기간은 30일 입니다. 특별한 경우 마스터와 협의해 주세요.
+                                            * 해당 기간이 지나면 기획전은 자동으로 종료되어 피드에 노출되지 않습니다.</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>메인 이미지 등록</th>
+                                    <td>
+                                        <div class="upload-img d-flex align-items-center">
+                                            <div class="filebox">
+                                                <input type="file" id="input-img">
+                                                <label for="input-img"><img src="" alt="" id="img"></label>
+                                            </div>
+                                            <div class="example-text ml-3">
+                                                <p>* 이미지 사이즈 : 가로 1000px * 세로 1000px</p>
+                                                <p>* 용량 : 10MB 이하, 파일 형식 JPG, PNG </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기획전 타이틀</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50"
+                                                placeholder="피드 제목을 입력해주세요." data-byte-target="#byte-check-event-title3"></textarea>
+                                            <span class="example-text m-l-15">(<span
+                                                    id="byte-check-event-title3">0</span>/50)</span>
+                                            <span class="example-text m-l-20">* 기획전 타이틀은 최소 25자 이상으로 작성해주세요.</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>기획전 내용</th>
+                                    <td>
+                                        <div class="d-flex align-items-end">
+                                            <textarea class="form-control w-772px" maxlength="50"
+                                                placeholder="기획전 내용을 입력해 주세요."
+                                                data-byte-target="#byte-check-event-cont3"></textarea>
+                                            <span class="example-text m-l-15">(<span
+                                                    id="byte-check-event-cont3">0</span>/85)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>배경 컬러</th>
+                                    <td>
+                                        <div class="d-flex">
+                                            <input id="demo-input" type="text" value="rgb(255, 128, 0)" />
+                                            <input type="text" class="form-control">
+                                            <span class="example-text m-l-15">* 기획전 배경 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>텍스트 컬러</th>
+                                    <td>
+                                        <div class="d-flex">
+                                            <input id="demo-input" type="text" value="rgb(255, 128, 0)" />
+                                            <input type="text" class="form-control">
+                                            <span class="example-text m-l-15">* 기획전 텍스트 컬러를 입력해주세요 (HEX값)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody> -->
+                        </table>
+                        <!-- 이벤트 후기 -->
+                        <!-- <table class="table table-bordered table-form radid-select" id="radio-select-1">
+                            <colgroup>
+                                <col width="246px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>이벤트 링크</th>
+                                    <td>
+                                        <div class="select-file d-flex align-items-center">
+                                            <div class="select-filebox">
+                                                <label for="input-img">
+                                                    <p>파일 선택 </p>
+                                                </label>
+                                                <input type="file" id="input-img">
+                                            </div>
+                                            <div class="example-text m-l-15">
+                                                <p>* 해당 이벤트 후기의 관련 이벤트를 선택해 주세요. (1개)</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+
+                    </div>
+
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer-left d-flex">
+                        <button type="button" class="btn btn-outline-dark btn-lg text-smaller" data-toggle="modal" data-target="#modal-app-exhibition"><strong>앱 프리뷰</strong></button>
+                    </div>
+
+                    <div class="modal-footer-right d-flex">
+                        <button type="button" class="btn btn-dark btn-lg">수정 재요청</button>
+                        <button type="button" class="btn btn-darkgray btn-lg" disabled>승인 대기중</button>
+                        <button type="button" class="btn btn-dark btn-lg" >수정 요청</button>
+                        <button type="button" class="btn btn-darkgray btn-lg">임시 저장</button>
+                        <button type="button" class="btn btn-dark btn-lg">피드 승인</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 이벤트 선택 -->
+    <div class="modal fade" id="modal-select-event" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+        <div class="modal-dialog modal-dialog-centered w-600px">
+            <div class="modal-content h-650px">
+                <div class="modal-header">
+                    <div class="modal-title">링크할 이벤트를 선택해 주세요.</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="기획전에 링크하고 싶은 이벤트가 있나요?">
+                        <i></i>
+                    </div>
+                    <div class="select-event-list multiple">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                    <span class="badge badge-dark">예약 이벤트</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>센세이셔널한 아홉소년들과 90:9 저녁 만찬🥂</span>
+                                    <span class="badge badge-dark">예약 이벤트</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>스타벅스에서 7천원 쓰고 10만원 받아가자💰</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="text-center m-t-30 btn-multiple-ok">
+                            <button type="button" class="btn btn-dark btn-lg">선택완료</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="../../resources/plugins/bootstrap-colorpicker/bootstrap-colorpicker.css">
+    <script src="../../resources/plugins/bootstrap-colorpicker/bootstrap-colorpicker.js"></script>
+    <script src="../../resources/js/common.js"></script>
+    <script>
+         CKEDITOR.replace('feedEditor', {
+            height: 500,
+            contentsCss: '../../resources/css/style.css'
+        });
+
+        $(document).ready(function () {
+            $('[name=feedType]').on('change',function(){
+                console.log($('[name=feedType]:checked').val());
+                var t = $('[name=feedType]:checked').val();
+                $('[data-type]').hide();
+                $('[data-type=' + t + ']').show();
+            });
+
+            $('.select-event-list a').on('click',function(e){
+                var $item = $(this);
+                if($item.closest('.select-event-list').hasClass('multiple')){
+                    e.preventDefault();
+                    $item.toggleClass('active');
+                }
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

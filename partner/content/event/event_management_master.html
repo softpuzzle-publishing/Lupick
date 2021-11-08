@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Theme Tag</h1>
+            </div>
+            <div class="row">
+                <table class="table table-bordered table-center">
+                    <colgroup>
+                        <col>
+                        <col width="566px">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">태그 분류</th>
+                            <th scope="col">이벤트 주제 태그</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">등록자</th>
+                            <th scope="col">수정</th>
+                            <th scope="col">삭제</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>스페셜 태그</td>
+                            <td><span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span></td>
+                            <td>2020.12.31</td>
+                            <td>TIDO</td>
+                            <td><button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-subject-modify">수정</button></td>
+                            <td><button type="button" class="btn btn-outline-dark btn-sm">삭제</button></td>
+                        </tr>
+                        <tr>
+                            <td>일반 태그</td>
+                            <td><span class="badge badge-dark gilroy">LUPICK SPECIAL</span></td>
+                            <td>2020.12.31</td>
+                            <td>TIDO</td>
+                            <td><button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-subject-modify">수정</button></td>
+                            <td><button type="button" class="btn btn-outline-dark btn-sm">삭제</button></td>
+                        </tr>
+                        <tr>
+                            <td>일반 태그</td>
+                            <td><span class="badge badge-dark gilroy">LOWEST PRICE</span></td>
+                            <td>2020.12.31</td>
+                            <td>TIDO</td>
+                            <td><button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-subject-modify">수정</button></td>
+                            <td><button type="button" class="btn btn-outline-dark btn-sm">삭제</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex align-items-center justify-content-center m-t-15">
+                <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#modal-subject-create">주제태그 생성</button>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+    <!-- modal : 주제태그 생성  -->
+    <div class="modal fade" id="modal-subject-create" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-820px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">주제 태그 생성</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>태그 종류</th>
+                                <td>
+                                    <div>
+                                        <select class="select-md">
+                                            <option value="" disabled selected>스페셜 태그(Yellow)</option>
+                                            <option value="1">스페셜 태그(Blue)</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주제 태그</th>
+                                <td>
+                                    <div class="d-flex align-items-center m-t-10">
+                                        <input type="text" class="form-control w-300px" maxlength="15" data-byte-target="#byte-check2">
+                                        <span class="m-l-15" id="byte-check2">0</span><span>/15</span>
+                                        <span class="example-text m-l-20">* 영문 대문자로만 입력해주세요.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">등록하기</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+     <!-- modal : 주제태그 수정  -->
+     <div class="modal fade" id="modal-subject-modify" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-820px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">주제 태그 수정</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>태그 종류</th>
+                                <td>
+                                    <div>
+                                        <select class="select-md">
+                                            <option value="" disabled selected>스페셜 태그(Yellow)</option>
+                                            <option value="1">스페셜 태그(Blue)</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주제 태그</th>
+                                <td>
+                                    <div class="d-flex align-items-center m-t-10">
+                                        <input type="text" class="form-control w-300px" maxlength="15" data-byte-target="#byte-check2">
+                                        <span class="m-l-15" id="byte-check2">0</span><span>/15</span>
+                                        <span class="example-text m-l-20">* 영문 대문자로만 입력해주세요.</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">수정하기</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../resources/js/common.js"></script>
+
+</body>
+
+</html>

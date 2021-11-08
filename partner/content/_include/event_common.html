@@ -1,0 +1,1123 @@
+<!-- modal : 직접/자동 투표자 리스트 전체보기 -->
+<div class="modal fade" id="modal-voter-list" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <div class="title-square-wrap d-flex align-items-center justify-content-between pt-0">
+                    <p class="title-square"><span>직접||자동 투표자 리스트</span></p>
+                    <div class="form-select">
+                        <select class="select-sm">
+                            <option value="" selected>투표자 가나다 순</option>
+                            <option value="1">고유번호 순</option>
+                            <option value="1">투표번호 순</option>
+                            <option value="1">득표수 순</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered mb-0">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">투표자</th>
+                            <th scope="col" class="text-center">고유번호</th>
+                            <th scope="col" class="text-center">투표번호</th>
+                            <th scope="col" class="text-center">득표수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">오리</td>
+                            <td class="text-center">91</td>
+                            <td class="text-center">777</td>
+                            <td class="text-center">30</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">후디</td>
+                            <td class="text-center">1009</td>
+                            <td class="text-center">1</td>
+                            <td class="text-center">19</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">메이</td>
+                            <td class="text-center">7</td>
+                            <td class="text-center">1000</td>
+                            <td class="text-center">3</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">티도</td>
+                            <td class="text-center">9999</td>
+                            <td class="text-center">10</td>
+                            <td class="text-center">3</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">호빵이</td>
+                            <td class="text-center">1000</td>
+                            <td class="text-center">7777</td>
+                            <td class="text-center">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal : 루피커 리스트 전체보기 -->
+<div class="modal fade" id="modal-lupicker-list" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <div class="title-square-wrap d-flex align-items-center justify-content-between pt-0">
+                    <p class="title-square"><span>루피커 리스트</span></p>
+                    <div class="form-select">
+                        <select class="select-sm">
+                            <option value="" selected>루피커 가나다 순</option>
+                            <option value="1">고유번호 순</option>
+                            <option value="1">득표수 순</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered mb-0">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">루피커</th>
+                            <th scope="col" class="text-center">고유번호</th>
+                            <th scope="col" class="text-center">득표수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">오리</td>
+                            <td class="text-center">777</td>
+                            <td class="text-center">30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal : 메인 이벤트 선택 -->
+<div class="modal fade" id="modal-event-add" tabindex="-1" role="dialog"  data-overlap="true">
+    <div class="modal-dialog modal-dialog-centered w-600px">
+        <div class="modal-content h-650px">
+            <div class="modal-header">
+                <div class="modal-title">링크할 이벤트를 선택해 주세요.</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="item-search d-flex align-items-center">
+                    <input class="form-control w-100" type="text" placeholder="기획전에 링크하고 싶은 이벤트가 있나요?">
+                    <i></i>
+                </div>
+                <div class="select-event-list">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>9명에게 포르쉐911을 FLEX 해버릴까봐💥</span>
+                                <span class="badge badge-dark">예약 이벤트</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>샤넬 매장에서 1시간 동안 1억 쓸 수 있는 사람?💸</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>3CE 2019 NEW PALETTE로 이사배가 메이크업 해준대</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>센세이셔널한 아홉소년들과 90:9 저녁 만찬🥂</span>
+                                <span class="badge badge-dark">예약 이벤트</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>스타벅스에서 7천원 쓰고 10만원 받아가자💰</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal : 마진계산기 -->
+<div class="modal fade modal-calculator" id="modal-calculator" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-dialog-centered w-1000px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title gilroy">Lupick Calculator <i class="icon-finance"></i></div>
+            </div>
+            <div class="modal-body">
+                <div class="calculator box">
+                    <ul class="list p-r-50">
+                        <li>
+                            <label>판매가</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="50,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">원</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>매입가</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="30,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">원</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>모집수</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="10,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">개</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>럭키템</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="100,000,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">원</span>
+                                </div>
+                            </div>
+                            <div class="luckytem">
+                                <ol>
+                                    <li class="first"><span>1위</span><strong>70,000,000<i>원</i></strong></li>
+                                    <li><span>2위</span><strong>20,000,000<i>원</i></strong></li>
+                                    <li><span>3위</span><strong>6,000,000<i>원</i></strong></li>
+                                    <li><span>4위</span><strong>4,000,000<i>원</i></strong></li>
+                                    <li><span>5위</span><strong>0<i>원</i></strong></li>
+                                    <li><span>6위</span><strong>0<i>원</i></strong></li>
+                                    <li><span>7위</span><strong>0<i>원</i></strong></li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list p-l-50">
+                        <li>
+                            <label>총 매출</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="500,000,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">원</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>판매 수익</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="200,000,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">원</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>판매 마진율</label>
+                            <div class="data">
+                                <strong>40<i>%</i></strong>
+                                <p class="text-danger">* 20% 이상을 권장합니다.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <label>제세공과금</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="100,000,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">원</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>운영비</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="100,000,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">원</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>루픽 수수료</label>
+                            <div class="input-group black">
+                                <input type="text" class="form-control" value="90,000,000">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">원</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>루픽 마진율</label>
+                            <div class="data">
+                                <strong class="paint">45<i>%</i></strong>
+                                <p class="text-danger">* 10% 이상을 권장합니다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p class="footnote">
+                    * 입력된 값에 따라 자동으로 계산됩니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal : 앱 프리뷰 -->
+<div class="modal fade modal-app-preview" id="modal-app-preview" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-418px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="javascrpt:;" class="app-preview-close" data-dismiss="modal"><span class="sr-only">레이어 닫기</span></a>
+            </div>
+            <div class="modal-body">
+                <div class="wrap detail">
+                    <div class="close" onclick="closeBtn()"></div>
+                    <div class="detail-img" style="background-image:url('../../resources/images/@event_01.png')">
+                        <span class="label-event label-event-yellow">🎊포인트 이벤트</span>
+                        <span class="label-event label-event-dark">🎉 프리 이벤트</span>
+                    </div>
+                    <div class="container-wrap">
+                        <div class="component"> <!-- 이벤트 실패 일때 .fail 추가 -->
+                            <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
+                            <div class="price">
+                                <div class="row justify-content-between">
+                                    <div class="col-auto">
+                                        <div class="d-flex align-items-center">
+                                            <i class="icon-point"></i>
+                                            <div class="font-22 bold">57,000원</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="sale paint font-18 bold">88%</span>
+                                        <span class="sale paint paint-muted font-18 bold">이벤트 실패</span>
+                                        <span class="font-14 bold">참여중</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress m-b-15">
+                                <div class="adobe progress-bar progress-bar-info" role="progressbar" style="width: 88%" data-percent="88">
+                                </div>
+                            </div>
+                            <div class="m-b-40">
+                                <span class="badge badge-outline-dark gilroy mb-0">LUPICK COLLAB</span>
+                                <span class="badge badge-outline-dark-primary gilroy mb-0">LUPICK SPECIAL</span>
+                            </div>
+                        </div>
+
+                        <div class="event-deadline m-b-35">
+                            <div class="tit"><i class="icon-clock"></i>남은 시간</div>
+                            <div>
+                                <strong class="day">4일</strong>
+                                <strong class="time">22:08:17</strong>
+                            </div>
+                            <div class="period"><b>이벤트 기간</b> <span>2021.03.25 오후 12시 ~ 2021.03.31 오후 12시</span></div>
+                        </div>
+
+                        <div class="product-info m-b-45">
+                            <div class="row row-0">
+                                <div class="col">
+                                    <div class="ball-text">
+                                        <div class="ball">일반상품</div>
+                                        <div class="text">구매하고</div>
+                                    </div>
+                                    <div class="product">
+                                        <div class="product-name">하이브로우 미니 캐리어 테이블</div>
+                                        <div class="how-many">옵션 2가지 제공</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="ball-text">
+                                        <div class="ball black">럭키상품</div>
+                                        <div class="text">받자!</div>
+                                    </div>
+                                    <div class="product border-right-0">
+                                        <div class="product-name">2020 랜드로버 뉴 디팬더 D240 S</div>
+                                        <div class="how-many">그 외 럭키상품 4종</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="event-end">
+                            <h2>이벤트 실패 </h2>
+                            <p>
+                                아쉽게도 이벤트가 실패되어 참여해주신 모든 분들의 결제는 전액환불 처리됩니다. 환불은 영업일 기준으로 4~5일 정도 소요됩니다. 더 재미있고 좋은 이벤트로 다시 찾아뵙겠습니다 :)
+                            </p>
+                            <em>* 환불은 결제사에 따라 차이가 있을 수 있습니다.</em>
+                        </div>
+                        <div class="event-end">
+                            <h2>이벤트 성공!</h2>
+                            <p>
+                                투표가 마무리되어 이벤트가 종료되었습니다. <br>
+                                나의 당첨 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 당첨 결과 전체를 보고 싶다면 상세페이지 내 ‘당첨 결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
+                            </p>
+                            <em>* 이벤트 마감 후 결제취소는 불가능합니다.</em>
+                            <i class="stamp" id="stamp-success"></i> <!-- .success-1 ~ .success-6 -->
+                        </div>
+                        <div class="event-end">
+                            <h2>이벤트가 종료되었습니다</h2>
+                            <p>
+                                투표가 마무리되어 이벤트가 종료되었습니다. <br>
+                                나의 당첨 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 당첨 결과 전체를 보고 싶다면 상세페이지 내 ‘당첨 결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
+                            </p>
+                            <i class="stamp" id="stamp-end"></i> <!-- .end-1 ~ .end-6 -->
+                        </div>
+                        <script>
+                            //스티커 6종 랜덤출 력
+                            const randomNum = Math.round(Math.random() * 5) + 1;
+                            console.log(randomNum);
+                            $('#stamp-success').addClass('success-' + randomNum);
+                            $('#stamp-end').addClass('end-' + randomNum);
+                        </script>
+
+                        <div class="item winning">
+                            <div class="tracking-title">
+                                <h3>루피커, 럭키템을 겟!</h3>
+                                <p class="font-14">축하해요. 진정한 행운의 사람들 🎉</p>
+                            </div>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
+                                        <p class="num">1st</p>
+                                        <p class="name">2020 랜드로버 디팬더</p>
+                                        <div class="winning-list d-flex">
+                                            <div class="list-wrap">
+                                                <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
+                                                <div class="people people-2" style="background-image:url('../../resources/images/Thumbnail_02.png')"></div>
+                                                <div class="people people-3" style="background-image:url('../../resources/images/Thumbnail_03.png')"></div>
+                                            </div>
+                                            <p class="font-12">총<span>3</span>명</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
+                                        <p class="num">2st</p>
+                                        <p class="name">2020 랜드로버 디팬더</p>
+                                        <div class="winning-list d-flex">
+                                            <div class="list-wrap">
+                                                <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
+                                                <div class="people people-2" style="background-image:url('../../resources/images/Thumbnail_02.png')"></div>
+                                            </div>
+                                            <p class="font-12">총<span>2</span>명</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
+                                        <p class="num">3st</p>
+                                        <p class="name">2020 랜드로버 디팬더</p>
+                                        <div class="winning-list d-flex">
+                                            <div class="list-wrap">
+                                                <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
+                                            </div>
+                                            <p class="font-12">총<span>1</span>명</p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="point">
+                                            <p class="font-24 bold">1000P</p>
+                                        </div>
+                                        <p class="num">4st</p>
+                                        <p class="name">2020 랜드로버 디팬더</p>
+                                        <div class="winning-list d-flex">
+                                            <div class="list-wrap">
+                                                <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
+                                                <div class="people people-2" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
+                                            </div>
+                                            <p class="font-12">총<span>2</span>명</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-20">
+                                    <!-- 해당 결과페이지로 이동 -->
+                                    <a href="../vote/vote.html">
+                                        <div class="btn-next white h-60">
+                                            <p class="font-16">결과 전체보기</p>
+                                            <i class="icon-link-arr"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-l-20 p-r-20 m-b-40">
+                                <ul class="card-list">
+                                    <li>
+                                        <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
+                                            <div class="thumb">
+                                                <span class="bg" style="background-image:url(../../resources/images/@event_01.png)"></span>
+                                            </div>
+                                            <div class="text">
+                                                <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-dark-primary badge-feed">이벤트후기</div>
+                                                    <div class="deadline">조회수 3.1만∙19시간 전</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a href="../vote/vote.html">
+                                    <div class="btn-next black h-60 m-t-5">
+                                        <p class="font-16">이벤트 후기 보러가기</p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="info m-b-15">
+                            <div class="desc">
+                                <p class="font-12 bold"><span class="paint">이벤트 정보</span></p>
+                                <ul>
+                                    <li><span>이벤트코드</span> <span>LEFAS201000152</span></li>
+                                    <li><span>구매개수</span> <span>일반상품 구매개수는 1인당 3개로 제한</span></li>
+                                    <li><span>결제취소</span> <span>남은 시간 12시간부터 결제취소 불가능</span></li>
+                                    <li><span>이벤트마감</span> <span>기간 내 준비된 일반상품 모두 소진 시</span></li>
+                                    <li><span>이벤트실패</span> <span>이벤트 참여율이 100% 미만으로 마감될 경우 구매금액 전액 환불처리</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info bg m-b-15">
+                            <div class="desc">
+                                <p class="font-12 bold"><span class="">일반상품/배송 정보</span></p>
+                                <ul>
+                                    <li><span>카테고리</span> <span>기타</span></li>
+                                    <li><span>배송비</span> <span>기본 배송 2,500원 (CJ대한통운) <br>* 제주 및 도서산간 지역은 추가 배송비 부담</span></li>
+                                    <li><span>상호명</span> <span>하이브로우</span></li>
+                                    <li><span>연락처</span> <span>02-1234-5678</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="item product m-t-60">
+                            <div class="title d-flex align-items-center">
+                                <span class="title-ball yellow"></span>
+                                <p class="font-20 bold">누구나 참여 가능!</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="../../resources/images/img-event-all-free.png" alt="">
+                            </div>
+                            <div class="desc">
+                                <p class="font-14">무료로 참여가 가능한 ‘프리 이벤트’는 루픽 유저 누구나 참여하여 다양한 럭키상품을 받을 수 있는 행운이 가득한 이벤트입니다. 이런 이벤트, 놓칠 수 없겠죠?</p>
+                            </div>
+                            <div class="detail">
+                                <ul>
+                                    <li><span class="bold">모집</span> <span>200,000명 (1인당 1회 참여 가능)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="item product m-t-60">
+                            <div class="title d-flex align-items-center">
+                                <span class="title-ball yellow"></span>
+                                <p class="font-20 bold">일반상품</p>
+                            </div>
+                            <div class="img" style="background-image:url('../../resources/images/@event_07.png')"></div>
+                            <div class="desc">
+                                <h5 class="font-16 bold">하이브로우 MINI CARRIER TABLE</h5>
+                                <p class="font-14">루픽과 하이브로우의 만남! 하이브로우의 라이프 스타일과 루픽의 ‘펀’함이 만나 스페셜 제품이 탄생했습니다. 단 7777개만 생산하고 에디션 넘버까지 각인됩니다!</p>
+                            </div>
+                            <div class="detail">
+                                <ul>
+                                    <li><span class="bold">가격</span> <span>배송비</span></li>
+                                    <li><span class="bold">모집수</span> <span>7777개 (1인당 최대 3개까지 구매 가능)</span></li>
+                                    <li><span class="bold">옵션</span> <span>PLAIN, TEAK</span></li>
+                                    <li><span class="bold">배송비</span> <span>기본 배송 2,500원 (CJ대한통운)</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item lucky m-t-30">
+                            <div class="title d-flex align-items-center">
+                                <span class="title-ball black"></span>
+                                <p class="font-20 bold">럭키상품</p>
+                            </div>
+                            <div class="img" style="background-image:url('../../resources/images/@event_07.png')"></div>
+                            <div class="desc">
+                                <span class="only paint font-16 bold">오직 1명에게</span>
+                                <h5 class="font-16 bold">하이브로우 MINI CARRIER TABLE</h5>
+                                <p class="text font-14">루픽과 하이브로우의 만남! 하이브로우의 라이프 스타일과 루픽의 ‘펀’함이 만나 스페셜 제품이 탄생했습니다. 단 7777개만 생산하고 에디션 넘버까지 각인됩니다!</p>
+                            </div>
+                            <div class="detail">
+                                <ul>
+                                    <li><span class="bold">지급</span> <span>1명</span></li>
+                                    <li><span class="bold">가격</span> <span>75,600,000원</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="lucky-item">
+                                <div class="rank">
+                                    <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                                    <div class="text">
+                                        <span class="paint font-15 bold">2위 럭키템</span>
+                                        <p class="name font-16 bold">나바호 인디언 빅 돔 텐트</p>
+                                        <p class="font-14">10명</p>
+                                    </div>
+                                </div>
+                                <div class="rank">
+                                    <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                                    <div class="text">
+                                        <span class="paint font-15 bold">3위 럭키템</span>
+                                        <p class="name font-16 bold">웰리 밴디지 패브릭 반창고 5종</p>
+                                        <p class="font-14">50명</p>
+                                    </div>
+                                </div>
+                                <div class="rank">
+                                    <div class="point">
+                                        <p class="font-16 bold">1000P</p>
+                                    </div>
+                                    <div class="text">
+                                        <span class="paint font-15 bold">4위 럭키템</span>
+                                        <p class="name font-16 bold">루픽 포인트 1,000P</p>
+                                        <p class="font-14">1000명</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item article m-t-60">
+                            <div class="title d-flex align-items-center">
+                                <span class="title-ball yellow"></span>
+                                <span class="title-ball black"></span>
+                                <p class="font-20 bold">이벤트 스토리</p>
+                            </div>
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                                <div class="desc">
+                                    <div class="content-title font-20 bold">펜데믹 시대에 진정한 힐링</div>
+                                    <div class="text">
+                                        <p class="font-14">
+                                            코로나는 우리 삶의 많은 변화를 주었습니다. 사람과의 관계에 있어 당연한 대면의 현상이 이제 조심하고 부자연스러운 형태가 되었죠. 그렇다면 이제 우리의 진정한 힐링은 무엇일까요? 하이브로우가 제안하는 힐링은 자연과 대면하는 것입니다. 펜데믹 시대에 어울리는 루픽과 하이브로우가 함께 만든 스페셜 에디션 제품을 소개합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/@event_07.png)"></div>
+                                <div class="desc">
+                                    <div class="content-title font-20 bold">이 세상에 7777개만 있는 루픽과 하이브로우만의 특별한 제안</div>
+                                    <div class="text">
+                                        <p class="font-14">
+                                            - 루픽의 기획 에디션!<br>
+                                            루키들이 함께하고 싶은 브랜드 상위에는 언제나 하이브로우가 있었습니다. 드디어 루픽이 기획했던 상품을 협업하여 만들었는데요, 감회가 새롭네요! <br><br>
+                                            - 7777번째는 누가 받게 되나요?<br>
+                                            0001번부터 7777번까지 테이블에 각인이 되어있습니다. 각인 번호는 랜덤하게 배송될 예정입니다.<br><br>
+                                            - 스페셜 키트 구성품까지 에디셔널하게<br>
+                                            테이블 바디와 우드에 커스텀 할 수 있도록 루픽이 그래픽 스티커를 준비했습니다. 자신만의 개성을 마음껏 뽐내보세요. 오직 루픽에서만 전하는 혜택입니다!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                                <div class="desc">
+                                    <div class="content-title font-20 bold">1명에게 정말 뉴 디팬더를 준다!</div>
+                                    <div class="text">
+                                        <p class="font-14">
+                                            믿기지 않겠지만 사실입니다. 하이브로우 테이블을 구매하면 뉴 디팬더를 얻을 기회를 잡을 수 있습니다. 드디어 2020 뉴 디팬더가 출시되어 여러분의 캠핑 로망을 실현시킬 수 있게 되었습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                                <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                                <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            믿기지 않겠지만 사실입니다. 하이브로우 테이블을 구매하면 뉴 디팬더를 얻을 기회를 잡을 수 있습니다. 드디어 2020 뉴 디팬더가 출시되어 여러분의 캠핑 로망을 실현시킬 수 있게 되었습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notice m-t-30">
+                            <div class="desc d-flex align-items-center m-b-10">
+                                <p class="font-12 bold">안내사항</p>
+                            </div>
+                            <ul>
+                                <li>• 일반상품 배송은 결제 순서대로 순차 출고됩니다.</li>
+                                <li>• 럭키상품에 대한 제세공과금은 루픽이 부담합니다.</li>
+                                <li>• 개인소득에 따른 차이로 발생하는 추가 공과금은 개인이 부담하여야 합니다.</li>
+                                <li>• 주문취소로 인해 발생하는 차액은 ‘포인트’ 럭키템에서 차감되며 이벤트 상세페이지 내 명시된 포인트와 이후 지급되는 포인트에 차이가 있을 수 있습니다.</li>
+                            </ul>
+                        </div>
+                        <div class="item lupick m-t-50">
+                           <div class="title font-24 bold gilroy">LUPICK?</div>
+                            <div class="desc">
+                                <div class="text">
+                                    <p class="font-14">
+                                        루픽은 구매자에게 행운을 주는 이벤트 쇼핑입니다. 루키가 기획한 상품(아이템)을 구매한 참여자들을 모아 직접 투표를 진행하여 루피커(선정자)를 뽑아 이벤트 상품(럭키템)을 지급 하는 형태를 갖고 있습니다. 루픽의 가치는 쇼핑을 더 재미있게 하고 소비자들로부터 발생되는 이윤을 다시 소비자에게 되돌려 주는 것에 있습니다.
+                                    </p>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="item process m-t-40">
+                            <div class="title font-24 bold gilroy">Event Process</div>
+                             <div class="desc">
+                                <div class="list top">
+                                    <div class="step">
+                                        <div class="circle">1</div>
+                                        <p>일반상품구매</p>
+                                    </div>
+                                    <div class="step">
+                                        <div class="circle">2</div>
+                                        <p>모집완료</p>
+                                    </div>
+                                    <div class="step">
+                                        <div class="circle">3</div>
+                                        <p>일반상품배송</p>
+                                    </div>
+                                    <div class="step">
+                                        <div class="circle">4</div>
+                                        <p>구매확정</p>
+                                    </div>
+                                </div>
+                                <div class="list bottom">
+                                    <div class="step">
+                                        <div class="circle">5</div>
+                                        <p>투표시작</p>
+                                    </div>
+                                    <div class="step">
+                                        <div class="circle">6</div>
+                                        <p>이벤트종료</p>
+                                    </div>
+                                    <div class="step active">
+                                        <div class="circle">7</div>
+                                        <p>루피커선정</p>
+                                    </div>
+                                    <div class="step">
+                                        <div class="circle">8</div>
+                                        <p>럭키상품지급</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item move-btn">
+                        <a href="policy.html">
+                            <div class="btn-next h-60">
+                                <p class="font-16">상품정보고지</p>
+                                <i class="icon-link-arr"></i>
+                            </div>
+                        </a>
+                        <a href="product_info.html">
+                            <div class="btn-next h-60">
+                                <p class="font-16">취소/교환/환불</p>
+                                <i class="icon-link-arr"></i>
+                            </div>
+                        </a>
+                        <a href="../vote/vote.html">
+                            <div class="btn-next border-b h-60">
+                                <p class="font-16">루픽 투표</p>
+                                <i class="icon-link-arr"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item share">
+                        <div class="list">
+                            <div class="desc">
+                                <a href="javascript:void(0)" class="ic-heart"></a>
+                            </div>
+                            <p>찜하기</p>
+                        </div>
+                        <div class="list">
+                            <div class="desc">
+                                <a href="javascript:void(0)" class="ic-share"></a>
+                            </div>
+                            <p>공유하기</p>
+                        </div>
+                        <div class="list">
+                            <div class="desc">
+                                <a href="javascript:void(0)" class="ic-ask"></a>
+                            </div>
+                            <p>문의하기</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-dark btn-xl h-70 fixed yellow gilroy" data-toggle="modal" data-target="#modal-detail">PICK</a>
+
+                    <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed">결제정보 보기</a> -->
+
+                    <!-- <a href="#" class="btn btn-dark btn-xl h-70 fixed justify-content-between">
+                        <p class="font-18 bold">투표하기 <span class="icon"></span></p>
+                        <p class="font-18">23:19:07</p>
+                    </a> -->
+
+                    <!-- <button type="button" class="btn btn-dark btn-xl h-60 fixed" disabled>이벤트 실패</button> -->
+                </div>
+            </div>
+            <a href="#" class="btn btn-dark btn-xl h-70 yellow gilroy" data-toggle="modal" data-target="#modal-detail">PICK</a>
+        </div>
+    </div>
+</div>
+<!-- modal : 앱 프리뷰 이벤트 후기 -->
+<div class="modal fade modal-app-preview" id="modal-app-event-review" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-418px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="header d-flex align-items-center">
+                    <a href="javascript:void(0)" class="ic-back"></a>
+                    <span class="font-18 bold">이벤트 후기</span>
+                </div>
+                <a href="javascrpt:;" class="app-preview-close" data-dismiss="modal"><span class="sr-only">레이어 닫기</span></a>
+            </div>
+            <div class="modal-body">
+                <div class="wrap feed">
+
+                    <div class="detail-img" style="background-image:url('../../resources/images/@event_01.png')">
+                    </div>
+                    <!-- <video src=""></video> -->
+                    <div class="container-wrap feed">
+                        <div class="component feed">
+                            <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
+                            <div class="price">
+                                <span class="sale paint font-14 bold">이벤트 후기</span>
+                                <span class="date font-12">조회수&nbsp;<span>2만<span>∙</span>
+                                <span>1주 전</span>
+                            </div>
+                        </div>
+                        <div class="item article">
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_01.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_04.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_02.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_03.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component">
+                            <a href="#" class="btn btn-dark btn-xl font-16 normal h-60 view-event">해당 이벤트 보러가기<i class="fas fa-chevron-right m-l-10 font-13"></i></a>
+                            <div class="feed-img" style="background-image:url(../../resources/images/Thumbnail_09.png)">
+                                <button type="button" class="icon-like"></button>
+                            </div>
+                            <p class="subject font-18">[VLIVE X BTS] 방탄소년단의 순간을 찰칵</p>
+                            <div class="price">
+                                <span class="font-22 bold">57,000원</span>
+                                <span class="font-22 bold">/</span>
+                                <span class="sale paint font-22 bold">98%</span>
+                                <span class="date font-12">참여중∙4일 남음</span>
+                                <!-- <span class="date font-12">참여∙이벤트 실패</span> -->
+                                <!-- <span class="date font-12">참여∙이벤트 성공</span> -->
+                            </div>
+                            <span class="badge badge-dark">LUPICK COLLAB</span>
+                            <span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span>
+                        </div>
+                        <div class="relation">
+                            <div class="title">Related Events</div>
+
+                            <div class="items d-flex">
+                                <div class="feed-event-img" style="background-image:url('../../resources/images/Thumbnail_02.png')"><button type="button" class="icon-like"></button></div>
+                                <div class="desc">
+                                    <div>
+                                        <p class="font-14">[SF9 COMEBACK EVENT] 센세이셔널한 아홉 남자와 90:9 미팅</p>
+                                        <div class="price bold">15,900원</div>
+                                    </div>
+                                    <div class="percent">
+                                        <span class="sale paint font-16 bold">98%</span>
+                                        <span class="date font-11">참여중∙4일 남음</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="items d-flex">
+                                <div class="feed-event-img" style="background-image:url('../../resources/images/Thumbnail_05.png')"><button type="button" class="icon-like"></button></div>
+                                <div class="desc">
+                                    <div>
+                                        <p class="font-14">킹덤의 왕좌를 향해 존재감을 ‘REVEAL’ 더보이즈 투표 인증하고 생방보러 가자! </p>
+                                        <div class="price bold">FREE</div>
+                                    </div>
+                                    <div class="percent">
+                                        <span class="sale paint font-16 bold">96%</span>
+                                        <span class="date font-11">참여중∙2일 남음</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <hr>
+                            <p class="copyright">Copyright Lupick. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal : 앱 프리뷰 기획전 -->
+<div class="modal fade modal-app-preview" id="modal-app-exhibition" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-418px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="header d-flex align-items-center">
+                    <a href="javascript:void(0)" class="ic-back"></a>
+                    <span class="font-18 bold">기획전</span>
+                </div>
+                <a href="javascrpt:;" class="app-preview-close" data-dismiss="modal"><span class="sr-only">레이어 닫기</span></a>
+            </div>
+            <div class="modal-body">
+                <div class="wrap feed">
+
+                    <div class="exhibition-main" style="background-color:rgb(28, 108, 143)">
+                        <div class="main-banner" style="background-image:url(../../resources/images/Thumbnail_08.png)"></div>
+                        <p class="title">바캉스의 계절</p>
+                        <p class="desc">여름하면 바캉스! 더운날, 어디론가 훌쩍 떠나버리고 싶은 여러분을 위해 준비했습니다. 마음을 시원하게 트여줄 이벤트와 함께 해보세요.</p>
+
+                        <p class="example-text font-12">* 기획전은 예고 없이 나타났다 사라집니다!</p>
+                    </div>
+                    <div class="container-wrap feed">
+
+                        <div class="component">
+                            <div class="feed-img" style="background-image:url(../../resources/images/Thumbnail_01.png)">
+                                <button type="button" class="icon-like"></button>
+                            </div>
+                            <p class="subject font-18">거대벽화 그리기에 참여하는 911명 중 9명은 포르쉐 911 타고 귀가하자</p>
+                            <div class="price">
+                                <span class="font-22 bold">20,000원</span>
+                                <span class="font-22 bold">/</span>
+                                <span class="sale paint font-22 bold">98%</span>
+                                <span class="date font-12">참여중∙4일 남음</span>
+                                <!-- <span class="date font-12">참여∙이벤트 실패</span> -->
+                                <!-- <span class="date font-12">참여∙이벤트 성공</span> -->
+                            </div>
+                            <span class="badge badge-dark">LUPICK COLLAB</span>
+                        </div>
+                        <div class="component">
+                            <div class="feed-img" style="background-image:url(../../resources/images/Thumbnail_02.png)">
+                                <button type="button" class="icon-like active"></button>
+                            </div>
+                            <p class="subject font-18">[VLIVE X BTS] 방탄소년단의 순간을 찰칵</p>
+                            <div class="price">
+                                <span class="font-22 bold">57,000원</span>
+                                <span class="font-22 bold">/</span>
+                                <span class="sale paint font-22 bold">98%</span>
+                                <span class="date font-12">참여중∙4일 남음</span>
+                                <!-- <span class="date font-12">참여∙이벤트 실패</span> -->
+                                <!-- <span class="date font-12">참여∙이벤트 성공</span> -->
+                            </div>
+                            <span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span>
+                        </div>
+                        <div class="component">
+                            <div class="feed-img" style="background-image:url(../../resources/images/Thumbnail_03.png)">
+                                <button type="button" class="icon-like"></button>
+                            </div>
+                            <p class="subject font-18">[VLIVE X BTS] 방탄소년단의 순간을 찰칵</p>
+                            <div class="price">
+                                <span class="font-22 bold">57,000원</span>
+                                <span class="font-22 bold">/</span>
+                                <span class="sale paint font-22 bold">98%</span>
+                                <span class="date font-12">참여중∙4일 남음</span>
+                                <!-- <span class="date font-12">참여∙이벤트 실패</span> -->
+                                <!-- <span class="date font-12">참여∙이벤트 성공</span> -->
+                            </div>
+                            <span class="badge badge-dark">LUPICK COLLAB</span>
+                            <span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span>
+                        </div>
+                        <div class="component">
+                            <div class="feed-img" style="background-image:url(../../resources/images/Thumbnail_05.png)">
+                                <button type="button" class="icon-like active"></button>
+                            </div>
+                            <p class="subject font-18">[VLIVE X BTS] 방탄소년단의 순간을 찰칵</p>
+                            <div class="price">
+                                <span class="font-22 bold">57,000원</span>
+                                <span class="font-22 bold">/</span>
+                                <span class="sale paint font-22 bold">98%</span>
+                                <span class="date font-12">참여중∙4일 남음</span>
+                                <!-- <span class="date font-12">참여∙이벤트 실패</span> -->
+                                <!-- <span class="date font-12">참여∙이벤트 성공</span> -->
+                            </div>
+                            <span class="badge badge-dark">LUPICK COLLAB</span>
+                            <span class="badge badge-dark-primary gilroy">LUPICK SPECIAL</span>
+                        </div>
+                        <div class="text-center">
+                            <hr>
+                            <p class="copyright">Copyright Lupick. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal : 앱 프리뷰 스토리-->
+<div class="modal fade modal-app-preview" id="modal-app-story" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-418px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="header d-flex align-items-center">
+                    <a href="javascript:void(0)" class="ic-back"></a>
+                    <span class="font-18 bold">루픽 스토리</span>
+                </div>
+                <a href="javascrpt:;" class="app-preview-close" data-dismiss="modal"><span class="sr-only">레이어 닫기</span></a>
+            </div>
+            <div class="modal-body">
+                <div class="wrap feed">
+
+                    <div class="detail-img" style="background-image:url('../../resources/images/Thumbnail_04.png')">
+                    </div>
+                    <div class="container-wrap feed">
+                        <div class="component">
+                            <p class="subject font-18">‘조깅’으로 컴백! 밴드 루시와 함께 진행한
+                                이벤트 비하인드 스토리</p>
+                            <div class="price">
+                                <span class="sale paint font-14 bold">루픽스토리</span>
+                                <span class="date font-12">조회수&nbsp;<span>547<span>∙</span>
+                                <span>한 달 전</span>
+                            </div>
+                        </div>
+                        <div class="item article">
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_01.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_04.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_02.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div class="img" style="background-image:url(../../resources/images/Thumbnail_03.png)"></div>
+                                <div class="desc">
+                                    <div class="text">
+                                        <p class="font-14">
+                                            럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용 럭키스토리 내용
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <hr>
+                            <p class="copyright">Copyright Lupick. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal : 판매자 찾기 -->
+<div class="modal fade" id="modal-seller-load" tabindex="-1" role="dialog" data-overlap="true"> <!-- 중첩된 모달 띄울떄  data-overlap="true" -->
+    <div class="modal-dialog modal-dialog-centered w-600px">
+        <div class="modal-content h-650px">
+            <div class="modal-header">
+                <div class="modal-title">판매자 찾기</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="item-search d-flex align-items-center">
+                    <input class="form-control w-100" type="text" placeholder="판매자 정보를 검색해주세요.">
+                    <i></i>
+                </div>
+                <div class="select-event-list">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span>주식회사 호호호</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>SAMSUNG</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>주식회사 호빵</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>하이드아웃</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>애플 코리아</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 이벤트 상세 -->

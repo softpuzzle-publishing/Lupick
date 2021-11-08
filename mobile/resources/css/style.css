@@ -573,6 +573,41 @@ td > .btn + .btn { margin-left: 6px; }
 
 .btn-bottom-spacing.p-b-40 { padding-bottom: calc(constant(safe-area-inset-bottom) + 40px); padding-bottom: calc(env(safe-area-inset-bottom) + 40px); }
 
+.full-video { position: relative; height: 0; padding-bottom: 56.25%; margin: 0 -20px 20px; }
+
+.full-video > iframe { position: absolute; left: 0; top: 0; width: 100% !important; height: 100% !important; }
+
+.full-img { margin: 0 -20px; overflow: hidden; }
+
+.full-img img { width: auto !important; max-width: 100% !important; height: auto !important; }
+
+.loading-voting { position: fixed; left: 0; top: 0; z-index: 9999; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; flex-direction: column; display: none; }
+
+.loading-voting.show { display: flex; }
+
+.loading-voting .loader { height: 16px; width: 200px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: translateY(-50%); }
+
+.loading-voting .loader--dot { animation-name: loader; animation-timing-function: ease-in-out; animation-duration: 3s; animation-iteration-count: infinite; height: 16px; width: 16px; border-radius: 100%; background-color: #ffff00; position: absolute; border: 2px solid #ffff00; }
+
+.loading-voting .loader--dot:first-child { animation-delay: 0.5s; }
+
+.loading-voting .loader--dot:nth-child(2) { animation-delay: 0.4s; }
+
+.loading-voting .loader--dot:nth-child(3) { animation-delay: 0.3s; }
+
+.loading-voting .loader--dot:nth-child(4) { animation-delay: 0.2s; }
+
+.loading-voting .loader--dot:nth-child(5) { animation-delay: 0.1s; }
+
+.loading-voting .loader--dot:nth-child(6) { animation-delay: 0s; }
+
+.loading-voting .loader--text { position: absolute; top: 200%; left: 0; right: 0; margin: auto; text-align: center; font-size: 16px; font-weight: 700; color: #fff; }
+
+@keyframes loader { 15% { transform: translateX(0); }
+  45% { transform: translateX(184px); }
+  65% { transform: translateX(184px); }
+  95% { transform: translateX(0); } }
+
 body { touch-action: manipulation; }
 
 html, body { height: 100%; }

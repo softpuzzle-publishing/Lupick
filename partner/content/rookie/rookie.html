@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Lukie</h1>
+            </div>
+            <div class="row align-items-center m-b-30">
+                <div class="col">
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="찾고 싶은 유저가 있나요?" aria-label="Search">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="1" selected>전체 루키</option>
+                        <option value="2">대기중인 이벤트</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="3" selected>가입 순</option>
+                        <option value="4">대기중인 이벤트</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table table-bordered table-center">
+                <colgroup>
+                    <col width="120px">
+                    <col width="120px">
+                    <col width="180px">
+                    <col width="180px">
+                    <col width="160px">
+                    <col width="124px">
+                    <col width="125px">
+                    <col width="124px">
+                    <col width="125px">
+                    <col width="124px">
+                    <col width="125px">
+                    <col width="124px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">Admin</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">아이디</th>
+                        <th scope="col">닉네임</th>
+                        <th scope="col">연락처</th>
+                        <th scope="col">회원 가입일</th>
+                        <th scope="col">최종 로그인</th>
+                        <th scope="col">등록 이벤트 수</th>
+                        <th scope="col">성공 이벤트 수</th>
+                        <th scope="col">실패 이벤트 수</th>
+                        <th scope="col">승인여부</th>
+                        <th scope="col">정보 수정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="gilroy">루키</td>
+                        <td class="rookie-td">
+                            <div>
+                                <span class="rookie-name">하하하호호호</span>
+                            </div>
+                        </td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">슈퍼루키</td>
+                        <td>호호호니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">마스터</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">슈퍼루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">마스터</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">슈퍼루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">마스터</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">슈퍼루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">마스터</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">슈퍼루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">마스터</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">슈퍼루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">마스터</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="gilroy">루키</td>
+                        <td>호호호라니라니</td>
+                        <td>hohohorani</td>
+                        <td>호호호라니호호호라니</td>
+                        <td>010-2345-6789</td>
+                        <td>2020.08.20</td>
+                        <td>2020.08.20</td>
+                        <td>30</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>승인대기</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#modal-user">수정</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="m-t-30">
+                <ul class="pagination">
+                    <li><a href="#"><i class="icon-pager-prev"></i></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#"><i class="icon-pager-next"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 루키수정 -->
+    <div class="modal fade" id="modal-user" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-1400px" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">루키 관리</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="title-square-wrap pt-0">
+                        <p class="title-square"><span>루키 정보</span></p>
+                    </div>
+                    <table class="table table-bordered table-user">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">루키관리</th>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="pt-1">
+                                            <div class="custom-control custom-radio custom-control-inline mt-0 mb-0 m-r-30">
+                                                <input type="radio" class="custom-control-input" name="lukieRole" id="radio-role1" value="radio-role1" checked="checked">
+                                                <label class="custom-control-label g-b" for="radio-role1">Lukie</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline mt-0 mb-0 m-r-30">
+                                                <input type="radio" class="custom-control-input" name="lukieRole" id="radio-role2" value="radio-role2">
+                                                <label class="custom-control-label g-b" for="radio-role2">Super Lukie</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline mt-0 mb-0 mr-0">
+                                                <input type="radio" class="custom-control-input" name="lukieRole" id="radio-role3" value="radio-role3">
+                                                <label class="custom-control-label g-b" for="radio-role3">Sub Master</label>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-outline-dark btn-sm">탈퇴 처리</button>
+                                    </div>
+                                </td>
+                                <th class="text-center">가입승인</th>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span>승인 대기</span>
+                                        <button type="button" class="btn btn-outline-dark btn-sm">승인</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">아이디</th>
+                                <td> Luukkie20 </td>
+                                <th class="text-center">전화번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span>010-1234-5678</span>
+                                        <button type="button" class="btn btn-outline-dark btn-sm">SMS 발송</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">이름</th>
+                                <td><input type="text" class="form-control h-30px" value="김루키"></td>
+                                <th class="text-center">닉네임</th>
+                                <td>루키루키</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">가입일</th>
+                                <td>2020.10.05</td>
+                                <th class="text-center">최종 접속일</th>
+                                <td>
+                                    <span>2020.10.06</span><span>20:15:01</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="title-square-wrap">
+                        <p class="title-square"><span>생성 이벤트</span></p>
+                    </div>
+                    <table class="table table-bordered table-center table-layout-auto">
+                        <thead>
+                            <tr>
+                                <th scope="col">생성일</th>
+                                <th scope="col">이벤트 명</th>
+                                <th scope="col">진행 상황</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2020.10.01</td>
+                                <td class="text-left"><a href="#myModal1" data-toggle="modal">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</a></td>
+                                <td>투표중</td>
+                            </tr>
+                            <tr>
+                                <td>2020.10.01</td>
+                                <td class="text-left"><a href="#myModal1" data-toggle="modal">여름의 향을 담은 복숭아청, 궁금하지 않나요? - 고블렛 컵과 함께</a></td>
+                                <td>이벤트 실패</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">수정하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function(){
+                $('div[id^="myModal"]').each(function(){
+                    $(this).attr('data-overlap','true');
+                });
+            }, 1000)
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Seller</h1>
+            </div>
+            <div class="row align-items-center m-b-30">
+                <div class="col">
+                    <div class="item-search">
+                        <input class="form-control w-100" type="text" placeholder="찾고 싶은 판매자가 있나요?" aria-label="Search">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-dark btn-xl-65" data-toggle="modal" data-target="#modal-seller-add">+ 판매자 추가하기</button>
+                </div>
+            </div>
+            <!-- 루키 일때 -->
+           <!--  <div class="item-search m-b-30">
+                <input class="form-control w-100" type="text" placeholder="찾고 싶은 판매자가 있나요?" aria-label="Search">
+                <i></i>
+            </div> -->
+
+            <table class="table table-bordered table-center table-layout-auto">
+                <thead>
+                    <tr>
+                        <th scope="col">상호명</th>
+                        <th scope="col">사업자 등록번호</th>
+                        <th scope="col">통신 판매업 번호</th>
+                        <th scope="col">대표자</th>
+                        <th scope="col">담당자</th>
+                        <th scope="col">담당자 전화번호</th>
+                        <th scope="col">CS 전화번호</th>
+                        <th scope="col">사업자 소재지</th>
+                        <th scope="col">정보 수정</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>주식회사 호호호</td>
+                        <td>101-20-02020</td>
+                        <td>101-20-02020</td>
+                        <td>정용채</td>
+                        <td>정민우</td>
+                        <td>010-1234-5678</td>
+                        <td>02-1111-2222</td>
+                        <td>서울시 강남구 논현동 101-1 3층</td>
+                        <td>
+                            <button type="button" class="btn btn-outline-dark btn-sm"  data-toggle="modal"
+                            data-target="#modal-seller-edit">수정</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="m-t-30">
+                <ul class="pagination">
+                    <li><a href="#"><i class="icon-pager-prev"></i></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#"><i class="icon-pager-next"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- modal : 판매자 추가하기 -->
+    <div class="modal fade" id="modal-seller-add" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-1400px" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">판매자 등록</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>상호명</th>
+                                <td>
+                                    <input type="text" value="hohohoTIDO" class="form-control w-610px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>대표자</th>
+                                <td>
+                                    <input type="text" value="****" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업자 번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>통신판매번호</th>
+                                <td>
+                                    <input type="text" value="티도" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업자 소재지</th>
+                                <td>
+                                    <input type="text" value="TIDO" class="form-control w-960px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자</th>
+                                <td>
+                                    <input type="text" value="TIDO" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자 전화번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>CS 전화번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-dark btn-lg">등록하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 판매자 정보 수정 -->
+    <div class="modal fade" id="modal-seller-edit" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable w-1400px" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">판매자 정보 수정</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="246px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>상호명</th>
+                                <td>
+                                    <input type="text" value="hohohoTIDO" class="form-control w-610px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>대표자</th>
+                                <td>
+                                    <input type="text" value="****" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업자 번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>통신판매번호</th>
+                                <td>
+                                    <input type="text" value="티도" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업자 소재지</th>
+                                <td>
+                                    <input type="text" value="TIDO" class="form-control w-960px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자</th>
+                                <td>
+                                    <input type="text" value="TIDO" class="form-control w-382px">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자 전화번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>CS 전화번호</th>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <input type="text" value="010" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="1234" class="form-control w-100px">
+                                        <span class="hyphen"></span>
+                                        <input type="text" value="5678" class="form-control w-100px">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-30">
+                        <button type="button" class="btn btn-darkgray btn-lg">삭제하기</button>
+                        <button type="button" class="btn btn-dark btn-lg">수정하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        $(document).ready(function () {})
+    </script>
+
+</body>
+
+</html>

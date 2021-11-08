@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <!-- swiper css 모든 페이지에 들어가야 함 -->
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+    <!-- 에디터 -->
+    <script src="../../resources/plugins/ckeditor/ckeditor.js"></script>
+    <!-- swiper 모든 페이지에 들어가야 함 -->
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="title-wrap justify-content-between mt-0">
+                <h1 class="title">Expense Report</h1>
+            </div>
+            <div class="row align-items-center m-b-40">
+                <div class="col">
+                    <div class="item-search d-flex align-items-center">
+                        <input class="form-control w-100" type="text" placeholder="찾고 싶은 내용이나 이벤트를 검색해 주세요.">
+                        <i></i>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <select class="select-lg">
+                        <option value="" selected="">2020년 8월</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-dark btn-xl btn-feed-write" data-toggle="modal" data-role="button" data-target="#modal-excel">엑셀파일 다운로드</button>
+                </div>
+            </div>
+            <table class="table table-bordered table-form border-color-light m-t-40" style="width:645px">
+                <colgroup>
+                    <col style="width:246px">
+                    <col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><div class="m-font">총 매출 금액(원)</div></th>
+                        <td><div class="m-font">246,103</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered table-center s-font m-t-30">
+                <colgroup>
+                    <col>
+                    <col style="width: 500px">
+                    <col style="width: 160px">
+                    <col style="width: 140px">
+                    <col style="width: 180px">
+                    <col style="width: 180px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">내용</th>
+                        <th scope="col">이벤트 명</th>
+                        <th scope="col">이벤트 코드</th>
+                        <th scope="col">루키</th>
+                        <th scope="col">결제 승인 시간</th>
+                        <th scope="col">금액</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left text-truncate">스페셜 상품 구매 비용</td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까? 에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>호호호</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td>250,000,000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left text-truncate">스페셜 상품 구매 비용</td>
+                        <td class="text-left text-truncate">리모와 캐리어 구매하고 코로나 이후 세계일주 가보자!</td>
+                        <td>LE20101801A142</td>
+                        <td>호호호</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td>250,000,000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="m-t-30">
+                <ul class="pagination">
+                    <li><a href="#"><i class="icon-pager-prev"></i></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#"><i class="icon-pager-next"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 엑셀파일 다운로드 -->
+    <div class="modal fade" id="modal-excel" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered w-568px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">엑셀파일 다운로드</div>
+                    <p class="modal-title-desc">* 원하는 기간을 선택하여 엑셀파일을 다운받으세요.</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-b-40">
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>선택</th>
+                                <td>
+                                    <div class="custom-control custom-radio custom-control-inline" style="margin-left: 45px;margin-right: 80px;">
+                                        <input type="radio" class="custom-control-input" name="downRange" id="downAll">
+                                        <label class="custom-control-label" for="downAll">전체</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" class="custom-control-input" name="downRange" id="downCondition">
+                                        <label class="custom-control-label" for="downCondition">조회한 항목</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-40">
+                        <button type="button" class="btn btn-dark btn-lg">다운로드</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        //datetimepicker
+        $('#datetimepickerStart').datetimepicker({
+            locale: 'ko',
+            sideBySide: true,
+            dayViewHeaderFormat: 'YYYY.M',
+            format: 'YYYY.MM.DD',
+            icons: {
+                previous: 'icon-month-prev',
+                next: 'icon-month-next',
+            },
+            widgetPositioning: {
+                horizontal: 'left',
+                vertical: 'bottom'
+            },
+        });
+        $('#datetimepickerEnd').datetimepicker({
+            locale: 'ko',
+            sideBySide: true,
+            dayViewHeaderFormat: 'YYYY.M',
+            format: 'YYYY.MM.DD',
+            icons: {
+                previous: 'icon-month-prev',
+                next: 'icon-month-next',
+            },
+            widgetPositioning: {
+                horizontal: 'left',
+                vertical: 'bottom'
+            },
+        });
+    </script>
+</body>
+
+</html>

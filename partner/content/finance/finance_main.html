@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+    <!-- swiper css 모든 페이지에 들어가야 함 -->
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- moment -->
+    <script src="../../resources/plugins/momentjs/moment.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- datetimepicker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart/Chart.min.js"></script>
+    <!-- 에디터 -->
+    <script src="../../resources/plugins/ckeditor/ckeditor.js"></script>
+    <!-- swiper 모든 페이지에 들어가야 함 -->
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <aside>
+            <!-- aside include -->
+        </aside>
+        <div id="container-block">
+            <div class="top">
+                <h2 class="hello"><span>Tido</span>님, 언제나 루픽은 다양한 분석을 통해 보다 좋은 이벤트 제작을 지원합니다!</h2>
+                <div class="latest">최근 업데이트 : 2020.10.07 17:49</div>
+            </div>
+            <div class="title-wrap justify-content-between">
+                <h3 class="title">Finance Report</h3>
+            </div>
+            <div class="lupick-report">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="box p--30">
+                            <div class="statistics">
+                                <i class="icon-finance-money"></i>
+                                <p>313,523</p>
+                            </div>
+                            <div class="info">
+                                <p>루픽 총 매출 (원)</p>
+                                <p class="comment">* 루픽 누적 총 매출</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box p--30">
+                            <div class="statistics">
+                                <i class="icon-finance-sales"></i>
+                                <p>2,746,103</p>
+                            </div>
+                            <div class="info">
+                                <p>8월 매출 금액 (원)</p>
+                                <p class="paint">전월 대비 +20%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box p--30">
+                            <div class="statistics">
+                                <i class="icon-finance-expenditure"></i>
+                                <p>92,561,512,648</p>
+                            </div>
+                            <div class="info">
+                                <p>8월 지출 금액 (원)</p>
+                                <p class="paint">전월 대비 +7%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="box p--30">
+                            <div class="statistics">
+                                <i class="icon-finance-revenue"></i>
+                                <p>1,583,327</p>
+                            </div>
+                            <div class="info">
+                                <p>8월 수익 금액 (원)</p>
+                                <p class="paint">전월 대비 +27%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-t-30">
+                        <div class="chart-finance box p--30 h-500px">
+                            <div class="d-flex justify-content-between align-items-center m-b-40 position-relative">
+                                <div class="year">
+                                    <a href="javascript:;"><i class="icon-month-prev"></i></a>
+                                    <span>2020</span>
+                                    <a href="javascript:;"><i class="icon-month-next"></i></a>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="box-title">루픽 월별 지표</div>
+                                    <dl class="legend-custom">
+                                        <dt><i class="icon-circle-green"></i></dt>
+                                        <dd>매출</dd>
+                                        <dt><i class="icon-circle-blue"></i></dt>
+                                        <dd>수익</dd>
+                                        <dt><i class="icon-circle-yellow"></i></dt>
+                                        <dd>지출</dd>
+                                    </dl>
+                                </div>
+                                <a href="#modal-excel" data-toggle="modal" class="btn btn-outline-dark btn-md text-lager">엑셀파일 다운로드</a>
+                            </div>
+                            <div class="finance-canvas">
+                                <canvas id="chart-finance">
+                                </canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title-wrap justify-content-between">
+                <h3 class="title">Revenue Report</h3>
+                <a href="finance_revenue.html" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
+            </div>
+            <table class="table table-bordered table-center s-font">
+                <colgroup>
+                    <col style="width: 140px;">
+                    <col>
+                    <col style="width: 160px;">
+                    <col style="width: 160px;">
+                    <col style="width: 140px;">
+                    <col style="width: 180px;">
+                    <col style="width: 180px;">
+                    <col style="width: 160px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">상태</th>
+                        <th scope="col">이벤트 명</th>
+                        <th scope="col">이벤트 코드</th>
+                        <th scope="col">주문 번호</th>
+                        <th scope="col">주문자</th>
+                        <th scope="col">결제 시간</th>
+                        <th scope="col">금액</th>
+                        <th scope="col">결제 수단</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong class="text-success">결제 완료</strong></td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>1010-2020-0801</td>
+                        <td>알파</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td><strong class="text-success">+ 37,000</strong></td>
+                        <td>신용카드</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-success">결제 완료</strong></td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>1010-2020-0801</td>
+                        <td>티도</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td><strong class="text-success">+ 37,000</strong></td>
+                        <td>페이코</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-success">결제 완료</strong></td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>1010-2020-0801</td>
+                        <td>라니</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td><strong class="text-success">+ 37,000</strong></td>
+                        <td>네이버페이</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-danger">결제 취소</strong></td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>1010-2020-0801</td>
+                        <td>호빵이</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td><strong class="text-danger">- 37,000</strong></td>
+                        <td>신용카드</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-success">결제 완료</strong></td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>1010-2020-0801</td>
+                        <td>호호호</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td><strong class="text-success">+ 37,000</strong></td>
+                        <td>카카오페이</td>
+                    </tr>
+                    <tr>
+                        <td><strong class="text-success">결제 완료</strong></td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>1010-2020-0801</td>
+                        <td>호호호</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td><strong class="text-success">+ 37,000</strong></td>
+                        <td>카카오페이</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="title-wrap justify-content-between">
+                <h3 class="title">Expense Report</h3>
+                <a href="finance_expense.html" class="more-text">전체보기 <i class="icon-link-arr"></i></a>
+            </div>
+            <table class="table table-bordered table-center s-font">
+                <colgroup>
+                    <col style="">
+                    <col style="width: 500px;">
+                    <col style="width: 160px;">
+                    <col style="width: 140px;">
+                    <col style="width: 180px;">
+                    <col style="width: 180px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">내용</th>
+                        <th scope="col">이벤트 명</th>
+                        <th scope="col">이벤트 코드</th>
+                        <th scope="col">루키</th>
+                        <th scope="col">결제 승인 시간</th>
+                        <th scope="col">금액</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-left text-truncate">스페셜 상품 구매 비용 스페셜 상품 구매 비용스페셜 상품 구매 비용스페셜 상품 구매 비용스페셜 상품 구매 비용스페셜 상품 구매 비용</td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까? 에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>호호호</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td>250,000,000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left text-truncate">이벤트 운영비 입니다. 촬영, 소품 비용 첨부합니다.</td>
+                        <td class="text-left text-truncate">리모와 캐리어 구매하고 코로나 이후 세계일주 가보자!</td>
+                        <td>LE20101801A142</td>
+                        <td>알파</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td>130,000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left text-truncate">이벤트 운영비 입니다. 촬영, 소품 비용 첨부합니다.</td>
+                        <td class="text-left text-truncate">리모와 캐리어 구매하고 코로나 이후 세계일주 가보자!</td>
+                        <td>LE20101801B512</td>
+                        <td>알파</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td>1,100,000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left text-truncate">제세 공과금</td>
+                        <td class="text-left text-truncate">리모와 캐리어 구매하고 코로나 이후 세계일주 가보자!</td>
+                        <td>LE20101801B512</td>
+                        <td>라니</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td>130,000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left text-truncate">운영비</td>
+                        <td class="text-left text-truncate">샤넬립스틱 구매하고 샤넬 매장에서 나홀로 쇼핑!!</td>
+                        <td>LE20101801A142</td>
+                        <td>티도</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td>300,000</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left text-truncate">이벤트 촬영 대관 비용</td>
+                        <td class="text-left text-truncate">에어팟을 끼고 애플 매장을 털어볼까?</td>
+                        <td>LE20101801A142</td>
+                        <td>호빵이</td>
+                        <td>2020.10.05.19:27:38</td>
+                        <td>425,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <footer>
+            <div id="modal-include">
+                <div id="event-write"></div>
+                <div id="event-detail"></div>
+                <div id="event-common"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 엑셀파일 다운로드 -->
+    <div class="modal fade" id="modal-excel" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered w-568px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">엑셀파일 다운로드</div>
+                    <p class="modal-title-desc">* 원하는 기간을 선택하여 엑셀파일을 다운받으세요.</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-b-40">
+                    <table class="table table-bordered table-form">
+                        <colgroup>
+                            <col width="120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>기간 선택</th>
+                                <td>
+                                    <select class="select-sm w-230px">
+                                        <option value="" selected>2020년 8월</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="text-center m-t-40">
+                        <button type="button" class="btn btn-dark btn-lg">다운로드</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+    <script>
+        window.onload = function() {
+            var finance = document.getElementById('chart-finance').getContext('2d');
+            window.myChart1 = new Chart(finance, barFinance);
+        };
+
+        Chart.defaults.global.pointHitDetectionRadius = 1;
+		var customTooltips = function(tooltip) {
+			// Tooltip Element
+			var tooltipEl = document.getElementById('chartjs-tooltip');
+
+			if (!tooltipEl) {
+				tooltipEl = document.createElement('div');
+				tooltipEl.id = 'chartjs-tooltip';
+				tooltipEl.innerHTML = '<table></table>';
+				this._chart.canvas.parentNode.appendChild(tooltipEl);
+			}
+
+			// Hide if no tooltip
+			if (tooltip.opacity === 0) {
+				tooltipEl.style.opacity = 0;
+				return;
+			}else{
+                var a = $(this);
+                console.log(a);
+            }
+
+			// Set caret Position
+			tooltipEl.classList.remove('above', 'below', 'no-transform');
+			if (tooltip.yAlign) {
+				tooltipEl.classList.add(tooltip.yAlign);
+			} else {
+				tooltipEl.classList.add('no-transform');
+			}
+
+			function getBody(bodyItem) {
+				return bodyItem.lines;
+			}
+
+			// Set Text
+			if (tooltip.body) {
+				var titleLines = tooltip.title || [];
+				var bodyLines = tooltip.body.map(getBody);
+
+				var innerHtml = '<thead>';
+
+				titleLines.forEach(function(title) {
+					innerHtml += '<tr><th>' + title + '</th></tr>';
+				});
+				innerHtml += '</thead><tbody>';
+
+				bodyLines.forEach(function(body, i) {
+					var colors = tooltip.labelColors[i];
+					var style = 'background:' + colors.backgroundColor;
+					style += '; border-color:' + colors.borderColor;
+					style += '; border-width: 2px';
+					var span = '<span class="chartjs-tooltip-key" style="' + style + '"></span>';
+                    innerHtml += '<tr><td>' + span + '<strong>' + body + '</strong>' + '<i>만원</i></td></tr>';
+				});
+				innerHtml += '</tbody>';
+
+				var tableRoot = tooltipEl.querySelector('table');
+				tableRoot.innerHTML = innerHtml;
+			}
+
+			var positionY = this._chart.canvas.offsetTop;
+			var positionX = this._chart.canvas.offsetLeft;
+
+			// Display, position, and set styles for font
+			tooltipEl.style.opacity = 1;
+			tooltipEl.style.left = positionX + tooltip.caretX + 'px';
+			tooltipEl.style.top = positionY + tooltip.caretY + 'px';
+			tooltipEl.style.fontFamily = tooltip._bodyFontFamily;
+			tooltipEl.style.fontSize = tooltip.bodyFontSize + 'px';
+			tooltipEl.style.fontStyle = tooltip._bodyFontStyle;
+			tooltipEl.style.padding = tooltip.yPadding + 'px ' + tooltip.xPadding + 'px';
+		};
+        var barFinance = {
+            type: 'line',
+            data: {
+                labels: ["", "2020.09", "2020.10", "2020.11", "2020.12", "2021.01", "2021.02", "2021.03", "2021.04",
+                    "2021.05", "2021.06", "2021.07", "2021.08"
+                ],
+                datasets: [{
+                    label: "매출",
+                    backgroundColor: '#35a853',
+                    borderColor: '#35a853',
+                    borderWidth: 2,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    lineTension: 0, // 값을 높이면, line의 장력이 커짐.
+                    pointRadius: 4,
+					pointHoverRadius: 6,
+                    data: [2, 3, 4, 4, 2, 1, 2, 4, 5, 3, 2, 1, 5],
+                }, {
+                    label: "수익",
+                    backgroundColor: '#4286f5',
+                    borderColor: '#4286f5',
+                    borderWidth: 2,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    lineTension: 0, // 값을 높이면, line의 장력이 커짐.
+                    pointRadius: 4,
+					pointHoverRadius: 6,
+                    data: [1, 2, 3, 4, 5, 2, 1, 3, 3, 2, 1, 2, 4],
+                }, {
+                    label: "지출",
+                    backgroundColor: '#fabc05',
+                    borderColor: '#fabc05',
+                    borderWidth: 2,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    lineTension: 0, // 값을 높이면, line의 장력이 커짐.
+                    pointRadius: 4,
+					pointHoverRadius: 6,
+                    data: [1, 2, 4, 2, 3, 2, 3, 4, 1, 2, 2, 5, 2],
+                }]
+            },
+            // Configuration options go here
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    display: false,
+                },
+				tooltips: {
+					enabled: false,
+                    mode: 'index',
+                    position: 'nearest',
+                    intersect: false,
+                    custom: customTooltips,
+				},
+				hover: {
+					mode: 'index',
+					intersect: false
+				},
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        scaleLabel: {
+                            display: false,
+                        },
+                        ticks:{
+                            fontColor : '#d2d2d2',
+                            fontSize : 15,
+                            fontFamily : 'Gilroy',
+                            padding:10,
+                        },
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            fontColor : '#d2d2d2',
+                            fontSize : 15,
+                            fontFamily : 'Gilroy',
+                            stepSize: 1,
+                            beginAtZero: true,
+                            padding:20,
+                        },
+                        gridLines:{
+                            drawBorder:false,
+                        }
+                    }]
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

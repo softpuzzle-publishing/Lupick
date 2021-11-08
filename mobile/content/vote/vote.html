@@ -73,7 +73,7 @@
                         <button type="button" class="btn btn-outline-dark btn-lg h-60 font-16 btn-block" data-toggle="modal" data-target="#modal-random">랜덤 투표</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-dark btn-lg h-60 font-16 btn-block">투표 완료</button>
+                        <button type="button" class="btn btn-dark btn-lg h-60 font-16 btn-block" id="btn-vote-finish">투표 완료</button>
                     </div>
                 </div>
             </div>
@@ -138,6 +138,18 @@
             </div>
         </div>
     </div>
+    <!-- 투표 진행중 -->
+    <div class="loading-voting"> <!-- .show -->
+        <div class='loader'>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--dot'></div>
+            <div class='loader--text'>투표중...</div>
+        </div>
+    </div>
     <script>
         $(document).ready(function () {
             $(window).on('load', function () {
@@ -146,6 +158,10 @@
                     bouncingVote();
                 }
             })
+
+            $('#btn-vote-finish').on('click',function(){
+                $('.loading-voting').addClass('show');
+            });
 
         })
         //투표하기 ball
