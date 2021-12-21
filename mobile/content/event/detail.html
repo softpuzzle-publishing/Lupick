@@ -22,15 +22,51 @@
 </head>
 <body>
     <div class="wrap detail">
-        <div class="close" onclick="closeBtn()"></div>
-        <div class="detail-img" style="background-image:url('../../resources/images/@event_01.png')">
-            <span class="label-event label-event-yellow">🎊포인트 이벤트</span>
-            <span class="label-event label-event-dark">🎉 프리 이벤트</span>
-        </div>
         <div class="container-wrap">
+            <nav class="my-tab mb-0">
+                <ul>
+                    <li class="active">
+                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('all')">이벤트 스토리</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('normal')">상품 상세 설명</a>
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                $('.my-tab a').on('click',function(){
+                    $(this).parent('li').siblings().removeClass('active');
+                    $(this).parent('li').addClass('active');
+                });
+            </script>
+            <div class="detail-img">
+                <img src="../../resources/images/@event_01.png" alt="">
+                <div class="event-status">
+                    <div class="progress">
+                        <div class="adobe progress-bar progress-bar-info" role="progressbar" style="width: 88%" data-percent="88">
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-between p-r-20 p-l-20">
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center">
+                                <i class="icon-clock-white"></i> <span>12일 남음</span>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <span>67% 참여 중</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="component"> <!-- 이벤트 실패 일때 .fail 추가 -->
                 <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
+                <p class="desc">1명 8000만원 랜드로버 지급, 2명에게는 200,000포인트</p>
                 <div class="price">
+                    <del>67,350원</del>
+                    <div class="d-flex align-items-center">
+                        <div class="discount">15%</div>
+                        <div class="final">57,000원</div>
+                    </div>
                     <div class="row align-items-center justify-content-between">
                         <div class="col-auto">
                             <div class="d-flex align-items-center">
@@ -45,53 +81,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="progress m-b-15">
-                    <div class="adobe progress-bar progress-bar-info" role="progressbar" style="width: 88%" data-percent="88">
-                    </div>
-                </div>
                 <div class="m-b-40">
-                    <span class="badge badge-outline-dark gilroy mb-0">BEST</span>
-                    <span class="badge badge-outline-dark-primary gilroy mb-0">LUPICK SPECIAL</span>
-                    <span class="badge badge-outline-dark-primary gilroy mb-0">하태하태</span>
-                </div>
-                <div class="m-b-20" style="margin-top: -10px">
-                    <a href=""><img src="../../resources/images/banner-invite.jpg" alt=""></a>
+                    <span class="badge badge-outline-muted gilroy mb-0">BEST</span>
+                    <span class="badge badge-outline-muted gilroy mb-0">LUPICK SPECIAL</span>
+                    <span class="badge badge-outline-muted gilroy mb-0">하태하태</span>
                 </div>
             </div>
 
-            <div class="event-deadline m-b-35">
-                <div class="tit"><i class="icon-clock"></i>남은 시간</div>
-                <div class="d-flex" id="event_rest_time">
-                    <strong class="day">4일</strong>
-                    <strong class="time">22:08:17</strong>
-                </div>
-                <div class="period"><b>이벤트 기간</b> <span>2021.03.25 오후 12시 ~ 2021.03.31 오후 12시</span></div>
-            </div>
-
-            <div class="product-info m-b-45">
-                <div class="row row-0">
-                    <div class="col">
-                        <div class="ball-text">
-                            <div class="ball">일반상품</div>
-                            <div class="text">구매하고</div>
-                        </div>
-                        <div class="product">
-                            <div class="product-name">하이브로우 미니 캐리어 테이블</div>
-                            <div class="how-many">옵션 2가지 제공</div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="ball-text">
-                            <div class="ball black">럭키상품</div>
-                            <div class="text">받자!</div>
-                        </div>
-                        <div class="product border-right-0">
-                            <div class="product-name">2020 랜드로버 뉴 디팬더 D240 S</div>
-                            <div class="how-many">그 외 럭키상품 4종</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="event-end">
                 <h2>이벤트 실패 </h2>
                 <p>
@@ -106,7 +102,6 @@
                     나의 당첨 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 당첨 결과 전체를 보고 싶다면 상세페이지 내 ‘당첨 결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
                 </p>
                 <em>* 이벤트 마감 후 결제취소는 불가능합니다.</em>
-                <i class="stamp" id="stamp-success"></i> <!-- .success-1 ~ .success-6 -->
             </div>
             <div class="event-end">
                 <h2>이벤트가 종료되었습니다</h2>
@@ -114,132 +109,53 @@
                     투표가 마무리되어 이벤트가 종료되었습니다. <br>
                     나의 럭키상품 선정 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 선정 결과 전체를 보고 싶다면 상세페이 지 내 ‘결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
                 </p>
-                <i class="stamp" id="stamp-end"></i> <!-- .end-1 ~ .end-6 -->
-            </div>
-            <script>
-                //스티커 6종 랜덤출 력
-                const randomNum = Math.round(Math.random() * 5) + 1;
-                $('#stamp-success').addClass('success-' + randomNum);
-                $('#stamp-end').addClass('end-' + randomNum);
-            </script>
-
-            <div class="item winning">
-                <div class="tracking-title">
-                    <h3>루피커, 럭키템을 겟!</h3>
-                    <p class="font-14">축하해요. 진정한 행운의 사람들 🎉</p>
-                </div>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
-                            <p class="num">1st</p>
-                            <p class="name">2020 랜드로버 디팬더</p>
-                            <div class="winning-list d-flex">
-                                <div class="list-wrap">
-                                    <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
-                                    <div class="people people-2" style="background-image:url('../../resources/images/Thumbnail_02.png')"></div>
-                                    <div class="people people-3" style="background-image:url('../../resources/images/Thumbnail_03.png')"></div>
-                                </div>
-                                <p class="font-12">총<span>3</span>명</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
-                            <p class="num">2st</p>
-                            <p class="name">2020 랜드로버 디팬더</p>
-                            <div class="winning-list d-flex">
-                                <div class="list-wrap">
-                                    <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
-                                    <div class="people people-2" style="background-image:url('../../resources/images/Thumbnail_02.png')"></div>
-                                </div>
-                                <p class="font-12">총<span>2</span>명</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="img" style="background-image:url('../../resources/images/image_lucky_item_1.jpg')"></div>
-                            <p class="num">3st</p>
-                            <p class="name">2020 랜드로버 디팬더</p>
-                            <div class="winning-list d-flex">
-                                <div class="list-wrap">
-                                    <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
-                                </div>
-                                <p class="font-12">총<span>1</span>명</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="point">
-                                <p class="font-24 bold">1000P</p>
-                            </div>
-                            <p class="num">4st</p>
-                            <p class="name">2020 랜드로버 디팬더</p>
-                            <div class="winning-list d-flex">
-                                <div class="list-wrap">
-                                    <div class="people people-1" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
-                                    <div class="people people-2" style="background-image:url('../../resources/images/Thumbnail_01.png')"></div>
-                                </div>
-                                <p class="font-12">총<span>2</span>명</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-20">
-                        <!-- 해당 결과페이지로 이동 -->
-                        <a href="../vote/vote.html">
-                            <div class="btn-next white h-60">
-                                <p class="font-16">결과 전체보기</p>
-                                <i class="icon-link-arr"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-l-20 p-r-20 m-b-40">
-                    <ul class="card-list">
-                        <li>
-                            <a href="#myModal1" class="item" data-toggle="modal" data-role="button">
-                                <div class="thumb">
-                                    <span class="bg" style="background-image:url(../../resources/images/@event_01.png)"></span>
-                                </div>
-                                <div class="text">
-                                    <div class="subject line-3">실제로 포르쉐를 FLEX 해버린 루피커 9명의 생생한 후기! 시승식부터 소감까지</div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="badge badge-dark-primary badge-feed">이벤트후기</div>
-                                        <div class="deadline">조회수 3.1만∙19시간 전</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <a href="../vote/vote.html">
-                        <div class="btn-next black h-60 m-t-5">
-                            <p class="font-16">이벤트 후기 보러가기</p>
-                            <i class="fas fa-chevron-right"></i>
-                        </div>
-                    </a>
-                </div>
             </div>
 
-            <div class="info m-b-15">
-                <div class="desc">
-                    <p class="font-12 bold"><span class="paint">이벤트 정보</span></p>
-                    <ul>
-                        <li><span>이벤트코드</span> <span>LEFAS201000152</span></li>
-                        <li><span>구매개수</span> <span>일반상품 구매개수는 1인당 3개로 제한</span></li>
-                        <li><span>결제취소</span> <span>남은 시간 12시간부터 결제취소 불가능</span></li>
-                        <li><span>이벤트마감</span> <span>기간 내 준비된 일반상품 모두 소진 시</span></li>
-                        <li><span>이벤트실패</span> <span>이벤트 참여율이 100% 미만으로 마감될 경우 구매금액 전액 환불처리</span></li>
-                    </ul>
-                </div>
+            <div class="info">
+                <h2>상품배송 정보</h2>
+                <ul>
+                    <li>
+                        <span>카테고리</span>
+                        <span>패션의류/잡화</span>
+                    </li>
+
+                    <li><span>상호명</span> <span>HOHOHO</span></li>
+                    <li><span>연락처</span> <span>01090390000</span></li>
+                    <li><span>상품정보</span> <span><b>524개</b> 남음</span></li>
+                    <li>
+                        <span>배송정보</span>
+                        <span>
+                            <a href="deli_info.html" role="button"><b>상품 배송 정보</b> <i class="icon-link-arr-sm ml-2"></i></a>
+                            <div class="folding-btn">
+                                <a href="javascript:;" role="button">
+                                    <i class="icon-info-sky"></i>
+                                    <span>바로배송</span>
+                                </a>
+                                <div class="txt">
+                                    참여한 이벤트의 모집이 완료되어 이벤트가 종료되지 않더라도 구매한 상품은 일괄 배송이 아닌 즉시 배송됩니다.
+                                </div>
+                            </div>
+                            <script>
+                                $('.folding-btn').on('click',function(e){
+                                    e.preventDefault();
+                                    $(this).toggleClass('active');
+                                });
+                            </script>
+                        </span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="info bg m-b-15">
-                <div class="desc">
-                    <p class="font-12 bold"><span class="">일반상품/배송 정보</span></p>
-                    <ul>
-                        <li><span>카테고리</span> <span>기타</span></li>
-                        <li><span>배송비</span> <span>기본 배송 2,500원 (CJ대한통운) <br>* 제주 및 도서산간 지역은 추가 배송비 부담</span></li>
-                        <li><span>상호명</span> <span>하이브로우</span></li>
-                        <li><span>연락처</span> <span>02-1234-5678</span></li>
-                    </ul>
-                </div>
+            <div class="info">
+                <h2>이벤트 정보</h2>
+                <ul>
+                    <li><span>이벤트코드</span> <span id="eventCd">LEFAS211200009</span></li>
+                    <li><span>구매개수</span> <span>일반상품 구매개수는 1인당 1개로 제한</span></li>
+                    <li><span>결제취소</span> <span>남은 시간 12시간부터 결제취소 불가능</span></li>
+                    <li><span>이벤트마감</span> <span>기간 내 준비된 일반상품 모두 소진 시</span></li>
+                    <li><span>이벤트미달</span> <span>이벤트 참여율이 100% 미만으로 마감될 경우 지정된 포인트 보상</span></li>
+                    <li><span>이벤트기간</span> <span>2021.12.17 오후 5시 ~ 2021.12.17 오후 5시</span></li>
+                </ul>
             </div>
 
             <div class="item product m-t-60">

@@ -15,7 +15,6 @@ html,body{height: 100%;}
         .ic-home{width: 30px;height: 30px;transform: translate(5px, -5px);}
     }
     &.detail{
-        padding-top: 0;
         padding-bottom: 70px;
         padding-bottom: calc(constant(safe-area-inset-bottom) + 70px);
         padding-bottom: calc(env(safe-area-inset-bottom) + 70px);
@@ -71,7 +70,8 @@ html,body{height: 100%;}
 }
 
 .detail-img{
-    width:100%;padding-top:100%;height: 0;background-position: center;background-size:cover;background-repeat: no-repeat;position: relative;
+    position: relative;margin: 0 -20px;
+    > img{width: 100%;height: 100vw;object-fit: cover;}
     .icon-like{width:30px;height:30px;display: inline-block;border-radius: 50%; position: absolute;top:15px;right:15px;background: rgba(0,0,0,.5) url('../images/ic_btn_like_off.svg') no-repeat 0 0;
         &.active{background: rgba(0,0,0,1) url('../images/ic_btn_like_on.svg') no-repeat 0 0;}
     }
@@ -80,17 +80,29 @@ html,body{height: 100%;}
     }
 }
 
+.event-status{
+    background: rgba(0,0,0,0.2);position: absolute;left: 0;bottom: 0;right: 0;color: #fff;height: 26px;font-size: 12px;font-weight: 500;
+    .progress{height: 2px;margin-bottom: 4px;}
+    .progress-bar{background: $yellow;}
+    .icon-clock-white{transform: translateY(-1px);margin-right: 4px;}
+}
+
 // event-detail
 .container-wrap{
     padding:0 20px;overflow: hidden;
     .container-wrap{padding-left: 0;padding-right: 0;}
-    .badge{min-width: 0;}
+    .badge{min-width: 0;border-radius: 7px;}
     .component{
-        margin-top:30px;
+        margin-top: 20px;
         .detail-img{border-radius: 7px;}
         .subject{line-height: 1.44;}
-        .price{margin:10px 0 15px;line-height: 1;
+        .desc{color: rgba(0,0,0,0.5);font-size: 14px;margin-top: 2px;}
+        .price{
+            margin:15px 0 10px;line-height: 1.1818;
+            del{color: $muted;font-size: 14px;margin-bottom: 3px;display: inline-block;}
             .icon-point{margin-right: 4px;transform: translateY(-1px);}
+            .discount{font-size: 22px;font-weight: 700;color: $sky;}
+            .final{font-size: 22px;font-weight: 700;margin-left: 5px;}
         }
         .date{margin-left:5px;}
         .progress{background: rgba(0,0,0,0.12);border-radius: 0;}
@@ -118,16 +130,31 @@ html,body{height: 100%;}
     }
 
     .info{
-        border:1px solid rgba(0,0,0,0.1); padding:20px;
+        border-top: 1px solid rgba(0,0,0,0.15);padding: 20px 0;
+        h2{font-size: 14px;font-weight: 700;margin-bottom: 15px;line-height: 1.14;}
         p{margin-bottom:15px;line-height: 1;}
         li{
             display:flex;font-size:12px;line-height: 1.666;
             & + li{margin-top: 5px;}
-            span:nth-child(1){width:69px;flex: 0 0 69px;font-weight: 700;}
+            span:nth-child(1){width:89px;flex: 0 0 89px;color: $muted;}
             span:nth-child(2){flex: 1 1 100%;max-width: 100%}
         }
         &.bg{
             background-color: #f7f7f7;border-color: #f7f7f7;
+        }
+    }
+
+    .folding-btn{
+        margin-top: 7px;
+        > a{
+            display: flex;align-items: center;border: 1px solid rgba(0,0,0,0.1);border-radius: 7px;background: rgb(247,247,247);padding: 0 10px;height: 30px;position: relative;
+            span{color: $sky;font-size: 12px;line-height: 1;}
+            &::before{content: '';display: block;width: 8px;height: 4px;background: #ddd url('../images/icon-link-arr-down.svg');position: absolute;right: 10px;top: 50%;margin-top: -2px;}
+        }
+        .txt{border: 1px solid rgba(0,0,0,0.1);border-radius: 7px;background: rgb(247,247,247);transform: translateY(-1px);padding: 10px;color: $muted;display: none;}
+        &.active{
+            &::before{transform: rotate(180deg);}
+            .txt{display: block;}
         }
     }
 
@@ -163,8 +190,8 @@ html,body{height: 100%;}
     }
 
     .event-end{
-        border-top:1px solid rgba(0,0,0,0.15);border-bottom:1px solid rgba(0,0,0,0.15);padding: 20px 0;position: relative;
-        h2{font-size: 16px;font-weight: 700;line-height: 1.1875;margin-bottom: 15px;}
+        border-top:1px solid rgba(0,0,0,0.15);padding: 20px 0;position: relative;
+        h2{font-size: 14px;font-weight: 700;line-height: 1.1875;margin-bottom: 15px;}
         p{font-size: 12px;line-height: 1.666;}
         em{color: rgba(0,0,0,0.6);font-size: 12px;font-style: normal;font-weight: 400;display: block;margin-top: 5px;}
         .stamp{
@@ -182,7 +209,6 @@ html,body{height: 100%;}
             &.end-5{background-image: url(../images/event_success_sticker_black_5.svg);}
             &.end-6{background-image: url(../images/event_success_sticker_black_6.svg);}
         }
-        & + .info{margin-top: 40px;}
     }
 
     .item{
@@ -527,8 +553,10 @@ html,body{height: 100%;}
 }
 
 .tracking-btn{
-    width:100%;height:40px;font-size:14px;color:#000;border: 1px solid rgba(0, 0, 0, 0.15);
-    &:disabled{background-color: rgba(0, 0, 0, 0.05);border:0;}
+    width:100%;height:40px;font-size:14px;color:#000;border: 1px solid rgba(0, 0, 0, 0.15);border-radius: 7px;font-weight: 700;
+    &:disabled{color: rgba(0,0,0,0.4);}
+    &.btn-sky{border-color: $sky;color: $sky;}
+    &.tracking-btn-lg{height: 44px;}
 }
 
 
@@ -547,18 +575,19 @@ html,body{height: 100%;}
 //주문내역
 .tracking-wrap{
     .content{
-        padding : 30px 20px;border-top:4px solid rgba(0,0,0,0.05);
-        &:first-child{border-top:0;}
+        padding : 30px 20px;border-top:8px solid rgba(0,0,0,0.05);
+        //&:first-child{border-top:0;}
     }
     .order-type{
         border-bottom: 1px solid rgba(0,0,0,0.15);padding-bottom: 15px;margin-bottom: 15px;
         p{color: rgba(0,0,0,0.6);line-height: 1;padding-top: 1px;}
-        p + p{margin-top: 6px;}
+        p + p{margin-top: 5px;}
     }
     .desc{
         width: 100%;display:flex;justify-content: space-between;
-        .status{line-height: 1.1875;}
+        .status{line-height: 1.1875;font-weight: 700;}
         .text{flex-basis: 0;-webkit-box-flex: 1;flex-grow: 1;max-width: 100%;min-width: 0;}
+        .price{font-weight: 700;margin-top: 15px;line-height: 1;}
         .product{margin-left: 35px;}
         .img{width: 80px;height:80px;background-position: center;background-size: cover;background-repeat:no-repeat;float: right;}
     }
@@ -685,4 +714,13 @@ html,body{height: 100%;}
 .event-detailinfo-wrap{
     padding: 0 20px;
     img{width: auto !important;height: auto !important;max-width: 100%;}
+}
+
+
+.product-delivery-info{
+    padding: 0 20px;font-size: 14px;line-height: 1.57;
+    dt{margin-top: 20px;}
+    dd{
+
+    }
 }

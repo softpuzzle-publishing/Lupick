@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap p-b-30">
+        <div class="p-l-20 p-r-20 p-t-20">
+            <select class="select-sm" id="sortColumn">
+                <option value="-1">1개월</option>
+                <option value="-3" selected="selected">3개월</option>
+                <option value="-6">6개월</option>
+                <option value="-12">1년</option>
+                <option value="all">전체</option>
+            </select>
+        </div>
+        <div class="tracking-wrap m-t-20">
+            <div class="content">
+                <!-- <a th:href="${order.sUserCd} ? |@{/m/order/}@{${order.iSeq}(userCd=${order.sUserCd})}| : |javascript:alert('로그인 후에 이용이 가능합니다.')|"> -->
+                <div id="orderContent" data-role="orderContent" data-seq="1336" data-value="LEFAS211200007">
+	                <div class="order-type">
+	                    <div class="row row-10 align-items-center">
+	                        <div class="col-auto">
+	                            <span class="badge badge-event nanumBarunGothic badge-outline-dark">쇼핑 이벤트</span>
+	                        </div>
+	                        <div class="col">
+	                            <a href="/m/order/1336?userCd=10-1000-1018" class="d-flex justify-content-between align-items-center">
+	                                <div>
+	                                    <p class="font-12"><span>주문번호</span> <span>ORD20211216-0000001</span></p>
+	                                    <p class="font-12"><span>2021.12.16</span></p>
+	                                </div>
+	                                <i class="icon-arrow-right-gray"></i>
+	                            </a>
+	                        </div>
+	                    </div>
+	                </div>
+                    <div class="desc">
+                        <div class="text">
+                        	<div class="status m-b-15">
+                                <span class="text-sky">배송중</span>
+                            </div>
+                        	<!-- <div class="status m-b-15"><span class="paint paint-muted">결제 취소</span></div> -->
+                            <p class="text-truncate font-12 bold m-b-3">빙글빙글</p>
+
+
+                            <p class="font-14 line-height-20 m-b-3">빙글빙글 (빙글빙글)</p>
+
+
+                            <p class="price">15,000 원</p>
+
+
+                        </div>
+                        <div class="product">
+                            <div class="img" style="background-image:url(http://15.165.52.52:8082/upload/event/20211216/18245486408500.png);"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </a> -->
+
+
+                <div class="row row-10 m-t-15">
+                    <!--
+                    <div class="col-12">
+                        <th:block th:if="${order.sInicisStatus.toString().equals('CANCEL')}">
+                        	<button type="button" class="tracking-btn" disabled >결제 취소</button>
+                        </th:block>
+                        <th:block th:unless="${order.sInicisStatus.toString().equals('CANCEL')}">
+                        	<button type="button" class="tracking-btn" th:text="${order.orderStatusNm}" disabled >배송 완료</button>
+                    	</th:block>
+                    </div>
+                     -->
+                    <div class="col-12 m-t-10">
+                        <button type="button" class="tracking-btn" onclick="Mobile_myIngEvent_list.orderTracking('ORD20211216-0000001')">배송 조회</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="content">
+                <!-- <a th:href="${order.sUserCd} ? |@{/m/order/}@{${order.iSeq}(userCd=${order.sUserCd})}| : |javascript:alert('로그인 후에 이용이 가능합니다.')|"> -->
+                <div id="orderContent" data-role="orderContent" data-seq="1301" data-value="LEFAS211200005">
+	                <div class="order-type">
+	                    <div class="row row-10 align-items-center">
+	                        <div class="col-auto">
+	                            <span class="badge badge-event nanumBarunGothic badge-outline-dark">이벤트</span>
+	                        </div>
+	                        <div class="col">
+	                            <a href="/m/order/1301?userCd=10-1000-1018" class="d-flex justify-content-between align-items-center">
+	                                <div>
+	                                    <p class="font-12"><span>주문번호</span> <span>ORD20211206-0000013</span></p>
+	                                    <p class="font-12"><span>2021.12.06</span></p>
+	                                </div>
+	                                <i class="icon-arrow-right-gray"></i>
+	                            </a>
+	                        </div>
+	                    </div>
+	                </div>
+                    <div class="desc">
+                        <div class="text">
+                        	<div class="status m-b-15">
+                                <span class="text-sky">배송중</span>
+                            </div>
+                        	<!-- <div class="status m-b-15"><span class="paint paint-muted">결제 취소</span></div> -->
+                            <p class="text-truncate font-12 bold m-b-3">마지막 일반 투표 테스트</p>
+
+
+                            <p class="text-truncate font-14 line-height-20 m-b-3">마지막 일반 투표 테스트 (마지막 일반 투표 테스트)</p>
+
+
+
+
+                            <p class="price">1,000 원</p>
+                        </div>
+                        <div class="product">
+                            <div class="img" style="background-image:url(http://15.165.52.52:8082/upload/event/20211206/26624052648329327.jpg);"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </a> -->
+
+
+                <div class="row row-10 m-t-15">
+                    <!--
+                    <div class="col-12">
+                        <th:block th:if="${order.sInicisStatus.toString().equals('CANCEL')}">
+                        	<button type="button" class="tracking-btn" disabled >결제 취소</button>
+                        </th:block>
+                        <th:block th:unless="${order.sInicisStatus.toString().equals('CANCEL')}">
+                        	<button type="button" class="tracking-btn" th:text="${order.orderStatusNm}" disabled >배송 완료</button>
+                    	</th:block>
+                    </div>
+                     -->
+                    <div class="col-12 m-t-10">
+                        <button type="button" class="tracking-btn" onclick="Mobile_myIngEvent_list.orderTracking('ORD20211206-0000013')">배송 조회</button>
+                    </div>
+
+                    <div class="col-12 m-t-10">
+                        <button type="button" class="tracking-btn" disabled="">구매확정 완료</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../../resources/js/common.js"></script>
+</body>
+
+</html>

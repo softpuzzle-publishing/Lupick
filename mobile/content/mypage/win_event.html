@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap p-b-30">
+        <div class="p-l-20 p-r-20 p-t-20">
+            <nav class="my-tab">
+                <ul>
+                    <li class="active">
+                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('all')">전체</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('normal')">쇼핑 이벤트</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('point')">포인트 이벤트</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('free')">프리 이벤트</a>
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                $('.my-tab a').on('click',function(){
+                    $(this).parent('li').siblings().removeClass('active');
+                    $(this).parent('li').addClass('active');
+                });
+            </script>
+            <input type="hidden" id="userCd" value="10-1000-1018">
+            <input type="hidden" class="myOrderStatus" value="my_all_event">
+            <input type="hidden" class="sType" value="free">
+            <select class="select-sm" id="sortColumn">
+                <option value="-1">1개월</option>
+                <option value="-3" selected="selected">3개월</option>
+                <option value="-6">6개월</option>
+                <option value="-12">1년</option>
+                <option value="all">전체</option>
+            </select>
+            <p class="congratulation">루피커 선정을 축하합니다 (총 12개)</p>
+            <div class="event-items m-t-20">
+                <div class="item" id="orderContent" data-role="orderContent" data-seq="1319" data-value="LEFRE211200009">
+                    <div class="row row-13">
+                        <div class="col-auto">
+                            <div class="thumb">
+                                <img src="http://15.165.52.52:8082/upload/event/20211214/27285022212937604.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="tit">쇼핑  - 아이패드 받으러 가볼까? 이제 나도 애…</div>
+                            <div class="product">아이패드 프로 128GB 스페이스그레이</div>
+                            <button type="button" class="tracking-btn" onclick="Mobile_myIngEvent_list.updateOrderInfo('1301')">루피커 리뷰 작성</button>
+                        </div>
+                    </div>
+                </div>
+                <form name="orderTrackingForm" action="" method="GET">
+                    <input type="hidden" name="userCd" value="10-1000-1018">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../../resources/js/common.js"></script>
+</body>
+
+</html>
