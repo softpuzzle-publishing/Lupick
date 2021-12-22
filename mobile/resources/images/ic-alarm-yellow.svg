@@ -1,22 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        <filter id="t4jm42ab4a">
+        <filter id="a">
             <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 0.000000 0 0 0 1.000000 0"/>
         </filter>
     </defs>
-    <g fill="none" fill-rule="evenodd">
-        <g>
-            <g filter="url(#t4jm42ab4a)" transform="translate(-208 -154) translate(183 140)">
-                <g>
-                    <g>
-                        <path d="M0 0H30V30H0z" transform="translate(19 14) translate(6)"/>
-                        <g>
-                            <path fill="#FFF" fill-rule="nonzero" d="M0 2H2V16H0zM16 10H18V16H16zM2 0H13V2H2zM2 16H16V18H2z" transform="translate(19 14) translate(6) translate(5 6)"/>
-                            <path stroke="#FFF" stroke-width="2" d="M5 8.409L8.591 12 18.591 2" transform="translate(19 14) translate(6) translate(5 6)"/>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
+    <g transform="translate(-138 -18)" filter="url(#a)" fill="none" fill-rule="evenodd">
+        <path d="M138 18h30v30h-30z"/>
+        <path d="M148 24a4 4 0 0 0-3.995 3.8L144 28v10a4 4 0 0 0 3.8 3.995l.2.005h10a4 4 0 0 0 3.995-3.8L162 38v-4h-2v4a2 2 0 0 1-1.85 1.995L158 40h-10a2 2 0 0 1-1.995-1.85L146 38V28a2 2 0 0 1 1.85-1.995L148 26h9v-2h-9z" fill="#FF0" fill-rule="nonzero"/>
+        <path stroke="#FF0" stroke-width="2" d="M149 32.409 152.591 36l10-10"/>
     </g>
 </svg>

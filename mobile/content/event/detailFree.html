@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
+</head>
+<body>
+    <div class="wrap detail">
+        <div class="container-wrap">
+            <nav class="my-tab mb-0">
+                <ul>
+                    <li class="active">
+                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('all')">이벤트 스토리</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('normal')">상품 상세 설명</a>
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                $('.my-tab a').on('click',function(){
+                    $(this).parent('li').siblings().removeClass('active');
+                    $(this).parent('li').addClass('active');
+                });
+            </script>
+            <div class="detail-img">
+                <img src="../../resources/images/@event_01.png" alt="">
+                <div class="event-status">
+                    <div class="progress">
+                        <div class="adobe progress-bar progress-bar-info" role="progressbar" style="width: 88%" data-percent="88">
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-between p-r-20 p-l-20">
+                        <div class="col-auto">
+                            <div class="d-flex align-items-center">
+                                <i class="icon-clock-white"></i> <span>12일 남음</span>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <span>67% 참여 중</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="component m-b-40"> <!-- 이벤트 실패 일때 .fail 추가 -->
+                <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
+                <p class="desc">1명 8000만원 랜드로버 지급, 2명에게는 200,000포인트</p>
+                <div class="price">
+                    <div class="font-22 bold text-sky">무료참여</div>
+                </div>
+                <div>
+                    <span class="badge badge-outline-muted gilroy mb-0">BEST</span>
+                    <span class="badge badge-outline-muted gilroy mb-0">LUPICK SPECIAL</span>
+                    <span class="badge badge-outline-muted gilroy mb-0">하태하태</span>
+                </div>
+            </div>
+
+            <div class="info">
+                <h2>프리 이벤트 정보</h2>
+                <ul>
+                    <li>
+                        <span>이벤트코드</span>
+                        <span>LEFAS201000152</span>
+                    </li>
+
+                    <li><span>참여횟수</span> <span>해당 포인트 이벤트는 1인당 1회 참여로 제한</span></li>
+                    <li><span>결제취소</span> <span>남은 시간 12시간부터 결제취소 불가능</span></li>
+                    <li><span>이벤트마감</span> <span>기간 내 이벤트 참여 100% 완료 시</span></li>
+                    <li>
+                        <span>이벤트미달</span>
+                        <span>이벤트 참여율이 100% 미만으로 마감될 경우
+                            참여한 모든 포인트 환불처리</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="item article">
+                <div class="content">
+                    <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                    <div class="desc">
+                        <div class="content-title font-20 bold">펜데믹 시대에 진정한 힐링</div>
+                        <div class="text">
+                            <p class="font-14">
+                                코로나는 우리 삶의 많은 변화를 주었습니다. 사람과의 관계에 있어 당연한 대면의 현상이 이제 조심하고 부자연스러운 형태가 되었죠. 그렇다면 이제 우리의 진정한 힐링은 무엇일까요? 하이브로우가 제안하는 힐링은 자연과 대면하는 것입니다. 펜데믹 시대에 어울리는 루픽과 하이브로우가 함께 만든 스페셜 에디션 제품을 소개합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-box m-t-50">
+                <p><strong>무료참여</strong> 하고, <strong>이벤트상품</strong> 받아보자!</p>
+            </div>
+
+            <div class="item product m-t-50">
+                <div class="title d-flex align-items-center">
+                    <span class="title-ball yellow"></span>
+                    <p class="font-20 bold">누구나 참여 가능!</p>
+                </div>
+                <div class="img" style="background-image:url('../../resources/images/@event_07.png')"></div>
+                <div class="desc">
+                    <p class="font-14">무료로 참여가 가능한 ‘프리 이벤트’는 루픽 유저 누구나 참여하여 다양한 이벤트상품을 받을 수 있는 행운이 가득한 이벤트입니다. 이런 이벤트, 놓칠 수 없겠죠?</p>
+                </div>
+                <div class="detail">
+                    <ul>
+                        <li><span class="bold">모집수</span> <span>2,000명 (1인당 1회 참여 가능)</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="item lucky m-t-50">
+                <div class="title d-flex align-items-center">
+                    <span class="title-ball black"></span>
+                    <p class="font-20 bold">이벤트상품</p>
+                </div>
+                <div class="img">
+                    <img src="../../resources/images/@event_07.png" alt="">
+                </div>
+                <div class="desc">
+                    <h5 class="font-16 bold">하이브로우 MINI CARRIER TABLE</h5>
+                    <div>
+                        <span class="badge badge-yellow">오직 1명에게</span>
+                        <span class="badge badge-dark">75,600,000원</span>
+                    </div>
+                    <p class="text-muted font-12 m-t-5">*이벤트상품 금액은 판매가 기준으로 상이할 수 있습니다.</p>
+                    <p class="text font-14 m-t-20">루픽과 하이브로우의 만남! 하이브로우의 라이프 스타일과 루픽의 ‘펀’함이 만나 스페셜 제품이 탄생했습니다. 단 7777개만 생산하고 에디션 넘버까지 각인됩니다!</p>
+                </div>
+            </div>
+
+            <div class="hr"></div>
+
+        </div>
+
+        <div class="move-btn">
+            <a href="detail_lupick.html">
+                <div class="btn-next h-60">
+                    <p class="font-18 gilroy bold">Lupick.</p>
+                    <i class="icon-link-arr"></i>
+                </div>
+            </a>
+            <a href="detail_process.html">
+                <div class="btn-next h-60">
+                    <p class="font-16">이벤트 프로세스</p>
+                    <i class="icon-link-arr"></i>
+                </div>
+            </a>
+            <a href="detail_notice.html">
+                <div class="btn-next h-60">
+                    <p class="font-16">상품정보고지</p>
+                    <i class="icon-link-arr"></i>
+                </div>
+            </a>
+            <a href="detail_refund.html">
+                <div class="btn-next h-60">
+                    <p class="font-16">취소/교환/환불</p>
+                    <i class="icon-link-arr"></i>
+                </div>
+            </a>
+            <a href="../vote/vote.html">
+                <div class="btn-next h-60">
+                    <p class="font-16">루픽 투표</p>
+                    <i class="icon-link-arr"></i>
+                </div>
+            </a>
+            <a href="detail_guidance.html">
+                <div class="btn-next border-b h-60">
+                    <p class="font-16">안내사항</p>
+                    <i class="icon-link-arr"></i>
+                </div>
+            </a>
+        </div>
+
+        <div class="btn-fixed">
+            <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modal-detail">참여하기</a>
+        </div>
+    </div>
+
+    <!-- //옵션선택화면 -->
+    <div class="modal fade bd-example-modal-lg" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
+        <div class="modal-dialog modal-lg detail">
+            <!-- min -->
+            <div class="modal-alert">
+                <div class="toast">
+                    <div class="icon"></div>
+                    <p class="font-14 bold">아이템을 더이상 선택할 수 없습니다!</p>
+                </div>
+            </div>
+            <!-- max -->
+            <!-- <div class="modal-alert">
+                <div class="toast">
+                    <div class="icon"></div>
+                    <p class="font-14 bold">아이템은 1개 이상 구매 가능합니다!</p>
+                </div>
+            </div> -->
+
+            <div class="modal-content bg-transparent">
+                <div class="wrap animate-bottom bg-white" style="padding-top: 30px">
+                    <div class="scroll-area">
+                        <p class="title bold font-12">총<span>3</span>개까지 구매할 수 있어요!</p>
+                        <div>
+                            <div class="sel-option" id="sel-1">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="name">가장 빠르게 아이폰13프로 유저가 될 수 있는 방법📱</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-price border-1">
+                            <p>
+                                <span class="font-14 mr-1">총 수량</span>
+                                <span class="font-14 bold"> 1개</span>
+                            </p>
+                            <p>
+                                <span class="font-14 m-r-10"></span>
+                                <span class="font-20 bold">300</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-fixed">
+                    <a href="#" class="btn btn-dark">참여하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 로그인 -->
+    <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-center random" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p class="font-14 text-center">
+                        <span class="bold">로그인</span>이 필요해요! <br>
+                        로그인 하고 더 많은 루픽의 <br>
+                        서비스를 이용해볼까요?
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn h-50 font-14" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn h-50 font-14 bold"><span class="paint">로그인</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var mySwiper = new Swiper('.swiper-container', {
+                speed: 400,
+                slidesPerGroup: 1,
+                slidesPerView: 'auto',
+                freeMode: true,
+                spaceBetween: 70,
+                slidesOffsetBefore: 40,
+                slidesOffsetAfter: 40,
+                on:{
+                    slideChange: function(){
+                        if(this.activeIndex == 0){
+
+                        }else if(this.activeIndex >= 1){
+
+                        }
+                    }
+                }
+            });
+            $( "#select-option" ).selectmenu({
+                // appenTo 선택 엘리먼트에 셀렉트박스 넣음
+                appendTo: "#selectmenu-zone",
+                select: function( event, ui ) {
+                    $('.ui-selectmenu-text').text('옵션 선택')
+                }
+            });
+        })
+
+    </script>
+    <script src="../../resources/js/common.js"></script>
+
+    <script>
+        const $body = document.querySelector('body');
+        let scrollPosition = 0;
+        $('#modal-detail').on('show.bs.modal', function () {
+            scrollPosition = window.pageYOffset;
+            $body.style.overflow = 'hidden';
+            $body.style.position = 'fixed';
+            $body.style.top = `-${scrollPosition}px`;
+            $body.style.width = '100%';
+            $('body').addClass('scoll-prevent');
+        }).on('hide.bs.modal', function () {
+            $('body').removeClass('scoll-prevent');
+            $body.style.removeProperty('overflow');
+            $body.style.removeProperty('position');
+            $body.style.removeProperty('top');
+            $body.style.removeProperty('width');
+            window.scrollTo(0, scrollPosition);
+        });
+    </script>
+</body>
+</html>
