@@ -781,7 +781,11 @@ input:focus, button:focus, a:focus { outline: none; box-shadow: none !important;
 
 .icon-event { width: 24px; height: 24px; background-image: url("../images/icon-gnb-event.svg"); }
 
-.icon-feed { width: 24px; height: 24px; background-image: url("../images/icon-gnb-feed.svg"); }
+.icon-exhibition { width: 24px; height: 24px; background-image: url("../images/icon-gnb-exhibition.svg"); }
+
+.icon-quiz { width: 24px; height: 24px; background-image: url("../images/icon-gnb-quiz.svg"); }
+
+.icon-feed { width: 24px; height: 25px; background-image: url("../images/icon-gnb-feed.svg"); }
 
 .icon-banner { width: 24px; height: 24px; background-image: url("../images/icon-gnb-banner.svg"); }
 
@@ -1178,25 +1182,47 @@ aside { position: fixed; z-index: 1000; background: #ffff; }
 
 .gnb { margin-top: 15px; }
 
-.gnb ul { padding: 15px 0; border-bottom: 1px solid #ddd; }
+.gnb .dep1 { padding: 15px 0; border-bottom: 1px solid #ddd; }
 
-.gnb ul li + li { margin-top: 15px; }
+.gnb .dep1 a { font-size: 14px; color: #000; line-height: 16px; display: flex; align-items: center; position: relative; }
 
-.gnb ul a { font-size: 14px; color: #000; line-height: 24px; display: flex; }
+.gnb .dep1 a span { position: relative; z-index: 2; }
 
-.gnb ul a span { position: relative; z-index: 2; }
+.gnb .dep1 a span::after { content: ""; width: 0; height: 50%; position: absolute; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.15); z-index: -1; transition: width .15s ease-in-out; }
 
-.gnb ul a span:after { content: ""; width: 0; height: 50%; position: absolute; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.15); z-index: -1; transition: width .15s ease-in-out; }
+.gnb .dep1 a i { margin-right: 15px; }
 
-.gnb ul a:focus, .gnb ul a:hover { text-decoration: none; }
+.gnb .dep1 a:focus, .gnb .dep1 a:hover { text-decoration: none; }
 
-.gnb ul a:focus span:after, .gnb ul a:hover span:after { width: 100%; }
+.gnb .dep1 a:focus span::after, .gnb .dep1 a:hover span::after { width: 100%; }
 
-.gnb ul i { margin-right: 20px; }
+.gnb .dep1 .active > a span { font-weight: 700; }
 
-.gnb ul li.active span { font-weight: 700; }
+.gnb .dep1 .active > a span::after { background-color: #ffff00; width: 100%; }
 
-.gnb ul li.active span:after { background-color: #ffff00; width: 100%; }
+.gnb .dep1 > li + li { margin-top: 15px; }
+
+.gnb .dep1 > li > a::after { content: ''; display: block; width: 7px; height: 14px; background: url("../images/icon-step-arr.svg") no-repeat 50% 100%; background-size: contain; position: absolute; right: 0; top: 50%; margin-top: -7px; }
+
+.gnb .dep1 > li.has-treeview > a::after { content: ''; display: block; width: 7px; height: 14px; background: url("../images/icon-step-arr.svg") no-repeat 50% 100%; background-size: contain; position: absolute; right: 0; top: 50%; margin-top: -7px; transform: rotate(90deg); }
+
+.gnb .dep1 > li.has-treeview > a:focus span::after { width: 0; }
+
+.gnb .dep1 > li.has-treeview.open > a::after { transform: rotate(270deg); }
+
+.gnb .dep1 > li.has-treeview.open > a span::after { display: none; }
+
+.gnb .dep1 > li.has-treeview.open .dep2 { display: block; }
+
+.gnb .dep2 { margin-left: 28px; margin-top: 15px; display: none; }
+
+.gnb .dep2 > li > a::before { content: '- '; margin-right: 3px; }
+
+.gnb .dep2 > li.active > a { font-weight: 700; }
+
+.gnb .dep2 > li.active > a span::after { background: #ffff00; }
+
+.gnb .dep2 > li + li { margin-top: 15px; }
 
 #container-block .title { font-size: 20px; margin: 50px 0 15px 0; font-family: 'Gilroy'; font-weight: 700; line-height: 1.2; }
 

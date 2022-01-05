@@ -1,12 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <g fill="none" fill-rule="evenodd">
+        <path d="M4 4h15.993v16H4z"/>
+        <path d="M18 5.5a2 2 0 0 1 1.396 3.432l-3.401 3.318 3.401 3.318A2 2 0 0 1 18.001 19H6.999A3 3 0 0 1 4 16V8.5a3 3 0 0 1 2.999-3H18zM18 7H7a1.5 1.5 0 0 0-1.493 1.356L5.5 8.5V16a1.5 1.5 0 0 0 1.355 1.493L7 17.5H18a.5.5 0 0 0 .407-.79l-.058-.068-4.503-4.392 4.503-4.392a.5.5 0 0 0-.26-.85L18 7z" fill="#000" fill-rule="nonzero"/>
         <g>
-            <g>
-                <g>
-                    <path d="M4 4H20V20H4z" transform="translate(-3299 -338) translate(3299 60) translate(0 278)"/>
-                    <path fill="#000" d="M5.5 17.5h13V16H20v3H4V5.5h16v3h-1.5V7h-13v10.5zm13-3V16H17v-1.5h1.5zM17 13v1.5h-1.5V13H17zm-1.5-1.5V13H14v-1.5h1.5zM17 10v1.5h-1.5V10H17zm1.5-1.5V10H17V8.5h1.5z" transform="translate(-3299 -338) translate(3299 60) translate(0 278)"/>
-                </g>
-            </g>
+            <path d="M4 4h16v16H4z"/>
         </g>
     </g>
 </svg>

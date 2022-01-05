@@ -76,8 +76,12 @@ $(document).ready(function () {
         });
     });
 
-
-
+    $(document).on('click', '.gnb .dep1 > li > a', function(e){
+        if($(this).parent('li').hasClass('has-treeview')){
+            e.preventDefault();
+            $(this).parent('li').toggleClass('open');
+        }
+    });
 });
 
 //로그인,회원가입 background balls

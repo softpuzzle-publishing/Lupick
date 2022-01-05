@@ -17,24 +17,53 @@
 
 .gnb {
     margin-top: 15px;
-    ul {
+    .dep1 {
         padding: 15px 0;border-bottom: 1px solid #ddd;
-        li + li{margin-top: 15px;}
-        a {font-size: 14px;color: $black;line-height: 24px;display: flex;
+        a {
+            font-size: 14px;color: $black;line-height: 16px;display: flex;align-items: center;position: relative;
             span{position: relative;z-index: 2;}
-            span:after{content: "";width: 0;height: 50%;position: absolute;bottom: 0;left: 0;background-color: $gray;z-index: -1;transition: width .15s ease-in-out;}
-
+            span::after{content: "";width: 0;height: 50%;position: absolute;bottom: 0;left: 0;background-color: $gray;z-index: -1;transition: width .15s ease-in-out;}
+            i {margin-right: 15px;}
         }
         a:focus,
         a:hover{
             text-decoration: none;
-            span:after{width: 100%;}
+            span::after{width: 100%;}
         }
-        i {margin-right: 20px;}
-
-        li.active{
-            span{font-weight: 700;}
-            span:after {background-color: $yellow;width: 100%;}
+        .active{
+            > a{
+                span{font-weight: 700;}
+                span::after{background-color: $yellow;width: 100%;}
+            }
         }
+        > li + li{margin-top: 15px;}
+        > li{
+            > a::after{content: '';display: block;width: 7px;height: 14px;background: url('../images/icon-step-arr.svg') no-repeat 50% 100%;background-size: contain;position: absolute;right: 0;top: 50%;margin-top: -7px;}
+            &.has-treeview{
+                > a::after{content: '';display: block;width: 7px;height: 14px;background: url('../images/icon-step-arr.svg') no-repeat 50% 100%;background-size: contain;position: absolute;right: 0;top: 50%;margin-top: -7px;transform: rotate(90deg);}
+                > a:focus span::after{width: 0;}
+            }
+            &.has-treeview.open{
+                > a{
+                    &::after{transform: rotate(270deg);}
+                    span::after{display: none;}
+                }
+                .dep2{display: block;}
+            }
+        }
+    }
+    .dep2{
+        margin-left: 28px;margin-top: 15px;display: none;
+        > li{
+            > a{
+                &::before{content: '- ';margin-right: 3px;}
+            }
+            &.active{
+                > a{font-weight: 700;
+                    span::after{background: $yellow;}
+                }
+            }
+        }
+        > li + li{margin-top: 15px;}
     }
 }
