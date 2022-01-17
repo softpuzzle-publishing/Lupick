@@ -99,8 +99,8 @@ html,body{height: 100%;}
             margin:15px 0 10px;line-height: 1.1818;
             del{color: $muted;font-size: 14px;margin-bottom: 3px;display: inline-block;}
             .icon-point{margin-right: 4px;transform: translateY(-1px);}
-            .discount{font-size: 22px;font-weight: 700;color: $sky;}
-            .final{font-size: 22px;font-weight: 700;margin-left: 5px;}
+            .discount{font-size: 22px;font-weight: 700;color: $sky;margin-right: 5px;}
+            .final{font-size: 22px;font-weight: 700;}
         }
         .date{margin-left:5px;}
         .progress{background: rgba(0,0,0,0.12);border-radius: 0;}
@@ -140,6 +140,7 @@ html,body{height: 100%;}
         &.bg{
             background-color: #f7f7f7;border-color: #f7f7f7;
         }
+        &.border-bottom{border-bottom: 1px solid rgba(0,0,0,0.15) !important;}
     }
 
     .product-info{
@@ -298,6 +299,7 @@ html,body{height: 100%;}
         }
         &.reward{
             padding-bottom: 50px;
+            .title{margin-bottom:20px; line-height: 15px;}
         }
         &.article{
             .title{margin-bottom:20px; line-height: 15px;}
@@ -354,6 +356,7 @@ html,body{height: 100%;}
             .name{margin: 6px 0 7px 0;line-height: 1.1876;}
             .d-flex{margin-top: 7px;}
             .font-12{color: rgba(0,0,0,0.4);line-height: 1;margin-top: 5px;}
+            .text-red{white-space: nowrap;}
         }
         .point{
             width: 105px;height: 105px;flex: 0 0 105px;position: relative;

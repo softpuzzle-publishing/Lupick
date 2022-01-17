@@ -754,9 +754,9 @@ html, body { height: 100%; }
 
 .container-wrap .component .price .icon-point { margin-right: 4px; transform: translateY(-1px); }
 
-.container-wrap .component .price .discount { font-size: 22px; font-weight: 700; color: #008ffb; }
+.container-wrap .component .price .discount { font-size: 22px; font-weight: 700; color: #008ffb; margin-right: 5px; }
 
-.container-wrap .component .price .final { font-size: 22px; font-weight: 700; margin-left: 5px; }
+.container-wrap .component .price .final { font-size: 22px; font-weight: 700; }
 
 .container-wrap .component .date { margin-left: 5px; }
 
@@ -799,6 +799,8 @@ html, body { height: 100%; }
 .container-wrap .info li span:nth-child(2) { flex: 1 1 100%; max-width: 100%; }
 
 .container-wrap .info.bg { background-color: #f7f7f7; border-color: #f7f7f7; }
+
+.container-wrap .info.border-bottom { border-bottom: 1px solid rgba(0, 0, 0, 0.15) !important; }
 
 .container-wrap .product-info .ball-text { font-size: 16px; display: flex; align-items: center; }
 
@@ -981,6 +983,8 @@ html, body { height: 100%; }
 
 .container-wrap .item.reward { padding-bottom: 50px; }
 
+.container-wrap .item.reward .title { margin-bottom: 20px; line-height: 15px; }
+
 .container-wrap .item.article .title { margin-bottom: 20px; line-height: 15px; }
 
 .container-wrap .item.article .content img { margin: 40px 0 20px; width: 100% !important; height: auto !important; }
@@ -1038,6 +1042,8 @@ html, body { height: 100%; }
 .lucky-item .rank .text .d-flex { margin-top: 7px; }
 
 .lucky-item .rank .text .font-12 { color: rgba(0, 0, 0, 0.4); line-height: 1; margin-top: 5px; }
+
+.lucky-item .rank .text .text-red { white-space: nowrap; }
 
 .lucky-item .rank .point { width: 105px; height: 105px; flex: 0 0 105px; position: relative; display: flex; align-items: center; justify-content: center; }
 
