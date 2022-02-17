@@ -364,12 +364,13 @@
                     }
                 }
             });
-            $( "#select-option" ).selectmenu({
-                // appenTo 선택 엘리먼트에 셀렉트박스 넣음
-                appendTo: "#selectmenu-zone",
-                select: function( event, ui ) {
-                    $('.ui-selectmenu-text').text('옵션 선택')
-                }
+
+            $('.select-option').each(function(idx){
+                var zone = $(this).next('.selectmenu-zone');
+                $(this).selectmenu({
+                    // appenTo 선택 엘리먼트에 셀렉트박스 넣음
+                    appendTo: zone,
+                });
             });
         })
 

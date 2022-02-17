@@ -21,15 +21,15 @@
     <script src="../../resources/plugins/swiper/js/swiper.min.js"></script>
 </head>
 <body>
-    <div class="wrap detail">
+    <div class="wrap detail pt-0">
         <div class="container-wrap">
             <nav class="my-tab mb-0">
                 <ul>
                     <li class="active">
-                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('all')">이벤트 스토리</a>
+                        <a href="#block-story">이벤트 스토리</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" onclick="Mobile_myIngEvent_list.eventTypeList('normal')">상품 상세 설명</a>
+                        <a href="#block-detail">상품 상세 설명</a>
                     </li>
                 </ul>
             </nav>
@@ -39,227 +39,231 @@
                     $(this).parent('li').addClass('active');
                 });
             </script>
-            <div class="detail-img">
-                <img src="../../resources/images/@event_01.png" alt="">
-                <div class="event-status">
-                    <div class="progress">
-                        <div class="adobe progress-bar progress-bar-info" role="progressbar" style="width: 88%" data-percent="88">
-                        </div>
-                    </div>
-                    <div class="row align-items-center justify-content-between p-r-20 p-l-20">
-                        <div class="col-auto">
-                            <div class="d-flex align-items-center">
-                                <i class="icon-clock-white"></i> <span>12일 남음</span>
+
+            <!-- 이벤트 스토리 -->
+            <div id="block-story">
+                <div class="detail-img">
+                    <img src="../../resources/images/@event_01.png" alt="">
+                    <div class="event-status">
+                        <div class="progress">
+                            <div class="adobe progress-bar progress-bar-info" role="progressbar" style="width: 88%" data-percent="88">
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <span>67% 참여 중</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="component m-b-40"> <!-- 이벤트 실패 일때 .fail 추가 -->
-                <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
-                <p class="desc">1명 8000만원 랜드로버 지급, 2명에게는 200,000포인트</p>
-                <div class="price">
-                    <del>67,350원</del>
-                    <div class="d-flex align-items-center">
-                        <div class="discount">15%</div>
-                        <div class="final">57,000원</div>
-                    </div>
-                </div>
-                <div>
-                    <span class="badge badge-outline-muted gilroy mb-0">BEST</span>
-                    <span class="badge badge-outline-muted gilroy mb-0">LUPICK SPECIAL</span>
-                    <span class="badge badge-outline-muted gilroy mb-0">하태하태</span>
-                </div>
-            </div>
-
-            <div class="event-end">
-                <h2>이벤트 실패 </h2>
-                <p>
-                    아쉽게도 이벤트가 실패되어 참여해주신 모든 분들의 결제는 전액환불 처리됩니다. 환불은 영업일 기준으로 4~5일 정도 소요됩니다. 더 재미있고 좋은 이벤트로 다시 찾아뵙겠습니다 :)
-                </p>
-                <em>* 환불은 결제사에 따라 차이가 있을 수 있습니다.</em>
-            </div>
-            <div class="event-end">
-                <h2>이벤트 성공!</h2>
-                <p>
-                    투표가 마무리되어 이벤트가 종료되었습니다. <br>
-                    나의 당첨 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 당첨 결과 전체를 보고 싶다면 상세페이지 내 ‘당첨 결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
-                </p>
-                <em>* 이벤트 마감 후 결제취소는 불가능합니다.</em>
-            </div>
-            <div class="event-end">
-                <h2>이벤트가 종료되었습니다</h2>
-                <p>
-                    투표가 마무리되어 이벤트가 종료되었습니다. <br>
-                    나의 당첨 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 당첨 결과 전체를 보고 싶다면 상세페이지 내 ‘당첨 결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
-                </p>
-            </div>
-
-            <div class="info">
-                <h2>상품배송 정보</h2>
-                <ul>
-                    <li>
-                        <span>카테고리</span>
-                        <span>패션의류/잡화</span>
-                    </li>
-
-                    <li><span>상호명</span> <span>HOHOHO</span></li>
-                    <li><span>연락처</span> <span>01090390000</span></li>
-                    <li><span>상품정보</span> <span><b>524개</b> 남음</span></li>
-                    <li>
-                        <span>배송정보</span>
-                        <span>
-                            <a href="delivery_info.html" role="button"><b>상품 배송 정보</b> <i class="icon-link-arr-sm ml-2"></i></a>
-                            <div class="folding-btn">
-                                <a href="javascript:;" role="button">
-                                    <i class="icon-info-sky"></i>
-                                    <span>바로배송</span>
-                                </a>
-                                <div class="txt">
-                                    참여한 이벤트의 모집이 완료되어 이벤트가 종료되지 않더라도 구매한 상품은 일괄 배송이 아닌 즉시 배송됩니다.
+                        <div class="row align-items-center justify-content-between px-3">
+                            <div class="col-auto">
+                                <div class="d-flex align-items-center">
+                                    <i class="icon-clock-white"></i> <span>12일 남음</span>
                                 </div>
                             </div>
-                            <script>
-                                $('.info .folding-btn').on('click',function(e){
-                                    e.preventDefault();
-                                    $(this).toggleClass('active');
-                                });
-                            </script>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="info border-bottom">
-                <h2>이벤트 정보</h2>
-                <ul>
-                    <li><span>이벤트코드</span> <span id="eventCd">LEFAS211200009</span></li>
-                    <li><span>구매개수</span> <span>일반상품 구매개수는 1인당 1개로 제한</span></li>
-                    <li><span>결제취소</span> <span>남은 시간 12시간부터 결제취소 불가능</span></li>
-                    <li><span>이벤트마감</span> <span>기간 내 준비된 일반상품 모두 소진 시</span></li>
-                    <li><span>이벤트미달</span> <span>이벤트 참여율이 100% 미만으로 마감될 경우 지정된 포인트 보상</span></li>
-                    <li><span>이벤트기간</span> <span>2021.12.17 오후 5시 ~ 2021.12.17 오후 5시</span></li>
-                </ul>
-            </div>
-
-            <div class="item article">
-                <div class="content">
-                    <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
-                    <div class="desc">
-                        <div class="content-title font-20 bold">펜데믹 시대에 진정한 힐링</div>
-                        <div class="text">
-                            <p class="font-14">
-                                코로나는 우리 삶의 많은 변화를 주었습니다. 사람과의 관계에 있어 당연한 대면의 현상이 이제 조심하고 부자연스러운 형태가 되었죠. 그렇다면 이제 우리의 진정한 힐링은 무엇일까요? 하이브로우가 제안하는 힐링은 자연과 대면하는 것입니다. 펜데믹 시대에 어울리는 루픽과 하이브로우가 함께 만든 스페셜 에디션 제품을 소개합니다.
-                            </p>
+                            <div class="col-auto">
+                                <span>67% 참여 중</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="text-box m-t-50">
-                <p><strong>상품</strong> 구매하고, <strong>이벤트상품</strong> 받아보자!</p>
-            </div>
-
-            <div class="item product m-t-50">
-                <div class="title d-flex align-items-center">
-                    <span class="title-ball yellow"></span>
-                    <p class="font-20 bold">상품</p>
+                <div class="component m-b-40"> <!-- 이벤트 실패 일때 .fail 추가 -->
+                    <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
+                    <p class="desc">1명 8000만원 랜드로버 지급, 2명에게는 200,000포인트</p>
+                    <div class="price">
+                        <del>67,350원</del>
+                        <div class="d-flex align-items-center">
+                            <div class="discount">15%</div>
+                            <div class="final">57,000원</div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="badge badge-outline-muted gilroy mb-0">BEST</span>
+                        <span class="badge badge-outline-muted gilroy mb-0">LUPICK SPECIAL</span>
+                        <span class="badge badge-outline-muted gilroy mb-0">하태하태</span>
+                    </div>
                 </div>
-                <div class="img" style="background-image:url('../../resources/images/@event_07.png')"></div>
-                <div class="desc">
-                    <h5 class="font-16 bold">하이브로우 MINI CARRIER TABLE</h5>
-                    <p class="font-14">루픽과 하이브로우의 만남! 하이브로우의 라이프 스타일과 루픽의 ‘펀’함이 만나 스페셜 제품이 탄생했습니다. 단 7777개만 생산하고 에디션 넘버까지 각인됩니다!</p>
+                <div class="event-end">
+                    <h2>이벤트 실패 </h2>
+                    <p>
+                        아쉽게도 이벤트가 실패되어 참여해주신 모든 분들의 결제는 전액환불 처리됩니다. 환불은 영업일 기준으로 4~5일 정도 소요됩니다. 더 재미있고 좋은 이벤트로 다시 찾아뵙겠습니다 :)
+                    </p>
+                    <em>* 환불은 결제사에 따라 차이가 있을 수 있습니다.</em>
                 </div>
-                <div class="detail">
+                <div class="event-end">
+                    <h2>이벤트 성공!</h2>
+                    <p>
+                        투표가 마무리되어 이벤트가 종료되었습니다. <br>
+                        나의 당첨 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 당첨 결과 전체를 보고 싶다면 상세페이지 내 ‘당첨 결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
+                    </p>
+                    <em>* 이벤트 마감 후 결제취소는 불가능합니다.</em>
+                </div>
+                <div class="event-end">
+                    <h2>이벤트가 종료되었습니다</h2>
+                    <p>
+                        투표가 마무리되어 이벤트가 종료되었습니다. <br>
+                        나의 당첨 여부와 번호, 득표수는 ‘결과 확인하기’ 버튼을 눌러 확인할 수 있습니다. 당첨 결과 전체를 보고 싶다면 상세페이지 내 ‘당첨 결과 전체보기’ 버튼을 눌러 확인할 수 있습니다.
+                    </p>
+                </div>
+                <div class="info">
+                    <h2>상품배송 정보</h2>
                     <ul>
-                        <li><span class="bold">가격</span> <span>배송비</span></li>
-                        <li><span class="bold">모집수</span> <span>7777개 (1인당 최대 3개까지 구매 가능)</span></li>
-                        <li><span class="bold">옵션</span> <span>PLAIN, TEAK</span></li>
-                        <li><span class="bold">배송비</span> <span>기본 배송 2,500원 (CJ대한통운)</span></li>
+                        <li>
+                            <span>카테고리</span>
+                            <span>패션의류/잡화</span>
+                        </li>
+                        <li><span>상호명</span> <span>HOHOHO</span></li>
+                        <li><span>연락처</span> <span>01090390000</span></li>
+                        <li><span>상품정보</span> <span><b>524개</b> 남음</span></li>
+                        <li>
+                            <span>배송정보</span>
+                            <span>
+                                <a href="delivery_info.html" role="button"><b>상품 배송 정보</b> <i class="icon-link-arr-sm ml-2"></i></a>
+                                <div class="folding-btn">
+                                    <a href="javascript:;" role="button">
+                                        <i class="icon-info-sky"></i>
+                                        <span>바로배송</span>
+                                    </a>
+                                    <div class="txt">
+                                        참여한 이벤트의 모집이 완료되어 이벤트가 종료되지 않더라도 구매한 상품은 일괄 배송이 아닌 즉시 배송됩니다.
+                                    </div>
+                                </div>
+                                <script>
+                                    //상단 탭(이벤트 스토리 / 상품 상세 설명)
+                                    $('.my-tab a').on('click', function (e) {
+                                        e.preventDefault();
+                                        $($(this).attr("href")).show();
+                                        $($(this).parent("li").siblings().find("a").attr("href")).hide();
+                                        $(this).parent('li').siblings().removeClass('active');
+                                        $(this).parent('li').addClass('active');
+                                    });
+                                    //배송정보 드롭다운 토글
+                                    $('.info .folding-btn').on('click',function(e){
+                                        e.preventDefault();
+                                        $(this).toggleClass('active');
+                                    });
+                                </script>
+                            </span>
+                        </li>
                     </ul>
                 </div>
+                <div class="info border-bottom">
+                    <h2>이벤트 정보</h2>
+                    <ul>
+                        <li><span>이벤트코드</span> <span id="eventCd">LEFAS211200009</span></li>
+                        <li><span>구매개수</span> <span>일반상품 구매개수는 1인당 1개로 제한</span></li>
+                        <li><span>결제취소</span> <span>남은 시간 12시간부터 결제취소 불가능</span></li>
+                        <li><span>이벤트마감</span> <span>기간 내 준비된 일반상품 모두 소진 시</span></li>
+                        <li><span>이벤트미달</span> <span>이벤트 참여율이 100% 미만으로 마감될 경우 지정된 포인트 보상</span></li>
+                        <li><span>이벤트기간</span> <span>2021.12.17 오후 5시 ~ 2021.12.17 오후 5시</span></li>
+                    </ul>
+                </div>
+                <div class="item article">
+                    <div class="content">
+                        <div class="img" style="background-image:url(../../resources/images/@event_01.png)"></div>
+                        <div class="desc">
+                            <div class="content-title font-20 bold">펜데믹 시대에 진정한 힐링</div>
+                            <div class="text">
+                                <p class="font-14">
+                                    코로나는 우리 삶의 많은 변화를 주었습니다. 사람과의 관계에 있어 당연한 대면의 현상이 이제 조심하고 부자연스러운 형태가 되었죠. 그렇다면 이제 우리의 진정한 힐링은 무엇일까요? 하이브로우가 제안하는 힐링은 자연과 대면하는 것입니다. 펜데믹 시대에 어울리는 루픽과 하이브로우가 함께 만든 스페셜 에디션 제품을 소개합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-box m-t-50">
+                    <p><strong>상품</strong> 구매하고, <strong>이벤트상품</strong> 받아보자!</p>
+                </div>
+                <div class="item product m-t-50">
+                    <div class="title d-flex align-items-center">
+                        <span class="title-ball yellow"></span>
+                        <p class="font-20 bold">상품</p>
+                    </div>
+                    <div class="img" style="background-image:url('../../resources/images/@event_07.png')"></div>
+                    <div class="desc">
+                        <h5 class="font-16 bold">하이브로우 MINI CARRIER TABLE</h5>
+                        <p class="font-14">루픽과 하이브로우의 만남! 하이브로우의 라이프 스타일과 루픽의 ‘펀’함이 만나 스페셜 제품이 탄생했습니다. 단 7777개만 생산하고 에디션 넘버까지 각인됩니다!</p>
+                    </div>
+                    <div class="detail">
+                        <ul>
+                            <li><span class="bold">가격</span> <span>배송비</span></li>
+                            <li><span class="bold">모집수</span> <span>7777개 (1인당 최대 3개까지 구매 가능)</span></li>
+                            <li><span class="bold">옵션</span> <span>PLAIN, TEAK</span></li>
+                            <li><span class="bold">배송비</span> <span>기본 배송 2,500원 (CJ대한통운)</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="item lucky m-t-50">
+                    <div class="title d-flex align-items-center">
+                        <span class="title-ball black"></span>
+                        <p class="font-20 bold">루픽리워드</p>
+                    </div>
+                    <div class="img">
+                        <img src="../../resources/images/@event_07.png" alt="">
+                    </div>
+                    <div class="desc">
+                        <h5 class="font-16 bold">하이브로우 MINI CARRIER TABLE</h5>
+                        <div>
+                            <span class="badge badge-yellow">오직 1명에게</span>
+                            <span class="badge badge-dark">75,600,000원</span>
+                        </div>
+                        <p class="text-muted font-12 m-t-5">*이벤트상품 금액은 판매가 기준으로 상이할 수 있습니다.</p>
+                        <p class="text font-14 m-t-20">루픽과 하이브로우의 만남! 하이브로우의 라이프 스타일과 루픽의 ‘펀’함이 만나 스페셜 제품이 탄생했습니다. 단 7777개만 생산하고 에디션 넘버까지 각인됩니다!</p>
+                    </div>
+                    <div class="lucky-item">
+                        <div class="rank">
+                            <div class="text">
+                                <div><span class="text-sky font-15 bold">10명에게</span></div>
+                                <p class="name font-16 bold">나바호 인디언 빅 돔 텐트</p>
+                                <div class="d-flex font-14 m-t-20"><span class="bold" style="width:40px">가격</span> <span>20,000원</span></div>
+                            </div>
+                            <div class="img">
+                                <img src="../../resources/images/@event_01.png" alt="">
+                            </div>
+                        </div>
+                        <div class="rank">
+                            <div class="text">
+                                <div><span class="text-sky font-15 bold">50명에게</span></div>
+                                <p class="name font-16 bold">웰리 밴디지 패브릭 반창고 5종</p>
+                                <div class="d-flex font-14 m-t-20"><span class="bold" style="width:40px">가격</span> <span>20,000원</span></div>
+                            </div>
+                            <div class="img">
+                                <img src="../../resources/images/@event_01.png" alt="">
+                            </div>
+                        </div>
+                        <div class="rank">
+                            <div class="text">
+                                <div><span class="text-sky font-15 bold">1000명에게</span></div>
+                                <p class="name font-16 bold">루픽 포인트 1,000P</p>
+                                <p class="font-12 m-t-20">*득표수와 관계없이 랜덤 지급됩니다.</p>
+                            </div>
+                            <div class="point">
+                                <strong class="gilroy">1,000P</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="item reward m-t-50">
+                    <div class="title d-flex align-items-center">
+                        <span class="title-ball red"></span>
+                        <p class="font-20 bold">이벤트 모집 미달 시 보상 포인트</p>
+                    </div>
+                    <div class="lucky-item m-t-20">
+                        <div class="rank">
+                            <div class="text">
+                                <div><span class="text-sky font-15 bold">이벤트 참여 인원에게</span></div>
+                                <p class="name font-16 bold">루픽 포인트 2,500P</p>
+                                <p class="text-red font-14 m-t-20">참여한 이벤트의 모집이 미달되어 <br>이벤트가 종료되면, 보상 포인트를 지급!</p>
+                            </div>
+                            <div class="point">
+                                <strong class="gilroy">2,500P</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr"></div>
             </div>
 
-            <div class="hr"></div>
-
-            <div class="item lucky m-t-50">
-                <div class="title d-flex align-items-center">
-                    <span class="title-ball black"></span>
-                    <p class="font-20 bold">루픽리워드</p>
-                </div>
-                <div class="img">
-                    <img src="../../resources/images/@event_07.png" alt="">
-                </div>
-                <div class="desc">
-                    <h5 class="font-16 bold">하이브로우 MINI CARRIER TABLE</h5>
-                    <div>
-                        <span class="badge badge-yellow">오직 1명에게</span>
-                        <span class="badge badge-dark">75,600,000원</span>
-                    </div>
-                    <p class="text-muted font-12 m-t-5">*이벤트상품 금액은 판매가 기준으로 상이할 수 있습니다.</p>
-                    <p class="text font-14 m-t-20">루픽과 하이브로우의 만남! 하이브로우의 라이프 스타일과 루픽의 ‘펀’함이 만나 스페셜 제품이 탄생했습니다. 단 7777개만 생산하고 에디션 넘버까지 각인됩니다!</p>
-                </div>
-
-                <div class="lucky-item">
-                    <div class="rank">
-                        <div class="text">
-                            <div><span class="text-sky font-15 bold">10명에게</span></div>
-                            <p class="name font-16 bold">나바호 인디언 빅 돔 텐트</p>
-                            <div class="d-flex font-14 m-t-20"><span class="bold" style="width:40px">가격</span> <span>20,000원</span></div>
-                        </div>
-                        <div class="img">
-                            <img src="../../resources/images/@event_01.png" alt="">
-                        </div>
-                    </div>
-                    <div class="rank">
-                        <div class="text">
-                            <div><span class="text-sky font-15 bold">50명에게</span></div>
-                            <p class="name font-16 bold">웰리 밴디지 패브릭 반창고 5종</p>
-                            <div class="d-flex font-14 m-t-20"><span class="bold" style="width:40px">가격</span> <span>20,000원</span></div>
-                        </div>
-                        <div class="img">
-                            <img src="../../resources/images/@event_01.png" alt="">
-                        </div>
-                    </div>
-                    <div class="rank">
-                        <div class="text">
-                            <div><span class="text-sky font-15 bold">1000명에게</span></div>
-                            <p class="name font-16 bold">루픽 포인트 1,000P</p>
-                            <p class="font-12 m-t-20">*득표수와 관계없이 랜덤 지급됩니다.</p>
-                        </div>
-                        <div class="point">
-                            <strong class="gilroy">1,000P</strong>
-                        </div>
-                    </div>
-                </div>
+            <!-- 상품 상세 설명 -->
+            <div id="block-detail" class="p-t-20" style="display:none">
+                <th:block th:utext="${eventInfo.tDetail}">상품 상세 설명 상품 상세 설명</th:block>
             </div>
-
-            <div class="hr"></div>
-
-            <div class="item reward m-t-50">
-                <div class="title d-flex align-items-center">
-                    <span class="title-ball red"></span>
-                    <p class="font-20 bold">이벤트 모집 미달 시 보상 포인트</p>
-                </div>
-
-                <div class="lucky-item m-t-20">
-                    <div class="rank">
-                        <div class="text">
-                            <div><span class="text-sky font-15 bold">이벤트 참여 인원에게</span></div>
-                            <p class="name font-16 bold">루픽 포인트 2,500P</p>
-                            <p class="text-red font-14 m-t-20">참여한 이벤트의 모집이 미달되어 <br>이벤트가 종료되면, 보상 포인트를 지급!</p>
-                        </div>
-                        <div class="point">
-                            <strong class="gilroy">2,500P</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hr"></div>
 
         </div>
 
@@ -343,7 +347,7 @@
                 <div class="wrap animate-bottom bg-white" style="padding-top: 30px">
                     <div class="scroll-area">
                         <p class="title bold font-12">총<span>3</span>개까지 구매할 수 있어요!</p>
-                        <select class="select-sm" id="select-option">
+                        <select class="select-sm select-option" id="select-option">
                             <option value="" selected>옵션 선택</option>
                             <option value="1">미니 캐리어 테이블 (PLAIN)</option>
                             <option value="1">미니 캐리어 테이블 (TEAK)</option>
@@ -352,7 +356,17 @@
                             <option value="1">미니 캐리어 테이블 (TEAK)</option>
                             <option value="1">미니 캐리어 테이블 (asdasdasd)</option>
                         </select>
-                        <div id="selectmenu-zone"></div>
+                        <div class="selectmenu-zone" id="selectmenu-zone"></div>
+                        <select class="select-sm select-option" id="select-option2">
+                            <option value="" selected>옵션 선택</option>
+                            <option value="1">미니 캐리어 테이블 (PLAIN)</option>
+                            <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                            <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                            <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                            <option value="1">미니 캐리어 테이블 (TEAK)</option>
+                            <option value="1">미니 캐리어 테이블 (asdasdasd)</option>
+                        </select>
+                        <div class="selectmenu-zone"></div>
                         <div>
                             <div class="sel-option" id="sel-1">
                                 <div class="d-flex align-items-center justify-content-between">
@@ -461,12 +475,13 @@
                     }
                 }
             });
-            $( "#select-option" ).selectmenu({
-                // appenTo 선택 엘리먼트에 셀렉트박스 넣음
-                appendTo: "#selectmenu-zone",
-                select: function( event, ui ) {
-                    $('.ui-selectmenu-text').text('옵션 선택')
-                }
+
+            $('.select-option').each(function(idx){
+                var zone = $(this).next('.selectmenu-zone');
+                $(this).selectmenu({
+                    // appenTo 선택 엘리먼트에 셀렉트박스 넣음
+                    appendTo: zone,
+                });
             });
         })
 
