@@ -261,8 +261,10 @@
             </div>
 
             <!-- 상품 상세 설명 -->
-            <div id="block-detail" class="p-t-20" style="display:none">
-                <th:block th:utext="${eventInfo.tDetail}">상품 상세 설명 상품 상세 설명</th:block>
+            <div id="block-detail" style="display:none">
+                <div style="background: #fcdbdb">
+                    <th:block th:utext="${eventInfo.tDetail}">상품 상세 설명 이미지</th:block>
+                </div>
             </div>
 
         </div>

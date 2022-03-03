@@ -5,7 +5,7 @@ $white:#fff;
 $black:#000;
 $red:#d20000;
 $yellow:#ffff00;
-$sky: #008ffb;
+$sky: #19AFFF ;
 $muted: rgba(0,0,0,0.4);
 
 $border-color:rgba(0,0,0,0.15);
@@ -175,6 +175,14 @@ a:focus{outline: none;box-shadow: none !important;}
     &.black{
         background-color: #f2f2f2;border-color: #f2f2f2;
     }
+}
+
+.btn-new-style{
+    border-radius: 7px;display: flex;align-items: center;justify-content: center;
+}
+
+.btn-lg.btn-new-style{
+    height: 50px;font-size: 18px;font-weight: 700;line-height: 1;
 }
 
 .search{width:100%;text-align:center;margin-top:20px;

@@ -10,8 +10,7 @@ html,body{height: 100%;}
     .header{
         position:fixed;width:100%;height:60px;padding: 20px;margin-bottom:20px;top:0;background-color:$white;z-index:40;
         .ic-back{width:20px;height:15px;background-image:url(../images/ic_back.svg);background-size: cover;background-position: center;background-repeat: no-repeat;
-        margin-right:15px;
-        }
+        margin-right: 15px;}
         .ic-home{width: 30px;height: 30px;transform: translate(5px, -5px);}
     }
     &.detail{
@@ -23,7 +22,6 @@ html,body{height: 100%;}
         padding-bottom: calc(constant(safe-area-inset-bottom) + 30px) !important;
         padding-bottom: calc(env(safe-area-inset-bottom) + 30px) !important;
     }
-
     .android &{padding-top: 0 !important;}
 }
 
