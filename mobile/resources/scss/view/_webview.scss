@@ -201,16 +201,21 @@ html,body{height: 100%;}
             }
             .swiper-slide{
                 width: 200px !important;height: auto !important;
+                .frame{height: 200px;display: flex;align-items: center;justify-content: center;}
                 .img{width:200px;height:200px;border-radius: 50%;background-size:cover;background-repeat: no-repeat;background-position: center;}
                 .point{width: 200px;height: 200px;border-radius: 50%; background-color: #ffff00;display: flex;align-items: center;justify-content: center;}
-                .num{font-size:20px;font-family: 'Gliroy'; font-weight: bold;margin-top: 10px;}
-                .name{margin-top:5px;font-size:20px;font-weight: bold;}
+                .num{font-size:20px;font-family: 'Gliroy'; font-weight: bold;margin-top: 10px;line-height: 1.2;}
+                .name{margin-top:5px;font-size:20px;font-weight: bold;line-height: 1.15;}
                 .winning-list{margin-top:10px;}
                 .list-wrap{position: relative;margin-right:5px;}
-                .people{width:20px;height:20px;display:inline-block;background-size:cover;background-repeat: no-repeat;background-position: center;border-radius:50%;border:1px solid $white;
+                .people{width:20px;height:20px;display:inline-block;background-size:cover;background-repeat: no-repeat;background-position: center;border-radius:50%;border:1px solid $white;vertical-align: top;
                     &.people-1{margin-left:0;z-index: 1;}
                     &.people-2{margin-left:-10px;z-index: 2;}
                     &.people-3{margin-left:-10px;z-index: 3;}
+                }
+                &:not(:first-child){
+                    .img{width: 150px;height: 150px;}
+                    .point{width: 150px;height: 150px;}
                 }
             }
             .event-review{
