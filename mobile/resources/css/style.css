@@ -664,6 +664,8 @@ select.select-lg { opacity: 0; height: 65px; }
 
 .white-pre-wrap { white-space: pre-wrap; }
 
+.white-break-spaces { white-space: break-spaces; }
+
 .item-info { padding: 0 20px; font-size: 14px; line-height: 1.57; }
 
 .item-info dt { margin-top: 20px; }
