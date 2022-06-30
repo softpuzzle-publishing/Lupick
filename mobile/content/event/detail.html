@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="component m-b-40"> <!-- 이벤트 실패 일때 .fail 추가 -->
+                <div class="component m-b-30"> <!-- 이벤트 실패 일때 .fail 추가 -->
                     <p class="subject font-18">[하이브로우] 미니캐리어 테이블 구매하고 랜드로버 뉴 디펜더 타고 캠핑가자!</p>
                     <p class="desc">1명 8000만원 랜드로버 지급, 2명에게는 200,000포인트</p>
                     <div class="price">
@@ -77,7 +77,7 @@
                         <span class="badge badge-outline-muted gilroy mb-0">하태하태</span>
                     </div>
                 </div>
-                <div class="item winning">
+                <!-- <div class="item winning">
                     <div class="tracking-title">
                         <h3>루피커, 럭키템을 겟!</h3>
                         <p class="font-14">축하해요. 진정한 행운의 사람들 🎉</p>
@@ -144,7 +144,6 @@
                             </div>
                         </div>
                         <div class="p-20">
-                            <!-- 해당 결과페이지로 이동 -->
                             <a href="../vote/vote.html">
                                 <div class="btn-next white h-50 btn-new-style">
                                     <p class="font-16">결과 전체보기</p>
@@ -177,7 +176,7 @@
                             </div>
                         </a>
                     </div>
-                </div>
+                </div> -->
                 <!-- <div class="event-end">
                     <h2>이벤트 실패 </h2>
                     <p>
@@ -202,7 +201,7 @@
                 </div> -->
                 <div class="info">
                     <h2>상품배송 정보</h2>
-                    <ul>
+                    <ul class="m-t-15">
                         <li>
                             <span>카테고리</span>
                             <span>패션의류/잡화</span>
@@ -242,16 +241,108 @@
                         </li>
                     </ul>
                 </div>
+                <div class="info-shipping">
+                    <h2>Info.</h2>
+                    <ul>
+                        <li><span>배송 일자</span> <span>지금 주문 시 <strong class="text-sky">6월 22일</strong>부터 배송 시작</span></li>
+                        <li><span>배송 정보</span> <span>배송비 <strong>3,500원</strong> / 3만원 이상 무료배송</span></li>
+                    </ul>
+                    <div class="box">
+                        <p>이벤트상품 제작과 관련한 이슈로 초기 모집 때 프리오더(선주문) 방식으로 판매가 진행될 수 있습니다.</p>
+                        <p>이벤트 모집이 완료 후 구매 취소가 불가합니다.</p>
+                    </div>
+                </div>
                 <div class="info border-bottom">
                     <h2>이벤트 정보</h2>
-                    <ul>
-                        <li><span>이벤트코드</span> <span id="eventCd">LEFAS211200009</span></li>
-                        <li><span>구매개수</span> <span>일반상품 구매개수는 1인당 1개로 제한</span></li>
-                        <li><span>결제취소</span> <span>남은 시간 12시간부터 결제취소 불가능</span></li>
-                        <li><span>이벤트마감</span> <span>기간 내 준비된 일반상품 모두 소진 시</span></li>
-                        <li><span>이벤트미달</span> <span>이벤트 참여율이 100% 미만으로 마감될 경우 지정된 포인트 보상</span></li>
-                        <li><span>이벤트기간</span> <span>2021.12.17 오후 5시 ~ 2021.12.17 오후 5시</span></li>
-                    </ul>
+                    <a href="#collapse-event-info" role="button" class="toggler" aria-label="이벤트 정보 토글" data-toggle="collapse"><i class="icon-toggler-arrow-down"></i></a>
+                    <div class="collapse" id="collapse-event-info">
+                        <ul class="m-t-15">
+                            <li><span>이벤트코드</span> <span id="eventCd">LEFAS211200009</span></li>
+                            <li><span>구매개수</span> <span>일반상품 구매개수는 1인당 1개로 제한</span></li>
+                            <li><span>결제취소</span> <span>남은 시간 12시간부터 결제취소 불가능</span></li>
+                            <li><span>이벤트마감</span> <span>기간 내 준비된 일반상품 모두 소진 시</span></li>
+                            <li><span>이벤트미달</span> <span>이벤트 참여율이 100% 미만으로 마감될 경우 지정된 포인트 보상</span></li>
+                            <li><span>이벤트기간</span> <span>2021.12.17 오후 5시 ~ 2021.12.17 오후 5시</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hr m-t-30"></div>
+                <div class="item review m-t-30">
+                    <div class="row justify-content-between m-b-30">
+                        <div class="col-auto">
+                            <h2>실제 구매자 리뷰 <span class="text-sky">2,392</span></h2>
+                        </div>
+                        <div class="col-auto">
+                            <a href="" class="write text-sky">리뷰쓰기</a>
+                        </div>
+                    </div>
+                    <div class="graph-review">
+                        <div class="rating-item">
+                            <div class="bar" style="width: 60%"></div>
+                            <p>포장이 꼼꼼해요</p>
+                            <span>1,192</span>
+                        </div>
+                        <div class="rating-item">
+                            <div class="bar" style="width: 45%"></div>
+                            <p>조리 식품이 맛있어요</p>
+                            <span>836</span>
+                        </div>
+                        <div class="rating-item">
+                            <div class="bar" style="width: 30%"></div>
+                            <p>배송이 빨랐어요</p>
+                            <span>622</span>
+                        </div>
+                        <div class="rating-item">
+                            <div class="bar" style="width: 20%"></div>
+                            <p>가격이 합리적이에요</p>
+                            <span>292</span>
+                        </div>
+                    </div>
+                    <div class="review-list-item">
+                        <div class="user">
+                            <div class="user-profile"><img src="../../resources/images/@event_07.png" alt="티도"></div>
+                            <div class="user-info">
+                                <div class="name">티도</div>
+                                <div class="date">2022.05.20 작성</div>
+                            </div>
+                        </div>
+                        <div class="photos">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../../resources/images/Thumbnail_07.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../resources/images/Thumbnail_08.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../resources/images/Thumbnail_06.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../resources/images/Thumbnail_07.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../resources/images/Thumbnail_08.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                var reviewSwiper = new Swiper('.photos .swiper-container', {
+                                    slidesPerView: 4.5,
+                                    freeMode: true,
+                                    spaceBetween: 5,
+                                    slidesOffsetBefore: 20,
+                                    slidesOffsetAfter: 20,
+                                });
+                            </script>
+                        </div>
+                        <div class="option">[옵션] 감자볶음밥</div>
+                        <div class="txt">하나를 둘이서 갈라먹어서 이건 반정도 되는양이에요! 내용물도 큼직큼직하고 양이 많아요. 감자 으깨서 케찹에 비비면 진짜 맛있습니다</div>
+                    </div>
+                    <a href="javascript:;" class="btn btn-lg btn-block btn-outline-sky">리뷰 더보기 (2,302)</a>
+                </div>
+                <div class="text-box m-t-40">
+                    <p><strong>상품</strong> 구매하고, <strong>이벤트상품</strong> 받아보자!</p>
                 </div>
                 <div class="item article">
                     <div class="content">
@@ -265,9 +356,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="text-box m-t-50">
-                    <p><strong>상품</strong> 구매하고, <strong>이벤트상품</strong> 받아보자!</p>
                 </div>
                 <div class="item product m-t-50">
                     <div class="title d-flex align-items-center">
@@ -410,6 +498,9 @@
         </div>
 
         <div class="btn-fixed">
+            <p class="count">
+                <strong>16,000</strong>개 모집 중, <strong class="text-sky">302</strong>개 남음
+            </p>
             <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modal-detail">구매하고 참여하기</a>
             <!-- <a href="#" class="btn btn-dark"><i class="icon-bell-white m-r-5"></i>알림받기</a>
             <a href="#" class="btn btn-dark text-yellow"><i class="icon-alarm-yellow m-r-5"></i>알림등록</a>
@@ -560,7 +651,7 @@
     </div>
     <script>
         $(document).ready(function(){
-            var mySwiper = new Swiper('.swiper-container', {
+            var mySwiper = new Swiper('.winning .swiper-container', {
                 speed: 400,
                 slidesPerGroup: 1,
                 slidesPerView: 'auto',

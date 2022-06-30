@@ -29,8 +29,8 @@ html,body{height: 100%;}
 
 .btn-fixed{
     position:fixed;left: 0;right: 0;bottom: 0;z-index: 100;background: #fff;
-    padding: 8px 20px calc(constant(safe-area-inset-bottom) + 8px);
-    padding: 8px 20px calc(env(safe-area-inset-bottom) + 8px);
+    padding: 10px 20px calc(constant(safe-area-inset-bottom) + 8px);
+    padding: 10px 20px calc(env(safe-area-inset-bottom) + 8px);
     .btn{font-size: 18px;display:flex;align-items: center;justify-content: center;font-weight: 700;border-radius: 7px;height: 50px;width: 100%;}
     .icon{
         width:18px;height:16px;display:inline-block;background-image:url(../images/arrow.svg);background-size: cover;background-position: center;background-repeat: no-repeat;vertical-align: middle;margin-left: 10px;
@@ -38,6 +38,7 @@ html,body{height: 100%;}
     .icon-active{
         width:18px;height:16px;display:inline-block;background-image:url(../images/ic_vote_check.svg);background-size: cover;background-position: center;background-repeat: no-repeat;vertical-align: middle;margin-left: 10px;
     }
+    .count{text-align: right;font-size: 14px;line-height: 1.14;margin-bottom: 10px;}
 }
 
 .badge-shipping{
@@ -113,7 +114,7 @@ html,body{height: 100%;}
         }
     }
     .event-deadline{
-        border-top: 1px solid rgba(0,0,0,0.15);border-bottom: 1px solid rgba(0,0,0,0.15);padding: 20px 0;
+        border-top: 1px solid $border-color;border-bottom: 1px solid $border-color;padding: 20px 0;
         .tit{
             font-size: 12px;font-weight: 700;margin-bottom: 8px;display: flex;align-items: center;line-height: 1.16666;
             i{margin-right: 5px;transform: translateY(-1px);}
@@ -130,8 +131,14 @@ html,body{height: 100%;}
     }
 
     .info{
-        border-top: 1px solid rgba(0,0,0,0.15);padding: 20px 0;
-        h2{font-size: 14px;font-weight: 700;margin-bottom: 15px;line-height: 1.14;}
+        border-top: 1px solid $border-color;padding: 20px 0;position: relative;
+        .toggler{
+            position: absolute;right: 10px;top: 22px;line-height: 1;display: inline-block;width: 20px;height: 20px;
+            &[aria-expanded=true]{
+                i{transform: scaleY(-1);}
+            }
+        }
+        h2{font-size: 14px;font-weight: 700;line-height: 1.14;transform: translateY(1px);}
         p{margin-bottom:15px;line-height: 1;}
         li{
             display:flex;font-size:12px;line-height: 1.666;
@@ -142,7 +149,25 @@ html,body{height: 100%;}
         &.bg{
             background-color: #f7f7f7;border-color: #f7f7f7;
         }
-        &.border-bottom{border-bottom: 1px solid rgba(0,0,0,0.15) !important;}
+        &.border-bottom{border-bottom: 1px solid $border-color !important;}
+    }
+
+    .info-shipping{
+        border-top: 1px solid $border-color;padding: 20px 0;
+        h2{font-size: 22px;font-family: 'Giloy';line-height: 1.35;}
+        li{
+            display:flex;font-size:16px;line-height: 1.1875;
+            margin-top: 10px;
+            span:nth-child(1){width:76px;flex: 0 0 76px;color: $muted;}
+            span:nth-child(2){flex: 1 1 100%;max-width: 100%}
+        }
+        .box{
+            background: rgba(241, 241, 241, 1);padding: 7px 8px 7px 9px;border-radius: 7px;margin-top: 20px;
+            p{
+                font-size: 12px;line-height: 1.666;color: rgba(0,0,0,0.5);padding-left: 9px;
+                &::before{content: '* ';margin-left: -9px;display: inline-block;width: 9px;}
+            }
+        }
     }
 
     .product-info{
@@ -159,7 +184,7 @@ html,body{height: 100%;}
             }
         }
         .product{
-            font-size: 13px;line-height: 1.34;padding: 0 10px 0 15px;margin-top: 15px;border-right: 1px solid rgba(0,0,0,0.15);
+            font-size: 13px;line-height: 1.34;padding: 0 10px 0 15px;margin-top: 15px;border-right: 1px solid $border-color;
             .product-name{font-weight: 700;}
             .how-many{margin-top: 7px;}
         }
@@ -169,7 +194,7 @@ html,body{height: 100%;}
     }
 
     .event-end{
-        border-top:1px solid rgba(0,0,0,0.15);padding: 20px 0;position: relative;
+        border-top:1px solid $border-color;padding: 20px 0;position: relative;
         h2{font-size: 14px;font-weight: 700;line-height: 1.1875;margin-bottom: 15px;}
         p{font-size: 12px;line-height: 1.666;}
         em{color: rgba(0,0,0,0.6);font-size: 12px;font-style: normal;font-weight: 400;display: block;margin-top: 5px;}
@@ -435,7 +460,7 @@ html,body{height: 100%;}
 .sel-option{
     padding:20px 0;
     & + .sel-option{
-        border-top:1px solid rgba(0,0,0,0.15);
+        border-top:1px solid $border-color;
     }
     .name{width:265px;font-size: 14px;line-height: 1.2;}
     .sel-delete{
@@ -541,8 +566,8 @@ html,body{height: 100%;}
 }
 
 .tracking-btn{
-    width:100%;height:40px;font-size:14px;color:#000;border: 1px solid rgba(0, 0, 0, 0.15);border-radius: 7px;font-weight: 700;
-    &:disabled{color: rgba(0,0,0,0.4);}
+    width:100%;height:40px;font-size:14px;color:#000;border: 1px solid $border-color;border-radius: 7px;font-weight: 700;
+    &:disabled{color: $muted;}
     &.btn-sky{border-color: $sky;color: $sky;}
     &.tracking-btn-lg{height: 44px;}
 }
@@ -567,7 +592,7 @@ html,body{height: 100%;}
         //&:first-child{border-top:0;}
     }
     .order-type{
-        border-bottom: 1px solid rgba(0,0,0,0.15);padding-bottom: 15px;margin-bottom: 15px;
+        border-bottom: 1px solid $border-color;padding-bottom: 15px;margin-bottom: 15px;
         p{color: rgba(0,0,0,0.6);line-height: 1;padding-top: 1px;}
         p + p{margin-top: 5px;}
     }
@@ -639,7 +664,7 @@ html,body{height: 100%;}
     .example-text{color:$white;opacity: $opacity-5;margin:10px 0 0;}
 }
 .copyright-wrap{
-    margin-top:40px;border-top:1px solid rgba(0,0,0,0.15);
+    margin-top:40px;border-top:1px solid $border-color;
     padding-bottom: 40px;padding-top: 20px;
     padding-bottom: calc(constant(safe-area-inset-bottom) + 40px);
     padding-bottom: calc(env(safe-area-inset-bottom) + 40px);
@@ -691,7 +716,7 @@ html,body{height: 100%;}
             & + li{margin-top: 24px;}
         }
     }
-    .btn-outline-gray{border-color: rgba(0,0,0,0.15);}
+    .btn-outline-gray{border-color: $border-color;}
     .line{margin: 40px 0 37px;width: 100%;height: 1px;background: rgba(0,0,0,0.15);}
     .item{
         border-top: 2px solid #000;padding: 15px 0 35px;
@@ -750,4 +775,47 @@ html,body{height: 100%;}
     }
     strong{font-size: 16px;font-family: 'Gilroy', 'NanumBarunGothic';display: block;}
     p{font-size: 14px;line-height: 1.714;}
+}
+
+.review{
+    h2{font-size: 16px;line-height: 1.875;}
+    .write{font-size: 16px;font-weight: 700;position: relative;text-decoration: underline;line-height: 1.875;}
+    .review-list-item{
+        padding: 20px 0;border-top: 1px solid $border-color;
+        .user{
+            display: flex;align-items: center;margin-bottom: 20px;
+        }
+        .user-profile{
+            width: 36px;height: 36px;border-radius: 50%;overflow: hidden;margin-right: 5px;
+            img{width: 100%;height: 100%;object-fit: cover;border-radius: 50%;}
+        }
+        .user-info{
+            .name{font-size: 14px;font-weight: 700;line-height: 1;}
+            .date{font-size: 12px;color: $muted;line-height: 1;margin-top: 4px;}
+        }
+        .photos{
+            margin-bottom: 20px;
+            .swiper-container{margin-left: -20px;margin-right: -20px;}
+            .swiper-slide{
+                width: 80px;height: 80px;border-radius: 7px;
+                img{width: 100%;height: 100%;object-fit: cover;border-radius: 7px;}
+            }
+        }
+        .option{font-size: 12px;color: $muted;margin-bottom: 5px;}
+        .txt{font-size: 14px;line-height: 1.571;}
+    }
+    .graph-review{
+        margin-bottom: 30px;
+        .rating-item{
+            background: rgba(245, 245, 245, 1);border-radius: 7px;display: flex;align-items: center;justify-content: space-between;padding: 2px 15px 0;height: 35px;position: relative;
+            p{font-size: 14px;position: relative;}
+            span{font-size: 12px;color: $sky;font-weight: 700;}
+            & + .rating-item{margin-top: 10px;}
+            .bar{height: 100%;position: absolute;left: 0;top: 0;border-radius: 7px;overflow: hidden;}
+            &:nth-child(1) .bar{background-color: rgba(25, 175, 255, 1);}
+            &:nth-child(2) .bar{background-color: rgba(25, 175, 255, .6);}
+            &:nth-child(3) .bar{background-color: rgba(25, 175, 255, .2);}
+            &:nth-child(4) .bar{background-color: rgba(25, 175, 255, .1);}
+        }
+    }
 }
