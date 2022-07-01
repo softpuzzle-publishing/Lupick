@@ -3420,11 +3420,6 @@ textarea.form-control {
   }
 }
 
-.btn:hover {
-  color: #111;
-  text-decoration: none;
-}
-
 .btn:focus, .btn.focus {
   outline: 0;
 }

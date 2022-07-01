@@ -268,15 +268,15 @@
                 </div>
                 <div class="hr m-t-30"></div>
                 <div class="item review m-t-30">
-                    <div class="row justify-content-between m-b-30">
+                    <div class="review-header row justify-content-between m-b-30">
                         <div class="col-auto">
                             <h2>실제 구매자 리뷰 <span class="text-sky">2,392</span></h2>
                         </div>
                         <div class="col-auto">
-                            <a href="" class="write text-sky">리뷰쓰기</a>
+                            <a href="#none" class="write text-sky">리뷰쓰기</a>
                         </div>
                     </div>
-                    <div class="graph-review">
+                    <div class="review-graph">
                         <div class="rating-item">
                             <div class="bar" style="width: 60%"></div>
                             <p>포장이 꼼꼼해요</p>
@@ -299,14 +299,14 @@
                         </div>
                     </div>
                     <div class="review-list-item">
-                        <div class="user">
+                        <div class="user m-b-20">
                             <div class="user-profile"><img src="../../resources/images/@event_07.png" alt="티도"></div>
                             <div class="user-info">
                                 <div class="name">티도</div>
                                 <div class="date">2022.05.20 작성</div>
                             </div>
                         </div>
-                        <div class="photos">
+                        <div class="review-photos">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -327,19 +327,23 @@
                                 </div>
                             </div>
                             <script>
-                                var reviewSwiper = new Swiper('.photos .swiper-container', {
-                                    slidesPerView: 4.5,
-                                    freeMode: true,
-                                    spaceBetween: 5,
-                                    slidesOffsetBefore: 20,
-                                    slidesOffsetAfter: 20,
+                                //포토리뷰 swiper
+                                var reviewSwiper = [];
+                                $('.review-list-item .swiper-container').each(function (i) {
+                                    reviewSwiper[i] = new Swiper($(this)[0], {
+                                        slidesPerView: 4.5,
+                                        freeMode: true,
+                                        spaceBetween: 5,
+                                        slidesOffsetBefore: 20,
+                                        slidesOffsetAfter: 20,
+                                    });
                                 });
                             </script>
                         </div>
-                        <div class="option">[옵션] 감자볶음밥</div>
-                        <div class="txt">하나를 둘이서 갈라먹어서 이건 반정도 되는양이에요! 내용물도 큼직큼직하고 양이 많아요. 감자 으깨서 케찹에 비비면 진짜 맛있습니다</div>
+                        <div class="review-option">[옵션] 감자볶음밥</div>
+                        <div class="review-content">하나를 둘이서 갈라먹어서 이건 반정도 되는양이에요! 내용물도 큼직큼직하고 양이 많아요. 감자 으깨서 케찹에 비비면 진짜 맛있습니다</div>
                     </div>
-                    <a href="javascript:;" class="btn btn-lg btn-block btn-outline-sky">리뷰 더보기 (2,302)</a>
+                    <a href="review.html" class="btn btn-lg btn-block btn-outline-sky font-18">리뷰 더보기 (2,302)</a>
                 </div>
                 <div class="text-box m-t-40">
                     <p><strong>상품</strong> 구매하고, <strong>이벤트상품</strong> 받아보자!</p>
