@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1, user-scalable=0">
+    <title>Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- <div class="header d-flex align-items-center">
+            <a href="javascript:void(0)" class="ic-back"></a>
+            <span class="font-18 bold">결제방법</span>
+        </div> -->
+        <div class="p-20 p-t-20 h-100">
+            <div class="d-flex flex-column h-100">
+                <div class="flex-grow-1">
+                    <div class="payment-section">
+                        <div class="custom-control custom-checkbox m-b-20">
+                            <input type="checkbox" class="custom-control-input" name="payType" id="payType1">
+                            <label class="custom-control-label bold" for="payType1">루픽페이</label>
+                        </div>
+                        <div class="m-b-15">
+                            <img src="../../resources/images/lupickpay-card.svg" alt="">
+                        </div>
+                        <ul class="lupickpay-added-card">
+                            <li><a href="javascript:;">[신한] 4890 **** **** 2834</a></li>
+                            <li class="selected"><a href="javascript:;">[현대] 4032 **** **** 5809</a></li>
+                        </ul>
+                        <script>
+                            //루픽페이 카드 선택
+                            $('.lupickpay-added-card a').on('click', function(e){
+                                e.preventDefault();
+                                $(this).parent('li').siblings().removeClass('selected');
+                                $(this).parent('li').addClass('selected');
+                            });
+                        </script>
+                        <div class="">
+                            <a href="lupickpay_card_add.html" class="btn btn-outline-dark btn-block btn-lg btn-new-style">신용/체크카드 등록하기</a>
+                            <a href="lupickpay_card_add.html" class="btn btn-outline-dark btn-block btn-lg btn-new-style">+ 새 카드 등록하기</a>
+                        </div>
+                    </div>
+                    <div class="payment-section m-t-25">
+                        <div class="custom-control custom-checkbox m-b-20">
+                            <input type="checkbox" class="custom-control-input" name="payType" id="payType2">
+                            <label class="custom-control-label bold" for="payType2">간편 결제</label>
+                        </div>
+                        <div class="simple-pay-list row row-10">
+                            <div class="col-6">
+                                <input type="radio" name="radio" id="naver" value="">
+                                <label for="naver">
+                                    <div class="way">
+                                        <img src="../../resources/images/pay_naver.svg" alt="네이버페이">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <input type="radio" name="radio" id="kakao" value="">
+                                <label for="kakao">
+                                    <div class="way active">
+                                        <img src="../../resources/images/pay_kakao.png" alt="카카오페이" style="width:58px;height:24px">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <input type="radio" name="radio" id="toss" value="">
+                                <label for="toss">
+                                    <div class="way">
+                                        <img src="../../resources/images/pay_toss.svg" alt="토스">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-6">
+                                <input type="radio" name="radio" id="payco" value="">
+                                <label for="payco">
+                                    <div class="way">
+                                        <img src="../../resources/images/pay_payco.svg" alt="페이코">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-section m-t-25">
+                        <div class="custom-control custom-checkbox m-b-10">
+                            <input type="checkbox" class="custom-control-input" id="defaultPayment" checked>
+                            <label class="custom-control-label font-15" for="defaultPayment">현재 결제 수단을 기본 결제 수단으로 설정</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-b-10 p-t-10">
+                    <button type="button" class="btn btn-dark btn-block btn-lg btn-new-style" disabled>확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../resources/js/common.js"></script>
+</body>
+</html>

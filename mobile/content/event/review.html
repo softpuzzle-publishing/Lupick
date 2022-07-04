@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="html-terms">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -89,26 +89,26 @@
                         </div>
                     </div>
                     <div class="col-auto m-t-5">
-                        <a href="javascript:;" class="declaration">신고</a>
+                        <a href="javascript:;" class="review-declaration">신고</a>
                     </div>
                 </div>
                 <div class="review-photos">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="../../resources/images/Thumbnail_07.png" alt="">
+                                <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="../../resources/images/Thumbnail_08.png" alt="">
+                                <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="../../resources/images/Thumbnail_06.png" alt="">
+                                <div class="img"><img src="../../resources/images/Thumbnail_08.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="../../resources/images/Thumbnail_07.png" alt="">
+                                <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
                             </div>
                             <div class="swiper-slide">
-                                <img src="../../resources/images/Thumbnail_08.png" alt="">
+                                <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                     <div class="col-auto m-t-5">
-                        <a href="javascript:;" class="declaration">신고</a>
+                        <a href="javascript:;" class="review-declaration">신고</a>
                     </div>
                 </div>
                 <div class="review-option">[옵션] 감자볶음밥</div>
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                     <div class="col-auto m-t-5">
-                        <a href="javascript:;" class="declaration">신고</a>
+                        <a href="javascript:;" class="review-declaration">신고</a>
                     </div>
                 </div>
                 <div class="review-photos">
@@ -213,19 +213,19 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <img src="../../resources/images/Thumbnail_07.png" alt="">
+                                    <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../../resources/images/Thumbnail_08.png" alt="">
+                                    <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../../resources/images/Thumbnail_06.png" alt="">
+                                    <div class="img"><img src="../../resources/images/Thumbnail_08.png" alt=""></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../../resources/images/Thumbnail_07.png" alt="">
+                                    <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <img src="../../resources/images/Thumbnail_08.png" alt="">
+                                    <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                     </div>
                     <div class="review-collapse">
                         <div class="review-option">[옵션] 감자볶음밥</div>
-                        <div class="review-content"><span id="reviewContent"></span> <a href="javascript:;" class="more">더보기</a></div>
+                        <div class="review-content"><span id="reviewContent"></span> <a href="javascript:;" class="more"><span>더보기</span><i class="icon-more-arrow-down m-l-5"></i></a></div>
                     </div>
                 </div>
             </div>
@@ -284,10 +284,10 @@
             e.preventDefault();
             if (!$('.review-collapse').hasClass('expanded')) {
                 $('#reviewContent').text(str);
-                $('.review-collapse .more').text('접기');
+                $('.review-collapse .more span').text('접기');
             } else {
                 $('#reviewContent').text(strShort);
-                $('.review-collapse .more').text('더보기');
+                $('.review-collapse .more span').text('더보기');
             }
             $('.review-collapse').toggleClass('expanded');
         });
@@ -297,6 +297,7 @@
             $(this).toggleClass('active');
         });
     </script>
+    <script src="../../resources/js/common.js"></script>
 </body>
 
 </html>

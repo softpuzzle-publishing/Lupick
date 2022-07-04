@@ -57,15 +57,34 @@
                 </div>
             </div>
             <div class="tab order">
-                <div class="tab-title">
+                <div class="tab-title border-bottom">
                     <p class="bold">주문자 정보</p>
                 </div>
-                <div class="desc">
+                <!-- <div class="desc">
                     <ul>
                         <li><span>이름</span><span>박수영</span></li>
                         <li><span>휴대폰</span><span>010-1234-5678</span></li>
                         <li><span>이메일</span><span>joy0903@gmail.com</span></li>
                     </ul>
+                </div> -->
+                <div class="form-group m-t-20">
+                    <label for="">이름*</label>
+                    <input type="email" class="form-control form-control-sm bottom-line-style" value="박수영">
+                </div>
+                <div class="form-group">
+                    <label for="">휴대폰 번호*</label>
+                    <div class="row row-10">
+                        <div class="col">
+                            <input type="email" class="form-control form-control-sm bottom-line-style" value="01012345678">
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-outline-dark btn-md"><i class="icon-check-black m-r-5"></i>인증 완료</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">이메일</label>
+                    <input type="email" class="form-control form-control-sm bottom-line-style" value="joy0903@gmail.com">
                 </div>
             </div>
             <div class="tab delivery">
@@ -160,82 +179,27 @@
                 <p class="example-text font-12">*제주 및 도서산간 지역 : 추가 배송비 3,000원 발생</p>
             </div>
             <div class="tab payment">
-                <div class="tab-title">
+                <div class="tab-title d-flex align-items-center justify-content-between">
                     <p class="bold">결제 방법</p>
+                    <a href="payment_type.html" class="btn btn-sm btn-light">변경하기</a>
                 </div>
                 <div class="desc">
-                   <div class="row">
-                        <div class="col-6">
-                            <input type="radio" name="radio" id="credit" value="">
-                            <label for="credit">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_card.svg" alt="신용카드">
-                                    <p class="font-14 ml-2">신용카드</p>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-6">
-                            <input type="radio" name="radio" id="phone" value="">
-                            <label for="phone">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_phone.svg" alt="휴대폰결제">
-                                    <p class="font-14 ml-2">휴대폰결제</p>
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-6">
-                            <input type="radio" name="radio" id="naver" value="">
-                            <label for="naver">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_naver.svg" alt="네이버페이">
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-6">
-                            <input type="radio" name="radio" id="kakao" value="">
-                            <label for="kakao">
-                                <div class="way active">
-                                    <img src="../../resources/images/pay_kakao.png" alt="카카오페이" style="width:58px;height:24px">
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-6">
-                            <input type="radio" name="radio" id="toss" value="">
-                            <label for="toss">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_toss.svg" alt="토스">
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-6">
-                            <input type="radio" name="radio" id="smile" value="">
-                            <label for="smile">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_smilepay.png" alt="스마일페이">
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-6">
-                            <input type="radio" name="radio" id="payco" value="">
-                            <label for="payco">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_payco.svg" alt="페이코">
-                                </div>
-                            </label>
-                        </div>
-                        <div class="col-6">
-                            <input type="radio" name="radio" id="paynow" value="">
-                            <label for="paynow">
-                                <div class="way">
-                                    <img src="../../resources/images/pay_paynow.png" alt="페이나우">
-                                </div>
-                            </label>
-                        </div>
-                   </div>
+                    <div class="added-payment-type">
+                        <div class="badge badge-dark border-radius-0 m-0">루픽페이</div>
+                        <span>[신한] 4890 **** **** 2834</span>
+                    </div>
+                    <div class="added-payment-type">
+                        <div class="badge badge-dark border-radius-0 m-0">카카오페이</div>
+                        <span><img src="../../resources/images/pay_kakao.png" alt=""></span>
+                        <span><img src="../../resources/images/pay_naver.svg" alt=""></span>
+                        <span><img src="../../resources/images/pay_toss.svg" alt=""></span>
+                        <span><img src="../../resources/images/pay_payco.svg" alt=""></span>
+                    </div>
+                    <a href="payment_type.html" class="btn btn-outline-dark btn-lg font-16 btn-block">+ 결제수단 추가하기</a>
                 </div>
             </div>
             <div class="tab agree">
-                <div class="custom-control custom-check custom-control-inline">
+                <div class="custom-control custom-checkbox m-t-15">
                     <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk3" value="chk3">
                     <label class="custom-control-label font-15" for="chk3">결제 정보를 확인하였으며, 동의합니다. (필수)</label>
                 </div>
@@ -245,7 +209,7 @@
             </div>
 
             <div class="p-b-40 btn-bottom-spacing">
-                <a href="#" class="btn btn-dark btn-block btn-lg btn-new-style">결제하기</a>
+                <a href="#" class="btn btn-dark btn-block btn-lg btn-new-style">결제하고 투표하기</a>
             </div>
         </div>
     </div>
