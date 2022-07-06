@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Lupick</title>
+    <title>(pub)Lupick</title>
     <link rel="icon" href="../../resources/images/favicon.png">
     <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
     <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
@@ -19,40 +19,46 @@
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <div class="wrap agree">
-        <div class="payment-agree-wrap">
-            <p class="title-small">결제하기 전에 잠깐!</p>
-            <p class="title"><strong>이벤트 참여</strong>의 의미를 <br>한 번 더 확인해주세요.</p>
+    <div class="wrap">
+        <div class="p-20 p-t-20 h-100">
+            <div class="d-flex flex-column h-100">
+                <div class="flex-grow-1">
+                    <div class="payment-agree-wrap">
+                        <p class="title-small">결제하기 전에 잠깐!</p>
+                        <p class="title"><strong>이벤트 참여</strong>의 의미를 <br>한 번 더 확인해주세요.</p>
 
-            <div class="agree-before-payment">
-                <ul>
-                    <li>
-                        <span>1.</span> <p>루픽에서의 ‘이벤트 참여’는 일반 쇼핑이 아닌 이벤트쇼핑을 의미합니다.</p>
-                    </li>
-                    <li>
-                        <span>2.</span> <p> 이벤트 마감이 12시간 남은 상태에서는 이벤트 진행을 위해 결제 취소가 불가합니다.</p>
-                    </li>
-                    <li>
-                        <span>3.</span> <p>구매하시는 일반상품 배송은 ‘이벤트 성공’후에 일괄 배송됩니다.</p>
-                    </li>
-                    <li>
-                        <span>4.</span> <p>이벤트 모집에 실패할 경우 구매금액 전액이 환불처리 됩니다.</p>
-                    </li>
-                    <li>
-                        <span>5.</span> <p>루피커 선정시 럭키상품 후기 및 촬영에 대한 요청을 할 수 있습니다.</p>
-                    </li>
-                </ul>
-                <div>
-                    <button type="button" class="btn btn-outline-gray btn-xl h-60 normal font-16" data-toggle="modal" data-target="#modal-agree-detail">내용 자세히 확인하기</button>
+                        <div class="agree-before-payment">
+                            <ul>
+                                <li>
+                                    <span>1.</span> <p>루픽에서의 ‘이벤트 참여’는 일반 쇼핑이 아닌 이벤트쇼핑을 의미합니다.</p>
+                                </li>
+                                <li>
+                                    <span>2.</span> <p> 이벤트 마감이 12시간 남은 상태에서는 이벤트 진행을 위해 결제 취소가 불가합니다.</p>
+                                </li>
+                                <li>
+                                    <span>3.</span> <p>구매하시는 일반상품 배송은 ‘이벤트 성공’후에 일괄 배송됩니다.</p>
+                                </li>
+                                <li>
+                                    <span>4.</span> <p>이벤트 모집에 실패할 경우 구매금액 전액이 환불처리 됩니다.</p>
+                                </li>
+                                <li>
+                                    <span>5.</span> <p>루피커 선정시 럭키상품 후기 및 촬영에 대한 요청을 할 수 있습니다.</p>
+                                </li>
+                            </ul>
+                            <div>
+                                <button type="button" class="btn btn-outline-gray btn-xl h-60 normal font-16" data-toggle="modal" data-target="#modal-agree-detail">내용 자세히 확인하기</button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk1" value="chk1">
+                                <label class="custom-control-label bold" for="chk1">위 내용을 확인했으며 이에 동의합니다.</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="line"></div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" name="chkSubject" id="chk1" value="chk1">
-                    <label class="custom-control-label bold" for="chk1">위 내용을 확인했으며 이에 동의합니다.</label>
+                <div class="bottom-button">
+                    <button type="button" class="btn btn-dark btn-block btn-lg btn-new-style" disabled id="goBuy">구매하러 가기</button>
                 </div>
-            </div>
-            <div class="p-b-40 btn-bottom-spacing">
-                <button type="button" class="btn btn-dark btn-xl h-60 normal font-16" disabled id="goBuy">구매하러 가기</button>
             </div>
         </div>
     </div>
@@ -68,7 +74,7 @@
                 <div class="wrapper">
                     <div class="payment-agree-wrap px-0">
                         <p class="title"><strong>이벤트 참여</strong>의 의미</p>
-                        <div class="agree-before-payment m-b-20">
+                        <div class="agree-before-payment">
                             <div class="item">
                                 <p class="font-14 bold">루픽에서의 '이벤트 참여'는 일반 쇼핑이 아닌<br> 이벤트 쇼핑을 의미합니다.</p>
                                 <div class="cont">
@@ -94,8 +100,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="p-b-40 btn-bottom-spacing">
-                            <button type="button" class="btn btn-dark btn-xl h-60 normal font-16" data-dismiss="modal">확인</button>
+                        <div class="bottom-button">
+                            <button type="button" class="btn btn-dark btn-block btn-lg btn-new-style" data-dismiss="modal">확인</button>
                         </div>
                     </div>
                 </div>
