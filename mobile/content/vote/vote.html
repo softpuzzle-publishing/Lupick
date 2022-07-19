@@ -96,11 +96,11 @@
             </div>
         </div>
     </div>
-    <!-- 나의 럭키번호란? -->
+    <!-- 루픽 투표하기 -->
     <div class="modal modal-info-style" id="modal-vote" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body">
+                <div class="modal-body p-t-20 p-b-20">
                     <div class="vote-input">
                         <div class="tit">
                             <span>루픽 투표권</span>
@@ -162,6 +162,7 @@
         $('.vote-item .form-control').on('click', function(){
             $('#modal-vote').modal('show');
         });
+
         function luckyCreateEffect(){
             setTimeout(function () {
                 $('.vote-loading').addClass('active');
