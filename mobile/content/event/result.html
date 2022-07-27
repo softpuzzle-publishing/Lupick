@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>(pub)Lupick</title>
+    <link rel="icon" href="../../resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="../../resources/images/favicon-152x152.png">
+    <link rel="mask-icon" href="../../resources/images/favicon.svg" color="#ffff00">
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap p-b-30">
+        <div class="p-l-20 p-r-20 p-t-10">
+            <h2 class="title-lg">루픽리워드 받으신 분들 <br>진심으로 축하합니다!</h2>
+            <!-- 3명에게 -->
+            <div class="reward-item">
+                <div class="reward-item-img">
+                    <img src="../../resources/images/@event_01.png" alt="">
+                </div>
+                <div class="name">패밀리 SUV의 진화, 현대 2022 SANTA FE</div>
+                <div class="to">오직 3명에게</div>
+                <ul class="lucky-user">
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                </ul>
+            </div>
+            <!-- 5명에게 -->
+            <div class="reward-item">
+                <div class="reward-item-img">
+                    <img src="../../resources/images/@event_01.png" alt="">
+                </div>
+                <div class="name">도미노 포테이토피자L+콜라</div>
+                <div class="to">오직 5명에게</div>
+                <ul class="lucky-user">
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                </ul>
+            </div>
+            <!-- 10명에게 -->
+            <div class="reward-item">
+                <div class="reward-item-img">
+                    <img src="../../resources/images/@event_01.png" alt="">
+                </div>
+                <div class="name">BHC 후라이드치킨+콜라</div>
+                <div class="to">오직 10명에게</div>
+                <ul class="lucky-user">
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                    <li>•데부루</li>
+                </ul>
+                <div class="toggler">
+                    <a href="javascript:;">전체보기 <i class="icon-arrow-down"></i></a>
+                </div>
+            </div>
+            <!-- 15명에게 -->
+            <div class="reward-item">
+                <div class="reward-item-img">
+                    <img src="../../resources/images/@event_01.png" alt="">
+                </div>
+                <div class="name">배스킨라빈스 싱글레귤러</div>
+                <div class="to">오직 15명에게</div>
+                <ul class="lucky-user">
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                    <li>•데부루</li>
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                    <li>•데부루</li>
+                    <li>•버터</li>
+                    <li>•티비보는도라에몽</li>
+                </ul>
+                <div class="toggler">
+                    <a href="javascript:;">전체보기 <i class="icon-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../resources/js/common.js"></script>
+
+    <script>
+        $(document).on('click', '.reward-item .toggler a', function(e){
+            e.preventDefault();
+            $(this).closest('.reward-item').toggleClass('expanded');
+        });
+    </script>
+</body>
+
+</html>

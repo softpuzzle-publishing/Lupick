@@ -25,7 +25,7 @@
         <div class="container-wrap">
 
             <div>
-                <div class="detail-img">
+                <div class="detail-img ended">
                     <img src="../../resources/images/@event_01.png" alt="">
                     <div class="event-status">
                         <div class="progress">
@@ -343,7 +343,8 @@
                             <div class="review-content">하나를 둘이서 갈라먹어서 이건 반정도 되는양이에요! 내용물도 큼직큼직하고 양이 많아요. 감자 으깨서 케찹에 비비면 진짜 맛있습니다</div>
                         </div>
                     </div>
-                    <a href="review.html" class="btn btn-lg btn-block btn-outline-sky font-18">리뷰 더보기 (2,302)</a>
+                    <a href="review.html" class="btn btn-lg btn-block btn-outline-sky font-18">리뷰 더보기 (<span>2,302</span>)</a>
+                    <a class="btn btn-lg btn-block btn-outline-sky font-18" id="reviewMore" th:data-action="'/m/event/review/' + ${eventItemInfo.sEventCd} + '/' + ${eventItemInfo.sProductCd}">리뷰 더보기 (<span class="text-sky" th:text="|${#numbers.formatInteger(eventItemInfo.productReviewCnt, 0, 'COMMA')}|">2,392</span>)</a>
                 </div>
                 <div class="text-box m-t-40">
                     <p><strong>상품</strong> 구매하고, <strong>이벤트상품</strong> 받아보자!</p>
@@ -500,8 +501,8 @@
                 <strong>16,000</strong>개 모집 중, <strong class="text-sky">302</strong>개 남음
             </p>
             <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#modal-detail">구매하고 참여하기</a>
-            <!-- <a href="#" class="btn btn-dark"><i class="icon-bell-white m-r-5"></i>알림받기</a>
-            <a href="#" class="btn btn-dark text-yellow"><i class="icon-alarm-yellow m-r-5"></i>알림등록</a>
+            <!-- <a href="#" class="btn btn-dark"><i class="icon-bell-white m-r-5"></i>알림신청</a>
+            <a href="#" class="btn btn-dark text-yellow"><i class="icon-alarm-yellow m-r-5"></i>등록완료</a>
             <a href="#" class="btn btn-dark">결제정보 보기</a>
             <a href="#" class="btn btn-dark justify-content-between">
                 <p class="font-18 bold">투표하기<span class="icon"></span></p>

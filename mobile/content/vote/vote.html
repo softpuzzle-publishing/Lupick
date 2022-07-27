@@ -26,7 +26,7 @@
             <a href="javascript:void(0)" class="ic-back"></a>
             <span class="font-18 bold">결제방법</span>
         </div> -->
-        <button type="button" class="ic-close m-l-10" aria-label="닫기"></button>
+        <!-- <button type="button" class="ic-close m-l-10" aria-label="닫기"></button> -->
         <div class="vote-wrap">
             <div class="title">나의 럭키번호 예측해서 <br>투표해주세요!</div>
             <div class="my-vote-count">
@@ -109,10 +109,13 @@
                         <p class="feedback">
                             입력가능한 숫자범위 <strong>1~10,000</strong>
                         </p>
-                        <p class="feedback">
+                        <p class="feedback pt-0">
                             <strong>! 입력 가능한 숫자범위가 아니에요</strong>
                         </p>
                         <input type="tel" class="form-control" placeholder="투표 1 : 숫자를 입력해주세요">
+                        <div class="button">
+                            <button type="button" class="btn btn-dark btn-lg btn-new-style btn-block">확인</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -192,7 +195,6 @@
             this.dy = dy;
             this.r = 41;
             this.color = '#ffec00';
-            console.log('x:'+ dx)
 
             this.draw = function () {
                 pen.fillStyle = this.color;

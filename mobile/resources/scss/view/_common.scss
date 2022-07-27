@@ -93,14 +93,16 @@ input[type="number"]::-webkit-inner-spin-button {
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 50% 50%;line-height: 1;font-size: 0;}
 .icon-clock{width: 12px;height: 12px;background-image: url('../images/icon-clock.svg');}
 .icon-clock-white{width: 12px;height: 12px;background-image: url('../images/icon-clock-white.svg');}
-.icon-bell-white{width: 30px;height: 30px;background-image: url('../images/ic-bell-white.svg');}
-.icon-alarm-yellow{width: 30px;height: 30px;background-image: url('../images/ic-alarm-yellow.svg');}
+.icon-bell-white{width: 32px;height: 32px;background-image: url('../images/ic-bell-white.svg');}
+.icon-alarm-yellow{width: 32px;height: 32px;background-image: url('../images/ic-alarm-yellow.svg');}
 .icon-point{width: 24px;height: 24px;background-image: url('../images/ic-point.svg');}
 .icon-info-sky{width: 15px;height: 15px;background-image: url('../images/icon-info-sky.svg');}
 .icon-toggler-arrow-down{width: 10px;height: 10px;background-image: url('../images/icon-toggler-arrow-down.svg');}
 .icon-x-white{width: 20px;height: 20px;background-image: url('../images/icon-x-white.svg');}
 .icon-check-black{width: 9px;height: 7px;background-image: url('../images/icon-check-black.svg');}
 .icon-question-mark{width: 14px;height: 14px;background-image: url('../images/icon-question-mark.svg');}
+
+.icon-arrow-down { width: 12px; height: 6px; background-image: url(../images/icon-arrow-down.svg);}
 
 .icon-link-arr { width: 7px; height: 12px; background-image: url(../images/icon-link-arr.svg); vertical-align: middle; }
 .icon-link-arr-sm { width: 4px; height: 8px; background-image: url(../images/icon-link-arr.svg); }
@@ -282,6 +284,8 @@ select.select-lg{opacity: 0;height: 65px;}
     }
     label{font-size: 14px;line-height: 1;color: #000;display: inline-block;}
 }
+
+.title-lg{font-size: 30px;line-height: 1.333;margin-bottom: 20px;font-weight: 400;}
 
 .title-ball{
     display: inline-block;width: 20px;height: 20px;border-radius: 50%;transform: translateY(-1px);
@@ -751,3 +755,4 @@ $spoke-transform-origin: ($spoke-translate) * -1;
   0%{opacity: 1}
   100%{opacity: 0.2}
 }
+
