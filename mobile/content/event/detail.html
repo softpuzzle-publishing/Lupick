@@ -296,7 +296,7 @@
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
+                                            <div class="img"><img src="../../resources/images/@portrait.jpg" alt=""></div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
@@ -328,10 +328,13 @@
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
+                                            <div class="img"><img src="../../resources/images/@portrait.jpg" alt=""></div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="img"><img src="../../resources/images/Thumbnail_08.png" alt=""></div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="img"><img src="../../resources/images/Thumbnail_08.png" alt=""></div>
@@ -344,7 +347,6 @@
                         </div>
                     </div>
                     <a href="review.html" class="btn btn-lg btn-block btn-outline-sky font-18">리뷰 더보기 (<span>2,302</span>)</a>
-                    <a class="btn btn-lg btn-block btn-outline-sky font-18" id="reviewMore" th:data-action="'/m/event/review/' + ${eventItemInfo.sEventCd} + '/' + ${eventItemInfo.sProductCd}">리뷰 더보기 (<span class="text-sky" th:text="|${#numbers.formatInteger(eventItemInfo.productReviewCnt, 0, 'COMMA')}|">2,392</span>)</a>
                 </div>
                 <div class="text-box m-t-40">
                     <p><strong>상품</strong> 구매하고, <strong>이벤트상품</strong> 받아보자!</p>
@@ -666,7 +668,7 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
+                                    <div class="img"><img src="../../resources/images/@portrait.jpg" alt=""></div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
@@ -726,30 +728,40 @@
         //포토리뷰 swiper
         var reviewSwiper = [];
         $('.review-list-item .swiper-container').each(function (i) {
-            reviewSwiper[i] = new Swiper($(this)[0], {
-                slidesPerView: 4.5,
-                freeMode: true,
-                spaceBetween: 5,
-                slidesOffsetBefore: 20,
-                slidesOffsetAfter: 20,
-            });
+            if($(this).find('.swiper-slide').length > 4){
+                reviewSwiper[i] = new Swiper($(this)[0], {
+                    slidesPerView: 4.5,
+                    freeMode: true,
+                    spaceBetween: 5,
+                    slidesOffsetBefore: 20,
+                    slidesOffsetAfter: 20,
+                    observeParent: true,
+                    observeSlideChildren: true,
+                    observer: true
+                });
+            }
         });
         let photoIdx; //클릭한 사진의 인덱스
         $('.review-photos .swiper-slide').on('click', function () {
             photoIdx = $(this).index();
-            console.log(photoIdx);
             $('#modal-review').modal('show')
         });
 
         // 모달이 열릴때 swiper 실행
-        $('#modal-review').on('shown.bs.modal', function (event) {
-            var reviewSwiper = new Swiper('.modal-review .swiper-container', {
-                initialSlide: photoIdx,
-                pagination: {
-                    el: '.review-swiper-pagination',
-                    type: 'bullets',
-                },
-            });
+        var modalReviewSwiper;
+        $('#modal-review').on('show.bs.modal', function (event) {
+            setTimeout(function () {
+                modalReviewSwiper = new Swiper(".modal-review .swiper-container", {
+                    initialSlide: photoIdx,
+                    pagination: {
+                        el: ".review-swiper-pagination",
+                        type: "bullets",
+                    },
+                    observeParent: true,
+                    observeSlideChildren: true,
+                    observer: true
+                });
+            }, 0)
         })
 
         //리뷰 내용 100자까지 ... 처리

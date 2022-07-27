@@ -99,7 +99,7 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
+                                    <div class="img"><img src="../../resources/images/@portrait.jpg" alt=""></div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
@@ -217,7 +217,7 @@
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="img"><img src="../../resources/images/Thumbnail_06.png" alt=""></div>
+                                    <div class="img"><img src="../../resources/images/@portrait.jpg" alt=""></div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="img"><img src="../../resources/images/Thumbnail_07.png" alt=""></div>
@@ -248,31 +248,39 @@
         //포토리뷰 swiper
         var reviewSwiper = [];
         $('.review-list-item .swiper-container').each(function (i) {
-            reviewSwiper[i] = new Swiper($(this)[0], {
-                slidesPerView: 4.5,
-                freeMode: true,
-                spaceBetween: 5,
-                slidesOffsetBefore: 20,
-                slidesOffsetAfter: 20,
-            });
+            if ($(this).find('.swiper-slide').length > 4) {
+                reviewSwiper[i] = new Swiper($(this)[0], {
+                    slidesPerView: 4.5,
+                    freeMode: true,
+                    spaceBetween: 5,
+                    slidesOffsetBefore: 20,
+                    slidesOffsetAfter: 20,
+                    observeParent: true,
+                    observeSlideChildren: true,
+                    observer: true
+                });
+            }
         });
         let photoIdx; //클릭한 사진의 인덱스
         $('.review-photos .swiper-slide').on('click', function () {
             photoIdx = $(this).index();
-            console.log(photoIdx);
             $('#modal-review').modal('show')
         });
 
         // 모달이 열릴때 swiper 실행
-        $('#modal-review').on('shown.bs.modal', function (event) {
-            var reviewSwiper = new Swiper('.modal-review .swiper-container', {
+        var modalReviewSwiper;
+        $('#modal-review').on('show.bs.modal', function (event) {
+            modalReviewSwiper = new Swiper('.modal-review .swiper-container', {
                 initialSlide: photoIdx,
                 pagination: {
                     el: '.review-swiper-pagination',
                     type: 'bullets',
                 },
+                observeParent: true,
+                observeSlideChildren: true,
+                observer: true
             });
-        })
+        });
 
         //리뷰 내용 100자까지 ... 처리
         const maxLength = 95;
