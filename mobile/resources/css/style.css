@@ -1380,7 +1380,7 @@ body { max-width: 768px; }
 
 .balls.front .bg-balls { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 
-.vote-loading { width: 240px; height: 240px; background: #000; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.vote-loading { width: 240px; height: 240px; background: #000; border-radius: 50%; position: absolute; left: 50%; top: 50%; transform: translate(-50%, calc(-50% - 33px)); }
 
 .vote-loading .set { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: absolute; left: 0; top: 0; transition: opacity .2s; }
 
