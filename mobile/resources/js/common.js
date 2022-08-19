@@ -44,11 +44,20 @@ $(document).ready(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-text");
         });
         $(".select-sm").each(function () {
-            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
+            var zone = $(this).next('.selectmenu-zone');
+            $(this).selectmenu({
+                // appenTo 선택 엘리먼트에 셀렉트박스 넣음
+                appendTo: zone,
+            });
         });
         $(".select-md").each(function () {
-            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-md menuWidget");
-            var option_length = $('.ui-selectmenu-menu ul li').length;
+            var zone = $(this).next('.selectmenu-zone');
+            $(this).selectmenu({
+                // appenTo 선택 엘리먼트에 셀렉트박스 넣음
+                appendTo: zone,
+            });
+
+            /* var option_length = $('.ui-selectmenu-menu ul li').length;
             $('.ui-selectmenu-button').click(function(){
                 setTimeout(function(){
                     console.log(option_length);
@@ -61,8 +70,7 @@ $(document).ready(function () {
                         $('.ui-selectmenu-menu .ui-menu').css('max-height','400px');
                     }
                 }
-            })
-
+            }) */
         });
         $(".select-lg").each(function () {
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-lg");
