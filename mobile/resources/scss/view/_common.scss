@@ -247,6 +247,10 @@ select.select-lg{opacity: 0;height: 65px;}
     &.badge-outline-muted{border-color: rgba(0,0,0,.6);color: rgba(0, 0, 0, .6);}
     &.badge-yellow{background: $yellow;border-color: #000;}
 }
+
+.badge-review-best{
+    height: 13px;background: $yellow;border-color: $yellow;border-radius: 3px;margin: 0;font-size: 9px;font-family: 'Gilroy'; font-weight: 700;padding: 0 4px;line-height: 13px;
+}
 .badge-shipping{
     min-width: 0;font-family: 'NanumBarunGothic';margin: 0;
 }
